@@ -1,0 +1,380 @@
+\documentclass{ximera}
+\input{../../preamble}
+\addPrintStyle{..}
+
+\providecommand{\answerFormatSixDots}[1]{\;.\,.\,.\,.\,.\,.\,.\,\;}
+\providecommand{\answerFormatThreeDots}[1]{\ldots}
+\let\handoutAnswerFormat\answerFormatSixDots
+\let\handoutAnswerFormat\answerFormatThreeDots
+% \let\defaultAnswerFormat\answerFormatSixDots
+% Allow \answer in non-mathmode
+\makeatletter
+\renewcommand{\answer}[2][]{%
+	\ensuremath{
+		\setkeys{answer}{#1}%
+		\recordvariable{\ans@id}
+		\ifthenelse{\boolean{\ans@given}}
+			{% Start then statement
+			\ifhandout 
+				#2
+			\else
+				\givenAnswerFormat{#2} %% in case the argument helps formatting
+			\fi
+			}% End then statement
+			{% Start else statement
+			\ifhandout
+				\handoutAnswerFormat{#2} %% in case the argument helps formatting
+			\else% show answer in box outside handout mode
+				\defaultAnswerFormat{#2} %% in case the argument helps formatting
+			\fi
+			}% End else statement
+}
+}
+\makeatother
+
+
+\newlength{\xmQuestionSepWidth}
+\setlength{\xmQuestionSepWidth}{1cm}
+
+\providecommand{\A}{}
+\renewcommand{\A}{\tabto{\xmQuestionSepWidth}}
+% \renewcommand{\A}{\hfill}
+ 
+% \ExplSyntaxOn
+% % Define the key-value pairs for optional settings
+% \keys_define:nn { myq }
+%   {
+%     category .tl_set:N = \l_myq_category_tl ,
+%     difficulty .tl_set:N = \l_myq_difficulty_tl ,
+%     notes .tl_set:N = \l_myq_notes_tl
+%   }
+% \ExplSyntaxOff
+
+
+% Define the command
+% \ifdefined\HCode
+%     \NewDocumentCommand{\xmQuestion}{O{} +m +m O{} O{}}{
+%         \HCode{<div class="xmQuestion"> <span class="xmQuestion xmCol1">}
+%             #2
+%         \HCode{</span> <span  class="xmQuestion xmCol2">}
+%             #3
+%         \HCode{</span></div>}
+%     }
+% \fi
+
+\ifdefined\HCode
+\newcounter{question}
+\fi
+
+% \providecommand{\thequestion}{}
+
+\AtBeginEnvironment{warning }{\setcounter{question}{0}}
+\AtBeginEnvironment{exercise}{\setcounter{question}{0}}
+\AtBeginEnvironment{example }{\setcounter{question}{0}\handoutfalse}    % print oplossingen in voorbeelden
+
+
+\ifdefined\HCode
+\NewEnviron{xmspan}[1]{\HCode{\Hnewline<span class="#1">\Hnewline}\BODY{\HCode{\Hnewline</span>\Hnewline}}}
+\else
+\NewEnviron{xmspan}[1]{\BODY}
+\fi
+
+\providecommand{\A}{}
+\providecommand{\Al}{}
+\renewcommand{\A}{\tab}
+\renewcommand{\Al}{$\quad$}
+
+
+\NewDocumentCommand{\xmQuestion}{O{} +m +m O{} O{}}{%
+    \refstepcounter{question}%
+    \ifdefined\HCode\relax\HCode{\Hnewline<span class="xmQuestion">\Hnewline}\fi%
+        \begin{xmspan}{xmQuestion0} \thequestion) \end{xmspan}%
+    \Al \begin{xmspan}{xmQuestion1}#2\end{xmspan}%
+    \A  \begin{xmspan}{xmQuestion2}#3\end{xmspan}%
+    \ifdefined\HCode\HCode{\Hnewline</span>\Hnewline}\fi%
+}
+
+\AddToHook{env/tabular/begin}{\def\A{&}\def\Al{&}}
+% \AddToHook{env/tabular/begin}{\def\xmUseTab{true}}
+
+\begin{document}
+	\author{Wiskundeplan}
+	\xmtitle{Niveau 1}{}
+
+    No Tabular:
+    
+    \xmQuestion{\((x-3)(2x+3) - (4x+1)(2x+3) =\)}{\(\answer[onlineshowanswerbutton]{(2x + 3)(-3x - 4) } \)}
+    
+    \xmQuestion{\(3(x-1) + (x-1)^2           =\)}{\(\answer[onlineshowanswerbutton]{(x - 1)(x + 2)    } \)}
+    
+    Tabular (lll):
+    
+    \begin{tabular}{ll@{ }l}
+    \xmQuestion{\((x-3)(2x+3) - (4x+1)(2x+3) =\)}{\(\answer[onlineshowanswerbutton]{(2x + 3)(-3x - 4) } \)} \\
+    \xmQuestion{\(3(x-1) + (x-1)^2           =\)}{\(\answer[onlineshowanswerbutton]{(x - 1)(x + 2)    } \)}
+    \end{tabular}
+    
+    Tabular (lrl):
+
+    \begin{tabular}{lr@{ }l}
+    \xmQuestion{\((x-3)(2x+3) - (4x+1)(2x+3) =\)}{\(\answer[onlineshowanswerbutton]{(2x + 3)(-3x - 4) } \)} \\
+    \xmQuestion{\(3(x-1) + (x-1)^2           =\)}{\(\answer[onlineshowanswerbutton]{(x - 1)(x + 2)    } \)}
+    \end{tabular}
+    
+    \begin{exercise} (lrl)
+
+    \begin{tabular}{lrl}
+    \xmQuestion{\((x-3)(2x+3) - (4x+1)(2x+3) =\)}{\(\answer[onlineshowanswerbutton]{(2x + 3)(-3x - 4) } \)} \\
+    \xmQuestion{\(3(x-1) + (x-1)^2           =\)}{\(\answer[onlineshowanswerbutton]{(x - 1)(x + 2)    } \)}
+    \end{tabular}
+    \end{exercise}
+
+    \begin{exercise} (lll)
+
+    \begin{tabular}{lll}
+    \xmQuestion{\((x-3)(2x+3) - (4x+1)(2x+3) =\)}{\(\answer[onlineshowanswerbutton]{(2x + 3)(-3x - 4) } \)} \\
+    \xmQuestion{\(3(x-1) + (x-1)^2           =\)}{\(\answer[onlineshowanswerbutton]{(x - 1)(x + 2)    } \)}
+    \end{tabular}
+    \end{exercise}
+    
+
+
+\begin{exercise} Is de gegeven uitdrukking te beschouwen als een product of als een som? (xmQuestion)
+    \newcommand{\choicesom }{{\wordChoice{\choice[correct]{som}\choice{product}}}}
+    \newcommand{\choiceprod}{{\wordChoice{\choice{som}\choice[correct]{product}}}}
+    \renewcommand{\A}{\tabto{\xmQuestionSepWidth}}
+    \settowidth{\xmQuestionSepWidth}{ 1) \Al \( a \cdot b \cdot c + 1   \) }
+
+    \begin{multicols}{2}%
+        \xmQuestion{\( a \cdot b \cdot c + 1   \)}{is een \choicesom}\par
+        % \begin{feedback} \( a \cdot b \cdot c + 1   \) is de som van de termen \( a \cdot b \cdot c \) en \(  1  \) \end{feedback}
+        \xmQuestion{\( (x + y)^2               \)}{is een \choiceprod}\par
+        %  \begin{feedback} \( (x + y)^2 \) is een macht, en dus het product van \(x+y\) met zichzelf.\end{feedback}
+        \xmQuestion{\( a \cdot (4b + c)        \)}{is een \choiceprod}\par
+        \xmQuestion{\( x \cdot y + x \cdot z   \)}{is een \choicesom }\par
+        \xmQuestion{\( a \cdot b \cdot (c + 1) \)}{is een \choiceprod}
+    \end{multicols}    
+\end{exercise}
+    
+    
+
+    \begin{exercise} Is de gegeven uitdrukking te beschouwen als een product of als een som?
+        \settowidth{\xmQuestionSepWidth}{ 1) \Al \( a \cdot b \cdot c + 1   \) }
+        \renewcommand{\A}{\tabto{\xmQuestionSepWidth}}
+
+        \newcommand{\choicesom }{{\wordChoice{\choice[correct]{som}\choice{product}}}}
+        \newcommand{\choiceprod}{{\wordChoice{\choice{som}\choice[correct]{product}}}}
+        \begin{multicols}{2}
+            
+        \begin{question}  \( a \cdot b \cdot c + 1   \) \A is een \choicesom 
+         \begin{feedback} \( a \cdot b \cdot c + 1   \) is de som van de termen \( a \cdot b \cdot c \) en \(  1  \) \end{feedback}
+        \end{question}
+        \begin{question}  \( (x + y)^2               \) \A is een \choiceprod 
+         \begin{feedback} \( (x + y)^2 \) is een macht, en dus het product van \(x+y\) met zichzelf.\end{feedback}
+        \end{question}
+        \begin{question}  \( a \cdot (4b + c)        \) \A is een \choiceprod \end{question}
+        \begin{question}  \( x \cdot y + x \cdot z   \) \A is een \choicesom  \end{question}
+        \begin{question}  \( a \cdot b \cdot (c + 1) \) \A is een \choiceprod \end{question}
+            
+        \end{multicols}    
+    \end{exercise}
+    
+    
+
+\begin{exercise} Onderzoek telkens of je van links naar rechts ontbindt, uitwerkt, of geen van beide.
+    \renewcommand{\A}{\tabto{4.9cm}}
+    \newcommand{\choiceuit}{{\A\wordChoice{\choice[correct]{uitwerken}\choice{ontbinden}\choice{geen van beide}}}}
+    \newcommand{\choiceont}{{\A\wordChoice{\choice{uitwerken}\choice[correct]{ontbinden}\choice{geen van beide}}}}
+    \newcommand{\choiceand}{{\A\wordChoice{\choice{uitwerken}\choice{ontbinden}\choice[correct]{geen van beide}}}}
+
+
+    \begin{xmmulticols}
+
+    \begin{question} \((3a+b)^2 = 9a^2 + 6ab + b^2                             \) \choiceuit \end{question}
+    \begin{question} \(9a^2 + 6ab + b^2 = (3a+b)^2                             \) \choiceont \end{question}
+    \begin{question} \(4(x^2 - y^2) = 4x^2 - 4y^2                              \) \choiceuit \end{question}
+    \begin{question} \(4(x^2 - y^2) = 4(x - y)(x + y)                          \) \choiceuit \end{question}
+    \begin{question} \(3x^3 - 3x + 1 = 3x(x^2 - 1) + 1 = 3x(x - 1)(x + 1) + 1  \) \choiceuit \end{question}
+    \begin{question} \(27a^3 - 27a^2 b + 9ab^2 - b^3   = (3a - b)^3            \) \choiceont \end{question}
+
+    \end{xmmulticols}    
+\end{exercise}
+
+
+
+
+
+
+
+\begin{exercise} Ontbind in factoren door af te zonderen.
+        
+    \begin{xmmulticols}
+    \begin{question} \(\sqrt{5} a - 3\sqrt{5} b   =\)\A\(\answer[onlineshowanswerbutton]{\sqrt{5} (a - 3b) } \) \end{question}
+    \begin{question} \(\sqrt{7} x^2 + 2\sqrt{7}   =\)\A\(\answer[onlineshowanswerbutton]{\sqrt{7} (x^2 + 2)} \) \end{question}
+    \begin{question} \(15a^2 b + 12ab - 9ab^3     =\)\A\(\answer[onlineshowanswerbutton]{3ab(5a + 4 - 3b^2)} \) \end{question}
+    \begin{question} \(x(x+4) - 2(x+4)            =\)\A\(\answer[onlineshowanswerbutton]{(x + 4)(x - 2)    } \) \end{question}
+    \begin{question} \(2a(3a+1) + 5b(3a+1)        =\)\A\(\answer[onlineshowanswerbutton]{(3a + 1)(2a + 5b) } \) \end{question}
+    \begin{question} \((x-1)(x+3) - 5(x+3)        =\)\A\(\answer[onlineshowanswerbutton]{(x + 3)(x - 6)    } \) \end{question}
+    \begin{question} \((y^2+3)(y-2) + y-2         =\)\A\(\answer[onlineshowanswerbutton]{(y - 2)(y^2 + 4)  } \) \end{question}
+    \begin{question} \((a+4)(3a+2) - 3a - 2       =\)\A\(\answer[onlineshowanswerbutton]{(3a + 2)(a + 3)   } \) \end{question}
+    \begin{question} \((x-3)(2x+3) - (4x+1)(2x+3) =\)\A\(\answer[onlineshowanswerbutton]{(2x + 3)(-3x - 4) } \) \end{question}
+    \begin{question} \(3(x-1) + (x-1)^2           =\)\A\(\answer[onlineshowanswerbutton]{(x - 1)(x + 2)    } \) \end{question}
+
+    \end{xmmulticols}    
+\end{exercise}
+
+
+
+\begin{exercise} Ontbind in factoren door af te zonderen.
+\handouttrue
+    \begin{xmmulticols}
+    \begin{question} \(\sqrt{5} a - 3\sqrt{5} b   =\)\A\(\answer[onlineshowanswerbutton]{\sqrt{5} (a - 3b) } \) \end{question}
+    \begin{question} \(\sqrt{7} x^2 + 2\sqrt{7}   =\)\A\(\answer[onlineshowanswerbutton]{\sqrt{7} (x^2 + 2)} \) \end{question}
+    \begin{question} \(15a^2 b + 12ab - 9ab^3     =\)\A\(\answer[onlineshowanswerbutton]{3ab(5a + 4 - 3b^2)} \) \end{question}
+    \begin{question} \(x(x+4) - 2(x+4)            =\)\A\(\answer[onlineshowanswerbutton]{(x + 4)(x - 2)    } \) \end{question}
+    \begin{question} \(2a(3a+1) + 5b(3a+1)        =\)\A\(\answer[onlineshowanswerbutton]{(3a + 1)(2a + 5b) } \) \end{question}
+    \begin{question} \((x-1)(x+3) - 5(x+3)        =\)\A\(\answer[onlineshowanswerbutton]{(x + 3)(x - 6)    } \) \end{question}
+    \begin{question} \((y^2+3)(y-2) + y-2         =\)\A\(\answer[onlineshowanswerbutton]{(y - 2)(y^2 + 4)  } \) \end{question}
+    \begin{question} \((a+4)(3a+2) - 3a - 2       =\)\A\(\answer[onlineshowanswerbutton]{(3a + 2)(a + 3)   } \) \end{question}
+    \begin{question} \((x-3)(2x+3) - (4x+1)(2x+3) =\)\A\(\answer[onlineshowanswerbutton]{(2x + 3)(-3x - 4) } \) \end{question}
+    \begin{question} \(3(x-1) + (x-1)^2           =\)\A\(\answer[onlineshowanswerbutton]{(x - 1)(x + 2)    } \) \end{question}    
+    \end{xmmulticols}    
+\end{exercise}
+
+
+\begin{exercise} Vul aan tot een merkwaardig product, indien mogelijk, en ontbind in dat geval.
+    \handouttrue
+
+    \begin{xmmulticols}
+    \begin{question}  \(9x^2 + {\answer{24}} x + 16    = \)\A\(\answer[onlineshowanswerbutton]{(3x+4)^2}\)       \end{question}
+    \begin{question}  \(a^2 - 6ab + {\answer{9b^2 }}   = \)\A\(\answer[onlineshowanswerbutton]{(a-3b)^2}\)       \end{question}
+    \begin{question}  \( {\answer{49}} y^4 - 42y^2 + 9 = \)\A\(\answer[onlineshowanswerbutton]{(7y^2+3)^2}\)     \end{question}
+    \begin{question}  \(121x^2 - {\answer{0}} x - 4    = \)\A\(\answer[onlineshowanswerbutton]{(11x-2)(11x+2)}\) \end{question}
+    \begin{question}  \(-81 - 4x^2 + {\answer{36x }}   = \)\A\(\answer[onlineshowanswerbutton]{-(2x-9)^2}\)      \end{question}
+    % Pas op: ook -36x zou een correct antwoord kunnen zijn ....
+    \end{xmmulticols}    
+\end{exercise}
+
+\begin{exercise} Vul aan tot een merkwaardig product, indien mogelijk, en ontbind in dat geval.
+    \renewcommand{\A}{\hfill}
+
+    \begin{xmmulticols}
+    \begin{question}  \(9x^2 + {\answer{24}} x + 16    = \)\A\(\answer[onlineshowanswerbutton]{(3x+4)^2}\)       \end{question}
+    \begin{question}  \(a^2 - 6ab + {\answer{9b^2 }}   = \)\A\(\answer[onlineshowanswerbutton]{(a-3b)^2}\)       \end{question}
+    \begin{question}  \( {\answer{49}} y^4 - 42y^2 + 9 = \)\A\(\answer[onlineshowanswerbutton]{(7y^2+3)^2}\)     \end{question}
+    \begin{question}  \(121x^2 - {\answer{0}} x - 4    = \)\A\(\answer[onlineshowanswerbutton]{(11x-2)(11x+2)}\) \end{question}
+    \begin{question}  \(-81 - 4x^2 + {\answer{36x }}   = \)\A\(\answer[onlineshowanswerbutton]{-(2x-9)^2}\)      \end{question}
+    % Pas op: ook -36x zou een correct antwoord kunnen zijn ....
+    \end{xmmulticols}    
+\end{exercise}
+
+\begin{exercise} Vul aan tot een merkwaardig product, indien mogelijk, en ontbind in dat geval.
+    \renewcommand{\A}{ }
+
+    \begin{xmmulticols}
+    \begin{question}  \(9x^2 + {\answer{24}} x + 16    = \)\A\(\answer[onlineshowanswerbutton]{(3x+4)^2}\)       \end{question}
+    \begin{question}  \(a^2 - 6ab + {\answer{9b^2 }}   = \)\A\(\answer[onlineshowanswerbutton]{(a-3b)^2}\)       \end{question}
+    \begin{question}  \( {\answer{49}} y^4 - 42y^2 + 9 = \)\A\(\answer[onlineshowanswerbutton]{(7y^2+3)^2}\)     \end{question}
+    \begin{question}  \(121x^2 - {\answer{0}} x - 4    = \)\A\(\answer[onlineshowanswerbutton]{(11x-2)(11x+2)}\) \end{question}
+    \begin{question}  \(-81 - 4x^2 + {\answer{36x }}   = \)\A\(\answer[onlineshowanswerbutton]{-(2x-9)^2}\)      \end{question}
+    % Pas op: ook -36x zou een correct antwoord kunnen zijn ....
+    \end{xmmulticols}    
+\end{exercise}
+
+\begin{exercise} Vul aan tot een merkwaardig product, indien mogelijk, en ontbind in dat geval.
+    \setlength{\xmQuestionSepWidth}{21ex}
+    \renewcommand{\A}{\tabto{\xmQuestionSepWidth}}    
+    \begin{xmmulticols}
+    \begin{question}  \(9x^2 + {\answer{24}} x + 16    = \)\A\(\answer[onlineshowanswerbutton]{(3x+4)^2}\)       \end{question}
+    \begin{question}  \(a^2 - 6ab + {\answer{9b^2 }}   = \)\A\(\answer[onlineshowanswerbutton]{(a-3b)^2}\)       \end{question}
+    \begin{question}  \( {\answer{49}} y^4 - 42y^2 + 9 = \)\A\(\answer[onlineshowanswerbutton]{(7y^2+3)^2}\)     \end{question}
+    \begin{question}  \(121x^2 - {\answer{0}} x - 4    = \)\A\(\answer[onlineshowanswerbutton]{(11x-2)(11x+2)}\) \end{question}
+    \begin{question}  \(-81 - 4x^2 + {\answer{36x }}   = \)\A\(\answer[onlineshowanswerbutton]{-(2x-9)^2}\)      \end{question}
+    % Pas op: ook -36x zou een correct antwoord kunnen zijn ....
+    \end{xmmulticols}    
+\end{exercise}
+
+\begin{exercise} Vul aan tot een merkwaardig product, indien mogelijk, en ontbind in dat geval.
+    \begin{xmmulticols}
+    \begin{question}  \(9x^2 + {\answer{24}} x + 16    = \)\A\(\answer[onlineshowanswerbutton]{(3x+4)^2}\)       \end{question}
+    \begin{question}  \(a^2 - 6ab + {\answer{9b^2 }}   = \)\A\(\answer[onlineshowanswerbutton]{(a-3b)^2}\)       \end{question}
+    \begin{question}  \( {\answer{49}} y^4 - 42y^2 + 9 = \)\A\(\answer[onlineshowanswerbutton]{(7y^2+3)^2}\)     \end{question}
+    \begin{question}  \(121x^2 - {\answer{0}} x - 4    = \)\A\(\answer[onlineshowanswerbutton]{(11x-2)(11x+2)}\) \end{question}
+    \begin{question}  \(-81 - 4x^2 + {\answer{36x }}   = \)\A\(\answer[onlineshowanswerbutton]{-(2x-9)^2}\)      \end{question}
+    % Pas op: ook -36x zou een correct antwoord kunnen zijn ....
+    \end{xmmulticols}    
+\end{exercise}
+
+\begin{exercise} Vul aan tot een merkwaardig product, indien mogelijk, en ontbind in dat geval.
+    % 20250219: BUG: brackets needed around \answer; ToBeSolved!!
+    % \begin{prompt} Gebruik \verb|/| als aanvullen tot een merkwaardig product niet mogelijk is. \end{prompt}
+    \renewcommand{\xmFixFormatLength}{17ex}
+    \begin{xmmulticols}
+    \begin{question}  \xmFixFormat{\(9x^2 + {\answer{24}} x + 16    \)}  \(= \answer[onlineshowanswerbutton]{(3x+4)^2}\)       \end{question}
+    \begin{question}  \xmFixFormat{\(a^2 - 6ab + {\answer{9b^2 }}   \)}  \(= \answer[onlineshowanswerbutton]{(a-3b)^2}\)       \end{question}
+    \begin{question}  \xmFixFormat{\( {\answer{49}} y^4 - 42y^2 + 9 \)}  \(= \answer[onlineshowanswerbutton]{(7y^2+3)^2}\)     \end{question}
+    \begin{question}  \xmFixFormat{\(121x^2 - {\answer{0}} x - 4    \)}  \(= \answer[onlineshowanswerbutton]{(11x-2)(11x+2)}\) \end{question}
+    \begin{question}  \xmFixFormat{\(-81 - 4x^2 + {\answer{36x }}   \)}  \(= \answer[onlineshowanswerbutton]{-(2x-9)^2}\)      \end{question}
+    % Pas op: ook -36x zou een correct antwoord kunnen zijn ....
+    \end{xmmulticols}    
+\end{exercise}
+
+
+% \begin{exercise} Ontbind de tweetermen in factoren
+%     \begin{xmmulticols}
+
+%     \begin{question} \( x^2 - 121      =\answer[onlineshowanswerbutton]{(x - 11)(x + 11)                            } \) \end{question}
+%     \begin{question} \( 9x^2 + 16      =\answer[onlineshowanswerbutton]{\text{geen oplossing}                       } \) \end{question}
+%     \begin{question} \( 16x^2 - 25     =\answer[onlineshowanswerbutton]{(4x - 5)(4x + 5)                            } \) \end{question}
+%     \begin{question} \( 4 - 9y^2       =\answer[onlineshowanswerbutton]{(2 - 3y)(2 + 3y)                            } \) \end{question}
+%     \begin{question} \( 36a^2 - 5      =\answer[onlineshowanswerbutton]{(6a - \sqrt{5})(6a + \sqrt{5})              } \) \end{question}
+%     \begin{question} \( 4a^2 - 81b^2   =\answer[onlineshowanswerbutton]{(2a - 9b)(2a + 9b)                          } \) \end{question}
+%     \begin{question} \( 144x^2 - 49y^4 =\answer[onlineshowanswerbutton]{(12x - 7y^2)(12x + 7y^2)                    } \) \end{question}
+%     \begin{question} \( 5x^2 - 3       =\answer[onlineshowanswerbutton]{(\sqrt{5}x - \sqrt{3})(\sqrt{5}x + \sqrt{3})} \) \end{question}
+%     \begin{question} \( -4x^2 + 25y^2  =\answer[onlineshowanswerbutton]{(5y - 2x)(5y + 2x)                          } \) \end{question}
+%     \begin{question} \( -1 + 7x^2      =\answer[onlineshowanswerbutton]{(\sqrt{7}x - 1)(\sqrt{7}x + 1)              } \) \end{question}
+
+    
+%     \end{xmmulticols}    
+% \end{exercise}
+
+
+
+
+% \begin{exercise} Ontbind de drietermen in factoren
+%     \begin{xmmulticols}
+%     \begin{question} \( 25x^2 - 20x + 4         =\answer[onlineshowanswerbutton]{(5x - 2)^2     } \) \end{question}
+%     \begin{question} \( x^4 + 6x^2 + 9          =\answer[onlineshowanswerbutton]{(x^2 + 3)^2    } \) \end{question}
+%     \begin{question} \( 25a^2 - 30ab + 9b^2     =\answer[onlineshowanswerbutton]{(5a - 3b)^2    } \) \end{question}
+%     \begin{question} \( 81 + 126t + 49t^2       =\answer[onlineshowanswerbutton]{(9 + 7t)^2     } \) \end{question}
+%     \begin{question} \( 121x^2 + 66xy^2 + 9y^4  =\answer[onlineshowanswerbutton]{(11x + 3y^2)^2 } \) \end{question}
+
+%     \end{xmmulticols}    
+% \end{exercise}
+
+
+
+
+
+
+% \begin{exercise} Ontbind de viertermen in factoren door termen samen te nemen.
+%     \begin{xmmulticols}
+%     \begin{question} \( 4x + 4y + ax + ay       =\answer[onlineshowanswerbutton]{(x + y)(4 + a)     } \) \end{question}
+%     \begin{question} \( 3x + 5y + 6xy + 10y^2   =\answer[onlineshowanswerbutton]{(3x + 5y)(1 + 2y)  } \) \end{question}
+%     \begin{question} \( 2ax + 3a - 2bx - 3b     =\answer[onlineshowanswerbutton]{(2x + 3)(a - b)    } \) \end{question}
+%     \begin{question} \( 7ab + 14a + b + 2       =\answer[onlineshowanswerbutton]{(b + 2)(7a + 1)    } \) \end{question}
+%     \begin{question} \( 1 - a - b + ab          =\answer[onlineshowanswerbutton]{(1 - a)(1 - b)     } \) \end{question}
+%     \begin{question} \( 5x^3 - x^2 + 35x - 7    =\answer[onlineshowanswerbutton]{(5x - 1)(x^2 + 7)  } \) \end{question}
+%     \begin{question} \( x^3 + x^2 + x + 1       =\answer[onlineshowanswerbutton]{(x + 1)(x^2 + 1)   } \) \end{question}
+%     \begin{question} \( 2x^6 + 3x^4 + 6x^2 + 9  =\answer[onlineshowanswerbutton]{(2x^2 + 3)(x^4 + 3)} \) \end{question}
+%     \begin{question} \( a^2 - 6b - 2ab + 3a     =\answer[onlineshowanswerbutton]{(a - 2b)(a + 3)    } \) \end{question}
+%     \begin{question} \( 12ab^2 - 1 - 4b^2 + 3a  =\answer[onlineshowanswerbutton]{(3a - 1)(4b^2 + 1) } \) \end{question}
+
+
+%     \end{xmmulticols}    
+% \end{exercise}
+
+
+
+
+\end{document}
