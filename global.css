@@ -1038,3 +1038,37 @@ blockquote {
 .wrapfig-l {
     float: left;
 }
+
+.columns-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+.columns-2 {
+    grid-template-columns: 1fr
+}
+}
+
+
+
+
+div.xmQuestion {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+span.xmQuestion0,
+span.xmQuestion1,
+span.xmQuestion2 {
+	display: inline-block;
+	height: 30px;
+	vertical-align: -1.247em;
+}
+
+
+.xmCol1 > span {
+    display: block;
+    padding: 0.7em;
+}
