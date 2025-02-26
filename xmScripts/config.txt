@@ -1,15 +1,16 @@
 #
 # version of Ximera xake container to use (with xmlatex)
 #
-# : "${XAKE_BASE:=xake2024}"
+: "${XAKE_BASE:=ximeralatex}"
 # : "${XAKE_VERSION:=v2.4.2}"
 ## Alternatives:
-# : "${XAKE_VERSION:=v2.4.2-full}"    # with texlive_full
+: "${XAKE_VERSION:=v2.6.3-full}"    # with texlive_full
 # : "${XAKE_BASE:=xake2023}"     # with older tex/xake
 # : "${XAKE_VERSION:=v2.1.3_a}"  # obsolete
 
 #
 #
+
 # For publishing locally, a default key in .xmKeyFile is sufficient.
 # For publishing to a publicly available website, you'll need proper keys.
 #      via Codespaces: connect keys via GitHub Codespaces Secrets
@@ -18,7 +19,8 @@
 #
 
 : "${XIMERA_NAME:=complexe-getallen}"
-: "${XIMERA_URL:=http://wiskunde.opmaat.org/}"
+##: "${XIMERA_URL:=http://wiskunde.opmaat.org/}"
+: "${XIMERA_URL:=http://localhost:2002/}"
 ## : "${XIMERA_URL:=https://ximera.osu.edu}"
 ## : "${XIMERA_URL:=https://set-p-dsb-zomercursus-latest.cloud-ext.icts.kuleuven.be/}"
 ## : "${XIMERA_URL:=https://set.kuleuven.be/voorkennis/}"

@@ -2,14 +2,16 @@
 \usepackage[paper=a4paper,margin=3.4cm,marginparwidth=2cm]{geometry}
 
 % packages algemeen:
-\usepackage[english,dutch]{babel}
+\pdfOnly{
+% \usepackage[english,dutch]{babel}
+}
 \usepackage{amsfonts}
 \usepackage{amsmath} %  o.a. \eqref en \text, omgeving equation*
 \usepackage{amssymb} % o.a. \nmid
 \usepackage{amsthm} % o.a. omgeving proof
 \usepackage{graphicx} % o.a. figuren
 \usepackage{xcolor} % \color
-\usepackage[disable]{todonotes} % \todo 
+% \usepackage[disable]{todonotes} % \todo 
 \usepackage{comment} % omgeving comment
 \usepackage{xcolor} % kleuren 
 \usepackage[skip=7pt plus1pt, indent=0pt]{parskip} % skip = verticale ruimte tussen twee alinea's, indent = insprong bij nieuwe alinea
@@ -46,18 +48,19 @@
 \makeatother
 
 % voor veranderen van de naam Bibliografie naar Referentielijst:
+\pdfOnly{
 \addto\captionsdutch{\renewcommand{\bibname}{Referentielijst}}
 
 % voor trefwoordenlijst:
 \usepackage{imakeidx}
 \makeindex[title=Trefwoordenlijst,program=makeindex,options=-s index.tex,columns=2,intoc=true]
-
+}
 % voor nummeren van vergelijkingen:
-\numberwithin{equation}{chapter} % als je dit desactiveert dan worden vergelijkingen in bijvoorbeeld hoofdstuk 3 genummerd als (1), (2) etc. in plaats van (3.1), (3.2) etc.
+%WIM%\numberwithin{equation}{chapter} % als je dit desactiveert dan worden vergelijkingen in bijvoorbeeld hoofdstuk 3 genummerd als (1), (2) etc. in plaats van (3.1), (3.2) etc.
 
 % voor hyperlinks en bladwijzers in PDF-bestand:
-\usepackage[bookmarksopen,bookmarksopenlevel=0,hypertexnames=false,pdfa,bookmarksnumbered]{hyperref} 
-\usepackage{bookmark} 
+%WIM%\usepackage[bookmarksopen,bookmarksopenlevel=0,hypertexnames=false,pdfa,bookmarksnumbered]{hyperref} 
+%WIM%\usepackage{bookmark} 
 
 % voor hyperlinks: 
 \hypersetup{pdfborder={0 0 0}, pdfstartpage=1,linkbordercolor={1 0 0}}%pdfborder={0 0 0} is geen rand rond hyperlinks, pdfborder={1 1 1} wel
@@ -66,10 +69,10 @@
 \newcommand{\D}{\displaystyle}
 
 % (veel)gebruikte verzamelingen:
-\def\NN{\mathbb{N}} % verzameling van de natuurlijke getallen
-\def\QQ{\mathbb{Q}} % verzameling van de rationale getallen
-\def\RR{\mathbb{R}} % verzameling van de re\"ele getallen
-\def\ZZ{\mathbb{Z}} % verzameling van de gehele getallen
+\newcommand\NN{\mathbb{N}} % verzameling van de natuurlijke getallen
+\newcommand\QQ{\mathbb{Q}} % verzameling van de rationale getallen
+\newcommand\RR{\mathbb{R}} % verzameling van de re\"ele getallen
+\newcommand\ZZ{\mathbb{Z}} % verzameling van de gehele getallen
 
 % (veel)gebruikte operatoren:
 \def\co{\operatorname{co}} % coördinaat van een punt
@@ -80,8 +83,8 @@
 \definecolor{graf}{RGB}{0,100,0} 
 
 % voor lijsten: 
-\usepackage{enumerate}
-\usepackage[shortlabels]{enumitem} 
+% \usepackage{enumerate}
+% \usepackage[shortlabels]{enumitem} 
 \setlist{topsep=0em, itemsep=-0.15em}
 
 % voor small bullet:
@@ -125,19 +128,19 @@
     innerbottommargin=0pt%,
 %	needspace=30pt %minimumhoogte vooraleer lijn wordt gesplitst
     }
-\newenvironment{Uitbreiding}{
-    \marginpar{
-        \center
-		\vspace{0.1cm}
-		\vspace{7pt}
-		\rotatebox{90}{\color{rood}\Large \bf Uitbreiding}
-	}
-    \begin{mdframed}[style=uitbreiding]
-    }{\vspace{-0.05cm}
-    \end{mdframed}
-}
+% \newenvironment{Uitbreiding}{
+%     \marginpar{
+%         \center
+% 		\vspace{0.1cm}
+% 		\vspace{7pt}
+% 		\rotatebox{90}{\color{rood}\Large \bf Uitbreiding}
+% 	}
+%     \begin{mdframed}[style=uitbreiding]
+%     }{\vspace{-0.05cm}
+%     \end{mdframed}
+% }
 
-
+\newenvironment{Uitbreiding}{\begin{xmuitweiding}}{\end{xmuitweiding}}
 % omgevingen voor lemma, definitie, voorbeeld etc.:
 \newtheoremstyle{mystyle}
     {0em} % Space above
@@ -149,7 +152,7 @@
     {.5em} % Space after theorem head
     {} % Theorem head spec (can be left empty, meaning `normal')
 \theoremstyle{mystyle}
-\newtheorem{lemma}{Lemma}[chapter] % als je [chapter] desactiveert dan Voorbeeld 3 in plaats van Voorbeeld 5.3, als je [chapter] vervangt door [section] dan Voorbeeld 5.2.3 in plaats van Voorbeeld 5.3 
+%WIM%\newtheorem{lemma}{Lemma}[chapter] % als je [chapter] desactiveert dan Voorbeeld 3 in plaats van Voorbeeld 5.3, als je [chapter] vervangt door [section] dan Voorbeeld 5.2.3 in plaats van Voorbeeld 5.3 
 %\theoremstyle{definition} % als je dit activeert dan is wat in de omgeving staat niet cursief gedrukt
 \newtheorem{oefening}[lemma]{Oefening}
 \newtheorem{definitie}[lemma]{Definitie} 
@@ -235,7 +238,7 @@ needspace=30pt % minimumhoogte voor splitsen kader
 % als de omgeving Uitbreiding start met een kaderomgeving (definitie, stelling, eigenschap, lemma of gevolg) dan moet wat extra verticale ruimte voorzien worden, met het commando \uitbreidingstartmetkader:
 \def\uitbreidingstartmetkader{\mbox{}\vspace{-0.205cm}}
 
-% voor schema van de staartdeling:
+%WIM % voor schema van de staartdeling:
 \usepackage{stackengine}
 \setstackgap{S}{5pt}
 \stackMath\def\stackalignment{r}
@@ -364,23 +367,23 @@ needspace=30pt % minimumhoogte voor splitsen kader
 \ifthenelse{\rectoverso < 1}{\def\totpag{57}}{\def\totpag{66}}
 
 % documenteigenschappen:
-\usepackage{hyperxmp}
-\hypersetup{
-pdftitle={Open Source Wiskunde Aan zet: Veeltermen}, 
-pdfnumpages={\totpag},
-pdfauthor={Koen De Naeghel},
-pdflang={nl},
-pdfkeywords={wiskunde, open source, wiskunde aan zet, veeltermen, secundair onderwijs, tweede graad, doorstroomfinaliteit},
-pdfsubject={Veeltermen},
-pdfcopyright={\unichar{"24B8} 2024 Koen De Naeghel},
-pdfdate={17 december 2024},
-pdfapart=1,
-pdfstartview=}
+% \usepackage{hyperxmp}
+% \hypersetup{
+% pdftitle={Open Source Wiskunde Aan zet: Veeltermen}, 
+% pdfnumpages={\totpag},
+% pdfauthor={Koen De Naeghel},
+% pdflang={nl},
+% pdfkeywords={wiskunde, open source, wiskunde aan zet, veeltermen, secundair onderwijs, tweede graad, doorstroomfinaliteit},
+% pdfsubject={Veeltermen},
+% pdfcopyright={\unichar{"24B8} 2024 Koen De Naeghel},
+% pdfdate={17 december 2024},
+% pdfapart=1,
+% pdfstartview=}
 
 % voor het benoemen van titel, auteur en datum:
-\title{Veeltermen}
-\author{Auteur: Koen De Naeghel}
-\date{\today}
+% \title{Veeltermen}
+% \author{Auteur: Koen De Naeghel}
+% \date{\today}
 
 \newcommand\BackgroundPic{
     \put(-260,-125){
@@ -390,3 +393,6 @@ pdfstartview=}
     \includegraphics[height=\paperwidth, keepaspectratio]{WaZlogo}%
     \vfill
 }}}
+
+
+\newcommand{\chapter}{\section}
