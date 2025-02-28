@@ -3,7 +3,7 @@
 #
 # : "${XAKE_BASE:=ximeralatex}"
 # : "${XAKE_VERSION:=v2.5.10}"
-# : "${XAKE_VERSION:=v2.5.10-full}"    # with texlive_full
+: "${XAKE_VERSION:=v2.6.5-full}"    # with texlive_full
 #
 # For publishing you'll need a GPG Key
 # To generate a key-pair, fill in your name and email, and run 'xmlatex genKey'
@@ -21,7 +21,7 @@ YOUR_EMAIL=""
 # !! DO NOT SAVE THE KEY IN THIS config.txt FILE   !!
 #
 
-## : "${XIMERA_NAME:=myreponame}"
+: "${XIMERA_NAME:=kdn}"
 ## : "${XIMERA_URL:=http://localhost:2000/}"
 ## : "${XIMERA_URL:=https://ximera.osu.edu/}"
 ## : "${XIMERA_URL:=https://set-p-dsb-zomercursus-latest.cloud-ext.icts.kuleuven.be/}"

@@ -1,0 +1,237 @@
+\documentclass{article}
+
+\begin{document}
+
+
+
+\section{basisonderwijs} 
+
+\begin{enumerate}
+
+    
+    \item 1.1    De leerlingen kunnen tellen en terugtellen met eenheden, tweetallen, vijftallen en machten van tien.
+    
+    \item 1.3    De leerlingen kennen de betekenis van: optellen, aftrekken, vermenigvuldigen, delen, veelvoud, deler, gemeenschappelijke deler, grootste gemeenschappelijke deler, kleinste gemeenschappelijk veelvoud, procent, som, verschil, product, quotiënt en rest. Zij kunnen correcte voorbeelden geven en kunnen verwoorden in welke situatie ze dit handig kunnen gebruiken.
+    
+    \item 1.5    De leerlingen kunnen natuurlijke getallen van maximaal 10 cijfers en kommagetallen (met 3 decimalen), eenvoudige breuken, eenvoudige procenten lezen, noteren, ordenen en op een getallenlijn plaatsen.
+    
+    
+    \item 1.10   De leerlingen zijn in staat tot een onmiddellijk geven van correcte resultaten bij optellen en aftrekken tot 10, bij tafels van vermenigvuldiging tot en met de tafels van 10 en de bijhorende deeltafels.
+    
+    \item 1.12   De leerlingen kunnen orde en regelmaat ontdekken in getallenpatronen onder meer om te komen tot de kenmerken van deelbaarheid door 2, 3, 5, 9, 10 en die te kunnen toepassen.
+    
+    \item 1.13   De leerlingen voeren opgaven uit het hoofd uit waarbij ze een doelmatige oplossingsweg kiezen op basis van inzicht in de eigenschappen van bewerkingen en in de structuur van getallen:
+    \begin{itemize}
+        \item optellen en aftrekken tot honderd
+        \item optellen en aftrekken met grote getallen met eindnullen
+        \item vermenigvuldigen met en delen naar analogie met de tafels
+    \end{itemize}
+        
+    \item 1.15   De leerlingen zijn in staat getallen af te ronden. De graad van nauwkeurigheid wordt bepaald door het doel van het afronden en door de context.
+    
+    \item 1.16   De leerlingen kunnen de uitkomst van een berekening bij benadering bepalen.
+    
+    \item 1.18   De leerlingen kunnen in eenvoudige getallen de gelijkwaardigheid tussen kommagetallen, breuken en procenten vaststellen en verduidelijken door omzettingen.
+    
+    \item 1.19   De leerlingen kunnen de delers van een natuurlijk getal \(< 100\) vinden; zij kunnen van twee dergelijke getallen de (grootste) gemeenschappelijke deler(s) vinden.
+    
+    \item 1.20   De leerlingen kunnen de veelvouden van een natuurlijk getal \( < 20 \) vinden, zij kunnen van twee dergelijke getallen het (kleinste) gemeenschappelijk veelvoud vinden.
+    
+    \item 1.21   De leerlingen zijn in staat in concrete situaties (onder meer tussen grootheden) eenvoudige verhoudingen vast te stellen, te vergelijken, hun gelijkwaardigheid te beoordelen en het ontbrekend verhoudingsgetal te berekenen.
+    
+    \item 1.22   De leerlingen kunnen eenvoudige breuken gelijknamig maken in functie van het optellen en aftrekken van breuken of in functie van het ordenen en het vergelijken van breuken.
+    
+    \item 1.23   De leerlingen kunnen in een zinvolle context eenvoudige breuken en kommagetallen optellen en aftrekken. In een zinvolle context kunnen zij eveneens een eenvoudige breuk vermenigvuldigen met een natuurlijk getal.
+    
+    \item 1.24   De leerlingen kennen de cijferalgoritmen. Zij kunnen cijferend vier hoofdbewerkingen uitvoeren met natuurlijke en met kommagetallen:
+    \begin{itemize}
+        \item optellen met max. 5 getallen: de som < 10 000 000;
+        \item aftrekken: aftrektal < 10 000 000 en max. 8 cijfers;
+        \item vermenigvuldigen: vermenigvuldiger bestaat uit max. 3 cijfers; het product = max. 8 cijfers (2 cijfers na de komma);
+        \item delen: deler bestaat uit max. 3 cijfers; quotiënt max. 2 cijfers na de komma.
+    \end{itemize}
+    
+    \item 1.25   De leerlingen kunnen eenvoudige procentberekeningen maken met betrekking tot praktische situaties.
+    
+    
+    \item 2.10   De leerlingen kunnen concreet aangeven hoe de inhoud van een balk wordt bepaald.
+    
+    \item 3.2    De leerlingen kunnen op basis van volgende eigenschappen de volgende meetkundige objecten herkennen en benoemen :
+    \begin{itemize}
+        \item in het vlak : punten, lijnen, hoeken en vlakke figuren (driehoeken, vierhoeken, cirkels);
+        \item in de ruimte : veelvlakken (kubus, balk, piramide) en bol en cilinder.
+    \end{itemize}
+        
+    
+    \item 3.4    De leerlingen kunnen de verschillende soorten hoeken classificeren en de verschillende soorten vierhoeken classificeren op grond van zijden en hoeken. Zij kunnen deze ook concreet vormgeven.
+    
+\end{enumerate}
+
+
+\begin{section}[Eerste graad] 
+    
+    \begin{enumerate}
+        
+        
+        \item 06.01 De leerlingen rekenen met natuurlijke, gehele en rationale getallen.
+        
+        \item 06.02 De leerlingen zetten rationale getallen om van de ene naar de andere voorstellingswijze: decimale vorm, breuk en procent.
+        
+        \item 06.03 De leerlingen ordenen rationale getallen.
+        
+        \item 06.08 De leerlingen berekenen omtrek en oppervlakte van vlakke figuren: driehoek, trapezium, parallellogram, ruit, rechthoek, vierkant en cirkel.
+        
+        \item 06.10 De leerlingen berekenen oppervlakte en volume van ruimtefiguren: kubus, balk en cilinder.
+        
+        \item 06.12 De leerlingen rekenen met algebraïsche uitdrukkingen.
+        
+        \item 06.13 De leerlingen bepalen de getalwaarde van een algebraïsche uitdrukking.
+        
+        \item 06.17 De leerlingen lossen vergelijkingen van de eerste graad op in één onbekende in de verzameling van de rationale getallen.
+        
+        \item 06.20 De leerlingen voeren bewerkingen met twee verzamelingen uit: doorsnede, unie en verschil.
+        
+        \item BG06.04 De leerling berekent de omtrek van een vierhoek en de oppervlakte van een rechthoek in betekenisvolle contexten.
+        
+    \end{enumerate}
+    
+    
+\section{eerste graad}
+
+\begin{enumerate}
+
+    
+    \item 06.02 De leerlingen ordenen reële getallen.
+    
+    \item 06.03 De leerlingen rekenen met reële getallen.
+    
+    \item 06.06 De leerlingen passen de stelling van Pythagoras toe om meetkundige problemen op te lossen in het vlak en in de ruimte.
+    
+    \item 06.07 De leerlingen gebruiken de goniometrische getallen sinus, cosinus en tangens in rechthoekige driehoeken om meetkundige problemen op te lossen.
+    
+    \item 06.08 De leerlingen passen gelijkvormigheidskenmerken van driehoeken toe om meetkundige problemen op te lossen.
+    
+    \item 06.09 De leerlingen tekenen in het vlak de som van vectoren en de vermenigvuldiging van een vector met een getal.
+    
+    \item 06.10 De leerlingen lossen eerstegraadsvergelijkingen en -ongelijkheden in één onbekende algebraïsch en grafisch op.
+    
+    \item 06.11 De leerlingen drukken bij een formule één variabele uit in functie van een andere.
+    
+    \item 06.13 De leerlingen bepalen het voorschrift, de grafiek, de tabel en de verwoording van een eerstegraadsfunctie als één van de andere representaties gegeven is.
+    
+    \item 06.15 De leerlingen analyseren kenmerken van tweedegraadsfuncties van de vorm \(f(x)=ax²\): domein, bereik, nulwaarden, tekenverloop, stijgen/dalen, extremum, toenemende/afnemende stijging/daling en symmetrie ten opzichte van een verticale rechte.
+    
+    \item 06.16 De leerlingen lossen stelsels van twee eerstegraadsvergelijkingen in twee onbekenden algebraïsch en grafisch op.
+    
+\end{enumerate}
+
+\subsection{differentiële doelen}
+\begin{enumerate}
+
+    \item De leerlingen berekenen het inproduct van vectoren in het vlak.  
+    
+    \item De leerlingen stellen vectoriële, parametrische en cartesische vergelijkingen van rechten in het vlak op.
+    
+    \item De leerlingen bepalen de onderlinge ligging van twee rechten in het vlak met behulp van vergelijkingen.
+    
+    \item De leerlingen berekenen afstanden en hoeken in het vlak.
+    
+    \item De leerlingen analyseren deelbaarheid bij veeltermen met reële coëfficiënten in één variabele. Euclidische deling, reststelling
+    
+\end{enumerate}
+
+\subsection{cesuurdoelen}
+
+\begin{enumerate}
+
+    
+    \item 06.04.01 De leerlingen bepalen het voorschrift of de grafiek van een tweedegraadsfunctie als de andere representatie gegeven is.
+    
+    \item 06.04.03 De leerlingen lossen tweedegraadsvergelijkingen in één onbekende in de verzameling van de reële getallen algebraïsch op.
+    
+    \item 06.04.04 De leerlingen lossen tweedegraadsongelijkheden in één onbekende algebraïsch op.
+    
+    \item 06.04.06 De leerlingen gebruiken goniometrische formules om uitdrukkingen te vereenvoudigen.
+    
+    \item 06.04.07 De leerlingen rekenen met vectoren in het vlak.
+    
+    \item 06.04.09 De leerlingen leggen het verband tussen de grafiek van de functie \( f(x)=c/x \) en haar kenmerken.
+    
+\end{enumerate}
+
+\section{derde graad}
+
+
+\begin{enumerate}
+
+    \item 06.01 De leerlingen rekenen met reële getallen.
+    
+    \item 06.04 De leerlingen leggen grafisch het verband tussen een functie en haar afgeleide functie.
+    
+
+    \item 06.07 De leerlingen gebruiken transformaties van de vorm \(f(x) + k\) en \(k·f(x)\) om de grafiek van een algemene exponentiële functie \(f(x)=b·a^x+c\) op te bouwen vanuit de grafiek van \(f(x)=a^x\).
+    
+    \item 06.09 De leerlingen gebruiken transformaties van de vorm \( f(x)+k, f(x-k), f(x/k) en k·f(x)\) om de grafiek van een algemene sinusfunctie \(f(x)= a·sin[b(x-c)]+d\) op te bouwen vanuit de grafiek van \(f(x)=sin x\).
+    
+    \item 06.17 De leerlingen berekenen kansen bij een normaal verdeelde kansvariabele.
+    
+    
+    
+    \item 06.08.01 De leerlingen voeren bewerkingen uit met matrices: optelling, scalaire vermenigvuldiging, matrixvermenigvuldiging, machtsverheffing en transpositie.
+    
+    \item 06.08.03 De leerlingen berekenen de rang van matrices, de inverse matrix van inverteerbare matrices en de determinant van vierkante matrices.
+    
+    \item 06.08.04 De leerlingen lossen stelsels van eerstegraadsvergelijkingen op met behulp van de methode van Gauss-Jordan.
+    
+    \item 06.08.10 De leerlingen lossen tweedegraadsvergelijkingen in één onbekende in de verzameling van de reële getallen algebraïsch op.
+    
+    \item {06.08.11 De leerlingen lossen tweedegraadsongelijkheden in één onbekende algebraïsch op.}
+    
+    \item 06.08.12 De leerlingen analyseren deelbaarheid bij veeltermen met reële coëfficiënten in één variabele.
+    
+    \item 06.08.13 De leerlingen lossen eenvoudige veeltermvergelijkingen, rationale vergelijkingen, irrationale vergelijkingen, exponentiële vergelijkingen, logaritmische vergelijkingen en goniometrische vergelijkingen algebraïsch op.
+    
+    \item 06.08.15 De leerlingen bepalen limieten van rijen.
+    
+    \item {06.08.17 De leerlingen berekenen de afgeleide functie van functies die zijn opgebouwd uit veeltermfuncties, rationale functies, irrationale functies, exponentiële functies, logaritmische functies en goniometrische functies.}
+    
+    \item 06.08.21 De leerlingen berekenen bepaalde en onbepaalde integralen van functies.
+    
+    \item 06.08.23 De leerlingen gebruiken goniometrische formules om uitdrukkingen te vereenvoudigen.
+    
+    \item { 06.08.24 De leerlingen stellen complexe getallen voor in het vlak.}
+    
+    \item { 06.08.25 De leerlingen voeren bewerkingen uit met complexe getallen in cartesische vorm: optelling, aftrekking, vermenigvuldiging en deling.}
+    
+    \item { 06.08.26 De leerlingen lossen tweedegraadsvergelijkingen met reële coëfficiënten in één onbekende op in de verzameling van de complexe getallen.}
+    
+    \item { 06.08.27 De leerlingen zetten complexe getallen in cartesische vorm om naar goniometrische vorm en omgekeerd.}
+    
+    \item 06.08.28 De leerlingen voeren bewerkingen uit met complexe getallen in goniometrische vorm: vermenigvuldiging, deling, machtsverheffing en n-de machtsworteltrekking.
+    
+    \item 06.08.29 De leerlingen rekenen met vectoren in het vlak en in de ruimte.
+    
+    \item 06.08.30 De leerlingen stellen vectoriële, parametrische en cartesische vergelijkingen van rechten in het vlak en van rechten en vlakken in de ruimte op.
+    
+    \item 06.08.31 De leerlingen bepalen de onderlinge ligging van twee rechten in het vlak met behulp van vergelijkingen.
+    
+    \item 06.08.32 De leerlingen bepalen de onderlinge ligging van twee rechten, van een rechte en een vlak en van twee vlakken in de ruimte met behulp van vergelijkingen.
+    
+    \item 06.08.33 De leerlingen berekenen afstanden en hoeken in het vlak en in de ruimte.
+    
+\end{enumerate}
+    
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,145 @@
+\documentclass{ximera} 
+\handouttrue
+
+\input{../preamble.tex}
+\input{./preamble_kdn.tex}
+
+\addPrintStyle{.}
+
+\begin{document}
+	\author{Koen De Naeghel}
+	\xmtitle{Oefeningen reeks 3}{}
+	\label{xim:veeltermen_basisbegrippen_oefeningen_reeks3}
+
+\section*{Oefeningen reeks 3}
+
+\begin{exercise}[\bf \ref{antw1.12}.]\setcounter{enumi}{12}
+\hypertarget{oef1.12}{Gegeven} zijn de veeltermen 
+\[
+A(x) = 2x^2 + 5x + 13, \quad B(x) =  x^3-3x-4  \quad \text{ en } \quad C(x) = xA(x) + cB(x)
+\]
+waarbij $c \in \RR$.
+
+
+	\begin{question} Bepaal $A\bigl(B(3)\bigr)$.                                       \( \answer[onlineshowanswerbutton]{   } \) \end{question}
+	\begin{question} Bepaal de waarde(n) van de parameter $c$ waarvoor $\gr C(x) = 2$. \( \answer[onlineshowanswerbutton]{   } \) \end{question}
+
+\end{exercise}
+
+\begin{exercise}[\bf \ref{antw1.13}.]\setcounter{enumi}{13} 
+\hypertarget{oef1.13}{Bepaal} een kwadratische veelterm $A(x)$ waarvoor $A(0) = 2$ en waarbij $-2$ en $1$ nulwaarden zijn.
+\end{exercise}
+
+\begin{exercise}[\bf \ref{antw1.14}.]\setcounter{enumi}{14} 
+\hypertarget{oef1.14}{Bepaal} een kubische veelterm $A(x)$ zonder constante term waarvoor
+\[
+A(x) = A(x-1) + x(x-1).
+\]
+\end{exercise}
+
+\begin{exercise}[\bf \ref{antw1.15}.]\setcounter{enumi}{15} 
+\hypertarget{oef1.15}{Als} je weet dat er precies \'e\'en veelterm is waarvan de derde macht gelijk is aan 
+\[
+P(x) = 8x^6 + 36x^5 + 66x^4 + 63x^3 + 33x^2 + 9x + 1,
+\]
+bepaal dan deze veelterm.
+\end{exercise}
+
+\begin{exercise}[\bf \ref{antw1.16}.]\setcounter{enumi}{16} 
+\hypertarget{oef1.16}{Gegeven} is de veelterm
+\[
+A(x) = x^4 - 4x^3 + ax^2 + 2x + b
+\]
+waarbij $a,b \in \RR$. Bepaal de waarde(n) van de parameters $a$ en $b$ waarvoor $A(x)$ het kwadraat is van een veelterm. 
+\end{exercise}
+
+\begin{exercise}[\bf \ref{antw1.17}.]\setcounter{enumi}{17} 
+\hypertarget{oef1.17}{Beschouw} de veelterm $P(x) = (3x - 1)^{12}$. Bereken algebra\"isch de som van de co\"effici\"enten. 
+\end{exercise}
+
+\begin{exercise}[\bf \ref{antw1.18}.]\setcounter{enumi}{18} 
+\hypertarget{oef1.18}{Als} $a,b,c,d$ re\"ele getallen zijn waarvoor geldt dat
+\[
+ax^3 + bx^2 + cx + d = (x^2-6x-8)^{10}\cdot(4x+2)^5 - (x+1)^8\cdot(x^2+5x+4)^{27}
+\]
+bepaal dan algebra\"isch de waarde van $a-b+c-d$.
+\end{exercise}
+
+\begin{exercise} % oef 19
+Van een rechthoekig stuk karton met afmetingen $20\:\text{cm}$ op $10\:\text{cm}$ knippen we in elke hoek een vierkant met zijde $x$ weg. Nadien plooien we het karton langs de stippellijnen, om zo een doos zonder deksel rechts te verkrijgen. 
+
+ 
+	\begin{question} Schrijf een veelterm $V(x)$ op dat het volume van de doos weergeeft.                                                                                 \( \answer[onlineshowanswerbutton]{  } \) \end{question}
+	\begin{question} Geef de graad en de constante term van deze veelterm, en verklaar jouw antwoord zowel algebra\"isch als met behulp van de context van deze oefening. \( \answer[onlineshowanswerbutton]{  } \) \end{question}
+	\begin{question} Geef alle nulwaarden van deze veelterm, en verklaar jouw antwoord zowel algebra\"isch als met behulp van de context van deze oefening.               \( \answer[onlineshowanswerbutton]{  } \) \end{question}
+
+
+\medskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\psset{xunit=1cm,yunit=1cm}
+\begin{pspicture}(0,-1)(6,4)% co linksonder, co rechtsboven
+\psline[](0,0)(6,0)(6,3)(0,3)(0,0)
+
+\psline[linestyle=dashed](0,0.5)(6,0.5)
+\psline[linestyle=dashed](0,2.5)(6,2.5)
+\psline[linestyle=dashed](0.5,0)(0.5,3)
+\psline[linestyle=dashed](5.5,0)(5.5,3)
+
+\psline[linecolor=blue]{<->}(0,3.5)(6,3.5)
+\uput[u](3,3.5){\color{blue}\SI{20}{\cm}}
+
+\psline[linecolor=blue]{<->}(-0.5,0)(-0.5,3)
+\uput[l](-0.5,1.5){\color{blue}\SI{10}{\cm}}
+
+\psline[linecolor=red]{<->}(0,-0.5)(0.5,-0.5)
+\uput[d](0.25,-0.5){\color{red}$x$}
+
+\psline[linecolor=red]{<->}(5.5,-0.5)(6,-0.5)
+\uput[d](5.75,-0.5){\color{red}$x$}
+
+\psline[linecolor=red]{<->}(6.5,0)(6.5,0.5)
+\uput[r](6.5,0.25){\color{red}$x$}
+
+\psline[linecolor=red]{<->}(6.5,2.5)(6.5,3)
+\uput[r](6.5,2.75){\color{red}$x$}
+\end{pspicture}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{exercise}
+
+%%% \clearpage
+
+\begin{Uitbreiding}
+\begin{exercise}% oef 20
+\label{oefgraadnulveelterm}
+{\bf (min oneindig en de graad van de nulveelterm)} 
+Om aan de nulveelterm ook een graad te kunnen toekennen, breiden we de verzameling van de re\"ele getallen uit met een element, voorgesteld door het symbool $- \infty$, lees als: min oneindig. Het element $-\infty$ is dus geen (re\"eel) getal. Men spreekt ook wel van het {\em oneigenlijk getal} $-\infty$. Ook de orde en de optelling in $\RR$ worden uitgebreid door de volgende definities (waarbij $a \in \RR$):
+\[
+\begin{aligned}
+\\[-0.5cm]
+-\infty & < a \\
+(-\infty) + a & = -\infty \\
+a + (-\infty) & = -\infty \\
+(-\infty) + (-\infty) & = (-\infty).
+\end{aligned}
+\]
+De \underline{graad van de nulveelterm}\index{graad}\index{veelterm!graad} is nu per definitie gelijk aan het oneigenlijk getal $-\infty$. In symbolen: $\gr 0 = - \infty$.
+
+Bewijs de volgende eigenschappen, waarbij $A(x)$ staat voor een willekeurige veelterm verschillend van de nulveelterm.
+
+
+\item
+$\gr\bigl( A(x) \cdot 0 \bigr) \, = \, \gr A(x) + \gr 0$
+\item
+$\gr\bigl( 0 \cdot 0 \bigr) \, = \, \gr 0 + \gr 0$
+\item
+$\D \gr\bigl( A(x) + 0 \bigr) \, \leq \, \max \bigl\{ \,\gr A(x)\, , \, \gr 0 \, \bigr\}$
+\item
+$\D \gr\bigl( A(x) + (-A(x)) \bigr) \, \leq \, \max \bigl\{ \,\gr A(x)\, , \, \gr \left(-A(x)\right) \, \bigr\}$
+
+\end{exercise}
+\end{Uitbreiding}
+
+\end{document}

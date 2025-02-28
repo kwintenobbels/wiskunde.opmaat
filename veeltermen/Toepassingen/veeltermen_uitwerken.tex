@@ -1,0 +1,70 @@
+\documentclass{ximera} 
+\handouttrue
+
+\input{../../preamble.tex}
+\input{../preamble_kdn.tex}
+
+\addPrintStyle{..}
+
+\begin{document}
+	\author{Koen De Naeghel}
+	\xmtitle{Veeltermen uitwerken}{}
+	\label{xim:veeltermen_uitwerken}
+
+In dit hoofdstuk richten we ons tot drie soorten vragen die we over een veelterm $A(x)$ kunnen stellen. Bij elk van deze drie vragen passen we de leerstof uit de vorige hoofdstukken toe. 
+\begin{enumerate}
+\item
+Een veelterm uitwerken: schrijven als een som van eentermen. 
+\item
+Een veelterm ontbinden in factoren: schrijven als een product van veeltermen.
+\item
+Nulwaarden bepalen van een veelterm $A(x)$: alle $x \in \RR$ bepalen waarvoor $A(x) = 0$. 
+\end{enumerate}
+
+\section{Veeltermen uitwerken}\index{veelterm!uitwerken}
+
+Bij het uitwerken van een veelterm maak je gebruik van de \wsgref{rekenregels en tekenregels}{36}{36-38} voor som, verschil en product. Het is de gewoonte om daarna de termen te herschikken naar toenemende of afnemende graad. Zo is bijvoorbeeld
+\begin{align*}
+7x^3-2(5x^3-5)-(x^3-8)x^2 & = 7x^3 - 10x^3 + 10 - x^5 + 8x^2 \\
+& = -x^5 - 3x^3 + 8x^2 + 10.
+\end{align*}
+Soms kun je het rekenwerk verkorten door middel van \wsgref{merkwaardige producten}{52}{52-53}
+waarvan de belangrijkste hieronder staan. Je kan elke gelijkheid aantonen door het linkerlid uit te werken en daarna te vereenvoudigen. We bewijzen \'e\'en gelijkheid. De andere bewijzen laten we over als oefening voor de lezer. 
+
+\begin{eigenschap}[merkwaardige producten]\index{merkwaardige producten}
+Zij $a,b,c \in \RR$. Dan geldt:
+\begin{align*}
+& (a+b)^2 = a^2+2ab+b^2 && \text{kwadraat van som van twee termen} \\
+& (a-b)^2 = a^2-2ab+b^2 && \text{kwadraat van verschil van twee termen} \\
+& (a-b)(a+b) = a^2-b^2 && \text{product van tweeterm met zijn toegevoegde} \\
+& (a+b+c)^2 = a^2 + b^2 + c^2 + 2ab + 2bc + 2ca && \text{kwadraat van som van drie termen} \\
+& (a+b)^3 = a^3+3a^2b+3ab^2+b^3 && \text{derde macht van som van twee termen} \\
+& (a-b)^3 = a^3-3a^2b+3ab^2-b^3 && \text{derde macht van verschil van twee termen.}
+\end{align*}
+\end{eigenschap} 
+\begin{proof}[Bewijs van merkwaardig poduct voor kwadraat van som van drie termen]
+\begin{align}
+(a+b+c)^2 
+& = (a+b+c)(a+b+c) \nonumber \\
+& = a^2 + ab + ac + ba + b^2 + bc + ca + cb + c^2 \nonumber \\
+& = a^2 + b^2 + c^2 + 2ab + 2bc + 2ca \tag*{\qedhere}
+\end{align}
+\end{proof}
+
+\begin{example}
+We werken telkens de veelterm uit door gebruik te maken van merkwaardige producten, en vereenvoudigen nadien zoveel als mogelijk.
+\begin{enumerate}
+
+\item 
+$\D (-3x+5)^2 = (5-3x)^2 = 5^2 - 2 \cdot 5 \cdot 3x + (3x)^2 = 9x^2 - 30x + 25$
+\item 
+$\D \left(\frac{1}{2}\,x-3\right)\left(3+\frac{1}{2}\,x\right) = \left(\frac{1}{2}\,x-3\right)\left(\frac{1}{2}\,x+3\right) = \left(\frac{1}{2}\,x\right)^2 - 3^2 = \frac{1}{4}\,x^2 - 9$
+\item
+$\D (4x^2 - 5x + 3)^2 = (4x^2)^2 + (-5x)^2 + 3^2 + 2 \cdot 4x^2 \cdot (-5x) + 2\cdot (-5x) \cdot 3 + 2 \cdot 4x^2 \cdot 3$
+\item[]
+$\D \mph{(4x^2 - 5x + 3)^2} = 16x^4 + 25x^2 + 9 -40x^3 - 30x + 24x^2$
+\item[]
+$\D \mph{(4x^2 - 5x + 3)^2} = 16x^4 - 40x^3 + 49x^2 - 30x + 9$
+\end{enumerate}
+\end{example} 
+\end{document}
