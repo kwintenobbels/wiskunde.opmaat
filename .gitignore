@@ -47,7 +47,7 @@ xmPictures/**
 *.ps
 # *.eps
 *.pdf
-!*-pics.pdf
+# *-pics.pdf    # ignore also -pics.pdf (for pstricks)
 !ximera-downloads/**
 
 
