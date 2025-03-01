@@ -2,7 +2,7 @@
 % \usepackage[paper=a4paper,margin=3.4cm,marginparwidth=2cm]{geometry}
 % \usepackage[margin=.5in, includehead, includefoot, hmargin={.8in,.5in}, a4paper]{geometry}
 % zes voorkeuren die je meteen zelf kan instellen:
-\def\uitbr{1} % waarde 1 als je Uitbreiding in de marge wilt, 0 als je dat niet wilt 
+\def\uitbr{0} % waarde 1 als je Uitbreiding in de marge wilt, 0 als je dat niet wilt 
 \def\wsg{0} % waarde 1 als je verwijzingen naar Wiskunde Samen gevat² wilt, 0 als je dat niet wilt (onderstippelde woorden in de hoofdtekst en logo met paginanummer en hyperlink naar boekpagina in de marge)
 \def\rectoverso{0} % waarde 1 als je het PDF-bestand recto-verso wilt laten afdrukken, 0 als je het recto wilt
 \def\voetn{0} % waarde 1 als je de voetnoten wilt, 0 als je dat niet wilt 
@@ -151,7 +151,10 @@
 % }
 
 % \newenvironment{Uitbreiding}{}{}
-\newenvironment{Uitbreiding}{\begin{xmuitweiding}(xxxx)]}{\end{xmuitweiding}}
+\newenvironment{Uitbreiding}
+{\begin{expandable}{xmuitweiding}{Uitbreiding:}
+}{\end{expandable}}   
+        %\begin{xmuitweiding}}{\end{xmuitweiding}}
 % omgevingen voor lemma, definitie, voorbeeld etc.:
 \newtheoremstyle{mystyle}
     {0em} % Space above
