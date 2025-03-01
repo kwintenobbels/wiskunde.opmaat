@@ -10,6 +10,40 @@
 	\xmtitle{Schema van de staartdeling}{}
 	\label{xim:veeltermen_schema_van_de_staartdeling}
 
+% warp something inside tikz (to turn it into an image, usefull for unsupported constructs in tex4ht/html)
+%  add 0.1 padding on top and right (mainly for charges in \chemfig!)
+\newcommand{\tikzit}[2][\width]{%
+    \begin{image}[#1]
+        \tikzitinline{#2}
+    \end{image}%
+}
+
+
+% Apply a scaling-factor to tikzpictures ONLINE
+\providecommand{\tikzexportScale}[1][1.5]{
+    \iftikzexport
+    \tikzset{every picture/.append style={scale=#1, transform shape}}
+    \fi
+    }
+
+
+%% mmm, could also be done with \tikzexportScale now, but that risks to be set globaly ...   
+\providecommand{\tikzitOptions}{}
+%\providecommand{\tikzitOptions}{[scale=1.5, transform shape]}
+\iftikzexport
+\renewcommand{\tikzitOptions}{[scale=1.5, transform shape]}
+\fi
+
+\newcommand{\tikzitinline}[2][0.1]{
+    \expandafter\tikz\tikzitOptions{
+        \node (a) {#2};
+        \path (current bounding box.south west) ++(-0.0,-0.0) coordinate (newSW);
+        \path (current bounding box.north east) ++(#1,#1) coordinate (newNE);
+        \useasboundingbox (newSW) rectangle (newNE);
+        % \draw[gray] (newSW) rectangle (newNE);   % for debugging
+}
+}  
+
 
 \section{Schema van de staartdeling}\index{staartdeling, schema van de}\index{schema!van de staartdeling}
 
@@ -32,7 +66,8 @@ We hernemen het voorbeeld $A(x) = 14x^2+17x+5$ en $B(x) = 2x+1$. Om na te gaan d
 
 
 Het vele schrijfwerk kan ingekort worden door het onderstaande {\em schema van de staartdeling}, ook wel {\em lange deling} genoemd. Hierin herken je de stappen die we hierboven uitgevoerd hebben. 
-\[
+\tikzit{
+$
 \begin{array}{l|l}
 & 2x+1 \\
 \cline{2-2}
@@ -51,7 +86,8 @@ Het vele schrijfwerk kan ingekort worden door het onderstaande {\em schema van d
 }
 }  
 \end{array}
-\]
+$
+}
 \end{werkwijze}
 \begin{werkwijze}
   
@@ -69,26 +105,28 @@ Ook in het geval een veelterm $A(x)$ niet deelbaar is door een veelterm $B(x)$, 
 & = (x^2+3x) \cdot (\mathcolor{red}{2x - 3}) + 9x - 1.
 \end{align*}
 Het bijbehorende schema van de staartdeling vergt opnieuw minder schrijfwerk. 
-% \[
-% \begin{array}{l|l}
-% & x^2+3x \\
-% \cline{2-2}
-% \vrule height 1.2em width 0pt
-% & \mathcolor{red}{2x-3} \\[-0.96cm]
-% \stackunder[0.05cm]{%
-%   \stackon[0pt]{2x^3+3x^2-1\mph{x-1}}{}%
-% }{%
-%   \Shortstack[r]{
-%     {2x^3 \mathcolor{blue}{+6x^2}\mph{-9x-1}} 
-%     {\staartmin \staartstreep{2x^3+6x^2} \staartphstreep{-9x-10}}
-%     {-3x^2-1\mph{x-1}} 
-%     {-3x^2 \mathcolor{blue}{-9x}\mph{-1}} 
-%     {\staartmin \staartstreep{-3x^2-9x} \staartphstreep{-10}}
-%     {9x-1}
-% }
-% }  
-% \end{array}
-% \]
+\tikzit{
+$
+\begin{array}{l|l}
+& x^2+3x \\
+\cline{2-2}
+\vrule height 1.2em width 0pt
+& \mathcolor{red}{2x-3} \\[-0.96cm]
+\stackunder[0.05cm]{%
+  \stackon[0pt]{2x^3+3x^2-1\mph{x-1}}{}%
+}{%
+  \Shortstack[r]{
+    {2x^3 \mathcolor{blue}{+6x^2}\mph{-9x-1}} 
+    {\staartmin \staartstreep{2x^3+6x^2} \staartphstreep{-9x-10}}
+    {-3x^2-1\mph{x-1}} 
+    {-3x^2 \mathcolor{blue}{-9x}\mph{-1}} 
+    {\staartmin \staartstreep{-3x^2-9x} \staartphstreep{-10}}
+    {9x-1}
+}
+}  
+\end{array}
+$
+}
 In dit geval stopt de procedure bij een {\em restveelterm} (kortweg {\em rest}) $R(x)$ die verschillend is van nul. Kenmerkend is dat de graad van die rest kleiner is dan de graad van $B(x)$. Uit het bovenstaande schema van de staartdeling mogen we dus besluiten dat
 %\[
 %\underbrace{2x^3+3x^2-1}_{A(x)} = \underbrace{(x^2+3x)}_{B(x)}\cdot\underbrace{(2x - 3)}_{Q(x)} \,\, + \,\, \underbrace{9x - 1}_{R(x)} \quad \text{ waarbij } \quad \gr R(x) < \gr B(x).
@@ -102,7 +140,8 @@ In het vervolg zullen we meestal meteen het schema van de staartdeling opschrijv
 \begin{example}
 Beschouw de veeltermen $A(x) = 6x^3 + 19x^2 + 8x - 5$ en $B(x) = 2x+5$. We gaan met behulp van het schema van de staartdeling na of $A(x)$ deelbaar is door $B(x)$. 
 
-\[
+\tikzit{
+$
 \begin{array}{l|l}
 & 2x+5 \\
 \cline{2-2}
@@ -124,7 +163,8 @@ Beschouw de veeltermen $A(x) = 6x^3 + 19x^2 + 8x - 5$ en $B(x) = 2x+5$. We gaan 
 }
 }  
 \end{array}
-\]
+$
+}
 
 Uit dit schema volgt het verband tussen deeltal, deler, quoti\"ent en rest:
 \[
@@ -135,7 +175,8 @@ waaruit we besluiten dat $A(x)$ deelbaar is door $B(x)$.
 
 \begin{example}
 Gegeven is de veelterm $A(x) = x^3 + ax^2 - 9x + b$ waarbij $a,b \in \RR$. We bepalen de waarde(n) van de parameters $a$ en $b$ waarvoor $A(x)$ deelbaar is door $(x+1)^2$. Dat kunnen we doen met behulp van het schema van de staartdeling: 
-\[
+\tikzit{
+$
 \begin{array}{l|l}
 & x^2+2x+1 \\
 \cline{2-2}
@@ -154,7 +195,8 @@ Gegeven is de veelterm $A(x) = x^3 + ax^2 - 9x + b$ waarbij $a,b \in \RR$. We be
 }
 }  
 \end{array}
-\]
+$
+}
 waaruit volgt dat  
 \begin{align*}
 (x+1)^2 \mid A(x) \quad 
