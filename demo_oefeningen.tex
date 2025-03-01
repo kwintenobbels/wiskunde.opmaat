@@ -1,0 +1,34 @@
+%\documentclass[12pt,numbers,noauthor,nooutcomes,wordchoicegiven]{xourse}
+\documentclass{xourse}
+\input{./preamble.tex}
+\input{./preamble_oplossingen.tex}
+\input{./veeltermen/preamble_kdn.tex}
+% \input{./veeltermen/preamble_pst.tex}
+% \input{../preambles/tcolorbox.tex}   % voor formularia ...
+\addPrintStyle{.}
+
+\begin{document}
+%	\setcounter{tocdepth}{2}
+    \xmtitle{Demo oefeningen}  
+ 
+
+\part{Basisbegrippen}
+% \activitychapter{veeltermen/Basisbegrippen/eentermen.tex}
+% \activitychapter{veeltermen/Basisbegrippen/veeltermen.tex}
+
+\activitychapter{veeltermen/Basisbegrippen/oef_basisbegrippen_reeks1.tex}
+%\activitysection{veeltermen/Basisbegrippen/oef_basisbegrippen_reeks2.tex}
+%\activitysection{veeltermen/Basisbegrippen/oef_basisbegrippen_reeks3.tex}
+
+\ifdefined\HCode\else
+\handouttrue
+\activitysection{veeltermen/Basisbegrippen/oef_basisbegrippen_reeks1.tex}
+% \handouttrue
+% \activitysection{veeltermen/Basisbegrippen/oef_basisbegrippen_reeks1.tex}
+% \setchoicepuntjes
+
+\activitysection{veeltermen/Basisbegrippen/oef_basisbegrippen_reeks1.tex}
+\shortanswersection{veeltermen/Basisbegrippen/oef_basisbegrippen_reeks1.tex}
+\fi
+
+\end{document}

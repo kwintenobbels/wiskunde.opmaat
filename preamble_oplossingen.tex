@@ -1,0 +1,140 @@
+%
+% Some hocus-pocus to enable printing only solutions 
+%  for \begin{exercise} and \begin{question}
+%
+% Design: if \printonlyshortanswers then
+%  - for questions: only (presumable ONE) \answer or \wordhChoice result is printed 
+%    in the form   <question-number>) <solution>
+%  - for exercises: 
+%        -  \begin{statement} environment is NOT printed
+%        - presumably nothing else, or a only something like 'Los op:' is left
+%        % only (presumable ONE or NONE) \answer or \wordChoice result is printed
+%
+
+% ref: https://tex.stackexchange.com/questions/514615/how-do-i-limit-the-scope-of-etoolbox-environment-patching
+%
+%  WILL BREAK WITH LATEX > 2020-10-01
+%  The following might work then:
+%
+\newrobustcmd{\LocalAtBeginEnvironment}[1]{%
+ \ifcsundef{ltbx@local@hook@begin@#1}
+   {\AtBeginEnvironment{#1}{\csuse{ltbx@local@hook@begin@#1}}}
+   {}%
+ \csappto{ltbx@local@hook@begin@#1}}
+
+\newrobustcmd{\LocalAtEndEnvironment}[1]{%
+ \ifcsundef{ltbx@local@hook@end@#1}
+   {\AtEndEnvironment{#1}{\csuse{ltbx@local@hook@end@#1}}}
+   {}%
+ \csappto{ltbx@local@hook@end@#1}}
+
+%%
+\makeatletter
+% \newrobustcmd{\LocalAtBeginEnvironment}[1]{%
+%   \csappto{@begin@#1@hook}}
+
+% \newrobustcmd{\LocalAtEndEnvironment}[1]{%
+%   \csappto{@end@#1@hook}}
+
+\makeatother
+
+\providecommand{\shortanswerscols}{3}     % default columns 
+
+\newif\ifshortanswersection
+
+\makeatletter
+% see https://tex.stackexchange.com/questions/217757/special-behavior-if-optional-argument-is-not-passed
+\providecommand{\shortanswersection}[2][\@nil]{
+\ifdefined\HCode
+\else
+\iftikzexport
+\else
+    \bgroup
+    \handoutfalse
+    \shortanswersectiontrue
+    \hintsfalse
+    \xdef\myuitkomst{}
+    \setchoicedefanswer
+    \renewcommand{\setchoicepuntjes}{}    % would break showing uitkomst
+    \renewcommand{\answer}[2][]{\gdef\myanswer{\ensuremath{##2}}}
+    %
+    % pas title aan
+    \renewcommand{\xmtitle}[3][]{
+    	\title{##2 (uitkomsten)}
+    	\maketitle
+    }
+    \renewcommand{\subsection}[1]{}   % ignore section to save space (and pages)
+    %
+    \RenewEnviron{uitkomst}[1][onzichtbaar]%
+    {%
+    \ifthenelse{\equal{\detokenize{##1}}{\detokenize{noshortanswer}}}
+    {}
+    {
+    % TOCH answers afdrukken binnen een 'uitkomst';-) (en dus wordt )\answer NOG EENS overschreven!)
+    % gebruik ####2 voor de tweede parameter (in twee nested niveaus van \newcommand en \newenvoronment !)
+    \renewcommand{\answer}[2][]{{\color{blue}\ensuremath{####2}}}   
+    \xdef\myuitkomst{\unexpanded\expandafter{\BODY}}
+    \begin{trivlist}
+    \item[\hspace{2ex}]\small%
+    \BODY
+    \end{trivlist}
+    }
+    }
+    %
+    \makeatletter
+    \let\exercise\relax
+    %\let\c@exercise\relax
+    \let\endexercise\relax
+    \makeatother
+    %
+    %\newtheorem{exercise}{Stelling}
+    %\newcounter{exercise}
+    \def\tmp{#1}%
+    \ifx\tmp\@nnil
+    \else
+       \renewcommand{\theexercise}{#1.\arabic{exercise}}
+    \fi
+    %
+    \NewEnviron{exercise}[1][]{
+        \stepcounter{exercise}
+        \RenewEnviron{statement}{}
+        \RenewEnviron{oplossing}{}
+        \RenewEnviron{hint}{}
+        \RenewEnviron{feedback}{}
+        \renewenvironment{xmmulticols}[1][]{}
+  %
+	\setchoicedefanswer   % reset this locally inside the environment (so global settings remain possible)
+  \vspace{1.1\baselineskip}
+	\textbf{\hyperlink{xm:sol:\theexercise}{Oefening} \hypertarget{xm:ex:\theexercise}{\theexercise}. (uitkomst)}
+
+        % \textbf{Oefening \theexercise.}\quad
+          \ifnum\shortanswerscols<2\relax% Fewer than 2 columns
+            \BODY%
+            \myanswer
+          \else
+           \begin{multicols}{\shortanswerscols}
+           \BODY%
+           \myanswer% this is the answer if there are no questions           
+           \end{multicols}
+         \fi
+         \gdef\myanswer{}
+         \xdef\myuitkomst{}
+    }
+    % \tcolorboxenvironment{exercise}{ is globaal, en blijft ....
+    % redefine question: only set myanswer, and print it at the end    
+    \LocalAtBeginEnvironment{question}{
+       %\par 
+       \setbox0\vbox\bgroup
+    }   
+%    \providecommand\thequestion\problemNumber   % if printstyle not loaded
+    \LocalAtEndEnvironment{question}{
+       \egroup
+       \textbf{\thequestion) }\myanswer\myuitkomst%
+       \gdef\myanswer{}
+       \xdef\myuitkomst{}
+    }   
+    \activity{#2}    % include de activity met geherdefinieerde omgevingen
+    \egroup
+\fi
+\fi
+}
