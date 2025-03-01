@@ -22,12 +22,12 @@ Bij het voorbeeld met $A(x) = 14x^2+17x+5$ en $B(x) = 2x+1$ was de deling opgaan
 \]
 Ook voor elke andere keuze van $A(x)$ en $B(x) \neq 0$ bestaan er zo'n veeltermen $Q(x)$ en $R(x)$, die daarenboven steeds uniek zijn. Ons bewijs bestaat uit twee delen. Eerst bewijzen we dat de veeltermen $Q(x)$ en $R(x)$ bestaan. Daarna bewijzen we dat ze uniek zijn. \footnote{De stelling van de euclidische deling voor veeltermen is analoog aan het gelijknamig resultaat voor gehele getallen: als $a,b \in \ZZ$ met $b \neq 0$ dan bestaat er precies \'e\'en geheel getal $q$ en \'e\'en geheel getal $r$ zodat $a = bq + r$ waarbij $0 \leq r < \left|b\right|$. Hoewel deze stelling genoemd is naar Euclides van Alexandri\"e\index{Euclides van Alexandri\"e} $\pm$300 v.Chr. lijkt het weinig waarschijnlijk dat Euclides bewust was van het bestaan en de uniciteit van het quoti\"ent en de rest. In die tijd was de manier om quoti\"ent en rest te bepalen beperkt tot het herhaaldelijk verminderen van het deeltal met de deler. De reden is dat het schema van de staartdeling van gehele getallen berust op een positiestelsel zoals het Hindu-Arabisch getallensysteem, die in de tijd van Euclides nog niet bekend was. De naam \xmemph{euclidische deling} werd pas in de 19e eeuw ge\"introduceerd als verwijzing naar een algemeen resultaat uit de hogere wiskunde. Euclidische deling is dus wel degelijk een stelling, en geen algoritme.}
 
-\begin{stelling}[deling met rest, euclidische deling]\index{deling met rest}\index{euclidische deling}
+\begin{theorem}[deling met rest, euclidische deling]\index{deling met rest}\index{euclidische deling}
 Zij $A(x)$ en $B(x)$ twee veeltermen met $B(x) \neq 0$. Dan bestaat er precies \'e\'en veelterm $Q(x)$ en precies \'e\'en veelterm $R(x)$ zodat
 \begin{equation} \label{euclides}
 A(x) = B(x)\cdot Q(x) + R(x) \quad \text{ waarbij } \quad \gr R(x) < \gr B(x) \,\, \text{ of } \,\, R(x) = 0.
 \end{equation}
-\end{stelling}
+\end{theorem}
 \begin{Uitbreiding}
 \begin{proof}[Bewijs dat $Q(x)$ en $R(x)$ bestaan] Beschouw de verzameling 
 \begin{align*}

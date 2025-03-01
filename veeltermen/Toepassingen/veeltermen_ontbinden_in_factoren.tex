@@ -36,9 +36,9 @@ De volgende kwadratische veelterm kan ontbonden worden in lineaire factoren omda
 
 In deze paragraaf leer je nog twee andere strategie\"en. Door al die werkwijzen doordacht in te zetten, kun je dan al heel wat eenvoudige veeltermen algebra\"isch ontbinden in factoren. Vooreerst vermelden we een belangrijk resultaat, dat een gevolg is van de zogenaamde \xmemph{hoofdstelling van de algebra}.\footnote{De hoofdstelling van de algebra stelt dat elke \xmemph{complexe} veelterm (een veelterm waarvan de co\"effici\"enten \xmemph{complexe getallen} zijn) dat niet constant is kan geschreven worden als een product van lineaire complexe veeltermen. Die stelling werd voor het eerst aangetoond door Carl Friedrich Gauss\index{Gauss, Carl Friedrich} in 1798.}\index{hoofdstelling van de algebra} Het bewijs laten we achterwege.
 
-\begin{stelling}\label{stelling:ontbinden}
+\begin{theorem}\label{stelling:ontbinden}
 Elke veelterm kan geschreven worden als een product van constante veeltermen, lineaire veel\-termen en kwadratische veeltermen met strikt negatieve discriminant.
-\end{stelling}
+\end{theorem}
 
 \begin{example}
 Gegeven is telkens een veelterm met bijbehorende ontbinding in factoren. Om aan te geven dat we een kwadratische veelterm niet verder kunnen ontbinden in lineaire factoren, duiden we aan dat de discriminant $D$ strikt negatief is. Je kan elke gelijkheid controleren door het rechterlid uit te werken en te vereenvoudigen. 
@@ -94,7 +94,7 @@ x^3+8 = x^3 + 2^3 = (x+2)(x^2-2x+4).
 \]
 Bij uitbreiding kun je ook producten herkennen voor $x^4-a^4$ en $x^5 \pm a^5$. Die vatten we hieronder samen. Ook hier kun je elke gelijkheid aantonen door het rechterlid uit te werken en te vereenvoudigen. Je kan ook een gelijkheid terugvinden vanuit het linkerlid: pas het kenmerk van deelbaarheid door $x \pm a$ toe en voer het schema van Horner uit, zoals we hierboven voor $x^3 \pm a^3$ hebben laten zien.\footnote{Merk op dat we de producten voor $x^3 + a^3$ en $x^5 + a^5$ kunnen verkrijgen door in de gelijkheden voor $x^3 - a^3$ en $x^5 - a^5$ elke $a$ te vervangen door $-a$. Zoals Stelling \ref{stelling:ontbinden} hierboven aangeeft, kun je de tweetermen $x^4 - a^4$ en $x^5 \pm a^5$ nog verder ontbinden in factoren tot een product van lineaire en kwadratische veeltermen. Je kan ook $x^4+a^4$ ontbinden in factoren. Die ontbindingen staan vermeld in Oefening \ref{somtweevierdemachten}.} 
  
-\begin{eigenschap}[merkwaardige producten herkennen]\index{merkwaardige producten}
+\begin{proposition}[merkwaardige producten herkennen]\index{merkwaardige producten}
 Voor elke $a \in \RR$ is:
 \begin{align*}
 & x^2 - a^2 = (x-a)(x+a) && \text{verschil van twee kwadraten} \\
@@ -104,7 +104,7 @@ Voor elke $a \in \RR$ is:
 & x^5 + a^5 = (x+a)(x^4 - ax^3 + a^2x^2 - a^3x + a^4) && \text{som van twee vijfde machten} \\
 & x^5 - a^5 = (x-a)(x^4 + ax^3 + a^2x^2 + a^3x + a^4) && \text{verschil van twee vijfde machten.}
 \end{align*}
-\end{eigenschap}
+\end{proposition}
 
 %%% \clearpage
 
@@ -164,9 +164,9 @@ Die redenering gaat ook op voor andere veeltermen met gehele co\"effici\"enten. 
 \footnote{De voorwaarde $a \neq 0$ is nodig, omdat deelbaarheid door $0$ ongedefinieerd is.
 Een veralgemening is de zogenaamde \xmemph{rationale wortelstelling}, zie Oefening \ref{oefening:rationalewortelstelling}.}
 
-\begin{stelling}[gehele wortelstelling] \label{stelling:gehelewortelstelling}\index{gehele wortelstelling}
+\begin{theorem}[gehele wortelstelling] \label{stelling:gehelewortelstelling}\index{gehele wortelstelling}
 Zij $A(x)$ een veelterm met gehele co\"effici\"enten. Als $a \neq 0$ een gehele nulwaarde van $A(x)$ is, dan is $a$ een deler van de constante term. 
-\end{stelling}
+\end{theorem}
 
 %%% \clearpage
 
