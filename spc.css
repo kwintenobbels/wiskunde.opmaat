@@ -56,3 +56,30 @@
 --uitweiding-background-perc: 0.1;
 --uitweiding-border-perc: 0.15;	
 }
+
+
+--awb-custom_color_1: #de9642;
+--awb-custom_color_1-h: 32;
+--awb-custom_color_1-s: 70%;
+--awb-custom_color_1-l: 56%;
+--awb-custom_color_1-a: 100%;
+--awb-custom_color_2: #98b639;
+--awb-custom_color_2-h: 74;
+--awb-custom_color_2-s: 52%;
+--awb-custom_color_2-l: 47%;
+--awb-custom_color_2-a: 100%;
+--awb-custom_color_3: #5d98d2;
+--awb-custom_color_3-h: 210;
+--awb-custom_color_3-s: 57%;
+--awb-custom_color_3-l: 59%;
+--awb-custom_color_3-a: 100%;
+--awb-custom_color_4: #88539b;
+--awb-custom_color_4-h: 284;
+--awb-custom_color_4-s: 30%;
+--awb-custom_color_4-l: 47%;
+--awb-custom_color_4-a: 100%;
+--awb-custom_color_5: #c84378;
+--awb-custom_color_5-h: 336;
+--awb-custom_color_5-s: 55%;
+--awb-custom_color_5-l: 52%;
+--awb-custom_color_5-a: 100%;
