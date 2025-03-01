@@ -485,7 +485,7 @@ div.quickquestion {
 }
 
 div.quickquestion:before {
-	content: 'QuickQuestion';
+	content: 'Vlugge Vraag';
 	font-weight: bold;	
 	top: -12px;
 	position: absolute;
@@ -786,8 +786,10 @@ div[class*="-content"] {
 }
 
 .xmformulevb table tr td:nth-child(3) {
-	background-color: #002eff33;
+	/* background-color: #002eff33; */
+	background-color: #9cb3c0;
 	border-radius: 5pt;
+	width: fit-content;
 }
 
 .xmcolorbox {
@@ -968,13 +970,18 @@ span.xmqa1 {
 
 
 .main-inhoud .toc-search {
-    background-color: white;
+    background-color: #526a80;
 }
 
 .toc-search .btn {
     background: transparent;
     color: #526a80;
     padding: 0px 5px;
+}
+
+.toc-search .btn {
+    /* background: transparent; */
+    color: white;
 }
 
 .toc .part {
@@ -994,10 +1001,94 @@ img.brandlogo {
     max-width: 20vw;
 }
 
+
+.title-xourse, .title-activity {
+    text-transform: uppercase;
+    font-family: "Times New Roman", Times, serif;
+}
+
 .main-inhoud .activity-title {
 	background-color: #526a80;
-  }
+}
+
+
+.main-inhoud .activity-title .title {
+    background-color: #383f47;
+
+}
+
 
 .main-inhoud .activity {
 	 overflow-y: hidden; 
+}
+
+blockquote {
+	/* background-color: lightgray; */
+    width: fit-content;
+    max-width: min(50em, 80%);
+    margin: auto;
+    text-align: center;
+	font-style: italic;
+    padding-inline: 2em;
+    padding-block: 0.5em;
+}
+
+.wrapfig-r {
+    float: right;
+}
+
+.wrapfig-l {
+    float: left;
+}
+
+
+/* color exercises in toc */
+.toc .card.activity-card.section {
+    background-color: rgb(200 202 203 / 25%);
+}
+
+.proof::before {
+    content: "bewijs:";
+    display: inline;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding-right: 0.5em;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Horrible Hack: default alignment is somehow worg ??? */
+.xmformulevb .mathjax-inline {
+    vertical-align: -0.5em;
+}
+
+
+.xmprev{
+    padding-block: 0rem;
+    padding-left: 1.8em;
+    padding-right: 0.2em;
+    color: black;
+}
+
+.xmnext {
+    padding-block: 0rem;
+    padding-left: 0.2em;
+    padding-right: 1.8em;
+    color: black;
+}
+
+
+.activity-title a {
+    color: white;
+    text-decoration: none;
+}
+
+/* tooltip next/previous */
+.xmhidden {
+    display: none;
+    position: absolute;
+    color: white;
+    background-color:  #383f47;
+    border: 2px solid;
+    border-radius: 3px;
+    padding: 5px;
 }
