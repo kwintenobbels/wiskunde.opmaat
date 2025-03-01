@@ -3,32 +3,43 @@
 \input{./preamble.tex}
 \input{./preamble_oplossingen.tex}
 \input{./veeltermen/preamble_kdn.tex}
-% \input{./veeltermen/preamble_pst.tex}
-% \input{../preambles/tcolorbox.tex}   % voor formularia ...
 \addPrintStyle{.}
 
 \begin{document}
-%	\setcounter{tocdepth}{2}
     \xmtitle{Demo oefeningen}  
  
 
-\part{Basisbegrippen}
-% \activitychapter{veeltermen/Basisbegrippen/eentermen.tex}
-% \activitychapter{veeltermen/Basisbegrippen/veeltermen.tex}
+\part{Basisoefeningen}
 
-\activitychapter{veeltermen/Basisbegrippen/oef_basisbegrippen_reeks1.tex}
-%\activitysection{veeltermen/Basisbegrippen/oef_basisbegrippen_reeks2.tex}
-%\activitysection{veeltermen/Basisbegrippen/oef_basisbegrippen_reeks3.tex}
+{
+    \handouttrue    % De standaard manier om in de PDF enkel de opgaven weer te geven; heeft online geef effect.
+    \activitychapter{veeltermen/Basisbegrippen/oef_basisbegrippen_reeks1.tex}
+}
+
+% De PDF bevat enkele voorbeelden hoe de opgaven en/of oplossingen kunnen worden getoond.
+\pdfOnly{
+{
+    \handoutfalse      % Standaard manier met antwoorden antwoorden
+    \activitysection{veeltermen/Basisbegrippen/oef_basisbegrippen_reeks1.tex}
+}
+{
+    \handouttrue
+    \setchoicepuntjes   % multiplechoice wordt niet weergegeven als open vraag (ie, met puntjes)
+    \activitysection{veeltermen/Basisbegrippen/oef_basisbegrippen_reeks1.tex}
+}
+{
+    \handouttrue
+    % \setchoicepuntjes
+    \setchoicedefanswer  % multiplechoice wordt niet weergegeven (ie, verdwijnt volledig)
+    \activitysection{veeltermen/Basisbegrippen/oef_basisbegrippen_reeks1.tex}
+}
+}
 
 \ifdefined\HCode\else
-\handouttrue
-\activitysection{veeltermen/Basisbegrippen/oef_basisbegrippen_reeks1.tex}
-% \handouttrue
-% \activitysection{veeltermen/Basisbegrippen/oef_basisbegrippen_reeks1.tex}
-% \setchoicepuntjes
-
-\activitysection{veeltermen/Basisbegrippen/oef_basisbegrippen_reeks1.tex}
-\shortanswersection{veeltermen/Basisbegrippen/oef_basisbegrippen_reeks1.tex}
+    % Toon ENKEL de uitkomsten. Dit werkt NIET bij alle type oefeningen !
+    \sectionstyle
+    \shortanswersection{veeltermen/Basisbegrippen/oef_basisbegrippen_reeks1.tex}
 \fi
+
 
 \end{document}

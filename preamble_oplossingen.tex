@@ -73,11 +73,12 @@
     % TOCH answers afdrukken binnen een 'uitkomst';-) (en dus wordt )\answer NOG EENS overschreven!)
     % gebruik ####2 voor de tweede parameter (in twee nested niveaus van \newcommand en \newenvoronment !)
     \renewcommand{\answer}[2][]{{\color{blue}\ensuremath{####2}}}   
+    % \xdef\myuitkomst{\BODY XXX}
     \xdef\myuitkomst{\unexpanded\expandafter{\BODY}}
-    \begin{trivlist}
-    \item[\hspace{2ex}]\small%
-    \BODY
-    \end{trivlist}
+    % \begin{trivlist}
+    % \item[\hspace{2ex}]\small%
+    % \BODY
+    % \end{trivlist}
     }
     }
     %
@@ -101,7 +102,8 @@
         \RenewEnviron{oplossing}{}
         \RenewEnviron{hint}{}
         \RenewEnviron{feedback}{}
-        \renewenvironment{xmmulticols}[1][]{}
+        \renewenvironment{xmmulticols}[1][]{}{}
+        % \renewenvironment{multicols}[1]{}{}
   %
 	\setchoicedefanswer   % reset this locally inside the environment (so global settings remain possible)
   \vspace{1.1\baselineskip}
