@@ -1023,8 +1023,7 @@
 	
 	
 	.main-inhoud .activity-title .title {
-		background-color: #;
-	
+		background-color:  var(--accent);
 	}
 	
 	
