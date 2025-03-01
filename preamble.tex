@@ -1,5 +1,7 @@
 %%% Begin Laad packages
 
+
+
 \makeatletter
 \@ifclassloaded{xourse}{%
     \typeout{Start loading preamble.tex (in a XOURSE)}%
@@ -21,17 +23,21 @@
 }
 
 
-
 \usepackage[utf8]{inputenc}
 \usepackage{morewrites}   % nav zomercursus (answer...?)
 \usepackage{multirow}
 \usepackage{multicol}
 \usepackage{tikzsymbols}
+\usepackage{tikz-3dplot}
 \usepackage{ifthen}
 %\usepackage{animate} BREAKS HTML STRUCTURE USED BY XIMERA
 \usepackage{relsize}
 
 \usepackage{eurosym}    % \euro  (€ werkt niet in xake ...?)
+\usepackage{wrapfig}
+
+\usepackage{cancel}
+
 
 % Nuttig als ook interactieve beamer slides worden voorzien:
 \providecommand{\p}{} % default nothing ; potentially usefull for slides: redefine as \pause
@@ -57,15 +63,15 @@
 
 %%% Begin Ximera specifieke zaken
 
-\graphicspath{
-	{../../}
-	{../}
-	{./}
-  	{../../pictures/}
-   	{../pictures/}
-   	{./pictures/}
-	{./explog/}    % M05 in groeimodellen       
-}
+% \graphicspath{
+% 	{../../}
+% 	{../}
+% 	{./}
+%   	{../../pictures/}
+%    	{../pictures/}
+%    	{./pictures/}
+% 	{./explog/}    % M05 in groeimodellen       
+% }
 
 %%% Einde Ximera specifieke zaken
 
@@ -92,7 +98,8 @@
 % werkt in math en text mode om MATH met oranje (of grijze...)  achtergond te tonen (ook \important{\text{blabla}} lijkt te werken)
 %\newcommand{\important}[1]{\ensuremath{\colorbox{xmaccent!50!white}{$#1$}}}   % werkt niet in Mathjax
 %\newcommand{\important}[1]{\ensuremath{\colorbox{lightgray}{$#1$}}}
-\newcommand{\important}[1]{\ensuremath{\colorbox{orange}{$#1$}}}   % TODO: kleur aanpassen voor mathjax; wordt overschreven infra!
+%\newcommand{\important}[1]{\ensuremath{\colorbox{orange}{$#1$}}}   % TODO: kleur aanpassen voor mathjax; wordt overschreven infra!
+\newcommand{\important}[1]{\ensuremath{\fcolorbox{black}{white}{$#1$}}}
 
 
 % Uitzonderlijk kan met \pdfnl in de PDF een newline worden geforceerd, die online niet nodig/nuttig is omdat daar de regellengte hoe dan ook niet gekend is.
@@ -335,9 +342,10 @@
 
 % om in voorbeelden/oefeningen de notatie voor afgeleiden te kunnen kiezen
 % Usage: \afg{(2\sin(x))}  (en wordt d/dx, of accent, of D )
-\newcommand{\afg}[1]{{#1}'}
-%\renewcommand{\afg}[1]{\frac{\mathrm{d}#1}{\mathrm{d}x}}   % include in relevant exercises ...
-%\renewcommand{\afg}[1]{D{#1}}
+% \afg kan evt al gedefinieerd zijn in xmPreamble, of overschreven worden  
+\providecommand{\afg}[1]{\frac{\mathrm{d}}{\mathrm{d}x} \left(#1\right) }   % include in relevant exercises ...
+% \providecommand{\afg}[1]{\left{#1\right}'}   
+%\renewcommand{\afg}[1]{D\left{#1\right}}
 
 %
 % \xmxxx commands: Extra KU Leuven functionaliteit van, boven of naast Ximera
@@ -400,10 +408,9 @@
 	\begin{tabular}{lcl}
 		\important{#1}
 		&  &
-		Vb: $#2$
+		 {$#2$}
 		\end{tabular}
 	\end{xmdiv}
-
 	}
 }
 
@@ -720,6 +727,10 @@
 \providebool{printactivityqrcode}
 \providebool{printactivityurl}
 \providebool{printcontinuouspagenumbers}
+
+
+\providebool{printquickquestion}
+\printquickquestiontrue
 
 % The following three commands are hardcoded in xake, you can't create other commands like these, without adding them to xake as well
 %  ( gebruikt in xourses om juiste soort titelpagina te krijgen voor verschillende ximera's )
@@ -1189,4 +1200,6 @@
     \RenewDocumentCommand{\xmFixFormat}{ O{\xmFixFormatLength} O{\xmFixFormatPosition} m }
     {\HCode{\Hnewline<span class="xmFixFormat" style="display: inline-block; width: }#1\HCode{;">\Hnewline}#3{\HCode{\Hnewline</span>\Hnewline}}}
 \fi
+
+
 
