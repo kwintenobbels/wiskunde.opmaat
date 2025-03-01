@@ -1,85 +1,10 @@
 :root {
---definition-red: 255;
---definition-green: 0;
---definition-blue: 0;
-
---definition-background-perc: 0.05;
---definition-border-perc: 0.45;
-
---notation-background-perc: 0.05;
---notation-border-perc: 0.45;
-
---axiom-background-perc: 0.05;
---axiom-border-perc: 0.45;
-
---proposition-background-perc: 0.02;
---proposition-border-perc: 0.65;
-
---corollary-background-perc: 0.02;
---corollary-border-perc: 0.65;
-
---theorem-background-perc: 0.02;
---theorem-border-perc: 0.65;
-
---algorithm-background-perc: 0.02;
---algorithm-border-perc: 0.65;
-
---proof-background-perc: 0.00;
---proof-border-perc: 0.2;
-
---explanation-background-perc: 0.01;
---explanation-border-perc: 0.75;
-
---example-red: 29;
---example-green: 141;
---example-blue: 176;
-
---example-background-perc: 0.1;
---example-border-perc: 1;
-
---exercise-background-perc: 0.05;
---exercise-border-perc: 1.2;
-
---denkvraag-background-perc: 0.2;
---denkvraag-border-perc: 0;
-
---remark-red: 221;
---remark-green: 138;
---remark-blue: 47;
-
---remark-background-perc: 0.1;
---remark-border-perc: 1;
-
---warning-background-perc: 0.05;
---warning-border-perc: 0.65;
-
---uitweiding-background-perc: 0.1;
---uitweiding-border-perc: 0.15;	
+	--main-title: #98b639;
+	--menu-part: #98b639;
+	--accent: #de9642;
+	--definition: #98b639;
+	--exercises: #5d98d2;
+	--menu-1: #88539b;
+	--menu-2:  #c84378;
 }
-
-
---awb-custom_color_1: #de9642;
---awb-custom_color_1-h: 32;
---awb-custom_color_1-s: 70%;
---awb-custom_color_1-l: 56%;
---awb-custom_color_1-a: 100%;
---awb-custom_color_2: #98b639;
---awb-custom_color_2-h: 74;
---awb-custom_color_2-s: 52%;
---awb-custom_color_2-l: 47%;
---awb-custom_color_2-a: 100%;
---awb-custom_color_3: #5d98d2;
---awb-custom_color_3-h: 210;
---awb-custom_color_3-s: 57%;
---awb-custom_color_3-l: 59%;
---awb-custom_color_3-a: 100%;
---awb-custom_color_4: #88539b;
---awb-custom_color_4-h: 284;
---awb-custom_color_4-s: 30%;
---awb-custom_color_4-l: 47%;
---awb-custom_color_4-a: 100%;
---awb-custom_color_5: #c84378;
---awb-custom_color_5-h: 336;
---awb-custom_color_5-s: 55%;
---awb-custom_color_5-l: 52%;
---awb-custom_color_5-a: 100%;
+	
