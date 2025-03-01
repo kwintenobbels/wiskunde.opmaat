@@ -298,9 +298,11 @@ needspace=30pt % minimumhoogte voor splitsen kader
     }%
 }%
 
+\providecommand{\xmemph}[1]{\textit{#1}}
+
 % voor nieuw commando underdashed: onderlijn met stippellijnen en ook het woord cursief zetten:
 \newcommand{\underdashed}[1]{%
-    {\em\utikzdash{\!#1\!}}%
+    {\\textit{\utikzdash{\!#1\!}}}%
 }
 
 % voor icoon TI-84 Plus met verwijzing naar filmpje:

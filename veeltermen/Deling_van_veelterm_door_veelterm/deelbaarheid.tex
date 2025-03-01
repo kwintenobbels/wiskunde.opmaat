@@ -10,7 +10,7 @@
 	\xmtitle{Deelbaarheid}{}
 	\label{xim:veeltermen_deelbaarheid}
 
-Net zoals je kan spreken over deling van gehele getallen, kun je ook spreken over {\em deling van veeltermen}. Die definitie, eigenschappen en werkwijzen staan in dit hoofdstuk centraal. 
+Net zoals je kan spreken over deling van gehele getallen, kun je ook spreken over \xmemph{deling van veeltermen}. Die definitie, eigenschappen en werkwijzen staan in dit hoofdstuk centraal. 
 \section{Deelbaarheid}
 
 Het geheel getal $2025$ is deelbaar door het geheel getal $15$ omdat er een geheel getal $q$ bestaat waarvoor $2025 = 15\cdot q$, namelijk $q = 35$. Op een gelijkaardige manier kunnen we zeggen dat de veelterm $x^2-1$ deelbaar is door de veelterm $x+1$, omdat er een veelterm $Q(x)$ bestaat waarvoor $x^2-1 = (x+1)\cdot Q(x)$, namelijk $Q(x) = x-1$. We veralgemenen dit als volgt.
@@ -51,7 +51,7 @@ Als een veelterm $B(x) \neq 0$ een deler is van een veelterm $A(x)$ dan noteren 
 We hebben dat $x \mid x^2$ en $(x+1) \mid (x^2-1)$ en $(x-3) \nmid (2x^3+15)$.
 \end{example}
 
-Met behulp van de \wsgref{existenti\"ele kwantor}{4}{4} $\exists$, lees als {\em er bestaat}, kunnen we Definitie \ref{definitie:deler} als volgt aanvullen.
+Met behulp van de \wsgref{existenti\"ele kwantor}{4}{4} $\exists$, lees als \xmemph{er bestaat}, kunnen we Definitie \ref{definitie:deler} als volgt aanvullen.
 
 \begin{definition}[in woorden en symbolen]
 Zij $A(x)$ en $B(x)$ twee veeltermen met $B(x) \neq 0$. We noemen $B(x)$ een \underline{deler}\index{deler} van $A(x)$ als er een veelterm $Q(x)$ bestaat waarvoor geldt dat $A(x) = B(x)\cdot Q(x)$. In symbolen:
@@ -66,7 +66,7 @@ In dat geval noemen we de veelterm $A(x)$ het \underline{deeltal}, veelterm $B(x
 Beschouw de veeltermen $A(x) = x^8$ en $B(x) = x^2$. Dan is $B(x) \mid A(x)$ en een quoti\"ent van de opgaande deling is gelijk aan $x^6$. 
 \end{example}
 
-In de bovenstaande voorbeelden bestaat er telkens hoogstens \'e\'en veelterm $Q(x)$ waarvoor $A(x) = B(x)\cdot Q(x)$. Dat resultaat blijkt waar te zijn voor alle veeltermen $A(x)$ en $B(x)$ met $B(x) \neq 0$. Die eigenschap is erg belangrijk, die we daarom een {\em stelling} noemen. Hieronder zullen we die stelling ook bewijzen. 
+In de bovenstaande voorbeelden bestaat er telkens hoogstens \'e\'en veelterm $Q(x)$ waarvoor $A(x) = B(x)\cdot Q(x)$. Dat resultaat blijkt waar te zijn voor alle veeltermen $A(x)$ en $B(x)$ met $B(x) \neq 0$. Die eigenschap is erg belangrijk, die we daarom een \xmemph{stelling} noemen. Hieronder zullen we die stelling ook bewijzen. 
 
 \begin{stelling}[opgaande deling]
 Zij $A(x)$ en $B(x)$ twee veeltermen waarbij $B(x) \neq 0$. Dan bestaat er hoogstens \'e\'en veelterm $Q(x)$ zodat $A(x) = B(x)\cdot Q(x)$. 
@@ -82,11 +82,11 @@ A(x) = A(x) \quad & \Rightarrow \quad B(x)\cdot Q(x) = B(x)\cdot Q'(x) \\
 Er is gegeven dat $B(x) \neq 0$. Dus moet noodzakelijk $Q(x) - Q'(x)$ zodat $Q(x) = Q'(x)$. Bijgevolg bestaat er hoogstens \'e\'en veelterm $Q(x)$ zodat $A(x) = B(x)\cdot Q(x)$.
 \end{proof}
 
-Combineren we die stelling met de definitie van deelbaarheid, dan vinden we: een veelterm $B(x) \neq 0$ is een deler van een veelterm $A(x)$ als en slechts als er precies \'e\'en veelterm $Q(x)$ bestaat waarvoor geldt dat $A(x) = B(x)\cdot Q(x)$. Dit kunnen we in symbolen noteren door gebruik te maken van de kwantor $\exists!$ die we lezen als {\em er bestaat precies \'e\'en}:
+Combineren we die stelling met de definitie van deelbaarheid, dan vinden we: een veelterm $B(x) \neq 0$ is een deler van een veelterm $A(x)$ als en slechts als er precies \'e\'en veelterm $Q(x)$ bestaat waarvoor geldt dat $A(x) = B(x)\cdot Q(x)$. Dit kunnen we in symbolen noteren door gebruik te maken van de kwantor $\exists!$ die we lezen als \xmemph{er bestaat precies \'e\'en}:
 \[
 B(x) \mid A(x) \quad \Leftrightarrow \quad \exists! \, Q(x) \in \RR[x]: A(x) = B(x)\cdot Q(x).
 \] 
-In dat geval mogen we $Q(x)$ voortaan {\em het} quoti\"ent (van de opgaande deling) noemen, en noteren we ook 
+In dat geval mogen we $Q(x)$ voortaan \xmemph{het} quoti\"ent (van de opgaande deling) noemen, en noteren we ook 
 \[
 \frac{A(x)}{B(x)} = Q(x).
 \]
@@ -101,7 +101,7 @@ We hebben dat $x^2 \mid x^8$ en het quoti\"ent van de deling is gelijk aan $x^6$
 
 Een typische oefening is bepalen van het quoti\"ent van een opgaande deling. In de volgende paragraaf zien we de algemene werkwijze om dat te doen. 
 
-In het geval er in de veeltermen $A(x)$ en $B(x)$ parameters voorkomen, dan is de zogenaamde {\em methode van de onbepaalde co\"effici\"enten} vaak effici\"enter. Hierbij bepalen we eerst de graad van het quoti\"ent $Q(x)$, daarna wordt het quoti\"ent $Q(x)$ uitgedrukt met co\"effici\"enten die nog onbepaald zijn (vandaar de naam), om daarna met het verband $A(x) = B(x) \cdot Q(x)$ die co\"effici\"enten van $Q(x)$ te bepalen. Die methode kwam al eerder aan bod in Voorbeeld \ref{geendeler}. 
+In het geval er in de veeltermen $A(x)$ en $B(x)$ parameters voorkomen, dan is de zogenaamde \xmemph{methode van de onbepaalde co\"effici\"enten} vaak effici\"enter. Hierbij bepalen we eerst de graad van het quoti\"ent $Q(x)$, daarna wordt het quoti\"ent $Q(x)$ uitgedrukt met co\"effici\"enten die nog onbepaald zijn (vandaar de naam), om daarna met het verband $A(x) = B(x) \cdot Q(x)$ die co\"effici\"enten van $Q(x)$ te bepalen. Die methode kwam al eerder aan bod in Voorbeeld \ref{geendeler}. 
 
 \begin{example}
 We bepalen de waarde(n) van de parameters $p$ en $q$ waarvoor geldt dat de veelterm $6x^3+px^2+32x+q$ deelbaar is door de veelterm $2x^2-7x-1$. In dat geval heeft het quoti\"ent van de opgaande deling graad $1$, zodat 

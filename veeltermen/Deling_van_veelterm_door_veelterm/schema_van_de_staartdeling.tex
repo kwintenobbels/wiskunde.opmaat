@@ -49,12 +49,12 @@
 
 \section{Schema van de staartdeling}\index{staartdeling, schema van de}\index{schema!van de staartdeling}
 
-In de lagere school heb je geleerd hoe je een deling van twee gehele getallen kan uitvoeren met behulp van het \wsgref{schema van de staartdeling}{41}{41}.\footnote{De staartdeling is een voorbeeld van wat we een {\em algoritme} noemen: een eindige reeks instructies om vanuit een gegeven begintoestand een probleem op te lossen of een taak uit te voeren. De fundamentele vraag welke problemen met een algoritme kunnen opgelost worden, werd in 1937 opgelost door Alan Turing\index{Turing, Alan} \cite{Turing}. Zijn werk lag aan de basis van een van de grootste uitvindingen ooit: de computer.} Zo geeft bijvoorbeeld de deling van $239$ door $5$ als quoti\"ent $47$ en rest $4$. Dat resultaat kun je schrijven als $239 = 5 \cdot 47 + 4$. Kenmerkend is dat de rest kleiner is dan (de absolute waarde van) de deler. 
+In de lagere school heb je geleerd hoe je een deling van twee gehele getallen kan uitvoeren met behulp van het \wsgref{schema van de staartdeling}{41}{41}.\footnote{De staartdeling is een voorbeeld van wat we een \xmemph{algoritme} noemen: een eindige reeks instructies om vanuit een gegeven begintoestand een probleem op te lossen of een taak uit te voeren. De fundamentele vraag welke problemen met een algoritme kunnen opgelost worden, werd in 1937 opgelost door Alan Turing\index{Turing, Alan} \cite{Turing}. Zijn werk lag aan de basis van een van de grootste uitvindingen ooit: de computer.} Zo geeft bijvoorbeeld de deling van $239$ door $5$ als quoti\"ent $47$ en rest $4$. Dat resultaat kun je schrijven als $239 = 5 \cdot 47 + 4$. Kenmerkend is dat de rest kleiner is dan (de absolute waarde van) de deler. 
 
 Hieronder leer je om een deling van veeltermen op een gelijkaardige manier uit te voeren.
 
 \begin{werkwijze} \label{werkwijze:staartdeling}
-We hernemen het voorbeeld $A(x) = 14x^2+17x+5$ en $B(x) = 2x+1$. Om na te gaan dat $B(x)$ een deler van $A(x)$ is en om tegelijk ook het quoti\"ent te vinden, kunnen we stapsgewijs {\em de veelterm $B(x)$ forceren in de veelterm $A(x)$}. Dat gaat als volgt:
+We hernemen het voorbeeld $A(x) = 14x^2+17x+5$ en $B(x) = 2x+1$. Om na te gaan dat $B(x)$ een deler van $A(x)$ is en om tegelijk ook het quoti\"ent te vinden, kunnen we stapsgewijs \xmemph{de veelterm $B(x)$ forceren in de veelterm $A(x)$}. Dat gaat als volgt:
 \begin{align*}
 14x^2 + 17x + 5 
 & = \red{7x} \cdot (2x+1) \blue{- 7x} + 17x + 5 \\
@@ -67,7 +67,7 @@ We hernemen het voorbeeld $A(x) = 14x^2+17x+5$ en $B(x) = 2x+1$. Om na te gaan d
 %%% \clearpage
 
 
-Het vele schrijfwerk kan ingekort worden door het onderstaande {\em schema van de staartdeling}, ook wel {\em lange deling} genoemd. Hierin herken je de stappen die we hierboven uitgevoerd hebben. 
+Het vele schrijfwerk kan ingekort worden door het onderstaande \xmemph{schema van de staartdeling}, ook wel \xmemph{lange deling} genoemd. Hierin herken je de stappen die we hierboven uitgevoerd hebben. 
 \tikzit{
 $
 \begin{array}{l|l}
@@ -98,7 +98,7 @@ Hieruit besluiten we dat $B(x) = 2x+1$ een deler is van $A(x) = 14x^2+17x+5$, wa
 \[
 \underbrace{14x^2+17x+5}_{A(x)} = \underbrace{(2x+1)}_{B(x)}\cdot\underbrace{(7x + 5)}_{Q(x)}.
 \]
-Ook in het geval een veelterm $A(x)$ niet deelbaar is door een veelterm $B(x)$, kunnen we te werk gaan zoals hierboven. Het {\em forceren van de veelterm $B(x)$ in de veelterm $A(x)$} verloopt nu als volgt:
+Ook in het geval een veelterm $A(x)$ niet deelbaar is door een veelterm $B(x)$, kunnen we te werk gaan zoals hierboven. Het \xmemph{forceren van de veelterm $B(x)$ in de veelterm $A(x)$} verloopt nu als volgt:
 \begin{align*}
 2x^3 + 3x^2 - 1 
 & = \red{2x} \cdot (x^2+3x) \blue{- 6x^2} + 3x^2 - 1 \\
@@ -129,13 +129,13 @@ $
 \end{array}
 $
 }
-In dit geval stopt de procedure bij een {\em restveelterm} (kortweg {\em rest}) $R(x)$ die verschillend is van nul. Kenmerkend is dat de graad van die rest kleiner is dan de graad van $B(x)$. Uit het bovenstaande schema van de staartdeling mogen we dus besluiten dat
+In dit geval stopt de procedure bij een \xmemph{restveelterm} (kortweg \xmemph{rest}) $R(x)$ die verschillend is van nul. Kenmerkend is dat de graad van die rest kleiner is dan de graad van $B(x)$. Uit het bovenstaande schema van de staartdeling mogen we dus besluiten dat
 %\[
 %\underbrace{2x^3+3x^2-1}_{A(x)} = \underbrace{(x^2+3x)}_{B(x)}\cdot\underbrace{(2x - 3)}_{Q(x)} \,\, + \,\, \underbrace{9x - 1}_{R(x)} \quad \text{ waarbij } \quad \gr R(x) < \gr B(x).
 %\]
 \end{werkwijze}
 
-In het vervolg zullen we meestal meteen het schema van de staartdeling opschrijven. Onthoud wel waar die staartdeling vandaan komt: het is een kortere schrijfwijze voor het {\em forceren van een veelterm $B(x)$ in een veelterm $A(x)$}, de lange werkwijze die we hierboven twee keer uitgeschreven hebben. Enerzijds komt die lange werkwijze later nog aan bod in bewijzen van eigenschappen. Anderzijds komt ze ook nog van pas bij het oplossen van sommige oefeningen, net zoals dat bij de methode van de onbepaalde co\"effici\"enten het geval is.
+In het vervolg zullen we meestal meteen het schema van de staartdeling opschrijven. Onthoud wel waar die staartdeling vandaan komt: het is een kortere schrijfwijze voor het \xmemph{forceren van een veelterm $B(x)$ in een veelterm $A(x)$}, de lange werkwijze die we hierboven twee keer uitgeschreven hebben. Enerzijds komt die lange werkwijze later nog aan bod in bewijzen van eigenschappen. Anderzijds komt ze ook nog van pas bij het oplossen van sommige oefeningen, net zoals dat bij de methode van de onbepaalde co\"effici\"enten het geval is.
 
 %%% \clearpage
 
