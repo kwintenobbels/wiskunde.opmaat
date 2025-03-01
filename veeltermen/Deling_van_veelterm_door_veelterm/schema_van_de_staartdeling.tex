@@ -35,13 +35,15 @@
 \fi
 
 \newcommand{\tikzitinline}[2][0.1]{
-    \expandafter\tikz\tikzitOptions{
+    % \expandafter\tikz\tikzitOptions{
+    \begin{tikzpicture}
         \node (a) {#2};
         \path (current bounding box.south west) ++(-0.0,-0.0) coordinate (newSW);
         \path (current bounding box.north east) ++(#1,#1) coordinate (newNE);
         \useasboundingbox (newSW) rectangle (newNE);
         % \draw[gray] (newSW) rectangle (newNE);   % for debugging
-}
+    \end{tikzpicture}
+
 }  
 
 
@@ -55,11 +57,11 @@ Hieronder leer je om een deling van veeltermen op een gelijkaardige manier uit t
 We hernemen het voorbeeld $A(x) = 14x^2+17x+5$ en $B(x) = 2x+1$. Om na te gaan dat $B(x)$ een deler van $A(x)$ is en om tegelijk ook het quoti\"ent te vinden, kunnen we stapsgewijs {\em de veelterm $B(x)$ forceren in de veelterm $A(x)$}. Dat gaat als volgt:
 \begin{align*}
 14x^2 + 17x + 5 
-& = \mathcolor{red}{7x} \cdot (2x+1) \mathcolor{blue}{- 7x} + 17x + 5 \\
-& = \mathcolor{red}{7x} \cdot (2x+1) + 10x + 5 \\
-& = \mathcolor{red}{7x} \cdot (2x+1) + \mathcolor{red}{5} \cdot (2x+1) \mathcolor{blue}{- 5} + 5 \\
-& = \mathcolor{red}{7x} \cdot (2x+1) + \mathcolor{red}{5} \cdot (2x+1) \\
-& = (2x+1)\cdot(\mathcolor{red}{7x + 5}).
+& = \red{7x} \cdot (2x+1) \blue{- 7x} + 17x + 5 \\
+& = \red{7x} \cdot (2x+1) + 10x + 5 \\
+& = \red{7x} \cdot (2x+1) + \red{5} \cdot (2x+1) \blue{- 5} + 5 \\
+& = \red{7x} \cdot (2x+1) + \red{5} \cdot (2x+1) \\
+& = (2x+1)\cdot(\red{7x + 5}).
 \end{align*}
 
 %%% \clearpage
@@ -72,15 +74,15 @@ $
 & 2x+1 \\
 \cline{2-2}
 \vrule height 1.2em width 0pt
-& \mathcolor{red}{7x+5} \\[-0.96cm]
+& \red{7x+5} \\[-0.96cm]
 \stackunder[0.05cm]{%
   \stackon[0pt]{14x^2+17x+5}{}%
 }{%
   \Shortstack[r]{
-    {14x^2+\mph{1}\mathcolor{blue}{7x}\mph{+5}}
+    {14x^2+\mph{1}\blue{7x}\mph{+5}}
     {\staartmin \staartstreep{14x^2+\mph{1}7x} \staartphstreep{+50}}
     {10x+5}
-    {10x+\mathcolor{blue}{5}} 
+    {10x+\blue{5}} 
     {\staartmin \staartstreep{10x+5}}
     {0}
 }
@@ -99,10 +101,10 @@ Hieruit besluiten we dat $B(x) = 2x+1$ een deler is van $A(x) = 14x^2+17x+5$, wa
 Ook in het geval een veelterm $A(x)$ niet deelbaar is door een veelterm $B(x)$, kunnen we te werk gaan zoals hierboven. Het {\em forceren van de veelterm $B(x)$ in de veelterm $A(x)$} verloopt nu als volgt:
 \begin{align*}
 2x^3 + 3x^2 - 1 
-& = \mathcolor{red}{2x} \cdot (x^2+3x) \mathcolor{blue}{- 6x^2} + 3x^2 - 1 \\
-& = \mathcolor{red}{2x} \cdot (x^2+3x) - 3x^2 - 1 \\
-& = \mathcolor{red}{2x} \cdot (x^2+3x) \mathcolor{red}{- 3} \cdot (x^2+3x) \mathcolor{blue}{+ 9x} - 1  \\
-& = (x^2+3x) \cdot (\mathcolor{red}{2x - 3}) + 9x - 1.
+& = \red{2x} \cdot (x^2+3x) \blue{- 6x^2} + 3x^2 - 1 \\
+& = \red{2x} \cdot (x^2+3x) - 3x^2 - 1 \\
+& = \red{2x} \cdot (x^2+3x) \red{- 3} \cdot (x^2+3x) \blue{+ 9x} - 1  \\
+& = (x^2+3x) \cdot (\red{2x - 3}) + 9x - 1.
 \end{align*}
 Het bijbehorende schema van de staartdeling vergt opnieuw minder schrijfwerk. 
 \tikzit{
@@ -111,15 +113,15 @@ $
 & x^2+3x \\
 \cline{2-2}
 \vrule height 1.2em width 0pt
-& \mathcolor{red}{2x-3} \\[-0.96cm]
+& \red{2x-3} \\[-0.96cm]
 \stackunder[0.05cm]{%
   \stackon[0pt]{2x^3+3x^2-1\mph{x-1}}{}%
 }{%
   \Shortstack[r]{
-    {2x^3 \mathcolor{blue}{+6x^2}\mph{-9x-1}} 
+    {2x^3 \blue{+6x^2}\mph{-9x-1}} 
     {\staartmin \staartstreep{2x^3+6x^2} \staartphstreep{-9x-10}}
     {-3x^2-1\mph{x-1}} 
-    {-3x^2 \mathcolor{blue}{-9x}\mph{-1}} 
+    {-3x^2 \blue{-9x}\mph{-1}} 
     {\staartmin \staartstreep{-3x^2-9x} \staartphstreep{-10}}
     {9x-1}
 }
