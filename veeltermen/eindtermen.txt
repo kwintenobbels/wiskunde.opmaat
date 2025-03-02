@@ -1,0 +1,60 @@
+\item 06.01    De leerlingen rekenen met reële getallen.
+\item 06.02    De leerlingen brengen met behulp van de grafiek, kenmerken van een functie in verband met de betekenisvolle situatie die door de functie beschreven wordt.
+\item 06.03    De leerlingen interpreteren de afgeleide als limiet van een differentiequotiënt en als richtingscoëfficiënt van de raaklijn aan de grafiek.
+\item 06.04    De leerlingen leggen grafisch het verband tussen een functie en haar afgeleide functie.
+\item 06.05    De leerlingen analyseren kenmerken van de functie f(x)=a^x: domein, bereik, stijgen/dalen, toenemende stijging/afnemende daling, horizontale asymptoot en gedrag op oneindig.
+\item 06.06    De leerlingen gebruiken modellen voor exponentiële groei.
+\item 06.07    De leerlingen gebruiken transformaties van de vorm f(x) + k en k·f(x) om de grafiek van een algemene exponentiële functie f(x)=b·a^x+c op te bouwen vanuit de grafiek van f(x)=a^x.
+\item 06.08    De leerlingen tekenen de grafiek van de functie f(x)=sin x vanuit de goniometrische cirkel.
+\item 06.09    De leerlingen gebruiken transformaties van de vorm f(x)+k, f(x-k), f(x/k) en k·f(x) om de grafiek van een algemene sinusfunctie f(x)= a·sin[b(x-c)]+d op te bouwen vanuit de grafiek van f(x)=sin x.
+\item 06.10    De leerlingen analyseren kenmerken van een algemene sinusfunctie aan de hand van de grafiek: domein, bereik, nulwaarden, tekenverloop, stijgen/dalen, extrema, symmetrie, periodiciteit en amplitude.
+\item 06.11    De leerlingen lossen vergelijkingen grafisch op met behulp van ICT.
+\item 06.12    De leerlingen gebruiken rekenkundige en meetkundige rijen om patronen te beschrijven.
+\item 06.13    De leerlingen bepalen kansen met behulp van kruistabellen, boomdiagrammen en de wet van Laplace.
+\item 06.14    De leerlingen verklaren het belang van randomisatie en representativiteit bij steekproeven voor het formuleren van statistische besluiten over een populatie.
+\item 06.15    De leerlingen leggen in concrete situaties het verschil uit tussen samenhang en causaliteit.
+\item 06.18    De leerlingen beargumenteren wiskundige redeneringen.
+\item 06.17    De leerlingen berekenen kansen bij een normaal verdeelde kansvariabele.
+\item 06.19    De leerlingen beschrijven fenomenen uit de realiteit aan de hand van wiskundige concepten uit de derde graad.
+\item 06.16    De leerlingen gebruiken de normale verdeling als continu model bij gegeven data.
+\item 06.20    De leerlingen lossen vraagstukken en problemen op door te mathematiseren en demathematiseren en door gebruik te maken van heuristieken.
+\item 06.21    De leerlingen gebruiken ICT om berekeningen uit te voeren en grafische voorstellingen te maken.
+\item 06.08.01 De leerlingen voeren bewerkingen uit met matrices: optelling, scalaire vermenigvuldiging, matrixvermenigvuldiging, machtsverheffing en transpositie.
+\item 06.08.02 De leerlingen gebruiken matrixmodellen om evoluties te beschrijven.
+\item 06.08.03 De leerlingen berekenen de rang van matrices, de inverse matrix van inverteerbare matrices en de determinant van vierkante matrices.
+\item 06.08.04 De leerlingen lossen stelsels van eerstegraadsvergelijkingen op met behulp van de methode van Gauss-Jordan.
+\item 06.08.05 De leerlingen bepalen het voorschrift of de grafiek van een tweedegraadsfunctie als de andere representatie gegeven is.
+\item 06.08.06 De leerlingen analyseren kenmerken van tweedegraadsfuncties: domein, bereik, nulwaarden, tekenverloop, stijgen/dalen, extremum, toenemende/afnemende stijging/daling en symmetrie ten opzichte van een verticale rechte.
+\item 06.08.07 De leerlingen leggen het verband tussen de grafiek van een functie en haar kenmerken.
+\item 06.08.08 De leerlingen leggen grafisch het verband tussen inverteerbare functies en hun inverse.
+\item 06.08.09 De leerlingen lossen vergelijkingen en ongelijkheden grafisch op.
+\item 06.08.10 De leerlingen lossen tweedegraadsvergelijkingen in één onbekende in de verzameling van de reële getallen algebraïsch op.
+\item 06.08.11 De leerlingen lossen tweedegraadsongelijkheden in één onbekende algebraïsch op.
+\item 06.08.12 De leerlingen analyseren deelbaarheid bij veeltermen met reële coëfficiënten in één variabele.
+\item 06.08.13 De leerlingen lossen eenvoudige veeltermvergelijkingen, rationale vergelijkingen, irrationale vergelijkingen, exponentiële vergelijkingen, logaritmische vergelijkingen en goniometrische vergelijkingen algebraïsch op.
+\item 06.08.14 De leerlingen definiëren het limietbegrip op een formele manier.
+\item 06.08.15 De leerlingen bepalen limieten van rijen.
+\item 06.08.16 De leerlingen bepalen grafisch en algebraïsch limieten van functies en analyseren het asymptotisch gedrag.
+\item 06.08.17 De leerlingen berekenen de afgeleide functie van functies die zijn opgebouwd uit veeltermfuncties, rationale functies, irrationale functies, exponentiële functies, logaritmische functies en goniometrische functies.
+\item 06.08.18 De leerlingen analyseren het verloop van functies met behulp van de eerste en tweede afgeleide functie en lossen extremumproblemen op.
+\item 06.08.19 De leerlingen interpreteren een bepaalde integraal als de limiet van een som en als een georiënteerde oppervlakte.
+\item 06.08.20 De leerlingen leggen het verband tussen bepaalde integralen en primitieve functies door middel van de hoofdstelling van de integraalrekening.
+\item 06.08.21 De leerlingen berekenen bepaalde en onbepaalde integralen van functies.
+\item 06.08.22 De leerlingen gebruiken de sinus- en cosinusregel om meetkundige problemen op te lossen.
+\item 06.08.23 De leerlingen gebruiken goniometrische formules om uitdrukkingen te vereenvoudigen.
+\item 06.08.24 De leerlingen stellen complexe getallen voor in het vlak.
+\item 06.08.25 De leerlingen voeren bewerkingen uit met complexe getallen in cartesische vorm: optelling, aftrekking, vermenigvuldiging en deling.
+\item 06.08.26 De leerlingen lossen tweedegraadsvergelijkingen met reële coëfficiënten in één onbekende op in de verzameling van de complexe getallen.
+\item 06.08.27 De leerlingen zetten complexe getallen in cartesische vorm om naar goniometrische vorm en omgekeerd.
+\item 06.08.28 De leerlingen voeren bewerkingen uit met complexe getallen in goniometrische vorm: vermenigvuldiging, deling, machtsverheffing en n-de machtsworteltrekking.
+\item 06.08.29 De leerlingen rekenen met vectoren in het vlak en in de ruimte.
+\item 06.08.30 De leerlingen stellen vectoriële, parametrische en cartesische vergelijkingen van rechten in het vlak en van rechten en vlakken in de ruimte op.
+\item 06.08.31 De leerlingen bepalen de onderlinge ligging van twee rechten in het vlak met behulp van vergelijkingen.
+\item 06.08.32 De leerlingen bepalen de onderlinge ligging van twee rechten, van een rechte en een vlak en van twee vlakken in de ruimte met behulp van vergelijkingen.
+\item 06.08.33 De leerlingen berekenen afstanden en hoeken in het vlak en in de ruimte.
+\item 06.08.34 De leerlingen lossen telproblemen op met en zonder herhaling en waarbij de volgorde al dan niet van belang is.
+\item 06.08.35 De leerlingen berekenen en interpreteren kansen met behulp van de binomiale verdeling.
+\item 06.08.36 De leerlingen toetsen hypothesen.
+\item 06.08.37 De leerlingen analyseren het verband tussen twee numerieke grootheden in een dataset met behulp van een spreidingsdiagram.
+\item 06.08.38 De leerlingen analyseren verzamelingen voorzien van één of meerdere bewerkingen aan de hand van een algebraïsche structuur.
+\item 06.08.39 De leerlingen beargumenteren wiskundige redeneringen en bewijzen wiskundige uitspraken.
