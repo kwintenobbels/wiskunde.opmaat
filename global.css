@@ -974,12 +974,14 @@
 	
 	
 	.main-title {
-		background-color: var(--main-title);
+		background-color: #5d98d2;
 		color: white;
+		/* align-items: anchor-center; */
 	}
 	
 	
 	.main-inhoud .toc-search {
+		display: none;
 		background-color: var(--main-title);
 	}
 	
@@ -996,12 +998,11 @@
 	
 	.toc .part {
 		font-size: larger;
-		background-color: var(--menu-part);
+		background-color: rgb(93, 152, 210);
 	}
 	
 	.toc .activity-card.active {
-		background-color: var(--accent) !important;
-		color: white;
+		background-color: rgb(152, 182, 57);
 		border-color: #292b2c;
 	}
 	
@@ -1014,7 +1015,8 @@
 	
 	.title-xourse, .title-activity {
 		text-transform: uppercase;
-		font-family: "Times New Roman", Times, serif;
+		font-family: Times New Roman;
+		font-size: xxx-large;
 	}
 	
 	.main-inhoud .activity-title {
@@ -1053,7 +1055,7 @@
 	
 	/* color exercises in toc */
 	.toc .card.activity-card.section {
-		background-color: rgb(200 202 203 / 25%);
+		background-color: rgb(152, 182, 57,0.2);
 	}
 	
 	.proof::before {
@@ -1103,11 +1105,11 @@
 	}
 	
 	.definition{
-		--border-color: var(--definition);
-		--background-color: var(--definition);
+		--border-color: rgb(136, 83, 155);
+		--background-color: rgb(136, 83, 155, 0.2);
 	}
 	
 	.example{
-		--border-color: var(--exercises);
-		--background-color: var(--exercises);
+		--border-color: rgb(222, 150, 66);
+		--background-color: rgb(222, 150, 66,0.2);
 	}
