@@ -151,7 +151,28 @@
 % }
 
 % \newenvironment{Uitbreiding}{}{}
-\newenvironment{Uitbreiding}{\begin{expandable}{xmuitweiding}{Uitbreiding:}}{\end{expandable}}
+\ifdefined\HCode
+\newenvironment{Uitbreiding}{%
+    \begin{expandable}{xmuitweiding}{Uitbreiding:}%
+}{%
+    \end{expandable}%
+}%
+\else
+\newtheorem{Uitbreiding}{Uitbreiding}
+\renewcommand{\theUitbreiding}{} % titel instellen
+\tcolorboxenvironment{Uitbreiding}{
+    boxrule=0pt,
+    boxsep=0pt,
+    colback={gray!2!white},
+    enhanced jigsaw,
+    borderline west={2pt}{0pt}{red!55!black},
+    sharp corners,
+    before skip=10pt,
+    after skip=10pt,
+    breakable,
+    % before upper={\vspace*{-0.45cm}},
+}
+\fi
 
         %\begin{xmuitweiding}}{\end{xmuitweiding}}
 % omgevingen voor lemma, definitie, voorbeeld etc.:
