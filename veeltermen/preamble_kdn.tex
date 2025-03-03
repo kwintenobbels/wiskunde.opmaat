@@ -150,6 +150,8 @@
 %     \end{mdframed}
 % }
 
+\tcbuselibrary{breakable,skins}
+
 % \newenvironment{Uitbreiding}{}{}
 \ifdefined\HCode
 \newenvironment{Uitbreiding}{%
@@ -158,8 +160,9 @@
     \end{expandable}%
 }%
 \else
-\newtheorem{Uitbreiding}{Uitbreiding}
-\renewcommand{\theUitbreiding}{} % titel instellen
+\newenvironment{Uitbreiding}{}{}%
+% \newtheorem{Uitbreiding}{Uitbreiding}
+% \renewcommand{\theUitbreiding}{} % titel instellen
 \tcolorboxenvironment{Uitbreiding}{
     boxrule=0pt,
     boxsep=0pt,
