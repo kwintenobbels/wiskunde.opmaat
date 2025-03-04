@@ -84,7 +84,8 @@ jobs:
           GPG_KEY: ${{ secrets.GPG_KEY }}
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
           XIMERA_URL: ${{ vars.XIMERA_URL }}
-          XIMERA_NAME:  ${{ vars.XIMERA_NAME }}
+          XXXXIMERA_NAME:  ${{ vars.XIMERA_NAME }}
+          XIMERA_NAME:  kdn
         run: |
           ./xmScripts/xmlatex name         
           ./xmScripts/xmlatex serve -f  # NOTE: -f  should not be needed ...        
