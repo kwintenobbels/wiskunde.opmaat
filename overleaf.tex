@@ -1,0 +1,270 @@
+\documentclass[a4paper,12pt]{book}
+
+
+\usepackage[dutch]{babel}
+\usepackage{geometry}
+
+
+
+\geometry{margin=0.8in}
+\usepackage{titlesec}
+
+
+
+% WE DEFNIFIEREN DE LAYOUT VOOR DE INHOUDSOPGAVE 
+
+\newcommand{\hoofdstuk}[2]{
+    \chapter*{
+        \centering 
+        \large{\MakeUppercase{\textbf{#1}}}\\[3mm]
+        \Large{\MakeUppercase{\textbf{#2}}}
+        }}
+
+\newcounter{sectie_nummer}
+\setcounter{sectie_nummer}{1}  
+\newcommand{\sectie}[1]{
+    \section*{
+        \centering 
+        \S \arabic{sectie_nummer}. \textbf{#1}}
+        \refstepcounter{sectie_nummer} % Increment the counter
+}
+
+\newcounter{subsectie_nummer}
+\setcounter{subsectie_nummer}{1}
+\newcommand{\subsectie}[1]{
+    \subsection*{
+        \centering{ \normalsize{\Roman{subsectie_nummer}. \MakeUppercase{\textbf{#1}}}}}
+        \refstepcounter{subsectie_nummer} % Increment the counter
+}
+
+\newcounter{subsubsectie_nummer}
+\setcounter{subsubsectie_nummer}{1}  
+\newcommand{\subsubsectie}[1]{
+    \subsubsection*{
+        \centering{ \small{\arabic{subsubsectie_nummer}. {\textbf{#1}}}}}
+        \refstepcounter{subsubsectie_nummer}
+}
+
+
+
+\newcommand{\opmerking}{\textbf{Opmerkingen.} }
+
+
+
+% WE DEFINIEREN DE GENESTE STRUCTUUR BINNEN PARAGRAFEN 
+
+\newcounter{punt_nummer} % Create a counter for paragraph numbers
+\setcounter{punt_nummer}{0} % Start the counter at 51
+
+\newenvironment{punt}{
+    \vspace{2mm}
+    \setcounter{subpunt_nummer}{0} 
+    \refstepcounter{punt_nummer} % Increment the counter
+    \textbf{\arabic{punt_nummer}. --- } {}}
+
+
+\newcounter{subpunt_nummer} % Create a counter for paragraph numbers
+\setcounter{subpunt_nummer}{0} % Start the counter at 51
+
+\newenvironment{subpunt}{
+  \setcounter{Asubpunt_nummer}{0} 
+  \refstepcounter{subpunt_nummer} % Increment the counter
+  \arabic{subpunt_nummer}.   % Print the bold number and the paragraph text
+}{}
+
+
+% \newcounter{Asubpunt_nummer} % Create a counter for paragraph numbers
+% \setcounter{Asubpunt_nummer}{1} % Start the counter at 51
+
+% \newenvironment{Asubpunt}{
+%   \refstepcounter{Asubpunt_nummer} % Increment the counter
+%   \Alph{Asubpunt_nummer}.   % Print the bold number and the paragraph text
+% }{}
+
+
+% Tabellen fixen 
+
+\usepackage{booktabs}
+
+\usepackage{mdframed, xcolor}
+
+\usepackage{graphicx}
+
+\usepackage{tikz}
+
+
+
+\begin{document}
+
+
+
+
+\hoofdstuk{EERSTE HOOFDSTUK}{HET ZELFSTANDIG NAAMWOORD}
+
+
+\sectie{Geslacht}
+
+Het geslacht van zelfstandige naamwoorden kent men:
+
+\begin{punt}
+
+    Aan hun \textbf{uitgang.}
+    - Bij elke verbuiging worden de voornaamste uitgangen opgesomd.
+\end{punt}
+
+
+\begin{punt}
+    
+Aan hun \textbf{betekenis.}:
+
+\begin{description} 
+    
+    \item[A]. \textbf{Mannelijk} zijn meestal:
+    \begin{description}
+        \item[a] Namen van mannen:
+        Caesar (Caesar); latro (rover); scriba (klerk)
+        
+        Opmerkingen:
+        - Het geslacht van verzamelingen hangt af van hun uitgang:
+        - operae (vr.) - toeschouwers
+        - vigiliae (vr.) - wachten
+        - copiae (vr.) - troepen
+        - auxilia (onz.) - hulptroepen
+        - Mancipium (slaaf, als zaak beschouwd) is onzijdig.
+        
+        \item[b] Namen van winden en rivieren (de algemene benamingen ventus en fluvius zijn mannelijk):
+        - Boreas (noordenwind)
+        - Scaldis (Schelde)
+        
+        Uitzonderingen:
+        - Sommige riviernamen zijn vrouwelijk, zoals Allia (een riviertje ten noorden van Rome).
+        - Van enkele riviernamen is het geslacht onbekend, zoals Mosa.
+        
+        \item[c] Namen van maanden (waarbij men het mannelijke "mensis" kan aanvullen):
+        - September (september)
+        
+    \end{description}
+    \item[B]. \textbf{Vrouwelijk} zijn:
+    a) Namen van vrouwen:
+    - Dido (Dido)
+    - mater (moeder)
+    - uxor (echtgenote)
+    - soror (zuster)
+    
+    b) De meeste namen van bomen (de algemene benaming arbor is vrouwelijk):
+    - malus (appelboom)
+    - populus (populier)
+    
+    c) Bijna alle namen van landen, eilanden en steden (zelfs die op -us eindigen):
+    - Aegyptus (Egypte)
+    - Cyprus (Cyprus)
+    - Pontus (landschap Pontus)
+    - Hellespontus (de Hellespont) zijn echter mannelijk.
+    - Steden in het meervoud zijn ook mannelijk: Veii (in Etrurië), Delphi.
+    
+    Opmerkingen:
+    1. Sommige zelfstandige naamwoorden zijn gemeenschappelijk (mannelijk of vrouwelijk afhankelijk van de persoon):
+    - adulescens (jongeman/meisje)
+    - bos (os/koe)
+    2. Andere hebben verschillende uitgangen voor mannelijk en vrouwelijk:
+    - filius (zoon) - filia (dochter)
+    - rex (koning) - regina (koningin)
+    - avus (grootvader) - avia (grootmoeder)
+    
+    \item[C] Onzijdig zijn alle onverbuigbare woorden:
+    - fas (de goddelijke wet)
+    - Alle infinitieven: amare (beminnen), mentiri (liegen), enz.
+    
+\end{description}
+\end{punt}
+
+\sectie{Verbuiging der zelfstandige naamwoorden}
+
+Er zijn vijf verbuigingen, geclassificeerd op basis van de uitgang van de genitief enkelvoud:
+
+| Verbuiging | Genitief eindigt op |
+|------------|--------------------|
+| 1e         | -ae                |
+| 2e         | -i                 |
+| 3e         | -is                |
+| 4e         | -us                |
+| 5e         | -ei                |
+
+------------------------------------------------------
+
+I. EERSTE VERBUIGING (Genitief op -ae)
+
+Deze omvat:
+- Vrouwelijke zelfstandige naamwoorden op -a
+- Enkele mannelijke op -a
+
+Voorbeeld van verbuiging: **Rosa (vr.) - de roos**
+
+| Naamval | Enkelvoud  | Meervoud  |
+|---------|-----------|-----------|
+| Nominatief  | rosa  | rosae  |
+| Vocatief    | rosa  | rosae  |
+| Genitief    | rosae | rosarum |
+| Datief      | rosae | rosis  |
+| Accusatief  | rosam | rosas  |
+| Ablatief    | rosa  | rosis  |
+
+------------------------------------------------------
+
+II. TWEEDE VERBUIGING (Genitief op -i)
+
+Deze omvat:
+- Mannelijke zelfstandige naamwoorden op -us
+- Enkele vrouwelijke op -us
+- Onzijdige op -um
+- Mannelijke op -er
+
+Voorbeelden:
+
+1. **Avus (m.) - grootvader** en **Donum (onz.) - geschenk**
+
+| Naamval | Avus (m.)  | Meervoud | Donum (onz.) | Meervoud |
+|---------|-----------|----------|--------------|----------|
+| Nominatief  | avus  | avi      | donum       | dona     |
+| Vocatief    | ave   | avi      | donum       | dona     |
+| Genitief    | avi   | avorum   | doni        | donorum  |
+| Datief      | avo   | avis     | dono        | donis    |
+| Accusatief  | avum  | avos     | donum       | dona     |
+| Ablatief    | avo   | avis     | dono        | donis    |
+
+2. **Liber (m.) - boek, Puer (m.) - jongen**
+
+| Naamval | Liber (m.)  | Meervoud | Puer (m.) | Meervoud |
+|---------|------------|----------|-----------|----------|
+| Nominatief  | liber   | libri    | puer      | pueri    |
+| Vocatief    | liber   | libri    | puer      | pueri    |
+| Genitief    | libri   | librorum | pueri     | puerorum |
+| Datief      | libro   | libris   | puero     | pueris   |
+| Accusatief  | librum  | libros   | puerum    | pueros   |
+| Ablatief    | libro   | libris   | puero     | pueris   |
+
+------------------------------------------------------
+
+III. DERDE VERBUIGING (Genitief op -is)
+
+Bevat:
+1. Consonantstammen (stam eindigt op medeklinker)
+2. Vocaalstammen op -i
+
+Voorbeeld:
+
+**Dux (m.) - leider, Corpus (onz.) - lichaam**
+
+| Naamval | Dux (m.) | Meervoud | Corpus (onz.) | Meervoud |
+|---------|---------|----------|--------------|----------|
+| Nominatief  | dux  | duces    | corpus       | corpora  |
+| Vocatief    | dux  | duces    | corpus       | corpora  |
+| Genitief    | ducis | ducum   | corporis     | corporum |
+| Datief      | duci  | ducibus | corpori      | corporibus |
+| Accusatief  | ducem | duces   | corpus       | corpora  |
+| Ablatief    | duce  | ducibus | corpore      | corporibus |
+
+
+
+
+\end{document}
