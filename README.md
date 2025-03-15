@@ -1,8 +1,5 @@
-# Branch 'wiskundeplan' (en afgeleiden...)
+Plaats om te experimenteren met ideen voor latijn. 
 
-Deze branch bevat een Ximeraversie van het onderdeel 'rekenvaardigheden' van wiskundeplan.be.
-
-De Github action is aangepast zodat de cursus gepubliceerd wordt op
 
 http://wiskunde.opmaat.org/wiskundeplan/rekenvaardigheden
 
