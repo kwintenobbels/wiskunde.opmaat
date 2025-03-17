@@ -1,0 +1,18 @@
+:root {
+	--main-title: #5d98d2;
+	--menu-part: #98b639;
+	--accent: #de9642;
+	--definition: #98b639;
+	--exercises: #5d98d2;
+	--menu-1: #88539b;
+	--menu-2:  #c84378;
+}
+	
+img.brandlogo {
+		display: none;		
+}
+
+img.xourselogo {
+	max-height: 6rem;
+	max-width: 20vw;
+}
