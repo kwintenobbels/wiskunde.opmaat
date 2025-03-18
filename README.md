@@ -1,2 +1,2 @@
 # wiskunde.opmaat
-LaTeX broncode van het open source project wiskunde.opmaat.org 
+De tijdelijke webhosting met layout Sint-Pieterscollege Leuven 
