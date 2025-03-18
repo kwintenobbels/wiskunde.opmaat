@@ -10,7 +10,7 @@ Onder 'download' kan je de pdf met of zonder antwoorden downloaden.
 
 \newcommand{\choicetwee}{{\wordChoice{\choice[correct]{twee}\choice{één}\choice{geen}}}}
 \newcommand{\choiceeen}{{\wordChoice{\choice{twee}\choice[correct]{één}\choice{geen}}}}
-\newcommand{\choicegeen}{{\wordChoice{\choice{twee}\choice]{één}\choice[correct]{geen}}}}
+\newcommand{\choicegeen}{{\wordChoice{\choice{twee}\choice{één}\choice[correct]{geen}}}}
 
 \newcommand{\choicepositief}{{\wordChoice{\choice[correct]{positief}\choice{nul}\choice{negatief}}}}
 \newcommand{\choicenul}{{\wordChoice{\choice{positief}\choice[correct]{nul}\choice{negatief}}}}
@@ -280,84 +280,84 @@ Met de discrimantformule bereken je dus deze snijpunten met de x-as zonder grafi
 \end{exercise}
     
 
-\begin{expandable}{remark}{De constante factor \(c\)}
-\begin{remark}
+% \begin{expandable}{remark}{De constante factor \(c\)}
+% \begin{remark}
     
     
-    In het algemeen voorschrift \( ax^2+bx+c=0 \) geeft de constante term \(c\) een verticale verschuiving weer. 
-    De waarde van \(c\) heeft dus invloed op het aantal snijpunten met de x-as en hiermee kan je inzien waar die \(c\) ook invloed heeft op het tegen van de discriminant \(\Delta = b^2 - 4ac\). 
-    
-\usepackage{tikz}
+%     In het algemeen voorschrift \( ax^2+bx+c=0 \) geeft de constante term \(c\) een verticale verschuiving weer. 
+%     De waarde van \(c\) heeft dus invloed op het aantal snijpunten met de x-as en hiermee kan je inzien waar die \(c\) ook invloed heeft op het tegen van de discriminant \(\Delta = b^2 - 4ac\). 
 
-    \begin{image}
+% \usepackage{tikz}
 
-        \begin{scope}[xshift=0cm]
-        \begin{tikzpicture}[scale=1]
+%     \begin{image}
 
-            % Draw axes
-            \draw[->] (-1,0) -- (5,0) node[right] {\(x\)};
-            \draw[->] (0,-1) -- (0,4) node[above] {\(y\)};
+%         \begin{scope}[xshift=0cm]
+%         \begin{tikzpicture}[scale=1]
+
+%             % Draw axes
+%             \draw[->] (-1,0) -- (5,0) node[right] {\(x\)};
+%             \draw[->] (0,-1) -- (0,4) node[above] {\(y\)};
             
-            % Draw the parabola y = x^2 - 4x + 3
-            \draw[domain=-0.2:4.2, samples=100, smooth, very thick, blue] 
-                plot (\x, {(\x)^2 - 4*(\x) + 3}); 
+%             % Draw the parabola y = x^2 - 4x + 3
+%             \draw[domain=-0.2:4.2, samples=100, smooth, very thick, blue] 
+%                 plot (\x, {(\x)^2 - 4*(\x) + 3}); 
                 
-            \draw (2, 3) node[blue] {\( f(x) = x^2 - 4x + 3 \)};
+%             \draw (2, 3) node[blue] {\( f(x) = x^2 - 4x + 3 \)};
         
-            % Roots (zeros) of the parabola
-            \filldraw[red] (1,0) circle (2pt) node[below] {\(x=1\)};
-            \filldraw[red] (3,0) circle (2pt) node[below] {\(x=3\)};
+%             % Roots (zeros) of the parabola
+%             \filldraw[red] (1,0) circle (2pt) node[below] {\(x=1\)};
+%             \filldraw[red] (3,0) circle (2pt) node[below] {\(x=3\)};
         
-        \end{tikzpicture}
-        \end{scope}
+%         \end{tikzpicture}
+%         \end{scope}
 
-        \begin{scope}[xshift=3cm]
-        \begin{tikzpicture}[scale=1]
-            % Teken de assen
-            \draw[->] (-1,0) -- (5,0) node[right] {\(x\)};
-            \draw[->] (0,-1) -- (0,4) node[above] {\(y\)};
+%         \begin{scope}[xshift=3cm]
+%         \begin{tikzpicture}[scale=1]
+%             % Teken de assen
+%             \draw[->] (-1,0) -- (5,0) node[right] {\(x\)};
+%             \draw[->] (0,-1) -- (0,4) node[above] {\(y\)};
             
-            % Teken de parabool f(x) = x^2 - 4x + 4
-            \draw[domain=-0.2:4.2, samples=100, smooth, very thick, blue] 
-                plot (\x, {(\x)^2 - 4*(\x) + 4});
+%             % Teken de parabool f(x) = x^2 - 4x + 4
+%             \draw[domain=-0.2:4.2, samples=100, smooth, very thick, blue] 
+%                 plot (\x, {(\x)^2 - 4*(\x) + 4});
                 
-            \draw (2, 3) node[blue] {\( f(x) = x^2 - 4x + 4 \)};
+%             \draw (2, 3) node[blue] {\( f(x) = x^2 - 4x + 4 \)};
             
-            % Markeer de dubbele wortel
-            \filldraw[red] (2,0) circle (2pt) node[below] {\(x=2\)};
+%             % Markeer de dubbele wortel
+%             \filldraw[red] (2,0) circle (2pt) node[below] {\(x=2\)};
             
-        \end{tikzpicture}
-        \end{scope}
+%         \end{tikzpicture}
+%         \end{scope}
 
 
-        \begin{scope}[xshift=6cm]    
-        \begin{tikzpicture}[scale=1]
-            % Teken de assen
-            \draw[->] (-1,0) -- (5,0) node[right] {\(x\)};
-            \draw[->] (0,-1) -- (0,6) node[above] {\(y\)};
+%         \begin{scope}[xshift=6cm]    
+%         \begin{tikzpicture}[scale=1]
+%             % Teken de assen
+%             \draw[->] (-1,0) -- (5,0) node[right] {\(x\)};
+%             \draw[->] (0,-1) -- (0,6) node[above] {\(y\)};
             
-            % Teken de parabool f(x) = x^2 - 4x + 5
-            \draw[domain=-0.2:4.2, samples=100, smooth, very thick, blue] 
-                plot (\x, {(\x)^2 - 4*(\x) + 5});
+%             % Teken de parabool f(x) = x^2 - 4x + 5
+%             \draw[domain=-0.2:4.2, samples=100, smooth, very thick, blue] 
+%                 plot (\x, {(\x)^2 - 4*(\x) + 5});
                 
-            \draw (2, 5) node[blue] {\( f(x) = x^2 - 4x + 5 \)};
+%             \draw (2, 5) node[blue] {\( f(x) = x^2 - 4x + 5 \)};
             
-        \end{tikzpicture}
-        \end{scope}
+%         \end{tikzpicture}
+%         \end{scope}
         
-    \end{image}
+%     \end{image}
     
     
-    Voor de geïntresseerd leerlingen: de grafiek boven de x-as met een negatieve discrimant in de vierkantswortel heeft geen oplossingen in de reële getallen. 
-    In de complexe getallen hebben wiskundigen echter wel oplossingen gevonden...
+%     Voor de geïntresseerd leerlingen: de grafiek boven de x-as met een negatieve discrimant in de vierkantswortel heeft geen oplossingen in de reële getallen. 
+%     In de complexe getallen hebben wiskundigen echter wel oplossingen gevonden...
 
-    \begin{expandable}{youtube}{A very gentle introduction to complex numbers.}
-        \youtube{https://youtu.be/f079K1f2WQk}
-    \end{expandable}   
+%     \begin{expandable}{youtube}{A very gentle introduction to complex numbers.}
+%         \youtube{https://youtu.be/f079K1f2WQk}
+%     \end{expandable}   
 
     
-\end{remark}
-\end{expandable}
+% \end{remark}
+% \end{expandable}
 
 
 \begin{exercise} Bepaal de oplossingen van volgende tweedegraadsvergelijkingen. 
