@@ -85,7 +85,7 @@ jobs:
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
           XIMERA_URL: ${{ vars.XIMERA_URL }}
           XXXXIMERA_NAME:  ${{ vars.XIMERA_NAME }}
-          XIMERA_NAME:  kdn
+          XIMERA_NAME:  sintpieterscollege
         run: |
           ./xmScripts/xmlatex name         
           ./xmScripts/xmlatex serve -f  # NOTE: -f  should not be needed ...        
