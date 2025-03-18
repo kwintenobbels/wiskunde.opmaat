@@ -5,17 +5,8 @@
 	\author{Wiskunde Op Maat}
 	\xmtitle{Kwadratische vergelijkingen oplossen}{}
 
-
-%  Een lijn commentaar staat achter een %-teken. 
-
-% In een opmerking wordt aan de leerling duidelijk gemaakt welke procedure ingeoefend zal worden. 
-% \begin{leerdoelstellingen}
-
- Met deze pagina kan je het oplossen van tweedegraadsvergelijkingen in één onbekende met voorschrift \( ax^2+bx+c=0 \) inoefenen.  
- We bepalen de oplossingen van deze vergelijking bepalen met de discriminant formule. 
- Afhankelijk van het teken van de discriminant zijn er 0, 1 of 2 verschillende oplossingen in de reeële getallen. 
-
-% \end{leerdoelstellingen}    
+Met deze pagina kan je het oplossen van tweedegraadsvergelijkingen in één onbekende met voorschrift ax2+bx+c=0 inoefenen. 
+Onder 'download' kan je de pdf met of zonder antwoorden downloaden.
 
 \newcommand{\choicetwee}{{\wordChoice{\choice[correct]{twee}\choice{één}\choice{geen}}}}
 \newcommand{\choiceeen}{{\wordChoice{\choice{twee}\choice[correct]{één}\choice{geen}}}}
@@ -23,7 +14,7 @@
 
 \newcommand{\choicepositief}{{\wordChoice{\choice[correct]{positief}\choice{nul}\choice{negatief}}}}
 \newcommand{\choicenul}{{\wordChoice{\choice{positief}\choice[correct]{nul}\choice{negatief}}}}
-\newcommand{\choicenegatief}{{\wordChoice{\choice{positief}\choice]{nul}\choice[correct]{negatief}}}}
+\newcommand{\choicenegatief}{{\wordChoice{\choice{positief}\choice{nul}\choice[correct]{negatief}}}}
  
 % positieve discriminant 
 \begin{exercise}
@@ -44,7 +35,7 @@ De discrimant is \choicepositief.
 \begin{question}
     Deze vergelijking heeft \choicetwee oplossingen in de reële getallen. 
     \begin{feedback}
-        Indien de dicriminant \(\Delta = b^2 - 4ac\) positief is, zijn er twee oplossingen in de reële getallen. 
+        Indien de discriminant \(\Delta = b^2 - 4ac\) positief is, zijn er twee oplossingen in de reële getallen. 
     \end{feedback}
 \end{question}
 
@@ -125,7 +116,6 @@ Met de discrimantformule bereken je dus deze snijpunten met de x-as zonder grafi
   
     
 \end{exercise}
-
 
 
 % nul discriminant 
@@ -222,8 +212,6 @@ Met de discrimantformule bereken je dus deze snijpunten met de x-as zonder grafi
 \end{exercise}
 
 
-
-
 % negatieve disciminant 
 \begin{exercise}
 
@@ -243,7 +231,7 @@ Met de discrimantformule bereken je dus deze snijpunten met de x-as zonder grafi
     \end{question}
     
     \begin{question}
-    Deze vergelijking heeft \choicenul oplossingen in de reële getallen.
+    Deze vergelijking heeft \choicegeen oplossingen in de reële getallen.
     \begin{feedback}
         Wanneer de discriminant negatief is, zijn er oplossingen in de reële getallen. 
         In de algemene formule staat de discriminant onder een wortel. 
@@ -292,25 +280,84 @@ Met de discrimantformule bereken je dus deze snijpunten met de x-as zonder grafi
 \end{exercise}
     
 
-% \begin{expandable}
-% \begin{remark}
+\begin{expandable}{remark}{De constante factor \(c\)}
+\begin{remark}
     
     
-%     In het algemeen voorschrift \( ax^2+bx+c=0 \) geeft de constante term \(c\) een verticale verschuiving weer. 
-%     De waarde van \(c\) heeft dus invloed op het aantal snijpunten met de x-as en hiermee kan je inzien waar die \(c\) ook invloed heeft op het tegen van de discriminant \(\Delta = b^2 - 4ac\). 
+    In het algemeen voorschrift \( ax^2+bx+c=0 \) geeft de constante term \(c\) een verticale verschuiving weer. 
+    De waarde van \(c\) heeft dus invloed op het aantal snijpunten met de x-as en hiermee kan je inzien waar die \(c\) ook invloed heeft op het tegen van de discriminant \(\Delta = b^2 - 4ac\). 
     
-    
-%     Voor de geïntresseerd leerlingen: de grafiek boven de x-as met een negatieve discrimant in de vierkantswortel heeft geen oplossingen in de reële getallen. 
-%     In de complexe getallen hebben wiskundigen echter wel oplossingen gevonden.....
+\usepackage{tikz}
 
-%     \begin{expandable} A very gentle introduction to complex numbers.
-%         \youtube{https://youtu.be/f079K1f2WQk}
-%     \end{expandable}   
+    \begin{image}
+
+        \begin{scope}[xshift=0cm]
+        \begin{tikzpicture}[scale=1]
+
+            % Draw axes
+            \draw[->] (-1,0) -- (5,0) node[right] {\(x\)};
+            \draw[->] (0,-1) -- (0,4) node[above] {\(y\)};
+            
+            % Draw the parabola y = x^2 - 4x + 3
+            \draw[domain=-0.2:4.2, samples=100, smooth, very thick, blue] 
+                plot (\x, {(\x)^2 - 4*(\x) + 3}); 
+                
+            \draw (2, 3) node[blue] {\( f(x) = x^2 - 4x + 3 \)};
+        
+            % Roots (zeros) of the parabola
+            \filldraw[red] (1,0) circle (2pt) node[below] {\(x=1\)};
+            \filldraw[red] (3,0) circle (2pt) node[below] {\(x=3\)};
+        
+        \end{tikzpicture}
+        \end{scope}
+
+        \begin{scope}[xshift=3cm]
+        \begin{tikzpicture}[scale=1]
+            % Teken de assen
+            \draw[->] (-1,0) -- (5,0) node[right] {\(x\)};
+            \draw[->] (0,-1) -- (0,4) node[above] {\(y\)};
+            
+            % Teken de parabool f(x) = x^2 - 4x + 4
+            \draw[domain=-0.2:4.2, samples=100, smooth, very thick, blue] 
+                plot (\x, {(\x)^2 - 4*(\x) + 4});
+                
+            \draw (2, 3) node[blue] {\( f(x) = x^2 - 4x + 4 \)};
+            
+            % Markeer de dubbele wortel
+            \filldraw[red] (2,0) circle (2pt) node[below] {\(x=2\)};
+            
+        \end{tikzpicture}
+        \end{scope}
+
+
+        \begin{scope}[xshift=6cm]    
+        \begin{tikzpicture}[scale=1]
+            % Teken de assen
+            \draw[->] (-1,0) -- (5,0) node[right] {\(x\)};
+            \draw[->] (0,-1) -- (0,6) node[above] {\(y\)};
+            
+            % Teken de parabool f(x) = x^2 - 4x + 5
+            \draw[domain=-0.2:4.2, samples=100, smooth, very thick, blue] 
+                plot (\x, {(\x)^2 - 4*(\x) + 5});
+                
+            \draw (2, 5) node[blue] {\( f(x) = x^2 - 4x + 5 \)};
+            
+        \end{tikzpicture}
+        \end{scope}
+        
+    \end{image}
+    
+    
+    Voor de geïntresseerd leerlingen: de grafiek boven de x-as met een negatieve discrimant in de vierkantswortel heeft geen oplossingen in de reële getallen. 
+    In de complexe getallen hebben wiskundigen echter wel oplossingen gevonden...
+
+    \begin{expandable}{youtube}{A very gentle introduction to complex numbers.}
+        \youtube{https://youtu.be/f079K1f2WQk}
+    \end{expandable}   
 
     
-% \end{expandable}
-% \end{remark}
-% \end{expandable}
+\end{remark}
+\end{expandable}
 
 
 \begin{exercise} Bepaal de oplossingen van volgende tweedegraadsvergelijkingen. 
@@ -333,6 +380,7 @@ Met de discrimantformule bereken je dus deze snijpunten met de x-as zonder grafi
     \begin{question} \( -x^2 + 4x + 1   = 0 \) \begin{uitkomst} Er zijn twee reële oplossingen  \( -\frac{1}{2} \) en \( 5 \) \end{uitkomst} \end{question}
     
 \end{exercise}
+
 
 
 \end{document}
