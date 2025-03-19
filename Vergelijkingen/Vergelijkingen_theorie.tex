@@ -1,0 +1,94 @@
+\documentclass{ximera}
+\input{../preamble}
+\addPrintStyle{..}
+\begin{document}
+	\author{Wiskunde Op Maat}
+	\xmtitle{Theorie lineaire vergelijkingen}{}
+
+   
+In de vergelijking \( a = b \) noemt men \(a \) het linkerlid en \(b\) het rechterlid. 
+Het feit dat beide leden gelijk zijn heeft een belangrijk gevolg: \textbf{indien we dezelfde operatie uitvoeren aan beide kanten, blijft de gelijkheid geldig}. 
+
+
+\begin{align*}
+       a  & = b\\
+       2a    & = 2b \\
+    2a +1  & = 2b + 1\\
+\end{align*}
+
+Deze vaststelling laat ons toe om lineaire vergelijkingen op te lossen: 
+
+\begin{proposition} Vergelijkingen van de vorm \(x + a = b\)
+  
+  \textbf{Een \textit{term} die van kant wisselt, wijzigt van teken}
+
+  \formulevb{\begin{array}{r@{ }l@{ }} x + \blue{a} & = b \\ x + a - \red{a} & = b - \red{a} \\ x & = b \blue{- a} \end{array}}{
+  \begin{array}{r@{ }l@{ }} x + 2 & = 5 \\ x + 2 - \red{2} & = 5 - \red{2} \\ x & = 5 - 2  \end{array}}
+
+ 
+\formulevb{\begin{array}{r@{ }l@{ }} x - a & = b \\ x - a + \red{a} & = b + \red{a} \\ x & = b + a \end{array}}{
+  \begin{array}{r@{ }l@{ }} x - 4 & = 3 \\ x - 4 + \red{4} & = 3 + \red{4} \\ x & = 3 + 4  \end{array}}
+ 
+
+\end{proposition}
+
+\begin{proposition} Vergelijkingen van de vorm \(ax = b\)
+
+  \textbf{Een factor die van kant wisselt, draait om}
+
+  \formulevb{\begin{array}{r@{ }l@{ }} ax  & = b \\ \frac{{ax}}{\red{a}} & = \frac{b}{\red{a}} \\ x & = \frac{b}{a} \end{array}}{
+    \begin{array}{r@{ }l@{ }} 4x  & = 8 \\ \frac{4x}{\red{4}} & = \frac{8}{\red{4}} \\ x & = \frac{8}{4} \end{array}}
+
+  \formulevb{\begin{array}{r@{ }l@{ }} \frac{x}{a}  & = b \\ \frac{\red{a}x}{a} & = \red{a}b \\ x & = ab \end{array}}{
+    \begin{array}{r@{ }l@{ }} 4x  & = 8 \\ \frac{4x}{\red{4}} & = \frac{8}{\red{4}} \\ x & = \frac{8}{4} \end{array}}
+ 
+
+
+\end{proposition}
+
+
+\begin{exercise}
+
+\begin{question} \( x+5         = 11  \) \begin{oplossing}  \( x = 6             \) \end{oplossing} \end{question}
+\begin{question} \( 3x          = 6   \) \begin{oplossing}  \( x = 2             \) \end{oplossing} \end{question}
+\begin{question} \( \frac{x}{2} = 7   \) \begin{oplossing}  \( x = 14            \) \end{oplossing} \end{question}
+\begin{question} \( x-1         = 0   \) \begin{oplossing}  \( x = 1             \) \end{oplossing} \end{question}
+\begin{question} \( 3x+2        = 0   \) \begin{oplossing}  \( x = \frac{-2}{3}  \) \end{oplossing} \end{question}
+\begin{question} \( 7x+3        = 10  \) \begin{oplossing}  \( x = 1             \) \end{oplossing} \end{question}
+\begin{question} \( x+1         = 1   \) \begin{oplossing}  \( x = 0             \) \end{oplossing} \end{question}
+\begin{question} \( 4x+x        = -4  \) \begin{oplossing}  \( x = -2            \) \end{oplossing} \end{question}
+\begin{question} \( 3x-11       = 1   \) \begin{oplossing}  \( x = 4             \) \end{oplossing} \end{question}
+\begin{question} \( 2x+13       = 13  \) \begin{oplossing}  \( x = 0             \) \end{oplossing} \end{question}
+
+\end{exercise}
+
+
+\begin{proposition} Vergelijkingen van de vorm \(ax + b  = cx + d\)
+
+  \textbf{Alle termen die x bevatten naar 1 lid brengen, daarna x afzonderen}
+
+  \formulevb{\begin{array}{r@{ }l@{ }} ax +b & = cx +d \\ ax - cx & = d-c \\ x(a-c) & = d-c \\ x & = \frac{d-c}{a-c} \end{array}}{
+  \begin{array}{r@{ }l@{ }} -2x +1 & = x +4 \\ -2x - x & = 4-2 \\ x(-2-1) & = 4-2 \\ x & = \frac{4-2}{-2-1} \end{array}}
+
+\end{proposition}
+
+
+\begin{exercise}
+\begin{question} \( 3x + 2  = 5        \) \begin{oplossing} \(  x = 1  \) \end{oplossing} \end{question}
+\begin{question} \( x + 7   = 2x - 5   \) \begin{oplossing} \(  x = 13 \) \end{oplossing} \end{question}
+\begin{question} \( 2 x+2   = 4x + 4   \) \begin{oplossing} \(  x = -1 \) \end{oplossing} \end{question}
+\begin{question} \( x       = -3 - 4   \) \begin{oplossing} \(  x = -1 \) \end{oplossing} \end{question}
+\begin{question} \( 5x - 3  = 2x + 6   \) \begin{oplossing} \(  x = 3  \) \end{oplossing} \end{question}
+\begin{question} \( 4x + 7  = 3x - 2   \) \begin{oplossing} \(  x = -9 \) \end{oplossing} \end{question}
+\begin{question} \( 6x - 4  = 2x + 8   \) \begin{oplossing} \(  x = 3  \) \end{oplossing} \end{question}
+\begin{question} \( 7x + 5  = 3x + 17  \) \begin{oplossing} \(  x = 3  \) \end{oplossing} \end{question}
+\begin{question} \( 8x - 6  = 2x + 12  \) \begin{oplossing} \(  x = 3  \) \end{oplossing} \end{question}
+\begin{question} \( 10x + 4 = 6x + 24  \) \begin{oplossing} \(  x = 5  \) \end{oplossing} \end{question}
+\begin{question} \( 9x - 3  = 2x + 11  \) \begin{oplossing} \(  x = 2  \) \end{oplossing} \end{question}
+\begin{question} \( 12x + 8 = 4x + 24  \) \begin{oplossing} \(  x = 2  \) \end{oplossing} \end{question}
+\begin{question} \( 5x + 3  = 2x + 12  \) \begin{oplossing} \(  x = 3  \) \end{oplossing} \end{question}
+\begin{question} \( 4x - 7  = 3x + 1   \) \begin{oplossing} \(  x = 8  \) \end{oplossing} \end{question}
+\begin{question} \( 11x + 9 = 5x + 21  \) \begin{oplossing} \(  x = 2  \) \end{oplossing} \end{question}
+
+\end{exercise}
+\end{document}
