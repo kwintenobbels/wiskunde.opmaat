@@ -2,28 +2,28 @@
 
 % Compileren in Overleaf: Menu > Settings > Compiler: XeLaTeX
 % Compileren in TeXstudio: F4
-\documentclass[titlepage,10pt,oneside]{book} 
+% \documentclass[titlepage,10pt,oneside]{book} 
 
 % zes voorkeuren die je meteen zelf kan instellen:
-\def\uitbr{1} % waarde 1 als je Uitbreiding in de marge wilt, 0 als je dat niet wilt 
-\def\wsg{1} % waarde 1 als je verwijzingen naar Wiskunde Samen gevat² wilt, 0 als je dat niet wilt (onderstippelde woorden in de hoofdtekst en logo met paginanummer en hyperlink naar boekpagina in de marge)
+\def\uitbr{0} % waarde 1 als je Uitbreiding in de marge wilt, 0 als je dat niet wilt 
+\def\wsg{0} % waarde 1 als je verwijzingen naar Wiskunde Samen gevat² wilt, 0 als je dat niet wilt (onderstippelde woorden in de hoofdtekst en logo met paginanummer en hyperlink naar boekpagina in de marge)
 \def\rectoverso{0} % waarde 1 als je het PDF-bestand recto-verso wilt laten afdrukken, 0 als je het recto wilt
-\def\voetn{1} % waarde 1 als je de voetnoten wilt, 0 als je dat niet wilt 
-\def\grm{1} % waarde 1 als je de schermafdrukken van TI-84 Plus wilt, 0 als je dat niet wilt
-\def\grmlogo{1} % waarde 1 als je logo TI-84 Plus in de marge wilt, 0 als je dat niet wilt (met hyperlink naar filmpje) 
+\def\voetn{0} % waarde 1 als je de voetnoten wilt, 0 als je dat niet wilt 
+\def\grm{0} % waarde 1 als je de schermafdrukken van TI-84 Plus wilt, 0 als je dat niet wilt
+\def\grmlogo{0} % waarde 1 als je logo TI-84 Plus in de marge wilt, 0 als je dat niet wilt (met hyperlink naar filmpje) 
 
 % marges:
-\usepackage[paper=a4paper,margin=3.4cm,marginparwidth=2cm]{geometry}
+% \usepackage[paper=a4paper,margin=3.4cm,marginparwidth=2cm]{geometry}
 
 % packages algemeen:
-\usepackage[english,dutch]{babel}
+% \usepackage[english,dutch]{babel}
 \usepackage{amsfonts}
 \usepackage{amsmath} %  o.a. \eqref en \text, omgeving equation*
 \usepackage{amssymb} % o.a. \nmid
 \usepackage{amsthm} % o.a. omgeving proof
 \usepackage{graphicx} % o.a. figuren
 \usepackage{xcolor} % \color
-\usepackage[disable]{todonotes} % \todo 
+% \usepackage[disable]{todonotes} % \todo 
 \usepackage{comment} % omgeving comment
 \usepackage{xcolor} % kleuren 
 \usepackage[skip=7pt plus1pt, indent=0pt]{parskip} % skip = verticale ruimte tussen twee alinea's, indent = insprong bij nieuwe alinea
@@ -41,7 +41,10 @@
 \usepackage{pst-plot}
 \usepackage{pst-node}
 \usepackage{pst-coil}
+\pdfOnly{
 \usepackage{auto-pst-pdf}
+}
+
 
 % voor figuren met TikZ:
 \usepackage{tikz} 
@@ -60,17 +63,17 @@
 \makeatother
 
 % voor veranderen van de naam Bibliografie naar Referentielijst:
-\addto\captionsdutch{\renewcommand{\bibname}{Referentielijst}}
+% \addto\captionsdutch{\renewcommand{\bibname}{Referentielijst}}
 
 % voor trefwoordenlijst:
 \usepackage{imakeidx}
 \makeindex[title=Trefwoordenlijst,program=makeindex,options=-s index.tex,columns=2,intoc=true]
 
 % voor nummeren van vergelijkingen:
-\numberwithin{equation}{chapter} % als je dit desactiveert dan worden vergelijkingen in bijvoorbeeld hoofdstuk 3 genummerd als (1), (2) etc. in plaats van (3.1), (3.2) etc.
+% \numberwithin{equation}{chapter} % als je dit desactiveert dan worden vergelijkingen in bijvoorbeeld hoofdstuk 3 genummerd als (1), (2) etc. in plaats van (3.1), (3.2) etc.
 
 % voor hyperlinks en bladwijzers in PDF-bestand:
-\usepackage[bookmarksopen,bookmarksopenlevel=0,hypertexnames=false,pdfa,bookmarksnumbered]{hyperref} 
+% \usepackage[bookmarksopen,bookmarksopenlevel=0,hypertexnames=false,pdfa,bookmarksnumbered]{hyperref} 
 \usepackage{bookmark} 
 
 % voor hyperlinks: 
@@ -108,8 +111,8 @@
 
 
 % voor lijsten: 
-\usepackage{enumerate}
-\usepackage[shortlabels]{enumitem} 
+% \usepackage{enumerate}
+% \usepackage[shortlabels]{enumitem} 
 \setlist{topsep=0em, itemsep=-0.15em}
 
 % voor small bullet:
@@ -191,7 +194,7 @@
     {.5em} % Space after theorem head
     {} % Theorem head spec (can be left empty, meaning `normal')
 \theoremstyle{mystyle}
-\newtheorem{lemma}{Lemma}[chapter] % als je [chapter] desactiveert dan Voorbeeld 3 in plaats van Voorbeeld 5.3, als je [chapter] vervangt door [section] dan Voorbeeld 5.2.3 in plaats van Voorbeeld 5.3 
+% \newtheorem{lemma}{Lemma}[chapter] % als je [chapter] desactiveert dan Voorbeeld 3 in plaats van Voorbeeld 5.3, als je [chapter] vervangt door [section] dan Voorbeeld 5.2.3 in plaats van Voorbeeld 5.3 
 %\theoremstyle{definition} % als je dit activeert dan is wat in de omgeving staat niet cursief gedrukt
 \newtheorem{oefening}[lemma]{Oefening}
 \newtheorem{definitie}[lemma]{Definitie} 

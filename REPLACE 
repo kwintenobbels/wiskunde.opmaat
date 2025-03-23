@@ -1,0 +1,282 @@
+-problemen met include graphics 
+
+
+- frontmatter
+
+-\sbullet
+
+- alles op nul 
+
+- geen documentclass in preamble 
+
+
+
+- \todo in beide preambles 
+% \usepackage[disable]{todonotes} % \todo  (koen)
+
+
+
+- Option clash for package babel. 
+% \usepackage[english,dutch]{babel} (koen)
+
+
+kwintenobbels@Kwintens-MacBook-Air wiskunde.opmaat-2 % mv *png xmPictures 
+kwintenobbels@Kwintens-MacBook-Air wiskunde.opmaat-2 % mv *jpg xmPictures
+
+(waren eruit gehaald voor commit; in book zoekt die in huidige directory ximera zoekt in xmpictures)
+
+
+
+
+%  alles in preamble koen met chapter of book is verdacht 
+\numberwithin{equation}{chapter} % als je dit desactiveert dan worden vergelijkingen in bijvoorbeeld hoofdstuk 3 genummerd als (1), (2) etc. in plaats van (3.1), (3.2) etc.
+
+
+
+%  We laden allebei zelfde packages --> bij koen in commentaar 
+[ERROR  ] bake : Compile error in overleaf.log        :[l.74] LaTeX Error: Option clash for package hyperref. 
+[ERROR  ] bake : Compile error in overleaf.log        :[l.113] LaTeX Error: Option clash for package enumitem. 
+
+\usepackage[shortlabels]{enumitem} 
+--> \begin{enumerate}[(a)]  deze a in zijn code is probleem (allemaal verwijderen in eerste instantie)
+
+IN XIMERE ZIT INLINE; NIET HETZELFDE ALS SHORTLABELS 
+
+
+./xmScripts/xmlatex copySettingsLocal  (PROBEERT TE WIJZIGEN IN XIMERA
+\RequirePackage[inline,shortlabels]{enumitem} (uit file: Ximera.cls)
+
+
+
+
+./printstyle.sty:58: LaTeX Error: Option clash for package geometry. (dit is uit overleaf.log)
+% \usepackage[paper=a4paper,margin=3.4cm,marginparwidth=2cm]{geometry} (evident dat dit clasht)
+
+
+
+%----------------------- ALLEMAAL DINGEN DIE UIT BOEK KOMEN: MAINMATTER; CHAPTER 
+./overleaf.tex:175: Undefined control sequence.
+l.175 \mainmatter
+
+
+\BACKMATTER STAAT VANACHTER MOEIJLIJK TE DOEN
+
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./overleaf.tex:176: Undefined control sequence.
+l.176 \chapter
+              {Basisbegrippen}
+
+%--------------------  \chaper opgelost met replace \section{chapter:
+
+
+
+grote miserie (hier zit een probleem met enumerate)
+
+./overleaf.tex:134: Undefined control sequence.
+\enit@endenumerate ->\enit@after 
+                                 \endlist \ifx \enit@series \relax \else \ifnum \enit@resuming =\@ne \enit@setresumekeys {series@\enit@series }\global \global \else \enit@setresumekeys {series@\enit@series }\@gobblefour \global \fi \enit@afterlist \fi...
+l.134 \end{enumerate}
+
+
+
+TIJDELIJKE BESTANDEN DIE TEX GEBRUIKT. BIJ EXOTISCHE FOUTEN VERWIJDEREN IN DE TERMINAL EN OPNIEUW PROBEREN 
+kwintenobbels@Kwintens-MacBook-Air wiskunde.opmaat-2 % rm overleaf.aux
+kwintenobbels@Kwintens-MacBook-Air wiskunde.opmaat-2 % rm overleaf.toc
+
+
+JE MAG PACKAGE ENUMERATE NIET LADEN NA ENUMITEM 
+
+\begin{enumerate}
+    \item%[DD1]
+    De leerlingen bewijzen wiskundige uitspraken. \\
+    $\sbullet[.75]$ Bewijstechnieken: rechtstreeks bewijs, bewijs uit het ongerijmde
+    \item%[DD6]
+
+    EXOTISCH WERKT NIET 
+
+
+ER ZITTEN OOK CHAPTERS IN DIE NIET \CHAPTER zijn
+\pdfbookmark[chapter]{Inhoud}{Inh}
+\addcontentsline{toc}{chapter}{Referentielijst}
+\pdfbookmark[chapter]{Achterzijde}{Ach}
+
+ALLEMAAL IN COMENTAAR GEZET SAMEN MET DE % \tableofcontents NU WERKTE HET 
+
+    
+% ------------------------------------------------------------------------------------------------------------------------------ HIERNA COMPILEDE DE PDF 
+
+eerste probleem van html: 
+% \addto\captionsdutch{\renewcommand{\bibname}{Referentielijst}}
+
+
+COMPILEERT METEEN 
+
+
+
+% ------------------------------------------------------------------------------------------------------------------------------ ALLE SLECHT GECOMPILEERDE HTML OPLIJSTEN 
+
+./xmScripts/xmlatex ghaction --compile html overleaf.tex 
+
+http://localhost:2000/cmplx/overleaf --> zelf overleaf achter moeten zetten want is geen course
+
+
+
+NIET DEFTIG DOORGEKOMEN 
+
+
+\sbullet 
+
+\item DD1 
+
+
+\D (display style)
+
+
+\mathcolorred7x⋅(2x+1)\mathcolorblue−7x+17x+5
+
+
+STAARTDELING FAALT VOLLDIG --> TIKZPCITURE ROND (MANUEEL ROND GEZET)
+
+
+
+Misplaced & --> dit komt door \begin{equation}
+
+    koen wilt deze een \label{eq:graadproduct} geven 
+
+
+
+
+
+Missing dimension or its units for \rule (staartdeling)
+
+
+
+--> TIKZPICTURES VAN MAKEN  (is tikzit voor gemaakt )
+
+\mathcolor 
+
+
+DIT IS NIET STANDAARD --> NAAR \COLOR GAAN EN GEBRUIKEN ZOALS PREAMBLE KUL 
+\providecommand{\blue}[1]{{\color{blue}#1}}    
+\providecommand{\red}[1]{{\color{red}#1}}
+
+\mathcolorwhite9x5−6x4−16   (EEN TRUC)
+
+
+
+
+
+\vrule 
+\cline 
+
+
+\ggd
+
+
+\qedhere (word opgelost door environment)
+
+
+WE HADDEN GEZEGD XIMERA LEMMA GEBRUIKEN 
+% \newtheorem{lemma}{Lemma}[chapter] % als je [chapter] desactiveert dan Voorbeeld 3 in plaats van Voorbeeld 5.3, als je [chapter] vervangt door [section] dan Voorbeeld 5.2.3 in plaats van Voorbeeld 5.3 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% -------------------------------------------------------------------------------------------------------------------------------------------- REPLACE 
+
+alle dingen die we van het rekenmachine hebben uitgezet weghalen 
+
+BEWIJZEN EXPLANDLE MAKEN 
+
+
+\def\NN{\mathbb{N}} % verzameling van de natuurlijke getallen
+\def\QQ{\mathbb{Q}} % verzameling van de rationale getallen
+\def\RR{\mathbb{R}} % verzameling van de re\"ele getallen
+\def\ZZ{\mathbb{Z}} % verzameling van de gehele getallen
+
+DEZE VERANDEREN DOOR ENKELE \N --> UIT PREAMBLE HALEN 
+
+
+
+
+\newenvironment{Oefening}{%
+    \begin{enumerate}[ 
+    series=Oef,
+    resume=Oef,
+    leftmargin=1.78em,
+    label={\bfseries\arabic*.},
+    ref=\arabic*
+    ]
+    \item %
+    }{%
+    \end{enumerate}
+}
+EXERCISE 
+
+
+\newenvironment{Antwoord}{%
+    \begin{enumerate}[%
+    series=Antw,
+    resume=Antw,
+    leftmargin=1.78em,
+    label={\bfseries\arabic*.},
+    ref=\arabic*
+    ]
+    \item %
+    }{%
+    \end{enumerate}
+}
+OPLOSSING 
+UITKOMST
+
+
+\newtheorem{lemma}{Lemma}[chapter] 
+lemma (moet niet veranderen)
+
+\newtheorem{oefening}[lemma]{Oefening}
+EXERCISE 
+
+\newtheorem{definitie}[lemma]{Definitie} 
+DEFINITION
+
+\newtheorem{voorbeeld}[lemma]{Voorbeeld}
+EXAMPLE 
+
+\newtheorem{eigenschap}[lemma]{Eigenschap} 
+PROPOSITION
+
+
+
+\newtheorem{stelling}[lemma]{Stelling} 
+THEOREM
+
+\newtheorem{gevolg}[lemma]{Gevolg} 
+Corollary
+
+\newtheorem{afspraak}[lemma]{Afspraak} 
+NOTATION
+
+\newtheorem{werkwijze}[lemma]{Werkwijze}
+Algorithm
+
+
+EXPLANATION 
+REMARK 
+WARNING
