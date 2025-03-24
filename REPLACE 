@@ -188,22 +188,16 @@ WE HADDEN GEZEGD XIMERA LEMMA GEBRUIKEN
 
 
 
+% ASDVANCED DEBUG HTML METHODE: BASH IN CONTAINER XMLATEX OPENEN
 
+./xmScripts/xmlatex bash 
 
+make4ht -l -c ximera.cfg -f html5+dvisvgm_hashes -m draft -j overleaf.online -s  overleaf.tex 'svg,htex4ht,mathjax,-css' '' '' '--interaction=nonstopmode -shell-escape -file-line-error'
 
-
-
-
-
-
-
-
+make4ht -l -a debug -c ximera.cfg -f html5+dvisvgm_hashes -m draft -j overleaf.online -s  overleaf.tex 'svg,htex4ht,mathjax,-css' '' '' '--interaction=nonstopmode -shell-escape -file-line-error'
 
 % -------------------------------------------------------------------------------------------------------------------------------------------- REPLACE 
 
-alle dingen die we van het rekenmachine hebben uitgezet weghalen 
-
-BEWIJZEN EXPLANDLE MAKEN 
 
 
 \def\NN{\mathbb{N}} % verzameling van de natuurlijke getallen
@@ -211,72 +205,151 @@ BEWIJZEN EXPLANDLE MAKEN
 \def\RR{\mathbb{R}} % verzameling van de re\"ele getallen
 \def\ZZ{\mathbb{Z}} % verzameling van de gehele getallen
 
-DEZE VERANDEREN DOOR ENKELE \N --> UIT PREAMBLE HALEN 
+1. DEZE VERANDEREN DOOR ENKELE \N --> UIT PREAMBLE HALEN 
+
+
+2. BEWIJZEN EXPLANDLE MAKEN 
+
+\begin{proof} --> \begin{expandable}{proof}
 
 
 
 
-\newenvironment{Oefening}{%
+3. ALLE EnvironmentS AANPASSEN 
+
+
+3.1 Oefeningen --> alle referenties ook weg gedaan met reguliere expressie 
+\\begin\{oefening\}.*dollar
+
+\\begin\{antwoord\}.*dollar 
+
+
+Hier staat telken labels 
+    
+    
+    \newenvironment{Oefening}{%
     \begin{enumerate}[ 
-    series=Oef,
-    resume=Oef,
-    leftmargin=1.78em,
-    label={\bfseries\arabic*.},
-    ref=\arabic*
-    ]
-    \item %
-    }{%
+        series=Oef,
+        resume=Oef,
+        leftmargin=1.78em,
+        label={\bfseries\arabic*.},
+        ref=\arabic*
+        ]
+        \item %
+        }{%
     \end{enumerate}
-}
-EXERCISE 
-
-
-\newenvironment{Antwoord}{%
+    }
+    EXERCISE 
+    
+    
+    \newenvironment{Antwoord}{%
     \begin{enumerate}[%
-    series=Antw,
-    resume=Antw,
-    leftmargin=1.78em,
-    label={\bfseries\arabic*.},
-    ref=\arabic*
-    ]
-    \item %
-    }{%
+        series=Antw,
+        resume=Antw,
+        leftmargin=1.78em,
+        label={\bfseries\arabic*.},
+        ref=\arabic*
+        ]
+        \item %
+        }{%
     \end{enumerate}
+    }
+    OPLOSSING 
+    UITKOMST
+
+    \\begin\{antwoord\}.*dollar 
+    NAAR OPLOSSING GEDAAN 
+    
+    
+    \newtheorem{lemma}{Lemma}[chapter] 
+    lemma (moet niet veranderen)
+    
+    \newtheorem{oefening}[lemma]{Oefening}
+    EXERCISE 
+    
+    \newtheorem{definitie}[lemma]{Definitie} 
+    DEFINITION
+    
+    \newtheorem{voorbeeld}[lemma]{Voorbeeld}
+    EXAMPLE 
+    
+    \newtheorem{eigenschap}[lemma]{Eigenschap} 
+    PROPOSITION
+    
+    
+    
+    \newtheorem{stelling}[lemma]{Stelling} 
+    THEOREM
+    
+    \newtheorem{gevolg}[lemma]{Gevolg} 
+    Corollary
+    
+    \newtheorem{afspraak}[lemma]{Afspraak} 
+    NOTATION
+    
+    \newtheorem{werkwijze}[lemma]{Werkwijze}
+    Algorithm
+    
+    
+    EXPLANATION 
+    REMARK 
+    WARNING
+
+
+
+
+    4. ALLE CLEARPAGE WEGGEHAALD  + blancobijrectoverso
+    [ERROR  ] bake : [pdf       ] overleaf.tex:[l.1205] LaTeX Error: Float(s) lost.    
+[WARNING] bake : Baked 1 files, but 1 compilation failed
+[ERROR  ] main : Bake failed: Baking resulted in 1 errors:
+pdf|overleaf.tex
+    
+
+
+\blancobijrectoverso
+DIT GEEFT NOG PROBLEMEN --> allemaal in commentaar gezet
+ROR  ] bake : [pdf       ] overleaf.tex:[l.3947] LaTeX Error: Float(s) lost.    
+[WARNING] bake : Baked 1 files, but 1 compilation failed
+[ERROR  ] main : Bake failed: Baking resulted in 1 errors:
+pdf|overleaf.tex
+
+
+ER ZIJN PROBLEMEN BIJ DIE BIBLIOGRAFIE ETC --> END DOCUMENT VERSCHOVEN 
+
+
+HET WAS \WSG DAT PROBLEMEN GAF MET FLOATS 
+
+
+4. ALLE WISKUNDE SAMEN GEVAL WEGGEDAAN MET REGULIERE EXPRESSIE 
+
+\\wsgref\{([^}]+)\}\{[^}]*\}\{[^}]*\}
+DOLLAR1
+
+
+
+
+
+5. DE SECTIE MET GRM WEGGEDAAN 
+\ifthenelse{\grm < 1}{}{
+Gebruik van de grafische rekenmachine TI-84 Plus CE.
+\grmref{https://www.dropbox.com/scl/fi/0gicz349b69zknu9fnj6o/TI84Plus-p.O-28.mp4?rlkey=e9x3cawyyw4zm6n3fbp33l6ie&raw=1}
+
+\setscreens
+\begin{tabularx}{\linewidth}{LGsGsGsGR}
+& \GRM{y=} && \GRM{2nd}\,\GRM{table}\,\GRM{\veetext} && \GRM{\veetext} && \GRM{\wedgetext}\\[0.2cm]
+&
+{\includegraphics[width=\widthscreens]{screen01}}
+&&
+{\includegraphics[width=\widthscreens]{screen02}}
+&&
+{\includegraphics[width=\widthscreens]{screen03}}
+&&
+{\includegraphics[width=\widthscreens]{screen04}}
+&
+\end{tabularx}
+\setlength{\tabcolsep}{6pt}
 }
-OPLOSSING 
-UITKOMST
-
-
-\newtheorem{lemma}{Lemma}[chapter] 
-lemma (moet niet veranderen)
-
-\newtheorem{oefening}[lemma]{Oefening}
-EXERCISE 
-
-\newtheorem{definitie}[lemma]{Definitie} 
-DEFINITION
-
-\newtheorem{voorbeeld}[lemma]{Voorbeeld}
-EXAMPLE 
-
-\newtheorem{eigenschap}[lemma]{Eigenschap} 
-PROPOSITION
 
 
 
-\newtheorem{stelling}[lemma]{Stelling} 
-THEOREM
-
-\newtheorem{gevolg}[lemma]{Gevolg} 
-Corollary
-
-\newtheorem{afspraak}[lemma]{Afspraak} 
-NOTATION
-
-\newtheorem{werkwijze}[lemma]{Werkwijze}
-Algorithm
-
-
-EXPLANATION 
-REMARK 
-WARNING
+NU WORDT ALLES GECOMMIT; DAARNA OPSPLITSEN 

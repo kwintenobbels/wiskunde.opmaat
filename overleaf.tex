@@ -159,13 +159,13 @@ Brugge, december 2024
 \end{flushright}
 }
 
-\blancobijrectoverso
+% \blancobijrectoverso
 
 \renewcommand{\contentsname}{\huge{Inhoud}} 
 % \pdfbookmark[chapter]{Inhoud}{Inh}
 % \tableofcontents
 
-\blancobijrectoverso
+% \blancobijrectoverso
 
 % aantal pagina's in frontmatter bijhouden, nodig voor trefwoordenlijst achteraan:
 \newcounter{totaalaantalvoorbladen}
@@ -187,18 +187,19 @@ De bewerkingen
 \[
 2\cdot 3^5, \qquad 2\cdot 8^5, \qquad 2\cdot (-1)^5, \qquad 2\cdot\left(\frac{19}{3}\right)^5, \qquad 2\cdot\left(\sqrt{3}\right)^5 \qquad \text{ en } \qquad 2 \cdot \pi^5
 \]
-hebben iets gemeen: ze zijn allemaal van de vorm $2\cdot \square^5$ waarbij $\square$ een \wsgref{re\"eel getal}{27}{27} voorstelt. Het is gebruikelijk om in plaats van het symbool $\square$ een Latijnse letter zoals $x$ te schrijven, die we dan een {\em variabele} noemen. De bewerkingen hierboven zijn dan telkens van de vorm $2 \cdot x^5$ en die uitdrukking noemen we een {\em eenterm in $x$}. Daarbij wordt het symbool $\cdot$ voor de vermenigvuldiging meestal weggelaten. 
+hebben iets gemeen: ze zijn allemaal van de vorm $2\cdot \square^5$ waarbij $\square$ een re\"eel getal voorstelt. Het is gebruikelijk om in plaats van het symbool $\square$ een Latijnse letter zoals $x$ te schrijven, die we dan een {\em variabele} noemen. De bewerkingen hierboven zijn dan telkens van de vorm $2 \cdot x^5$ en die uitdrukking noemen we een {\em eenterm in $x$}. Daarbij wordt het symbool $\cdot$ voor de vermenigvuldiging meestal weggelaten. 
 
 Doorgaans noteren we een eenterm met een Latijnse hoofdletter zoals $A$ of $B$. Om te beklemtonen dat de variabele van de eenterm gelijk is aan $x$, noteren we dan ook $A(x)$ of $B(x)$. Wat tussen de haakjes staat, noemen we dan het {\em argument}, wat in dit geval gewoon gelijk is aan de variabele $x$. De eenterm van hierboven kan nu geschreven worden als $A(x) = 2x^5$ en veralgemenen leidt tot de volgende definitie.
 
-\begin{definitie}
+\begin{definition} 
 Een \underline{(re\"ele) eenterm in (de variabele) $x$}\index{eenterm} is een uitdrukking $A(x) = ax^n$ waarbij $a \in \R$ en $n \in \N$. 
-\end{definitie}
+\end{definition} 
 
 Spreken we in het vervolg van {\em een eenterm} $A(x) = ax^n$ of $B(x) = bx^m$ dan nemen we steeds aan dat $n,m\in \N$ en $a,b\in \R$.
 
-\begin{voorbeeld}
+\begin{example} 
 De volgende uitdrukkingen zijn eentermen in $x$:
+  
 \[
 A(x) = 2x^5, \quad B(x) = -\frac{3}{7}\,x^1, \quad C(x) = 541x^0 \quad \text{ en } \quad D(x) = 0x^{2024}.
 \]
@@ -206,9 +207,9 @@ Ook $A(t) = 2t^5$ is een eenterm, maar dan in de variabele $t$. De volgende uitd
 \[
 2x^5+3x, \quad \frac{1}{x}, \quad 3x^{-5}, \quad \sqrt{x} \quad \text{en} \quad \left|x\right|.
 \] 
-\end{voorbeeld}
+\end{example} 
 
-De uitdrukking $ax^n$ van een eenterm wordt opgevat als de {\em vermenigvuldiging} van een re\"eel getal $a$ met $x^n$. Om die vermenigvuldiging te benadrukken, noteren we $ax^n$ soms ook als $a \cdot x^n$. Verder vatten we de uitdrukking $x^n$ op als \wsgref{macht}{45}{45} met als grondtal de variabele $x$ en als exponent $n$. Bij afspraak maken we dan ook gebruik van de volgende schrijfwijzen:
+De uitdrukking $ax^n$ van een eenterm wordt opgevat als de {\em vermenigvuldiging} van een re\"eel getal $a$ met $x^n$. Om die vermenigvuldiging te benadrukken, noteren we $ax^n$ soms ook als $a \cdot x^n$. Verder vatten we de uitdrukking $x^n$ op als macht met als grondtal de variabele $x$ en als exponent $n$. Bij afspraak maken we dan ook gebruik van de volgende schrijfwijzen:
 \[
 1\cdot x^n = x^n, \qquad
 0\cdot x^n = 0, \qquad  
@@ -219,7 +220,7 @@ a\cdot x^1 = a \cdot x = ax.
 
 Als $ax^n$ een eenterm is, dan noemen we het getal $a$ de \underline{co\"effici\"ent}\index{co\"effici\"ent}\index{eenterm!co\"effici\"ent} van de eenterm.
 
-\begin{voorbeeld}
+\begin{example} 
 We vereenvoudigen de onderstaande eentermen, geven telkens de co\"eefici\"ent en vermelden ook of de eenterm al dan niet behoort tot de verzameling van de re\"ele getallen.
 \begin{enumerate}[(a)]
 \item
@@ -231,7 +232,7 @@ $\D C(x) = -\frac{4}{7}\,x^1 = -\frac{4}{7}\,x$ met co\"effici\"ent $\D -\frac{4
 \item
 $D(x) = 0 x^{2024} = 0$ met co\"effici\"ent $0$, en $D(x) \in \R$ 
 \end{enumerate}
-\end{voorbeeld}
+\end{example} 
 
 Als $ax^n$ een eenterm is waarbij $a \neq 0$, dan noemen we $n$ de \underline{graad}\index{graad}\index{eenterm!graad} van de eenterm. Schrijven we de eenterm als $A(x)$, dan noteren we de graad als $\gr A(x)$. De graad van de eenterm $0\cdot x^n = 0$ wordt in het secundair onderwijs niet gedefini\"eerd.
 
@@ -242,7 +243,7 @@ In hogere wiskunde stelt men $\gr 0 = - \infty$ omdat op deze manier rekenregels
 {\em de graad van het product van twee re\"ele eentermen is gelijk aan de som van de graden van die eentermen}. Daarvoor verwijzen we naar Oefening \ref{oefgraadnulveelterm} op het einde van dit hoofdstuk.
 \end{Uitbreiding}
 
-\begin{voorbeeld}
+\begin{example} 
 Beschouw de volgende eentermen.
 \[
 A(x) = -7x^3, \,\,\, B(x) = -\frac{17}{89}\,x^5\cdot x^3, \,\,\, C(x) = 1, \,\,\, D(x) = \sqrt{5}\,x, \,\,\, P(x) = 0 x^4, \,\,\,  Q(x) = 0 x^7.
@@ -256,38 +257,38 @@ dan lezen we hieruit af dat
 \gr B(x) = 8, \qquad \gr C(x) = 0, \qquad \gr D(x) = 1. 
 \]
 Omdat $P(x) = 0$ bestaat de graad van de eenterm $P(x)$ niet. We schrijven dan: $\gr P(x) = /$. Idem is $\gr Q(x) = /$.
-\end{voorbeeld}
+\end{example} 
 
 Twee eentermen in $x$ zijn \underline{gelijksoortig}\index{gelijksoortig} als ze ofwel dezelfde graad hebben, ofwel beide gelijk zijn aan nul.
 
-\begin{voorbeeld}
+\begin{example} 
 Gegeven zijn de eentermen
 \[
 A(x) = -\frac{1}{3}\,x^9, \quad B(x) = 5\,x^9, \quad C(x) = 0x^9, \quad D(x) = 2^9, \quad P(x) = \pi \quad \text{ en } \quad Q(x) = 0 x^7.
 \]
 Dan zijn $A(x)$ en $B(x)$ gelijksoortig. Omdat $C(x) = 0 = Q(x)$ zijn ook $C(x)$ en $Q(x)$ gelijksoortig. Ten slotte is $D(x) = 2^9 \cdot x^0$ en $P(x) = \pi \cdot x^0$ zodat de eentermen $D(x)$ en $P(x)$ gelijksoortig zijn.  
-\end{voorbeeld}
+\end{example} 
 
 Twee eentermen in $x$ zijn \underline{gelijk}\index{eenterm!gelijk} als ze ofwel dezelfde graad en dezelfde co\"effici\"ent hebben, ofwel beide gelijk zijn aan nul.
 
-\begin{voorbeeld}
+\begin{example} 
 We hebben dat $0x^{2024} = 0x^{2025}$. En als je weet dat $\sqrt{2}\,x^n = bx^{35}$ dan is $n = 35$ en $b = \sqrt{2}$.
-\end{voorbeeld}
+\end{example} 
 
-\clearpage
 
-Vervangen we in een eenterm $A(x)$ de variabele $x$ door een re\"eel getal $r$, dan verkrijgen we de \underline{getalwaarde}\index{eenterm!getalwaarde} van $A(x)$ in $x = r$. Die getalwaarde noteren we met $A(r)$. Samengevat: als $A(x) = ax^n$ dan is $A(r) = ar^n$. Met behulp van het symbool $\Rightarrow$ voor \wsgref{implicatie}{2}{2} wordt dit in symbolen:
+
+Vervangen we in een eenterm $A(x)$ de variabele $x$ door een re\"eel getal $r$, dan verkrijgen we de \underline{getalwaarde}\index{eenterm!getalwaarde} van $A(x)$ in $x = r$. Die getalwaarde noteren we met $A(r)$. Samengevat: als $A(x) = ax^n$ dan is $A(r) = ar^n$. Met behulp van het symbool $\Rightarrow$ voor implicatie wordt dit in symbolen:
 \[
 A(x) = ax^n \quad \Rightarrow \quad A(r) = a r^n.
 \]
 Hierbij is $a,r \in \R$ en $n \in \N$, waarbij we het geval $r = n = 0$ uitsluiten: aan de uitdrukking $0^0$ geven we geen betekenis.
 
-\begin{voorbeeld}
+\begin{example} 
 Als $A(x) = 5x^3$ dan is de getalwaarde van $A(x)$ in $x = -2$ gelijk aan 
 \[
 A(-2) = 5 \cdot (-2)^3 = 5 \cdot (-8) = - 5 \cdot 8 = -40.
 \]
-\end{voorbeeld}
+\end{example} 
 
 De som of het verschil van twee gelijksoortige eentermen in $x$ is opnieuw een eenterm in $x$, met als rekenregels:
 \[
@@ -297,9 +298,9 @@ of kortweg: $ax^n \pm bx^n = (a\pm b)x^n$. Ook het product van twee eentermen in
 \[
 ax^n \cdot bx^m = abx^{n+m}.
 \]
-Na het toepassen van die rekenregels kan een som $a+b$, een verschil $a-b$ of een product $ab$ soms verder uitgewerkt en nadien vereenvoudigd worden. Zo moet je vlot kunnen rekenen met \wsgref{breuken}{37}{37-39}.
+Na het toepassen van die rekenregels kan een som $a+b$, een verschil $a-b$ of een product $ab$ soms verder uitgewerkt en nadien vereenvoudigd worden. Zo moet je vlot kunnen rekenen met breuken.
 
-\begin{voorbeeld}
+\begin{example} 
 Als $\D A(x) = \frac{3}{4}\,x^5$ en $\D B(x) = -\frac{7}{6}\,x^5$ dan is 
 \begin{align*}
 A(x) + B(x) & = \frac{3}{4}\,x^5 + \left(-\frac{7}{6}\,x^5\right) 
@@ -309,22 +310,22 @@ A(x) + B(x) & = \frac{3}{4}\,x^5 + \left(-\frac{7}{6}\,x^5\right)
 = -\frac{5}{12}\,x^5, \\
 A(x) \cdot B(x) & = \frac{3}{4}\,x^5 \cdot \left(-\frac{7}{6}\,x^5\right) = - \frac{3 \cdot 7}{4 \cdot 6}\,x^{5+5} = -\frac{1\cdot 7}{4 \cdot 2}\, x^{10} = -\frac{7}{8}\,x^{10}. 
 \end{align*}
-\end{voorbeeld}
+\end{example} 
 
 \section{Veeltermen}
 
 Als $ax^n$ en $bx^m$ eentermen zijn, dan kunnen we de uitdrukking $ax^n + bx^m$ bekijken, die we opvatten als de {\em som} van die twee eentermen. Het resultaat noemen we een {\em tweeterm}. Analoog kunnen we spreken over een {\em drieterm}, een {\em vierterm} enzovoort. Algemeen spreken we dan van een {\em veelterm}.
 
-\begin{definitie}[in woorden]
+\begin{definition} 
 Een \underline{(re\"ele) veelterm in (de variabele) $x$}\index{veelterm} is een eindige som van eentermen in $x$.
-\end{definitie}
+\end{definition} 
 
-\begin{voorbeeld}
+\begin{example} 
 De volgende uitdrukkingen zijn veeltermen in $x$:
 \[
 3x^2, \qquad \sqrt{5} - 8x, \qquad -1 + 3x -2x^2 \qquad \text{ en } \qquad -\frac{4}{3}x^5 - 2x^3 + \pi^2\,x + 5. 
 \]
-\end{voorbeeld}
+\end{example} 
 
 We willen nu ook een willekeurige veelterm in symbolen kunnen schrijven. Als de graad van de eentermen die voorkomen niet te hoog is, kan dat als volgt:
 \begin{align*} 
@@ -340,13 +341,13 @@ We willen nu ook een willekeurige veelterm in symbolen kunnen schrijven. Als de 
 \end{align*}
 Van zodra er een eenterm van graad $26$ voorkomt, hebben we onvoldoende letters in het Latijns alfabet. Dat probleem kunnen we omzeilen door gebruik te maken van een {\em onderindex}\:: in plaats van $a,b,c$ etc. schrijven we $a_0, a_1, a_2$ etc. Op die manier kunnen we een willekeurige veelterm in symbolen uitdrukken.
 
-\begin{definitie}[in symbolen]
+\begin{definition} 
 Een \underline{(re\"ele) veelterm in (de variabele) $x$}\index{veelterm} is een uitdrukking van de vorm $A(x) = a_0 + a_1x + a_2x^2 + \dots + a_n x^n$ waarbij $n \in \N$ en $a_0,a_1,a_2,\ldots,a_n \in \R$.
-\end{definitie}
+\end{definition} 
 
 Spreken we in het vervolg van {\em een veelterm} $a_0 + a_1x + a_2x^2 + \dots + a_n x^n$ of $b_0 + b_1x + \dots + b_m x^m$ dan nemen we steeds aan dat $n,m\in \N$ en $a_0, \ldots, a_n\in \R$ en $b_0, \ldots, b_m\in \R$.
 
-\begin{voorbeeld}
+\begin{example} 
 Kiezen we in de bovenstaande definitie $n = 4$ en $a_0 = -5$, $a_1 = 7$, $a_2 = -3$, $a_3 = 0$ en $a_4 = 0$ dan verkrijgen we de veelterm
 \begin{align*}
 A(x) 
@@ -356,14 +357,14 @@ A(x)
 & = -5 + 7x - 3x^2.
 \end{align*}
 We konden dus even goed $n = 2$ en $a_0 = -5$, $a_1 = 7$ en $a_2 = -3$ gekozen hebben. 
-\end{voorbeeld}
+\end{example} 
 
-Dankzij de afspraak $x^0 = 1$ kunnen we een veelterm herschrijven met het \wsgref{sommatieteken}{54}{54}:
+Dankzij de afspraak $x^0 = 1$ kunnen we een veelterm herschrijven met het sommatieteken:
 \[
 A(x) = a_0 + a_1x + a_2x^2 + \dots + a_n x^n = \sum_{i=0}^n a_i x^i.
 \]
 
-\begin{voorbeeld}
+\begin{example} 
 Beschouw de veeltermen
 \[
 A(x) = \sum_{i=0}^3 (2i+1) x^i \qquad \text{ en } \qquad P(t) = \sum_{i=1}^5 \frac{1}{i^2} \, t^i.
@@ -378,19 +379,19 @@ P(x)
 & = \frac{1}{1^2} \, t^1 + \frac{1}{2^2} \, t^2 + \frac{1}{3^2} \, t^3 + \frac{1}{4^2} \, t^4 + \frac{1}{5^2} \, t^5 \\
 & = t + \frac{1}{4}\,t^2 + \frac{1}{9}\,t^3 + \frac{1}{16}\,t^4 + \frac{1}{5}\,t^5.
 \end{align*}
-\end{voorbeeld}
+\end{example} 
 
 Als $a_0 + a_1x + a_2x^2 + \dots + a_n x^n$ een veelterm is, dan noemen we de getallen $a_0, a_1, a_2, \ldots, a_n$ de \underline{co\"effici\"enten}\index{co\"effici\"ent}\index{veelterm!co\"effici\"enten} van de veelterm. De (een)termen $a_0, a_1x, a_2x^2, \ldots , a_nx^n$ noemen we de \underline{(een)termen} van de veelterm. De term $a_0$ wordt de \underline{constante term}\index{constante term}\index{veelterm!constante term} van de veelterm genoemd.
 
-\begin{voorbeeld}
+\begin{example} 
 De constante term van de veelterm $A(x) = -5 + 7x - 3x^2$ is gelijk aan $-5$.  
-\end{voorbeeld}
+\end{example} 
 
 Als $a_0 + a_1x + a_2x^2 + \dots + a_n x^n$ een veelterm is waarbij $a_n \neq 0$, dan noemen we $n$ de \underline{graad}\index{graad}\index{veelterm!graad} van de veelterm. Schrijven we de veelterm als $A(x)$, dan noteren we de graad als $\gr A(x)$. In dat geval is $a_nx^n$ de \underline{hoogstegraadsterm}\index{hoogstegraadsterm}\index{veelterm!hoogstegraadsterm} en $a_n$ de \underline{hoogstegraadsco\"effici\"ent}\index{hoogstegraadsco\"effici\"ent}\index{veelterm!hoogstegraadsco\"effici\"ent} van de veelterm. De graad van de veelterm $0 + 0\cdot x + 0 \cdot x^2 + \dots + 0\cdot x^n = 0$ wordt in het secundair onderwijs niet gedefini\"eerd.
 
 Veeltermen van graad nul, \'e\'en, twee of drie wordt respectievelijk \underline{constante}, \underline{lineaire}, \linebreak \underline{kwadratische} en \underline{kubische veeltermen} genoemd. Ook veelterm $0 + 0\cdot x + 0 \cdot x^2 + \dots + 0\cdot x^n = 0$ wordt een constante veelterm genoemd.
 
-\begin{voorbeeld}
+\begin{example} 
 We vereenvoudigen onderstaande veeltermen, en geven telkens de graad, de hoogstegraadsco\"effici\"ent en constante term.
 \begin{enumerate}[(a)]
 \item
@@ -400,23 +401,24 @@ $B(x) = 0x^2 + 3x = 3x$ heeft graad $1$, hoogstegraadsco\"effici\"ent $3$ en con
 \item
 $C(x) = \sqrt{7}-\sqrt{28} = \sqrt{7}-2\sqrt{7} = -\sqrt{7}$ heeft graad $0$, hoogstegraadsco\"effici\"ent $-\sqrt{7}$ en constante term $-\sqrt{7}$.
 \end{enumerate}
-\end{voorbeeld}
+\end{example} 
 
-De \wsgref{verzameling}{15}{15} van alle veeltermen in $x$ wordt genoteerd met $\R[x]$. In symbolen:
+De verzameling van alle veeltermen in $x$ wordt genoteerd met $\R[x]$. In symbolen:
 \[
 \R[x] = \{a_0 + a_1 x + a_2 x^2 + \dots + a_n x^n \mid \text{$n \in \N$ en $a_0,a_1,a_2,\ldots,a_n \in \R$} \}.
 \]
-Wegens een eerdere afspraak is $a = a\cdot x^0$, zodat elk re\"eel getal $a$ kan geschreven worden als een veelterm. De verzameling van de re\"ele getallen is dus een \wsgref{deelverzameling}{16}{16}
+Wegens een eerdere afspraak is $a = a\cdot x^0$, zodat elk re\"eel getal $a$ kan geschreven worden als een veelterm. De verzameling van de re\"ele getallen is dus een deelverzameling
 van de verzameling van alle veeltermen, in symbolen: $\R \subseteq \R[x]$. 
 
-\begin{voorbeeld} We hebben dat $1-4x+2x^3 \in \R[x]$, $x^5-\sqrt{2} \in \R[x]$ en $\D -\frac{13}{7} \in \R[x]$.   
-\end{voorbeeld}
+\begin{example} 
+We hebben dat $1-4x+2x^3 \in \R[x]$, $x^5-\sqrt{2} \in \R[x]$ en $\D -\frac{13}{7} \in \R[x]$.   
+\end{example} 
 
 Twee veeltermen in $x$ zijn \underline{gelijk} als ze ofwel dezelfde graad en dezelfde co\"effici\"enten hebben, ofwel beide gelijk zijn aan nul. 
 
 Soms komen er in wiskundige uitdrukkingen symbolen zoals $a$, $b$, $p$, $q$ etc. voor die getallen voorstellen. Pas als die symbolen een waarde toegekend krijgen, wordt de uitdrukking volledig vastgelegd. Zo'n symbool noemen we dan een {\em parameter}.\index{parameter} 
 
-\begin{voorbeeld}
+\begin{example} 
 Beschouw $A(x) = ax^5 - 4x^2 + bx + 2$ en $B(x) = 7x^m + 2ax - c^2x^2 - d$ waarbij $a,b,c,d \in \R$ en $m \in \N$. We bepalen de waarde(n) van de parameters $a,b,c,d$ en $m$ waarvoor de veelterm $A(x)$ gelijk is aan de veelterm $B(x)$. We hebben: 
 \begin{align*}
 A(x) = B(x) \quad 
@@ -432,7 +434,7 @@ A(x) = B(x) \quad
 \end{aligned}
 \right.
 \end{align*}
-\end{voorbeeld}
+\end{example} 
 
 Vervangen we in een veelterm $A(x)$ de variabele $x$ door een re\"eel getal $r$, dan verkrijgen we de \underline{getalwaarde}\index{veelterm!getalwaarde} van $A(x)$ in $x = r$. Die getalwaarde noteren we met $A(r)$. In symbolen:
 \[
@@ -442,20 +444,20 @@ A(x) = a_0 + a_1x + a_2x^2 + \dots + a_n x^n \quad
 \]
 met $n \in \N$ en $r, a_0, a_1, \ldots, a_n \in \R$, waarbij we ook hier het geval $n = r = 0$ uitsluiten. % voor ons heeft $0^0$ geen betekenis.
 
-\begin{voorbeeld}
+\begin{example} 
 Als $A(x) = 2x^3+3x-5$ dan is de getalwaarde van $A(x)$ in $x = 10$ gelijk aan $A(10) = 2\cdot 10^3 + 3 \cdot 10 - 5 = 2025$.
-\end{voorbeeld}
+\end{example} 
 
-Is de getalwaarde van een veelterm in een re\"eel getal $r$ gelijk aan nul, dan noemen we $r$ een \underline{nulwaarde}\index{veelterm!nulwaarde} \index{nulwaarde} van die veelterm. De uitspraak {\em $r$ is een nulwaarde van $A(x)$} is dus gelijkwaardig met de uitspraak {\em $A(r) = 0$}. Met behulp van het symbool $\Leftrightarrow$ voor \wsgref{equivalentie}{2}{2} wordt dit in symbolen:
+Is de getalwaarde van een veelterm in een re\"eel getal $r$ gelijk aan nul, dan noemen we $r$ een \underline{nulwaarde}\index{veelterm!nulwaarde} \index{nulwaarde} van die veelterm. De uitspraak {\em $r$ is een nulwaarde van $A(x)$} is dus gelijkwaardig met de uitspraak {\em $A(r) = 0$}. Met behulp van het symbool $\Leftrightarrow$ voor equivalentie wordt dit in symbolen:
 \[
 r \text{ is een nulwaarde van } A(x) \quad \Leftrightarrow \quad A(r) = 0.
 \]
 Hierbij is $r \in \R$ en $A(x)$ een veelterm in $x$. In de literatuur wordt een nulwaarde soms ook een \underline{nulpunt}\index{nulpunt} genoemd. Onze voorkeur gaat uit naar de volgende afspraak: een nulpunt is een punt (dus een meetkundig object), een nulwaarde is een waarde (dus een getal).
 
-Bepalen van de waarde(n) van parameters kan leiden tot een \wsgref{stelsel}{115}{115-119}. 
+Bepalen van de waarde(n) van parameters kan leiden tot een stelsel. 
 In het derde jaar heb je geleerd hoe je een stelsel van twee vergelijkingen in twee onbekenden kan oplossen. Die technieken moet je nog steeds kunnen toepassen. 
 
-\begin{voorbeeld}
+\begin{example} 
 We bepalen de waarde(n) van de parameters $a$ en $b$ waarvoor
 \[
 a(x-3) - b(x+1) = 1-3x.
@@ -474,14 +476,14 @@ a - b & = -3 && (1)\\
 \right.
 \end{align*}
 Uit $(1)-(2)$ volgt $4a = -4$ zodat $a = -1$. Invullen in $(2)$ geeft $-1-b =  -3$ waaruit $b = 2$. 
-\end{voorbeeld}
+\end{example} 
 
-Bij een rekenoefening kan gevraagd worden om de berekening {\em algebra\"isch} uit te voeren: met de hand, waarbij je jouw tussenstappen met berekeningen opschrijft. Als het resultaat een re\"eel getal is, dan kan gevraagd worden om een \wsgref{exacte waarde}{31}{31} te geven. Je kan uiteraard wel de rekenmachine gebruiken om jouw oplossing te controleren. 
+Bij een rekenoefening kan gevraagd worden om de berekening {\em algebra\"isch} uit te voeren: met de hand, waarbij je jouw tussenstappen met berekeningen opschrijft. Als het resultaat een re\"eel getal is, dan kan gevraagd worden om een exacte waarde te geven. Je kan uiteraard wel de rekenmachine gebruiken om jouw oplossing te controleren. 
 
-Bij het algebra\"isch rekenwerk is het ook de bedoeling om het resultaat te vereenvoudigen. Je moet dus vlot kunnen rekenen met \wsgref{vierkantswortels en derdemachtswortels}{47}{47-51}. 
+Bij het algebra\"isch rekenwerk is het ook de bedoeling om het resultaat te vereenvoudigen. Je moet dus vlot kunnen rekenen met vierkantswortels en derdemachtswortels. 
 Indien gevraagd maak je ook de noemers (vierkants)wortelvrij. 
 
-\begin{voorbeeld}
+\begin{example} 
 Gegeven zijn de veeltermen
 \[
 A(x) = \frac{1}{5}\,x^2-3x+\frac{2}{3}, \quad B(x) = 3(bx)^2-6x+1 \quad \text{ en } \quad C(x) = x^3 + \sqrt[3]{2} x^2 + \sqrt[3]{4}x+5
@@ -512,11 +514,11 @@ C(\sqrt[3]{2}) & = (\sqrt[3]{2})^3 + \sqrt[3]{2}\cdot(\sqrt[3]{2})^2 + \sqrt[3]{
 & = 11.
 \end{align*}
 \end{enumerate}
-\end{voorbeeld}
+\end{example} 
 
 De som van twee veeltermen in $x$ is opnieuw een veelterm in $x$. Ook het product van twee veeltermen in $x$ is opnieuw een veelterm in $x$. 
 
-\begin{voorbeeld}
+\begin{example} 
 De som van $A(x) = 3x^3+2x^2-x+4$ met $B(x) = 6x^3-x^2+2$ is 
 \[
 A(x) + B(x) = 3x^3+2x^2-x+4 + 6x^3-x^2+2 = 9x^3 + x^2 - x + 6.
@@ -529,7 +531,7 @@ P(x) \cdot Q(x)
 & = -18x^5 + 30x^4 + 3x^4 - 5x^3 - 6x^3 + 10x^2 \\
 & = -18x^5 + 33x^4 - 11x^3 + 10x^2.
 \end{align*}
-\end{voorbeeld}
+\end{example} 
 
 In het voorbeeld hierboven is de graad van het product $P(x) \cdot Q(x)$ bepaald wordt door de graad van de hoogstegraadsterm $6x^2 \cdot (-3x^3) = -18 x^{5}$. We stellen dus vast dat de graad van het product gelijk is aan de som van de graden. Dat kenmerk geldt ook in het algemeen, in symbolen: 
 \begin{equation} \label{eq:graadproduct}
@@ -537,7 +539,7 @@ In het voorbeeld hierboven is de graad van het product $P(x) \cdot Q(x)$ bepaald
 \end{equation}
 waarbij $A(x)$ en $B(x)$ veeltermen zijn, beide verschillend van de nulveelterm. 
 
-In sommmige gevallen is de graad van de som van twee veeltermen gelijk aan het \wsgref{maximum}{13}{13} van de graden van die twee veeltermen. Dat is bijvoorbeeld het geval met 
+In sommmige gevallen is de graad van de som van twee veeltermen gelijk aan het maximum van de graden van die twee veeltermen. Dat is bijvoorbeeld het geval met 
 $A(x) = x^3$ en $B(x) = x^5 + 2x^2$. Inderdaad, dan is $A(x) + B(x) = x^5 + x^3 + 2x^2$ zodat $\gr\left(A(x) + B(x)\right) = 5$ gelijk is aan het maximum van de getallen $\gr A(x) = 3$ en $\gr B(x) = 5$. %In symbolen: $5 = \max\{3,5\}$. 
 
 In andere gevallen kan het voorkomen dat de graad van de som van twee veeltermen kleiner is dan de graad van elk van die twee veeltermen. Dat is precies het geval wanneer de hoogste\-graadstermen van die twee veeltermen elkaars tegengestelde zijn. Zo is voor $A(x) = x^3$ en $C(x) = -x^3 + 2x^2$ de som gelijk aan $A(x) + C(x) = 2x^2$, waarvan de graad kleiner is dan $\max\{3,3\} = 3$. In het algemeen hebben we dat  
@@ -553,7 +555,7 @@ Spreken we af dat $\gr 0 = - \infty$, dan zijn \eqref{eq:graadproduct} en \eqref
 \]
 \end{Uitbreiding}
 
-\begin{voorbeeld}
+\begin{example} 
 Van drie veeltermen $A(x)$, $B(x)$ en $C(x)$ weten we dat
 \[
 \gr A(x) = 6, \quad \gr B(x) = 4 \quad \text{ en } \quad \gr C(x) = 1.
@@ -580,23 +582,26 @@ Anderzijds is
 \gr\bigl(B(x)\cdot Q(x)\bigr) = \gr B(x) + \gr Q(x) = 4 + \gr Q(x).
 \]
 Hieruit volgt dat $\gr Q(x) = 6-4 = 2$. 
-\end{voorbeeld}
+\end{example} 
 
-Is het product van twee getallen gelijk aan nul, dan is minstens een van die getallen gelijk aan nul. Die eigenschap geldt ook voor veeltermen. Om dat aan te tonen, maken we gebruik van de techniek \wsgref{bewijs uit het ongerijmde}{5}{5-6}. 
+Is het product van twee getallen gelijk aan nul, dan is minstens een van die getallen gelijk aan nul. Die eigenschap geldt ook voor veeltermen. Om dat aan te tonen, maken we gebruik van de techniek bewijs uit het ongerijmde. 
  
-\begin{eigenschap} \label{eigenschap:geennuldelers}
+\begin{proposition} 
 Zij $A(x)$ en $B(x)$ twee veeltermen. Dan geldt: 
 \[
 A(x)\cdot B(x) = 0 \quad \Rightarrow \quad A(x) = 0 \,\,\text{ of } \,\, B(x) = 0.
 \]
-\end{eigenschap}
+\end{proposition} 
+
+
 \begin{proof}
+
 Gegeven is dat $A(x)\cdot B(x) = 0$. We moeten aantonen dat $A(x) = 0$ of $B(x) = 0$. Veronderstel, uit het ongerijmde, dat deze uitspraak niet waar is. Met behulp van het symbool $\neg$ voor 
-\wsgref{negatie}{2}{2} weten we dan:
+negatie weten we dan:
 \[
 \neg\bigl(A(x) = 0 \,\, \text{ of } \,\, B(x) = 0\bigr).
 \]
-Wegens een \wsgref{wet van de Morgan}{3}{3} betekent dit:
+Wegens een wet van de Morgan betekent dit:
 \[
 A(x) \neq 0 \,\, \text{ en } \,\, B(x) \neq 0.
 \] 
@@ -612,7 +617,9 @@ A(x) \cdot B(x)
 & = a_0b_0 + (a_0b_1 + a_1b_0)x + \dots + a_n b_m x^{n+m}.
 \end{align*}
 Omdat $a_n \neq 0$ en $b_m \neq 0$ weten we dat $a_n \cdot b_m \neq 0$. Hieruit volgt dat $A(x) \cdot B(x) = 0$. Dit is in strijd met het gegeven dat $A(x)\cdot B(x) = 0$. Kortom: de aanname dat $A(x) \neq 0$ en $B(x) \neq 0$ leidt tot een tegenstrijdigheid. Die aanname was dus fout. Op die manier hebben we aangetoond dat $A(x) = 0$ of $B(x) = 0$. 
+
 \end{proof}
+
 
 \begin{Uitbreiding}
 Spreken we af dat $\gr 0 = - \infty$, dan kunnen we ons bewijs heel wat korter opschrijven. 
@@ -624,13 +631,13 @@ Mocht $A(x) \neq 0$ en $B(x) \neq 0$ dan zou een som van twee natuurlijk getalle
 \qed
 \end{Uitbreiding}
 
-\clearpage
+
 
 \phantomsection
 \addcontentsline{toc}{section}{Oefeningen}
 \section*{Oefeningen reeks 1}
 
-\begin{Oefening}[\bf \ref{antw1.1}.]\setcounter{enumi}{1} 
+\begin{exercise} 
 \hypertarget{oef1.1}{Welke} uitdrukkingen stellen na vereenvoudiging een eenterm in $x$ voor? 
 \begin{multicols}{2}
 \begin{enumerate}[(a)]
@@ -656,9 +663,9 @@ $\sqrt{x}$
 $\sqrt{x^2}$
 \end{enumerate}
 \end{multicols}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw1.2}.]\setcounter{enumi}{2}
+\begin{exercise} 
 \hypertarget{oef1.2}{Schrijf} de volgende veeltermen uit.
 \begin{enumerate}[(a)]
 \item
@@ -668,9 +675,9 @@ $\D B(x) = \sum_{n=0}^3 \frac{x^{2n+1}}{n+1}$
 \item
 $\D C(x) = \sum_{i=2}^4 (-x)^i$
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw1.3}.]\setcounter{enumi}{3}
+\begin{exercise} 
 \hypertarget{oef1.3}{Welke} uitdrukkingen stellen na vereenvoudiging een veelterm in $x$ voor? 
 \begin{multicols}{2}
 \begin{enumerate}[(a)]
@@ -700,9 +707,9 @@ $\sqrt{9+25}$
 $\sqrt{x^4}$
 \end{enumerate}
 \end{multicols}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening} % oef 4
+\begin{exercise} 
 Bepaal telkens de graad, de hoogstegraadsco\"effici\"ent en de constante term van de veelterm.
 \begin{multicols}{2}
 \begin{enumerate}[(a)]
@@ -724,11 +731,11 @@ $(-5x+7)(3x^2-5x+8)$
 $(x-2)^5$
 \end{enumerate}
 \end{multicols}
-\end{Oefening}
+\end{exercise} 
 
 \section*{Oefeningen reeks 2}
 
-\begin{Oefening}[\bf \ref{antw1.5}.]\setcounter{enumi}{5}
+\begin{exercise} 
 \hypertarget{oef1.5}{Bepaal} telkens de graad, de hoogstegraadsco\"effici\"ent en de constante term van de veelterm zonder deze veelterm uit te werken of te vereenvoudigen. 
 \begin{multicols}{2}
 \begin{enumerate}[(a)]
@@ -746,11 +753,11 @@ $(5x-3)^3+27$
 $(4x^2+5)^3-x^5-x^4-x^3-x^2-x$
 \end{enumerate}
 \end{multicols}
-\end{Oefening}
+\end{exercise} 
 
 \pagebreak
 
-\begin{Oefening} % oef 6
+\begin{exercise} 
 Werk de volgende veeltermen uit, en vereenvoudig telkens zoveel mogelijk. Geef daarna telkens de graad, de constante term en de hoogstegraadsco\"effici\"ent.
 \begin{multicols}{2}
 \begin{enumerate}[(a)]
@@ -772,9 +779,9 @@ $-(\sqrt{3}+4x)(-\sqrt{3}+4x)+3x^2-1$
 $\D \Bigl(-x^6 + \frac{1}{3}x\Bigr)(2x-1) - 3x^2\Bigl(-x^5-\frac{1}{9}\Bigr)$
 \end{enumerate}
 \end{multicols} 
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw1.7}.]\setcounter{enumi}{7}
+\begin{exercise} 
 \hypertarget{oef1.7}{Werk} telkens uit, vereenvoudig en bepaal de graad. 
 \begin{multicols}{2}
 \begin{enumerate}[(a)]
@@ -796,9 +803,9 @@ $17-4x^2-(-2x+3)(-2x-3)-8$
 $\D \left(\frac{5}{6}\,x+\frac{1}{3}\right)(3x-2)(3x+2)$
 \end{enumerate}
 \end{multicols}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw1.8}.]\setcounter{enumi}{8}
+\begin{exercise} 
 \hypertarget{oef1.8}{Bepaal} telkens de getalwaarde van de veelterm in de gegeven $x$-waarde. Gebruik de correcte notatie. Geef aan of die $x$-waarde ook een nulwaarde is. 
 \begin{enumerate}[(a)]
 \item
@@ -814,9 +821,9 @@ $C(x) = x^4-4$ \quad in $x = \sqrt{2}$
 \item
 $D(x) = 2x^3 + 3x^2 - 11x - 6$ \quad in $\D x = -\frac{1}{2}$
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw1.9}.]\setcounter{enumi}{9} 
+\begin{exercise} 
 \hypertarget{oef1.9}{Bepaal} telkens de waarde(n) van de re\"ele parameters waarvoor de veeltermen $A(x)$ en $B(x)$ gelijk zijn.
 \begin{enumerate}[(a)]
 \item
@@ -824,9 +831,9 @@ $A(x) = (ax+7)x$ en $B(x) = 7x-3x^2$ %waarbij $a \in \R$
 \item
 $A(x) = (ax+b)(3x-2)$ en $B(x) = 3x^2+6-11x$ %waarbij $a,b \in \R$
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw1.10}.]\setcounter{enumi}{10} 
+\begin{exercise} 
 \hypertarget{oef1.10}{Bepaal} telkens de exacte waarde(n) van de re\"ele parameters waarvoor de veelterm voldoet aan de voorwaarde. 
 \begin{enumerate}[(a)]
 \item
@@ -836,9 +843,9 @@ met $A(1) = 8$
 $G(x) = (c+1)x^2+3x-\sqrt{2}\,c$ %waarbij $c \in \R$ en 
 met nulwaarde $-1$
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw1.11}.]\setcounter{enumi}{11} 
+\begin{exercise} 
 \hypertarget{oef1.11}{Gegeven} zijn de veeltermen 
 \[
 A(x) = -3x^4+2x^6-5x^6+6x^4+21x^4-5+12x^2+5 \quad \text{ en } \quad B(x) = -5x^2+2x-6-2x+6.
@@ -853,13 +860,13 @@ Bepaal $A(-2)$ en $B(\sqrt{3})$.
 \item
 Werk uit, vereenvoudig en bepaal de graad van de som en het product van de veeltermen $A(x)$ en $B(x)$. 
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 
-\clearpage
+
 
 \section*{Oefeningen reeks 3}
 
-\begin{Oefening}[\bf \ref{antw1.12}.]\setcounter{enumi}{12}
+\begin{exercise} 
 \hypertarget{oef1.12}{Gegeven} zijn de veeltermen 
 \[
 A(x) = 2x^2 + 5x + 13, \quad B(x) =  x^3-3x-4  \quad \text{ en } \quad C(x) = xA(x) + cB(x)
@@ -871,48 +878,48 @@ Bepaal $A\bigl(B(3)\bigr)$.
 \item
 Bepaal de waarde(n) van de parameter $c$ waarvoor $\gr C(x) = 2$.
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw1.13}.]\setcounter{enumi}{13} 
+\begin{exercise} 
 \hypertarget{oef1.13}{Bepaal} een kwadratische veelterm $A(x)$ waarvoor $A(0) = 2$ en waarbij $-2$ en $1$ nulwaarden zijn.
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw1.14}.]\setcounter{enumi}{14} 
+\begin{exercise} 
 \hypertarget{oef1.14}{Bepaal} een kubische veelterm $A(x)$ zonder constante term waarvoor
 \[
 A(x) = A(x-1) + x(x-1).
 \]
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw1.15}.]\setcounter{enumi}{15} 
+\begin{exercise} 
 \hypertarget{oef1.15}{Als} je weet dat er precies \'e\'en veelterm is waarvan de derde macht gelijk is aan 
 \[
 P(x) = 8x^6 + 36x^5 + 66x^4 + 63x^3 + 33x^2 + 9x + 1,
 \]
 bepaal dan deze veelterm.
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw1.16}.]\setcounter{enumi}{16} 
+\begin{exercise} 
 \hypertarget{oef1.16}{Gegeven} is de veelterm
 \[
 A(x) = x^4 - 4x^3 + ax^2 + 2x + b
 \]
 waarbij $a,b \in \R$. Bepaal de waarde(n) van de parameters $a$ en $b$ waarvoor $A(x)$ het kwadraat is van een veelterm. 
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw1.17}.]\setcounter{enumi}{17} 
+\begin{exercise} 
 \hypertarget{oef1.17}{Beschouw} de veelterm $P(x) = (3x - 1)^{12}$. Bereken algebra\"isch de som van de co\"effici\"enten. 
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw1.18}.]\setcounter{enumi}{18} 
+\begin{exercise} 
 \hypertarget{oef1.18}{Als} $a,b,c,d$ re\"ele getallen zijn waarvoor geldt dat
 \[
 ax^3 + bx^2 + cx + d = (x^2-6x-8)^{10}\cdot(4x+2)^5 - (x+1)^8\cdot(x^2+5x+4)^{27}
 \]
 bepaal dan algebra\"isch de waarde van $a-b+c-d$.
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening} % oef 19
+\begin{exercise} 
 Van een rechthoekig stuk karton met afmetingen $20\:\text{cm}$ op $10\:\text{cm}$ knippen we in elke hoek een vierkant met zijde $x$ weg. Nadien plooien we het karton langs de stippellijnen, om zo een doos zonder deksel rechts te verkrijgen. 
 \begin{enumerate}[(a)]
 \item 
@@ -956,12 +963,12 @@ Geef alle nulwaarden van deze veelterm, en verklaar jouw antwoord zowel algebra\
 \end{pspicture}
 \end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\end{Oefening}
+\end{exercise} 
 
-\clearpage
+
 
 \begin{Uitbreiding}
-\begin{Oefening}% oef 20
+\begin{exercise} 
 \label{oefgraadnulveelterm}
 {\bf (min oneindig en de graad van de nulveelterm)} 
 Om aan de nulveelterm ook een graad te kunnen toekennen, breiden we de verzameling van de re\"ele getallen uit met een element, voorgesteld door het symbool $- \infty$, lees als: min oneindig. Het element $-\infty$ is dus geen (re\"eel) getal. Men spreekt ook wel van het {\em oneigenlijk getal} $-\infty$. Ook de orde en de optelling in $\R$ worden uitgebreid door de volgende definities (waarbij $a \in \R$):
@@ -987,7 +994,7 @@ $\D \gr\bigl( A(x) + 0 \bigr) \, \leq \, \max \bigl\{ \,\gr A(x)\, , \, \gr 0 \,
 \item
 $\D \gr\bigl( A(x) + (-A(x)) \bigr) \, \leq \, \max \bigl\{ \,\gr A(x)\, , \, \gr \left(-A(x)\right) \, \bigr\}$
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 \end{Uitbreiding}
 
 \section{chapter:Deling van veelterm door veelterm}\label{hoofdstuk:2}
@@ -998,22 +1005,22 @@ Net zoals je kan spreken over deling van gehele getallen, kun je ook spreken ove
 
 Het geheel getal $2025$ is deelbaar door het geheel getal $15$ omdat er een geheel getal $q$ bestaat waarvoor $2025 = 15\cdot q$, namelijk $q = 35$. Op een gelijkaardige manier kunnen we zeggen dat de veelterm $x^2-1$ deelbaar is door de veelterm $x+1$, omdat er een veelterm $Q(x)$ bestaat waarvoor $x^2-1 = (x+1)\cdot Q(x)$, namelijk $Q(x) = x-1$. We veralgemenen dit als volgt.
 
-\begin{definitie}[in woorden]\label{definitie:deler}
+\begin{definition} 
 Zij $A(x)$ en $B(x)$ twee veeltermen waarbij $B(x) \neq 0$. 
 We noemen $B(x)$ een \underline{deler}\index{deler} van $A(x)$ als er een veelterm $Q(x)$ bestaat zodat $A(x) = B(x)\cdot Q(x)$.
-\end{definitie}
+\end{definition} 
 
-\begin{voorbeeld}
+\begin{example} 
 Beschouw de veeltermen $A(x) = 14x^2+17x+5$ en $B(x) = 2x+1$. Dan is $B(x)$ een deler van $A(x)$, want er bestaat een veelterm $Q(x)$ waarvoor $A(x) = B(x) \cdot Q(x)$, bijvoorbeeld $Q(x) = 7x+5$. Dat kunnen we controleren door het product %$B(x) \cdot Q(x)$ 
 uit te werken:
 \[
 B(x) \cdot Q(x) = (2x+1) \cdot (7x+5) = 14x^2 + 10x + 7x + 5 = 14x^2 + 17x + 5 = A(x).
 \]
-\end{voorbeeld}
+\end{example} 
 
 Argumenteren dat een gegeven veelterm $A(x)$ niet deelbaar is door een gegeven veelterm $B(x)$ kan door aan te tonen dat er geen enkele veelterm $Q(x)$ bestaat waarvoor $A(x) = B(x) \cdot Q(x)$. 
 
-\begin{voorbeeld} \label{geendeler}
+\begin{example} 
 Zij $A(x) = 2x^3+15$ en $B(x) = x-3$. Dan is $B(x)$ geen deler van $A(x)$. Inderdaad, mocht er toch een veelterm $Q(x)$ bestaan waarvoor $A(x) = B(x) \cdot Q(x)$ dan zou $\gr Q(x) = 2$ zodat $Q(x) = a x^2 + b x + c$ voor zekere $a,b,c \in \R$ met $a \neq 0$. In dat geval is
 \[
 2x^3+15 = (x-3) \cdot (a x^2 + b x + c) 
@@ -1026,35 +1033,38 @@ en door de hoogstegraadsterm en constante term van beide leden te vergelijken, v
 & = 2x^3 + (b-6)x^2 + (-5-3b)x + 15.
 \end{align*}
 Hieruit volgt dat $b - 6 = 0$ en $-5-3b = 0$, zodat $b = 6$ en $b = -\frac{5}{3}$, wat onmogelijk is. Er bestaat dus geen veelterm $Q(x)$ met $A(x) = B(x) \cdot Q(x)$. Dus $x-3$ is geen deler van $2x^3+15$. 
-\end{voorbeeld}
+\end{example} 
 
 Als een veelterm $B(x) \neq 0$ een deler is van een veelterm $A(x)$ dan noteren we $B(x) \mid A(x)$ en zeggen we dat de veelterm $A(x)$ \underline{deelbaar} is door de veelterm $B(x)$. Is dat niet zo, dan schrijven we $B(x) \nmid A(x)$. 
 
-\begin{voorbeeld} 
+\begin{example} 
 We hebben dat $x \mid x^2$ en $(x+1) \mid (x^2-1)$ en $(x-3) \nmid (2x^3+15)$.
-\end{voorbeeld}
+\end{example} 
 
-Met behulp van de \wsgref{existenti\"ele kwantor}{4}{4} $\exists$, lees als {\em er bestaat}, kunnen we Definitie \ref{definitie:deler} als volgt aanvullen.
+Met behulp van de existenti\"ele kwantor $\exists$, lees als {\em er bestaat}, kunnen we Definitie \ref{definitie:deler} als volgt aanvullen.
 
-\begin{definitie}[in woorden en symbolen]
+\begin{definition} 
 Zij $A(x)$ en $B(x)$ twee veeltermen met $B(x) \neq 0$. We noemen $B(x)$ een \underline{deler}\index{deler} van $A(x)$ als er een veelterm $Q(x)$ bestaat waarvoor geldt dat $A(x) = B(x)\cdot Q(x)$. In symbolen:
 \[
 B(x) \mid A(x) \quad \Leftrightarrow \quad \exists \, Q(x) \in \R[x]: A(x) = B(x)\cdot Q(x).
 \]
-\end{definitie}
+\end{definition} 
 
 In dat geval noemen we de veelterm $A(x)$ het \underline{deeltal}, veelterm $B(x)$ de \underline{deler} en veelterm $Q(x)$ een \underline{quoti\"ent (van de opgaande deling)}.\index{quoti\"ent}\index{opgaande deling} 
 
-\begin{voorbeeld}
+\begin{example} 
 Beschouw de veeltermen $A(x) = x^8$ en $B(x) = x^2$. Dan is $B(x) \mid A(x)$ en een quoti\"ent van de opgaande deling is gelijk aan $x^6$. 
-\end{voorbeeld}
+\end{example} 
 
 In de bovenstaande voorbeelden bestaat er telkens hoogstens \'e\'en veelterm $Q(x)$ waarvoor $A(x) = B(x)\cdot Q(x)$. Dat resultaat blijkt waar te zijn voor alle veeltermen $A(x)$ en $B(x)$ met $B(x) \neq 0$. Die eigenschap is erg belangrijk, die we daarom een {\em stelling} noemen. Hieronder zullen we die stelling ook bewijzen. 
 
-\begin{stelling}[opgaande deling]
+\begin{theorem} 
 Zij $A(x)$ en $B(x)$ twee veeltermen waarbij $B(x) \neq 0$. Dan bestaat er hoogstens \'e\'en veelterm $Q(x)$ zodat $A(x) = B(x)\cdot Q(x)$. 
-\end{stelling}
+\end{theorem} 
+
+
 \begin{proof}
+
 Stel dat er twee veeltermen $Q(x)$ en $Q'(x)$ bestaan waarvoor $A(x) = B(x)\cdot Q(x)$ en $A(x) = B(x)\cdot Q'(x)$. Gelijkstellen levert nu:
 \begin{align*}
 A(x) = A(x) \quad & \Rightarrow \quad B(x)\cdot Q(x) = B(x)\cdot Q'(x) \\
@@ -1063,7 +1073,9 @@ A(x) = A(x) \quad & \Rightarrow \quad B(x)\cdot Q(x) = B(x)\cdot Q'(x) \\
 & \Rightarrow \quad B(x) = 0 \,\,\text{ of } \,\, Q(x) - Q'(x) = 0. 
 \end{align*}
 Er is gegeven dat $B(x) \neq 0$. Dus moet noodzakelijk $Q(x) - Q'(x)$ zodat $Q(x) = Q'(x)$. Bijgevolg bestaat er hoogstens \'e\'en veelterm $Q(x)$ zodat $A(x) = B(x)\cdot Q(x)$.
+
 \end{proof}
+
 
 Combineren we die stelling met de definitie van deelbaarheid, dan vinden we: een veelterm $B(x) \neq 0$ is een deler van een veelterm $A(x)$ als en slechts als er precies \'e\'en veelterm $Q(x)$ bestaat waarvoor geldt dat $A(x) = B(x)\cdot Q(x)$. Dit kunnen we in symbolen noteren door gebruik te maken van de kwantor $\exists!$ die we lezen als {\em er bestaat precies \'e\'en}:
 \[
@@ -1074,20 +1086,19 @@ In dat geval mogen we $Q(x)$ voortaan {\em het} quoti\"ent (van de opgaande deli
 \frac{A(x)}{B(x)} = Q(x).
 \]
 
-\begin{voorbeeld}
-We hebben dat $x^2 \mid x^8$ en het quoti\"ent van de deling is gelijk aan $x^6$. De volgende notatie komt dan overeen met een rekenregel voor \wsgref{machten}{45}{45}:
+\begin{example} 
+We hebben dat $x^2 \mid x^8$ en het quoti\"ent van de deling is gelijk aan $x^6$. De volgende notatie komt dan overeen met een rekenregel voor machten:
 \[
 \frac{x^8}{x^2} = x^6.
 \]
-\end{voorbeeld}
+\end{example} 
 
-\clearpage
 
 Een typische oefening is bepalen van het quoti\"ent van een opgaande deling. In de volgende paragraaf zien we de algemene werkwijze om dat te doen. 
 
 In het geval er in de veeltermen $A(x)$ en $B(x)$ parameters voorkomen, dan is de zogenaamde {\em methode van de onbepaalde co\"effici\"enten} vaak effici\"enter. Hierbij bepalen we eerst de graad van het quoti\"ent $Q(x)$, daarna wordt het quoti\"ent $Q(x)$ uitgedrukt met co\"effici\"enten die nog onbepaald zijn (vandaar de naam), om daarna met het verband $A(x) = B(x) \cdot Q(x)$ die co\"effici\"enten van $Q(x)$ te bepalen. Die methode kwam al eerder aan bod in Voorbeeld \ref{geendeler}. 
 
-\begin{voorbeeld}
+\begin{example} 
 We bepalen de waarde(n) van de parameters $p$ en $q$ waarvoor geldt dat de veelterm $6x^3+px^2+32x+q$ deelbaar is door de veelterm $2x^2-7x-1$. In dat geval heeft het quoti\"ent van de opgaande deling graad $1$, zodat 
 \[
 6x^3+px^2+32x+q = (2x^2-7x-1)\cdot (ax+b)
@@ -1109,15 +1120,15 @@ p & = -2q - 21 \\
 \right.
 \]
 De tweede vergelijking geeft $q = 5$, en door die waarde in de eerste vergelijking te substitueren, vinden we ten slotte dat $p = -31$.  
-\end{voorbeeld}
+\end{example} 
 
 \section{Schema van de staartdeling}\index{staartdeling, schema van de}\index{schema!van de staartdeling}
 
-In de lagere school heb je geleerd hoe je een deling van twee gehele getallen kan uitvoeren met behulp van het \wsgref{schema van de staartdeling}{41}{41}.\footnote{De staartdeling is een voorbeeld van wat we een {\em algoritme} noemen: een eindige reeks instructies om vanuit een gegeven begintoestand een probleem op te lossen of een taak uit te voeren. De fundamentele vraag welke problemen met een algoritme kunnen opgelost worden, werd in 1937 opgelost door Alan Turing\index{Turing, Alan} \cite{Turing}. Zijn werk lag aan de basis van een van de grootste uitvindingen ooit: de computer.} Zo geeft bijvoorbeeld de deling van $239$ door $5$ als quoti\"ent $47$ en rest $4$. Dat resultaat kun je schrijven als $239 = 5 \cdot 47 + 4$. Kenmerkend is dat de rest kleiner is dan (de absolute waarde van) de deler. 
+In de lagere school heb je geleerd hoe je een deling van twee gehele getallen kan uitvoeren met behulp van het schema van de staartdeling.\footnote{De staartdeling is een voorbeeld van wat we een {\em algoritme} noemen: een eindige reeks instructies om vanuit een gegeven begintoestand een probleem op te lossen of een taak uit te voeren. De fundamentele vraag welke problemen met een algoritme kunnen opgelost worden, werd in 1937 opgelost door Alan Turing\index{Turing, Alan} \cite{Turing}. Zijn werk lag aan de basis van een van de grootste uitvindingen ooit: de computer.} Zo geeft bijvoorbeeld de deling van $239$ door $5$ als quoti\"ent $47$ en rest $4$. Dat resultaat kun je schrijven als $239 = 5 \cdot 47 + 4$. Kenmerkend is dat de rest kleiner is dan (de absolute waarde van) de deler. 
 
 Hieronder leer je om een deling van veeltermen op een gelijkaardige manier uit te voeren.
 
-\begin{werkwijze} \label{werkwijze:staartdeling}
+\begin{algorithm} 
 We hernemen het voorbeeld $A(x) = 14x^2+17x+5$ en $B(x) = 2x+1$. Om na te gaan dat $B(x)$ een deler van $A(x)$ is en om tegelijk ook het quoti\"ent te vinden, kunnen we stapsgewijs {\em de veelterm $B(x)$ forceren in de veelterm $A(x)$}. Dat gaat als volgt:
 \begin{align*}
 14x^2 + 17x + 5 
@@ -1128,7 +1139,7 @@ We hernemen het voorbeeld $A(x) = 14x^2+17x+5$ en $B(x) = 2x+1$. Om na te gaan d
 & = (2x+1)\cdot(\mathcolor{red}{7x + 5}).
 \end{align*}
 
-\clearpage
+
 
 Het vele schrijfwerk kan ingekort worden door het onderstaande {\em schema van de staartdeling}, ook wel {\em lange deling} genoemd. Hierin herken je de stappen die we hierboven uitgevoerd hebben. 
 \[
@@ -1188,13 +1199,12 @@ In dit geval stopt de procedure bij een {\em restveelterm} (kortweg {\em rest}) 
 \[
 \underbrace{2x^3+3x^2-1}_{A(x)} = \underbrace{(x^2+3x)}_{B(x)}\cdot\underbrace{(2x - 3)}_{Q(x)} \,\, + \,\, \underbrace{9x - 1}_{R(x)} \quad \text{ waarbij } \quad \gr R(x) < \gr B(x).
 \]
-\end{werkwijze}
+\end{algorithm} 
 
 In het vervolg zullen we meestal meteen het schema van de staartdeling opschrijven. Onthoud wel waar die staartdeling vandaan komt: het is een kortere schrijfwijze voor het {\em forceren van een veelterm $B(x)$ in een veelterm $A(x)$}, de lange werkwijze die we hierboven twee keer uitgeschreven hebben. Enerzijds komt die lange werkwijze later nog aan bod in bewijzen van eigenschappen. Anderzijds komt ze ook nog van pas bij het oplossen van sommige oefeningen, net zoals dat bij de methode van de onbepaalde co\"effici\"enten het geval is.
 
-\clearpage
 
-\begin{voorbeeld}
+\begin{example} 
 Beschouw de veeltermen $A(x) = 6x^3 + 19x^2 + 8x - 5$ en $B(x) = 2x+5$. We gaan met behulp van het schema van de staartdeling na of $A(x)$ deelbaar is door $B(x)$. 
 
 \[
@@ -1226,9 +1236,9 @@ Uit dit schema volgt het verband tussen deeltal, deler, quoti\"ent en rest:
 \underbrace{6x^3 + 19x^2 + 8x - 5}_{A(x)} = \underbrace{(2x+5)}_{B(x)}\cdot\underbrace{(3x^2+2x-1)}_{Q(x)} \,\, + \,\, \underbrace{0}_{R(x)} 
 \]
 waaruit we besluiten dat $A(x)$ deelbaar is door $B(x)$.
-\end{voorbeeld}
+\end{example} 
 
-\begin{voorbeeld}
+\begin{example} 
 Gegeven is de veelterm $A(x) = x^3 + ax^2 - 9x + b$ waarbij $a,b \in \R$. We bepalen de waarde(n) van de parameters $a$ en $b$ waarvoor $A(x)$ deelbaar is door $(x+1)^2$. Dat kunnen we doen met behulp van het schema van de staartdeling: 
 \[
 \begin{array}{l|l}
@@ -1291,7 +1301,7 @@ b & = -5.
 \end{aligned}
 \right.
 \end{align*}
-\end{voorbeeld}
+\end{example} 
 
 \section{Stelling van de euclidische deling}
 
@@ -1305,14 +1315,23 @@ Bij het voorbeeld met $A(x) = 14x^2+17x+5$ en $B(x) = 2x+1$ was de deling opgaan
 \]
 Ook voor elke andere keuze van $A(x)$ en $B(x) \neq 0$ bestaan er zo'n veeltermen $Q(x)$ en $R(x)$, die daarenboven steeds uniek zijn. Ons bewijs bestaat uit twee delen. Eerst bewijzen we dat de veeltermen $Q(x)$ en $R(x)$ bestaan. Daarna bewijzen we dat ze uniek zijn. \footnote{De stelling van de euclidische deling voor veeltermen is analoog aan het gelijknamig resultaat voor gehele getallen: als $a,b \in \Z$ met $b \neq 0$ dan bestaat er precies \'e\'en geheel getal $q$ en \'e\'en geheel getal $r$ zodat $a = bq + r$ waarbij $0 \leq r < \left|b\right|$. Hoewel deze stelling genoemd is naar Euclides van Alexandri\"e\index{Euclides van Alexandri\"e} $\pm$300 v.Chr. lijkt het weinig waarschijnlijk dat Euclides bewust was van het bestaan en de uniciteit van het quoti\"ent en de rest. In die tijd was de manier om quoti\"ent en rest te bepalen beperkt tot het herhaaldelijk verminderen van het deeltal met de deler. De reden is dat het schema van de staartdeling van gehele getallen berust op een positiestelsel zoals het Hindu-Arabisch getallensysteem, die in de tijd van Euclides nog niet bekend was. De naam {\em euclidische deling} werd pas in de 19e eeuw ge\"introduceerd als verwijzing naar een algemeen resultaat uit de hogere wiskunde. Euclidische deling is dus wel degelijk een stelling, en geen algoritme.}
 
-\begin{stelling}[deling met rest, euclidische deling]\index{deling met rest}\index{euclidische deling}
+\begin{theorem} 
 Zij $A(x)$ en $B(x)$ twee veeltermen met $B(x) \neq 0$. Dan bestaat er precies \'e\'en veelterm $Q(x)$ en precies \'e\'en veelterm $R(x)$ zodat
 \begin{equation} \label{euclides}
 A(x) = B(x)\cdot Q(x) + R(x) \quad \text{ waarbij } \quad \gr R(x) < \gr B(x) \,\, \text{ of } \,\, R(x) = 0.
 \end{equation}
-\end{stelling}
+\end{theorem} 
 \begin{Uitbreiding}
-\begin{proof}[Bewijs dat $Q(x)$ en $R(x)$ bestaan] Beschouw de verzameling 
+
+  
+\begin{proof}
+  
+  
+  
+[Bewijs dat $Q(x)$ en $R(x)$ bestaan] 
+  
+Beschouw de verzameling 
+
 \begin{align*}
 S & = \bigl\{ A(x) - B(x)\cdot C(x) \mid C(x) \in \R[x] \bigr\}.  
 \end{align*}
@@ -1330,12 +1349,17 @@ We tonen aan dat $\gr R(x) < \gr B(x)$. Stel uit het ongerijmde dat $\gr R(x) \g
 R(x) - ax^k B(x) & = A(x) - B(x)\cdot Q(x) - ax^k B(x) = A(x) - B(x)\cdot (Q(x) + ax^k) 
 \end{align*}
 zodat $R(x) - ax^k B(x) \in S$. Maar dan hebben we een veelterm in $S$ gevonden waarvan de graad kleiner is dan de graad van $R(x)$. Dit is in strijd  met onze veronderstelling dat $R(x)$ een veelterm in $S$ is waarvoor de graad het kleinst is. Bijgevolg is noodzakelijk $\gr R(x) < \gr B(x)$. Dus ook als $0 \not\in S$ bestaan er veeltermen $Q(x)$ en $R(x)$ zodat uitspraak \eqref{euclides} geldt.
+
 \end{proof}
+
 \end{Uitbreiding}
 
-\clearpage
+
+
+
 
 \begin{proof}[Bewijs dat $Q(x)$ en $R(x)$ uniek zijn] Stel dat er nog een tweede veelterm $Q'(x)$ en een tweede veelterm $R'(x)$ zou bestaan zodat
+
 \[
 A(x) = B(x)\cdot Q'(x) + R'(x) \quad \text{ waarbij } \quad \gr R'(x) < \gr B(x) \,\, \text{ of } \,\, R'(x) = 0.
 \]
@@ -1359,7 +1383,9 @@ B(x) \cdot \bigl(Q(x) - Q'(x)\bigr) = 0 \quad
 Omdat gegeven is dat $B(x) \neq 0$ volgt nu noodzakelijk $Q(x) = Q'(x)$.
 \end{itemize}
 We besluiten dat in elk geval $Q'(x) = Q(x)$ en $R'(x) = R(x)$. Hiermee is aangetoond dat $Q(x)$ en $R(x)$ uniek zijn. 
+
 \end{proof}
+
 
 De bovenstaande stelling lijkt heel erg op een kenmerk van getallen dat je in de lagere school hebt gezien. Zo kan de deling van $365$ door $7$ geschreven worden als
 \[
@@ -1371,7 +1397,7 @@ A(x) = B(x)\cdot Q(x) + R(x) \quad \text{ waarbij } \quad \gr R(x) < \gr B(x) \,
 \]
 dan noemen we $A(x)$ het \underline{deeltal}\index{deeltal}, $B(x)$ de \underline{deler}\index{deler}, $Q(x)$ het \underline{quotie\"nt}\index{quoti\"ent} en $R(x)$ de \underline{rest}\index{rest} bij de deling van $A(x)$ door $B(x)$. 
 
-\begin{voorbeeld}
+\begin{example} 
 De veelterm $A(x) = x^3 + px^2 - 8x + q$ is deelbaar door $x-1$ en de rest bij deling door $x^2 - 9$ is $x-9$. Om de waarde(n) van de parameters $p$ en $q$ te vinden, gaan we als volgt te werk: we weten dat
 \begin{align*}
 A(x) = (x-1)\cdot Q(x) \quad \text{ en } \quad A(x) = (x^2-9)\cdot Q'(x) + x - 9
@@ -1403,14 +1429,14 @@ p+q & = 7 && (1) \\
 \right.
 \]
 Uit (2)$-$(1) volgt $8p=-16$ zodat $p = -2$. Invullen in (1) geeft dan $-2+q=7$ zodat $q = 9$. 
-\end{voorbeeld}
+\end{example} 
 
-\clearpage
+
 
 \phantomsection
 \addcontentsline{toc}{section}{Oefeningen}
 \section*{Oefeningen reeks 1}
-\begin{Oefening}[\bf \ref{antw2.1}.]\setcounter{enumi}{1} 
+\begin{exercise} 
 \hypertarget{oef2.1}{Ga} telkens na of de eenterm deelbaar is door $6x^6$ en geef in dat geval het quoti\"ent van de deling.
 \begin{multicols}{2}
 \begin{enumerate}[(a)]
@@ -1432,9 +1458,9 @@ $\sqrt{2}\,x^6$
 $42$
 \end{enumerate}
 \end{multicols}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw2.2}.]\setcounter{enumi}{2} 
+\begin{exercise} 
 \hypertarget{oef2.2}{Ga} telkens na of de veelterm deelbaar is door $6$, door $3x$ en door $3x^2$; en geef in die gevallen telkens het quoti\"ent van de deling.
 \begin{multicols}{2}
 \begin{enumerate}[(a)]
@@ -1452,17 +1478,17 @@ $\sqrt{3}\,x-8$
 $x^8-\pi\,x^5$
 \end{enumerate}
 \end{multicols}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw2.3}.]\setcounter{enumi}{3} 
+\begin{exercise} 
 \hypertarget{oef2.3}{Bepaal} de veelterm waarbij de deling door $-3x^2+2x-1$ als quoti\"ent $x-3$ en als rest $2x-1$ heeft. Werk de veelterm uit en vereenvoudig zoveel mogelijk.
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw2.4}.]\setcounter{enumi}{4}  
+\begin{exercise} 
 \hypertarget{oef2.4}{Gegeven} is de veelterm $P(x) = 4x^3 - px^2 + qx - 4$ waarbij $p,q \in \R$. Bepaal de waarde(n) van de parameters $p$ en $q$ waarvoor de deling van $P(x)$ door $2x^2+3$ als quoti\"ent $2x-1$ en als rest $2x-1$ heeft. 
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw2.5}.]\setcounter{enumi}{5} 
+\begin{exercise} 
 \hypertarget{oef2.5}{Bepaal} telkens het quoti\"ent en de rest bij deling van $A(x)$ door $B(x)$. Schrijf ook telkens het verband op tussen deeltal, deler, quoti\"ent en rest. Geef ook aan of $A(x)$ deelbaar is door $B(x)$.
 \begin{enumerate}
 \item
@@ -1480,15 +1506,15 @@ $A(x) = 3x^2 - 5x + 3$ \quad en \quad $B(x) = x^2 - 5x + 25$
 \item
 $A(x) = 8-8x^2-8x^3$ \quad en \quad $B(x) = 3x^2 - 3x + 3$ 
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 
 \section*{Oefeningen reeks 2}
 
-\begin{Oefening}[\bf \ref{antw2.6}.]\setcounter{enumi}{6} 
+\begin{exercise} 
 \hypertarget{oef2.6}{Als} $x^4 + 4x^3 + 6px^2 + 4qx + r$ deelbaar is door $x^3 + 3x^2 + 9x + 3$, bepaal dan $p(q+r)$.
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw2.7}.]\setcounter{enumi}{7} 
+\begin{exercise} 
 \hypertarget{oef2.7}{Voer} telkens het schema van de staartdeling uit: deling van $A(x)$ door $B(x)$. Noteer ook telkens jouw besluit of $A(x)$ deelbaar is door $B(x)$.
 \begin{enumerate}
 \item
@@ -1502,11 +1528,11 @@ $A(x) = x^4 + x^3 + 5x^2 + 4x + 4$ \quad en \quad $B(x) = x^2 + x + 1$
 \item
 $A(x) = 4x^4 + 7x^2 + 13x - 5$ \quad en \quad $B(x) = 2x^2 + x + 1$
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 
 \pagebreak
 
-\begin{Oefening}[\bf \ref{antw2.8}.]\setcounter{enumi}{8}  
+\begin{exercise} 
 \hypertarget{oef2.8}{Toon} telkens aan dat de veelterm $A(x)$ deelbaar is door de veelterm $B(x)$ en schrijf $A(x)$ als een product van twee veeltermen.
 \begin{enumerate}
 \item
@@ -1516,9 +1542,9 @@ $A(x) = x^5 - 1$ \quad en \quad $B(x) = x - 1$
 \item
 $A(x) = x^4 + 1$ \quad en \quad $B(x) = x^2 + \sqrt{2}\,x + 1$
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw2.9}.]\setcounter{enumi}{9} 
+\begin{exercise} 
 \hypertarget{oef2.9}{Gegeven} zijn de volgende veeltermen waarbij de letters $a$, $b$ en $c$ re\"ele getallen voorstellen. Bepaal, door middel van de methode van de onbepaalde co\"effici\"enten, telkens de waarde(n) van de parameters $a$, $b$ en $c$ opdat $A(x)$ deelbaar zou zijn door $B(x)$. 
 \begin{enumerate}
 \item
@@ -1534,9 +1560,9 @@ $A(x) = x^4+1$ \quad \text{ en } \quad $B(x) = x^2+ax+b$
 \item %REEKS 3??
 $A(x) = x^4+x^2+1$ \quad \text{ en } \quad $B(x) = x^2+ax+b$
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw2.10}.]\setcounter{enumi}{10} 
+\begin{exercise} 
 \hypertarget{oef2.10}{Bepaal} telkens het quoti\"ent en de rest bij deling van $A(x)$ door $B(x)$. Schrijf ook telkens het verband op tussen deeltal, deler, quoti\"ent en rest. Geef ook aan of $A(x)$ deelbaar is door $B(x)$.
 \begin{enumerate}
 \item
@@ -1554,9 +1580,9 @@ $A(x) = x^2+x+1$ en $B(x) = 3x-2$
 \item
 $A(x) = 2x^3 + x^2 + 1$ en $B(x) = 4x^2 + 5$ 
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw2.11}.]\setcounter{enumi}{11} 
+\begin{exercise} 
 \hypertarget{oef2.11}{Bepaal} telkens het quoti\"ent en de rest bij deling van $A(x)$ door $B(x)$. Schrijf ook telkens het verband op tussen deeltal, deler, quoti\"ent en rest. Geef ook aan of $A(x)$ deelbaar is door $B(x)$.
 \begin{enumerate}
 \item 
@@ -1574,9 +1600,9 @@ $\D A(x) = x^4 + 3x^2 + \frac{8}{9}$ en $B(x) = 3x^2 + 1$
 \item
 $\D A(x) = 2x^4 + 4x^3 + 5x^2 + 2x + 7$ en $B(x) = 2x^2+3x-5$ 
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw2.12}.]\setcounter{enumi}{12} 
+\begin{exercise} 
 \hypertarget{oef2.12}{Bepaal} telkens het quoti\"ent en de rest bij deling van $A(x)$ door $B(x)$. Hierbij stellen de letters $a$ en $b$ re\"ele getallen voor. 
 \begin{enumerate}
 \item
@@ -1584,35 +1610,35 @@ $A(x) = ax - 4x^4 - 2x^2 + b$ en $B(x) = 2-x^2$
 \item
 $A(x) = 8x^3 + b + ax$ \quad en \quad $B(x) = 3+2x$ 
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw2.13}.]\setcounter{enumi}{13} 
+\begin{exercise} 
 \hypertarget{oef2.13}{Gegeven} is de veelterm
 \[
 A(x) = 3x^3 + mx^2 + nx - 3
 \]
 waarbij $m,n \in \R$. Bepaal de waarde(n) van de parameters $m$ en $n$ waarvoor de deling van $A(x)$ door $x^2-1$ als als rest $2x-3$ heeft. 
-\end{Oefening}
+\end{exercise} 
 
 \section*{Oefeningen reeks 3}
 
-\begin{Oefening}
+\begin{exercise} 
 Beschouw $a,b,c,d \in \R$ willekeurig met $a \neq 0$. Bewijs:
 \[
 \exists k \in \R: (x^2 + k) \mid (ax^3 + bx^2 + cx + d) \quad \Leftrightarrow \quad ad = bc
 \]
-\end{Oefening}
+\end{exercise} 
 
 \begin{Uitbreiding}
-\begin{Oefening} 
+\begin{exercise} 
 Zij $A(x)$ en $B(x)$ twee veeltermen waarbij $A(x) \neq 0$ en $B(x) \neq 0$. Vul aan en bewijs de volgende eigenschap:
 \[
 B(x) \mid A(x) \quad \Rightarrow \quad \gr\biggl(\frac{A(x)}{B(x)}\biggr) 
 \, = \, \ldots
 \]
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}
+\begin{exercise} 
 Zij $r \in \R_0$ en $A(x), B(x), C(x), D(x), E(x), K(x)$ en $L(x)$ veeltermen waarbij $D(x) \neq 0$ en $E(x) \neq 0$. Bewijs de volgende basiseigenschappen van deelbaarheid. 
 \begin{enumerate}
 \item
@@ -1630,29 +1656,29 @@ Als $D(x) \mid A(x)$ en $D(x) \mid B(x)$ dan is $D(x) \mid \bigl(K(x)A(x)+L(x)B(
 \item
 Als $D(x) \mid A(x)$ dan is $\gr D(x) \leq \gr A(x)$ of $A(x) = 0$.
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 \end{Uitbreiding}
 
-\begin{Oefening}[\bf \ref{antw2.17}.]\setcounter{enumi}{17}  
+\begin{exercise} 
 \hypertarget{oef2.17}{Stel} dat het deling van een veelterm $A(x)$ door een veelterm $B(x) \neq 0$ als quoti\"ent $Q(x)$ en als rest $R(x)$ heeft. Als $\gr A(x) = 12$ en $\gr R(x) = 2$, wat zijn dan de mogelijke waarden voor de graad van de veelterm $Q(x)$?
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw2.18}.]\setcounter{enumi}{18} 
+\begin{exercise} 
 \hypertarget{oef2.18}{Gegeven} is de veelterm
 \[
 A(x) = x^3+3x^2+ax+13
 \]
 waarbij $a \in \R$. Bepaal de waarde(n) van de parameter $a$ waarvoor de deling van $A(x)$ door $x^2+3x-2$ als als rest een getal heeft. 
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw2.19}.]\setcounter{enumi}{19}
+\begin{exercise} 
 \hypertarget{oef2.19}{Bepaal} de rest bij deling van $A(x)$ door $B(x)$ waarbij
 \[
 A(x) = x^{81} + x^{49} + x^{25} + x^{9} + x \quad \text{ en } \quad B(x) = x^3-x.
 \]
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw2.20}.]\setcounter{enumi}{20}
+\begin{exercise} 
 \hypertarget{oef2.20}{Toon} voor elk van onderstaande gevallen het bestaan van de veeltermen $Q(x)$ en $R(x)$ in de stelling van de euclidische deling aan. Doe dat telkens door expliciet de veeltermen $Q(x)$ en $R(x)$ te geven. 
 \begin{enumerate}
 \item
@@ -1668,7 +1694,7 @@ $A(x) \neq 0$ een willekeurige veelterm en $B(x) = A(x)$
 \item
 $A(x) \neq 0$ een willekeurige veelterm en $B(x) = \sqrt{2}\cdot A(x)+\pi$
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 
 \section{chapter:Deling van veelterm door \texorpdfstring{$x-a$}{x-a}}
 
@@ -1714,14 +1740,17 @@ A(x) & = (x-2) \cdot Q(x) + \underbrace{R(x)}_{r} \\
 \end{align*}
 Op die manier kunnen we de rest berekenen: $R(x) = r = A(2) = 2^3 - 2 \cdot 2^2 + 3 \cdot 2 - 1 = 5$.
 
-\clearpage
+
 
 De vaststelling die we hierboven gemaakt hebben, geeft ons nu een manier om meteen de rest bij deling van een veelterm door $x-a$ te vinden, zonder dat we eerst het schema van de staartdeling moeten uitvoeren. Dat resultaat wordt de {\em reststelling} genoemd.
 
-\begin{stelling}[reststelling]\index{reststelling}
+\begin{theorem} 
 Zij $A(x)$ een veelterm en $a \in \R$. Dan is de rest bij deling van $A(x)$ door $x-a$ gelijk aan $A(a)$.
-\end{stelling}
+\end{theorem} 
+
+
 \begin{proof}
+
 Wegens de stelling van de euclidische deling bestaat er precies  \'e\'en veelterm $Q(x)$ en \'e\'en veelterm $R(x)$ zodat
 \[
 A(x) = (x-a)\cdot Q(x) + R(x) \quad \text{ waarbij } \quad \gr R(x) < \underbrace{\gr (x-a)}_{1} \,\, \text{ of } \,\, R(x) = 0.
@@ -1733,11 +1762,13 @@ A(x) & = (x-a) \cdot Q(x) + \underbrace{R(x)}_{r} \\
 \Rightarrow \quad A(a) & = \underbrace{(a-a)}_{0} \cdot \, Q(a) + r = r. 
 \end{align*}
 We besluiten dat de rest bij deling van $A(x)$ door $x-a$ gelijk is aan $R(x) = r = A(a)$. 
+
 \end{proof}
+
 
 Als we in het vervolg enkel de rest bij deling van een veelterm door $x-a$ willen weten, dan passen we de reststelling toe. Ze kan ook gebruikt worden om de rest bij deling door $bx-a$ te bepalen. 
 
-\begin{voorbeeld}
+\begin{example} 
 Beschouw de veelterm $A(x) = 5x^7 - 3x^2 + 2$. Dan is, wegens de reststelling, de rest bij deling van $A(x)$ door $x+1$ gelijk aan
 \[
 A(-1) = 5 \cdot (-1)^7 - 3 \cdot (-1)^2 + 2 = -5-3+2 = -6.
@@ -1758,11 +1789,11 @@ r = A\left(\frac{1}{2}\right) & = 5 \cdot \left(\frac{1}{2}\right)^7 - 3 \cdot \
 & = \frac{5}{128} - \frac{96}{128} + \frac{256}{128} \\
 & = \frac{165}{128}.
 \end{align*}
-\end{voorbeeld}
+\end{example} 
 
 \section{Kenmerken van deelbaarheid} 
 
-Om na te gaan of een geheel getal deelbaar is door $2$, $3$, $5$, $7$, $9$, $10$ of $11$ kun je een \wsgref{kenmerk van deelbaarheid}{42}{42} gebruiken. Voor grotere getallen gaat dat heel wat sneller dan het uitvoeren van de staartdeling. Zo kun je meteen inzien dat $2025$ deelbaar is door $3$ en door $5$, en dus ook door $15$.  
+Om na te gaan of een geheel getal deelbaar is door $2$, $3$, $5$, $7$, $9$, $10$ of $11$ kun je een kenmerk van deelbaarheid gebruiken. Voor grotere getallen gaat dat heel wat sneller dan het uitvoeren van de staartdeling. Zo kun je meteen inzien dat $2025$ deelbaar is door $3$ en door $5$, en dus ook door $15$.  
 
 Ook bij veeltermen kun je spreken over kenmerken van deelbaarheid. Om in het algemeen na te gaan of een veelterm $A(x)$ deelbaar is door een veelterm $B(x) \neq 0$, voeren we het schema van de staartdeling uit, en verkijgen:
 \[
@@ -1770,24 +1801,29 @@ B(x) \mid A(x) \quad \Leftrightarrow \quad \text{ de rest bij deling van $A(x)$ 
 \] 
 In het geval dat $B(x) = x-a$ met $a \in \R$ leidt de reststelling tot een sluiproute.
 
-\begin{stelling}[kenmerk van deelbaarheid door $x-a$]\label{stelling:kenmerkvandeelbaarheid}\index{kenmerk van deelbaarheid!door $x-a$}
+\begin{theorem} 
 Zij $A(x)$ een veelterm en $a \in \R$. Dan geldt:
 \[
 (x-a) \mid A(x) \quad \Leftrightarrow \quad A(a) = 0.
 \]
-\end{stelling}
+\end{theorem} 
+
+
 \begin{proof}
+
 Wegens de reststelling geldt:
 \begin{align}
 (x-a) \mid A(x) \quad 
 & \Leftrightarrow \quad \underbrace{\text{ de rest bij deling van $A(x)$ door $x-a$ }}_{A(a)} \text{ is gelijk aan $0$} \nonumber \\
 & \Leftrightarrow \quad A(a) = 0. \tag*{\qedhere}
 \end{align}
+
 \end{proof}
 
-Bepalen van de waarde van een parameter kan leiden tot een \wsgref{vergelijking}{104}{104-110}. Verwacht wordt dat je vlot eerstegraads-, tweedegraads- en bikwadratische vergelijkingen kan oplossen waarbij je jouw redenering correct kan opschrijven. 
 
-\begin{voorbeeld}
+Bepalen van de waarde van een parameter kan leiden tot een vergelijking. Verwacht wordt dat je vlot eerstegraads-, tweedegraads- en bikwadratische vergelijkingen kan oplossen waarbij je jouw redenering correct kan opschrijven. 
+
+\begin{example} 
 We bepalen de waarde(n) van de re\"ele parameter $p$ waarvoor de veelterm $A(x) = 5x^2-4x-3$ deelbaar is door $x-2p$. Het kenmerk van deelbaarheid door $x-a$ geeft:
 \begin{align*}
 (x-2p) \mid A(x) \quad 
@@ -1824,18 +1860,21 @@ D & = b^2-4ac \\[0.1cm]
 & \Leftrightarrow \quad p = \frac{8 \pm 4\sqrt{19}}{40} \\
 & \Leftrightarrow \quad p = \frac{2 + \sqrt{19}}{10} \,\, \text{ of } \,\, p = \frac{2 - \sqrt{19}}{10}.
 \end{align*}
-\end{voorbeeld}
+\end{example} 
 
-Het kenmerk van deelbaarheid door $x-a$ kan gemakkelijk veralgemeend worden. De uitspraak die we hieronder moeten aantonen, is een equivalentie. Een bewijs van zo'n equivalentie $P \Leftrightarrow Q$ bestaat vaak uit twee deelbewijzen: een bewijs van de implicatie $P \Rightarrow Q$ en een bewijs van de implicatie $Q \Rightarrow P$. In beide gevallen zullen we de implicatie aantonen met een \wsgref{rechtstreeks bewijs}{7}{7}.
+Het kenmerk van deelbaarheid door $x-a$ kan gemakkelijk veralgemeend worden. De uitspraak die we hieronder moeten aantonen, is een equivalentie. Een bewijs van zo'n equivalentie $P \Leftrightarrow Q$ bestaat vaak uit twee deelbewijzen: een bewijs van de implicatie $P \Rightarrow Q$ en een bewijs van de implicatie $Q \Rightarrow P$. In beide gevallen zullen we de implicatie aantonen met een rechtstreeks bewijs.
 
-\begin{stelling}[kenmerk van deelbaarheid door $(x-a)(x-b)$]\index{kenmerk van deelbaarheid!door $(x-a)(x-b)$} 
+\begin{theorem} 
 Zij $A(x)$ een veelterm en $a,b \in \R$ met $a \neq b$. Dan geldt:
 \[
 (x-a)(x-b) \mid A(x) \quad \Leftrightarrow \quad A(a) = 0 \,\, \text{ en } \,\, A(b) = 0.
 \]
-\end{stelling}
+\end{theorem} 
 \begin{Uitbreiding}
+
+  
 \begin{proof}
+
 We bewijzen de eigenschap in twee delen.
 
 Veronderstel eerst dat $(x-a)(x-b) \mid A(x)$. We moeten aantonen dat $A(a) = 0$ en $A(b) = 0$.
@@ -1867,10 +1906,12 @@ zodat $Q'(b) = 0$. Dus $(x-b) \mid Q'(x)$ zodat $Q'(x) = (x-b)Q''(x)$ voor een z
 A(x) = (x-a)Q'(x) = (x-a)(x-b)Q''(x)
 \]
 waaruit we mogen besluiten dat $(x-a)(x-b) \mid A(x)$.
+
 \end{proof}
+
 \end{Uitbreiding}
 
-\begin{voorbeeld}
+\begin{example} 
 We gaan na of de veelterm $A(x) = x^{2025} - x^{2009}$ deelbaar is door $x^2 - 1$. Omdat $x^2-1 = (x-1)(x+1)$ kunnen we het kenmerk van deelbaarheid door $(x-a)(x-b)$ toepassen:
 \begin{align*}
 (x^2-1) \mid (x^{2025} - x^{2009}) \quad 
@@ -1880,13 +1921,13 @@ We gaan na of de veelterm $A(x) = x^{2025} - x^{2009}$ deelbaar is door $x^2 - 1
 & \Leftrightarrow \quad 1 - 1 = 0 \,\, \text{ en } \,\, (-1) - (-1) = 0.
 \end{align*}
 Die laatste uitspraak $1 - 1 = 0$ en $(-1) - (-1) = 0$ is waar, en omdat ze gelijkwaardig is met de eerste uitspraak $(x^2-1) \mid (x^{2025} - x^{2009})$ besluiten we dat $A(x)$ deelbaar is door $x^2-1$. 
-\end{voorbeeld}
+\end{example} 
 
 \section{Schema van Horner}
 
 Om in het algemeen het quoti\"ent en de rest bij deling van een veelterm $A(x)$ door een veelterm $B(x) \neq 0$ te vinden, voeren we het schema van de staartdeling uit. In het geval dat $B(x) = x-a$ voor een zekere $a \in \R$ kun je de rest veel sneller vinden door de reststelling toe te passen: de rest is gelijk aan $A(a)$. Hieronder leer je om ook het quoti\"ent op een meer efficiente manier te vinden. 
 
-\begin{werkwijze}
+\begin{algorithm} 
 Beschouw de veeltermen $A(x) = 3x^3+5x^2+8x+13$ en $B(x) = x-2$. Om quoti\"ent en rest te vinden, kunnen we de veelterm 
 {\em de veelterm $B(x)$ forceren in de veelterm $A(x)$}, een manier die ook al in het vorige hoofdstuk aan bod kwam, zie Werkwijze \ref{werkwijze:staartdeling}:
 \begin{align*}
@@ -1913,9 +1954,9 @@ Dat schrijfwerk kan ingekort worden met het schema van de staartdeling uit Hoofd
   & {\mathcolor{red}{3}} & {\mathcolor{graf}{11}} & {\mathcolor{blue}{30}} & \multicolumn{1}{|c}{{\mathcolor{gray}{73}}} 
 \end{array}
 \]
-\end{werkwijze}
+\end{algorithm} 
 
-\begin{voorbeeld}
+\begin{example} 
 Beschouw de veelterm $A(x) = 2x^3 + 5x^2 - 3$. We bepalen met behulp van het schema van Horner het quoti\"ent en de rest bij deling van $A(x)$ door $x+3$. 
 \renewcommand{\kolbreed}{\widthof{$-3 \cdot (-1)$}}
 \[
@@ -1933,13 +1974,13 @@ Hieruit lezen we af dat het quoti\"ent $Q(x)$ gelijk is aan $2x^2-x+3$ en de res
 & = 2x^3 - x^2 + 3x + 6x^2 - 3x + 9 - 12 \\
 & = 2x^3 + 5x^2 - 3 = A(x).
 \end{align*}
-\end{voorbeeld}
+\end{example} 
 
-\clearpage
+
 
 Is een veelterm $A(x)$ deelbaar door $x-a$ en $x-b$, dan kan het schema van Horner twee keer na elkaar uitgevoerd worden om zo het quoti\"ent bij deling van $A(x)$ door $(x-a)(x-b)$ te bepalen. 
 
-\begin{voorbeeld}
+\begin{example} 
 Gegeven is de veelterm $A(x) = x^4 - 3x^3 - 7x^2 - 9 x - 30$. Er is ook gegeven dat die veelterm deelbaar is door $(x-5)(x+2)$. Om het quoti\"ent van die deling te vinden, kunnen we als volgt te werk gaan.
 
 Eerst zoeken we het quoti\"ent bij deling van $A(x)$ door $x-5$. Daartoe voeren we het schema van Horner uit.
@@ -1979,7 +2020,7 @@ A(x)
 & = (x-5)(x+2)(x^2+3).
 \end{align*}
 Het quoti\"ent bij deling van $A(x)$ door $(x-5)(x+2)$ is dus gelijk aan $x^2+3$. 
-\end{voorbeeld}
+\end{example} 
 
 In het vervolg zullen een redenering zoals in het voorbeeld hierboven wat korter opschrijven: we voeren dan de twee schema's van Horner meteen na elkaar uit
 \renewcommand{\kolbreed}{\widthof{$-30$}}
@@ -2003,7 +2044,7 @@ x^4 - 3x^3 - 7x^2 - 9 x - 30
 & = (x-5)(x+2)(x^2+3).
 \end{align*}
 
-\begin{voorbeeld}
+\begin{example} 
 Gegeven is de veelterm $A(x) = 3 x^3 - x^2 - 7 x + 5$. Er is ook gegeven dat die veelterm deelbaar is door $x^2-2x+1$. Om het quoti\"ent van die deling te bepalen, merken we op dat de deler gelijk is aan $(x-1)^2 = (x-1)(x-1)$. We kunnen het quoti\"ent dus vinden door het schema van Horner twee keer na elkaar kunnen uitvoeren:
 \renewcommand{\kolbreed}{\widthof{$-30$}}
 \[
@@ -2026,12 +2067,12 @@ A(x)
 & = (x-1)(3x^2+2x-5) \\
 & = (x-1)(x-1)(3x+5).
 \end{align*}
-\end{voorbeeld}
+\end{example} 
 
 \begin{Uitbreiding}
 Meer algemeen kunnen we het schema van Horner ook gebruiken om quoti\"ent en rest bij deling van een veelterm door $B(x) = bx-a$ te vinden, waarbij $a,b \in \R$ met $b \neq 0$. 
 
-\begin{voorbeeld}
+\begin{example} 
 Gegeven zijn de veeltermen $A(x) = 3x^3-8x^2+13x-7$ en $B(x) = 3x-2$. We beschouwen de deling van $A(x)$ door $B(x)$. Eerst herschrijven we het verband tussen deeltal, deler, quoti\"ent $Q(x)$ en rest $R(x)$ als volgt:
 \begin{align*}
 3x^3-8x^2+13x-7 
@@ -2060,16 +2101,16 @@ B(x) \cdot Q(x) + R(x)
 & =  3x^3-8x^2+13x-7 \\
 & = A(x).
 \end{align*}
-\end{voorbeeld}
+\end{example} 
 \end{Uitbreiding}
 
-\clearpage
+
 
 \phantomsection
 \addcontentsline{toc}{section}{Oefeningen}
 
 \section*{Oefeningen reeks 1}
-\begin{Oefening}[\bf \ref{antw3.1}.]\setcounter{enumi}{1}
+\begin{exercise} 
 \hypertarget{oef3.1}{Bepaal} telkens de rest bij deling van $A(x) = x^3-x+6$ door de gegeven veelterm.
 \begin{multicols}{2}
 \begin{enumerate}[(a)]
@@ -2088,9 +2129,9 @@ $3x-5$
 $-1$
 \end{enumerate}
 \end{multicols}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw3.2}.]\setcounter{enumi}{2}
+\begin{exercise} 
 \hypertarget{oef3.2}{{\bf (toelatingsexamen arts)}}\index{toelatingsexamen arts} 
 Gegeven zijn de re\"ele getallen $a$ en $b$. Bij deling van de veelterm $P(x) = x^2 + bx + ab$ door $x+a$ is de rest gelijk aan
 \begin{multicols}{4}
@@ -2105,9 +2146,9 @@ $a-b$
 $b$
 \end{enumerate}
 \end{multicols}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw3.3}.]\setcounter{enumi}{3}
+\begin{exercise} 
 \hypertarget{oef3.3}{Ga} telkens na of de gegeven veelterm een deler is van $A(x) = x^4 - 10x^2 + 9$. 
 \begin{multicols}{2}
 \begin{enumerate}[(a)]
@@ -2121,9 +2162,9 @@ $x+1$
 $x$
 \end{enumerate}
 \end{multicols}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw3.4}.]\setcounter{enumi}{4}
+\begin{exercise} 
 \hypertarget{oef3.4}{Bepaal} telkens het quoti\"ent bij deling van $A(x)$ door $B(x)$.% met behulp van het schema van Horner.
 \begin{enumerate}[(a)]
 \item
@@ -2131,19 +2172,19 @@ $A(x) = 2x^3+5x^2-3$ \quad en \quad $B(x) = x-3$.
 \item
 $A(x) = x^5 - x^4 + x^3 - x^2 + x - 1$ \quad en \quad $B(x) = x+1$
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 
 \section*{Oefeningen reeks 2}
 
-\begin{Oefening}[\bf \ref{antw3.5}.]\setcounter{enumi}{5}
+\begin{exercise} 
 \hypertarget{oef3.5}{Gegeven} zijn de veeltermen
 \[
 A(x) = -x^4 - kx^2+\frac{3}{2} \quad \text{ en } \quad B(x) = x+2
 \]
 waarbij $k \in \R$. Bepaal de waarde(n) van de parameter $k$ zodat de rest bij deling van $A(x)$ door $B(x)$ gelijk is aan $\frac{4}{5}$. 
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw3.6}.]\setcounter{enumi}{6} 
+\begin{exercise} 
 \hypertarget{oef3.6}{{\bf (toelatingsexamen arts)}}\index{toelatingsexamen arts} 
 De deling van de veelterm $P(x) = x^3 + mx^2 + mx + 4$ door $x-2$ en $x+2$ levert dezelfde rest op. Hoeveel is die rest?
 \begin{multicols}{4} 
@@ -2158,9 +2199,9 @@ $-8$
 $-4$
 \end{enumerate}
 \end{multicols}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw3.7}.]\setcounter{enumi}{7}  
+\begin{exercise} 
 \hypertarget{oef3.7}{Bepaal} telkens de exacte waarde(n) van de parameters zodat $A(x)$ deelbaar is door $B(x)$. 
 \begin{enumerate}[(a)]
 \item
@@ -2178,11 +2219,11 @@ $A(x) = x^4 + ax^3 - 9x^2 + 18x + b$ \quad \text{ en } \quad $B(x) = x(x-2)$
 \item 
 $A(x) = -2x^3 + bx - 2ax^2 + 3a$ \quad \text{ en } \quad $B(x) = x+a$ 
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 
-\clearpage
 
-\begin{Oefening}[\bf \ref{antw3.8}.]\setcounter{enumi}{8} 
+
+\begin{exercise} 
 \hypertarget{oef3.8}{{\bf (toelatingsexamen arts)}}\index{toelatingsexamen arts}
 De veelterm $P(x) = 8x^3 + 8$ is deelbaar door $x+a$, met $a \in \R$. Hoeveel is de rest van de deling van $P(x)$ door $x+2a$?
 \begin{multicols}{4} 
@@ -2197,9 +2238,9 @@ $-52$
 $-50$ 
 \end{enumerate}
 \end{multicols}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw3.9}.]\setcounter{enumi}{9} 
+\begin{exercise} 
 \hypertarget{oef3.9}{{\bf (toelatingsexamen arts)}}\index{toelatingsexamen arts}
 Als de veelterm $P(x) = x^2 + ax + a$ deelbaar is door $x+b$, met $a$ en $b$ re\"ele getallen, dan geldt
 \begin{multicols}{2} 
@@ -2214,17 +2255,17 @@ $b \neq 1$ en $\D a = \frac{b^2}{b-1}$
 $b \neq 1$ en $\D a = \frac{b}{b-1}$
 \end{enumerate}
 \end{multicols}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw3.10}.]\setcounter{enumi}{10}
+\begin{exercise} 
 \hypertarget{oef3.10}{Gegeven} is de veelterm
 \[
 A(x) = x^3 - ax^2 + bx - 12
 \]
 waarbij $a,b \in \R$. Bepaal de waarde(n) van de parameters $a$ en $b$ waarvoor $A(x)$ deelbaar is door $(x-1)(x-3)$. 
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw3.11}.]\setcounter{enumi}{11} 
+\begin{exercise} 
 \hypertarget{oef3.11}{{\bf (toelatingsexamen arts)}}\index{toelatingsexamen arts}
 We beschouwen de veelterm $A(x) = 2x^3 + px^2 + qx + r$. Deze veelterm is deelbaar door $x^2 - 1$ en de rest bij deling door $x-3$ is $8$. Geef de waarde van de uitdrukking $(p-r)\cdot q$.
 \begin{multicols}{4} 
@@ -2239,17 +2280,17 @@ $10$
 $20$
 \end{enumerate}
 \end{multicols}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw3.12}.]\setcounter{enumi}{12} 
+\begin{exercise} 
 \hypertarget{oef3.12}{Gegeven} is de veelterm
 \[
 A(x) = (b-c)x^2 + b^2(c-x) + c^2(x-b)
 \]
 waarbij $b,c \in \R$ met $b \neq c$. Toon aan dat $A(x)$ deelbaar is door $(x-b)(x-c)$ en schrijf $A(x)$ als een product. 
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw3.13}.]\setcounter{enumi}{13}  
+\begin{exercise} 
 \hypertarget{oef3.13}{{\bf (toelatingsexamen arts)}}\index{toelatingsexamen arts}
 We beschouwen de veelterm $F(x) = x^3 + px^2 - 8x + q$. Deze veelterm is deelbaar door $x-1$ en de rest bij deling door $x^2-9$ is $x-9$. Geef de waarde van $q$.
 \begin{multicols}{4} 
@@ -2264,9 +2305,9 @@ $9$
 $16$
 \end{enumerate}
 \end{multicols}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw3.14}.]\setcounter{enumi}{14}  
+\begin{exercise} 
 \hypertarget{oef3.14}{Bepaal} telkens het quoti\"ent en de rest bij deling van $A(x)$ door $B(x)$.
 \begin{enumerate}[(a)]
 \item
@@ -2278,9 +2319,9 @@ $A(x) = 2x^4 + 17x^3 - 68x$ \quad en \quad $\D B(x) = x+\frac{1}{2}$
 \item 
 $A(x) = \sqrt{2}\,x^2 + 3\sqrt{10}\,x - 20\sqrt{2}$ \quad en \quad $\D B(x) = x - \sqrt{5}$
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw3.15}.]\setcounter{enumi}{15}  
+\begin{exercise} 
 \hypertarget{oef3.15}{Jeroen} deelt de veelterm $6x^4-7x^3+22x^2-24x-13$ door $2x-1$ en vindt als quoti\"ent $6x^3-4x^2+20x-14$ en als rest $-20$. 
 \begin{enumerate}
 \item[(a)]
@@ -2290,29 +2331,29 @@ Bepaal het juiste quoti\"ent en de juiste rest.
 \item[(c)]
 Hoe kun je zeker weten dat jouw quoti\"ent en rest correct is? Voer dit uit.
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 
 \section*{Oefeningen reeks 3}
 
-\begin{Oefening}[\bf \ref{antw3.16}.]\setcounter{enumi}{16}   
+\begin{exercise} 
 \hypertarget{oef3.16}{De} rest bij deling van een veelterm door $x-1$ is $6$. Delen we de veelterm door $x-2$ dan verkrijgen we als rest $18$. Bepaal de rest bij deling van de veelterm door $x^2-3x+2$. %$(x-1)(x-2)$. 
-\end{Oefening}
+\end{exercise} 
 
 \begin{Uitbreiding}
-\begin{Oefening}
+\begin{exercise} 
 {\bf (veralgemeende reststelling)}\index{reststelling!veralgemeende}\index{veralgemeende reststelling}
 Zij $A(x)$ een veelterm en $a,b \in \R$ met $b \neq 0$. Toon aan dat de rest bij deling van $A(x)$ door $bx-a$ gelijk is aan $A\left(\frac{a}{b}\right)$.
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}
+\begin{exercise} 
 {\bf (kenmerk van deelbaarheid door $bx-a$)}\index{kenmerk van deelbaarheid!door $bx-a$}
 Zij $A(x)$ een veelterm en $a,b \in \R$ met $b \neq 0$. Bewijs:
 \[
 (bx-a) \mid A(x) \quad \Leftrightarrow \quad A\left(\frac{a}{b}\right) = 0
 \]
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}
+\begin{exercise} 
 {\bf (kenmerken van deelbaarheid door $x-1$ en $x+1$)}\index{kenmerk van deelbaarheid!door $x-1$}\index{kenmerk van deelbaarheid!door $x+1$}
 Bewijs de volgende uitspraken.
 \begin{enumerate}[(a)]
@@ -2321,18 +2362,18 @@ Een veelterm is deelbaar door $x-1$ als en slechts als de som van de co\"effici\
 \item
 Een veelterm is deelbaar door $x+1$ als en slechts als de som van de co\"effici\"enten van de termen van even graad gelijk is aan de som van de co\"effici\"enten van de termen van oneven graad.
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 \end{Uitbreiding}
 
-\begin{Oefening}[\bf \ref{antw3.20}.]\setcounter{enumi}{20}   
+\begin{exercise} 
 \hypertarget{oef3.20}{Gegeven} is de veelterm
 \[
 A(x) = 48x^6 + 491 x^5 - 364x^4 + 456x^3 - 164x^2 + 272x + 309.
 \]
 Bepaal algebra\"isch en zonder gebruik van te maken van ICT of rekenmachine de getalwaarde van $A(x)$ in $x = -11$. 
-\end{Oefening}
+\end{exercise} 
 
-\clearpage
+
 
 \section{chapter:Toepassingen}
 
@@ -2348,15 +2389,15 @@ Nulwaarden bepalen van een veelterm $A(x)$: alle $x \in \R$ bepalen waarvoor $A(
 
 \section{Veeltermen uitwerken}\index{veelterm!uitwerken}
 
-Bij het uitwerken van een veelterm maak je gebruik van de \wsgref{rekenregels en tekenregels}{36}{36-38} voor som, verschil en product. Het is de gewoonte om daarna de termen te herschikken naar toenemende of afnemende graad. Zo is bijvoorbeeld
+Bij het uitwerken van een veelterm maak je gebruik van de rekenregels en tekenregels voor som, verschil en product. Het is de gewoonte om daarna de termen te herschikken naar toenemende of afnemende graad. Zo is bijvoorbeeld
 \begin{align*}
 7x^3-2(5x^3-5)-(x^3-8)x^2 & = 7x^3 - 10x^3 + 10 - x^5 + 8x^2 \\
 & = -x^5 - 3x^3 + 8x^2 + 10.
 \end{align*}
-Soms kun je het rekenwerk verkorten door middel van \wsgref{merkwaardige producten}{52}{52-53}
+Soms kun je het rekenwerk verkorten door middel van merkwaardige producten
 waarvan de belangrijkste hieronder staan. Je kan elke gelijkheid aantonen door het linkerlid uit te werken en daarna te vereenvoudigen. We bewijzen \'e\'en gelijkheid. De andere bewijzen laten we over als oefening voor de lezer. 
 
-\begin{eigenschap}[merkwaardige producten]\index{merkwaardige producten}
+\begin{proposition} 
 Zij $a,b,c \in \R$. Dan geldt:
 \begin{align*}
 & (a+b)^2 = a^2+2ab+b^2 && \text{kwadraat van som van twee termen} \\
@@ -2366,17 +2407,22 @@ Zij $a,b,c \in \R$. Dan geldt:
 & (a+b)^3 = a^3+3a^2b+3ab^2+b^3 && \text{derde macht van som van twee termen} \\
 & (a-b)^3 = a^3-3a^2b+3ab^2-b^3 && \text{derde macht van verschil van twee termen.}
 \end{align*}
-\end{eigenschap} 
+\end{proposition} 
+
+
 \begin{proof}[Bewijs van merkwaardig poduct voor kwadraat van som van drie termen]
+
 \begin{align}
 (a+b+c)^2 
 & = (a+b+c)(a+b+c) \nonumber \\
 & = a^2 + ab + ac + ba + b^2 + bc + ca + cb + c^2 \nonumber \\
 & = a^2 + b^2 + c^2 + 2ab + 2bc + 2ca \tag*{\qedhere}
 \end{align}
+
 \end{proof}
 
-\begin{voorbeeld}
+
+\begin{example} 
 We werken telkens de veelterm uit door gebruik te maken van merkwaardige producten, en vereenvoudigen nadien zoveel als mogelijk.
 \begin{enumerate}[(a)]
 \item 
@@ -2390,13 +2436,13 @@ $\D \mph{(4x^2 - 5x + 3)^2} = 16x^4 + 25x^2 + 9 -40x^3 - 30x + 24x^2$
 \item[]
 $\D \mph{(4x^2 - 5x + 3)^2} = 16x^4 - 40x^3 + 49x^2 - 30x + 9$
 \end{enumerate}
-\end{voorbeeld} 
+\end{example} 
 
 \section{Veeltermen ontbinden in factoren}\index{veelterm!ontbinden in factoren}\index{ontbinden in factoren}
 
-Tot nu toe heb je al enkele strategie\"en gezien om te \wsgref{ontbinden in factoren}{56}{56-60}: afzonderen, merkwaardige producten herkennen, groeperen en ontbinden van een kwadratische veelterm.
+Tot nu toe heb je al enkele strategie\"en gezien om te ontbinden in factoren: afzonderen, merkwaardige producten herkennen, groeperen en ontbinden van een kwadratische veelterm.
 
-\begin{voorbeeld}
+\begin{example} 
 De volgende kwadratische veelterm kan ontbonden worden in lineaire factoren omdat de discriminant positief is. Het rekenwerk kan ingekort worden door eerst een gemeenschappelijke factor van de termen af te zonderen. 
 \begin{align*}
 6x^2+21x-45 & = 3(2x^2 + 7x - 15) \\
@@ -2415,15 +2461,15 @@ De volgende kwadratische veelterm kan ontbonden worden in lineaire factoren omda
 & = 3 \cdot 2\left(x- \frac{3}{2}\right)(x+5) \\
 & = 3(2x-3)(x+5)
 \end{align*}
-\end{voorbeeld}
+\end{example} 
 
 In deze paragraaf leer je nog twee andere strategie\"en. Door al die werkwijzen doordacht in te zetten, kun je dan al heel wat eenvoudige veeltermen algebra\"isch ontbinden in factoren. Vooreerst vermelden we een belangrijk resultaat, dat een gevolg is van de zogenaamde {\em hoofdstelling van de algebra}.\footnote{De hoofdstelling van de algebra stelt dat elke {\em complexe} veelterm (een veelterm waarvan de co\"effici\"enten {\em complexe getallen} zijn) dat niet constant is kan geschreven worden als een product van lineaire complexe veeltermen. Die stelling werd voor het eerst aangetoond door Carl Friedrich Gauss\index{Gauss, Carl Friedrich} in 1798.}\index{hoofdstelling van de algebra} Het bewijs laten we achterwege.
 
-\begin{stelling}\label{stelling:ontbinden}
+\begin{theorem} 
 Elke veelterm kan geschreven worden als een product van constante veeltermen, lineaire veel\-termen en kwadratische veeltermen met strikt negatieve discriminant.
-\end{stelling}
+\end{theorem} 
 
-\begin{voorbeeld}
+\begin{example} 
 Gegeven is telkens een veelterm met bijbehorende ontbinding in factoren. Om aan te geven dat we een kwadratische veelterm niet verder kunnen ontbinden in lineaire factoren, duiden we aan dat de discriminant $D$ strikt negatief is. Je kan elke gelijkheid controleren door het rechterlid uit te werken en te vereenvoudigen. 
 \begin{enumerate}[(a)]
 \item
@@ -2431,9 +2477,9 @@ $\D 2x^3 + 5x^2 + 14x + 6 = (2x+1)\underbrace{(x^2+2x+6)}_{D < 0}$
 \item
 $\D x^4+x^2+1 = \underbrace{(x^2+x+1)}_{D < 0}\underbrace{(x^2-x+1)}_{D < 0}$
 \end{enumerate}
-\end{voorbeeld}
+\end{example} 
 
-\clearpage
+
 
 Sommige veeltermen kun je meteen ontbinden omdat je een merkwaardig product herkent. Zo volgt bijvoorbeeld uit $x^2 - a^2 = (x-a)(x+a)$ met $a \in \R$ meteen dat
 \[
@@ -2476,7 +2522,7 @@ x^3+8 = x^3 + 2^3 = (x+2)(x^2-2x+4).
 \]
 Bij uitbreiding kun je ook producten herkennen voor $x^4-a^4$ en $x^5 \pm a^5$. Die vatten we hieronder samen. Ook hier kun je elke gelijkheid aantonen door het rechterlid uit te werken en te vereenvoudigen. Je kan ook een gelijkheid terugvinden vanuit het linkerlid: pas het kenmerk van deelbaarheid door $x \pm a$ toe en voer het schema van Horner uit, zoals we hierboven voor $x^3 \pm a^3$ hebben laten zien.\footnote{Merk op dat we de producten voor $x^3 + a^3$ en $x^5 + a^5$ kunnen verkrijgen door in de gelijkheden voor $x^3 - a^3$ en $x^5 - a^5$ elke $a$ te vervangen door $-a$. Zoals Stelling \ref{stelling:ontbinden} hierboven aangeeft, kun je de tweetermen $x^4 - a^4$ en $x^5 \pm a^5$ nog verder ontbinden in factoren tot een product van lineaire en kwadratische veeltermen. Je kan ook $x^4+a^4$ ontbinden in factoren. Die ontbindingen staan vermeld in Oefening \ref{somtweevierdemachten}.} 
  
-\begin{eigenschap}[merkwaardige producten herkennen]\index{merkwaardige producten}
+\begin{proposition} 
 Voor elke $a \in \R$ is:
 \begin{align*}
 & x^2 - a^2 = (x-a)(x+a) && \text{verschil van twee kwadraten} \\
@@ -2486,13 +2532,13 @@ Voor elke $a \in \R$ is:
 & x^5 + a^5 = (x+a)(x^4 - ax^3 + a^2x^2 - a^3x + a^4) && \text{som van twee vijfde machten} \\
 & x^5 - a^5 = (x-a)(x^4 + ax^3 + a^2x^2 + a^3x + a^4) && \text{verschil van twee vijfde machten.}
 \end{align*}
-\end{eigenschap}
+\end{proposition} 
 
-\clearpage
+
 
 Nu kunnen we sommige eenvoudige veeltermen zo ver mogelijk ontbinden in factoren door alle eerder geziene strategie\"en voor ontbinden in factoren te combineren (afzonderen, merkwaardige producten herkennen, groeperen en ontbinden van een kwadratische veelterm).
 
-\begin{voorbeeld}
+\begin{example} 
 We ontbinden telkens de veelterm zo ver mogelijk in factoren. 
 \begin{enumerate}[(a)]
 \item 
@@ -2520,7 +2566,7 @@ $\D \mph{9x^5 - 6x^4 - 16x^3} = x^3 \cdot 9 \cdot \left(x-\frac{1+\sqrt{17}}{3}\
 \item[]
 $\D \mph{9x^5 - 6x^4 - 16x^3} = x^3(3x-1-\sqrt{17})(3x-1+\sqrt{17})$
 \end{enumerate}
-\end{voorbeeld}
+\end{example} 
 
 Voor heel wat andere veeltermen volstaan die technieken niet, maar kan toch ontbonden worden door het kenmerk van deelbaarheid door $x-a$ toe te passen. Beschouw bijvoorbeeld
 \[
@@ -2545,16 +2591,16 @@ Die redenering gaat ook op voor andere veeltermen met gehele co\"effici\"enten. 
 \footnote{De voorwaarde $a \neq 0$ is nodig, omdat deelbaarheid door $0$ ongedefinieerd is.
 Een veralgemening is de zogenaamde {\em rationale wortelstelling}, zie Oefening \ref{oefening:rationalewortelstelling}.}
 
-\begin{stelling}[gehele wortelstelling] \label{stelling:gehelewortelstelling}\index{gehele wortelstelling}
+\begin{theorem} 
 Zij $A(x)$ een veelterm met gehele co\"effici\"enten. Als $a \neq 0$ een gehele nulwaarde van $A(x)$ is, dan is $a$ een deler van de constante term. 
-\end{stelling}
+\end{theorem} 
 
-\clearpage
+
 
 De gehele wortelstelling leidt tot een techniek om elke veelterm met gehele co\"efici\"enten te ontbinden in factoren, op voorwaarde dat die veelterm een gehele nulwaarde heeft. Die nulwaarde(n) kun je opsporen door eerst de delers van de constante term te berekenen en daarna voor elke deler na te gaan of ze een nulwaarde is van de veelterm. In de praktijk kun je het berekenen van de getalwaarden uitvoeren met ICT. \footnote{De {\em rationale wortelstelling} leidt tot een techniek om elke veelterm met {\em rationale} co\"efici\"enten 
 te ontbinden in factoren, op voorwaarde dat er een {\em rationale} nulwaarde is. De kanshebbers voor rationale nulwaarden $\frac{p}{q}$ worden dan bepaald door de delers $p$ van de constante term en de delers $q$ van de hoogstegraadsco\"effici\"ent.}
 
-\begin{voorbeeld}
+\begin{example} 
 We ontbinden de volgende veelterm zo ver als mogelijk.
 \renewcommand{\kolbreed}{\widthof{$-21$}}
 \begin{align*}
@@ -2580,28 +2626,13 @@ A(x) & = 2x^3 + x^2 - 8x + 21 \\
 \end{array} \\[0.1cm]
 & = (x+3)\underbrace{(2x^2-5x+7)}_{D = -31 < 0}
 \end{align*}
-\ifthenelse{\grm < 1}{}{
-Gebruik van de grafische rekenmachine TI-84 Plus CE.
-\grmref{https://www.dropbox.com/scl/fi/0gicz349b69zknu9fnj6o/TI84Plus-p.O-28.mp4?rlkey=e9x3cawyyw4zm6n3fbp33l6ie&raw=1}
+\end{example} 
 
-\setscreens
-\begin{tabularx}{\linewidth}{LGsGsGsGR}
-& \GRM{y=} && \GRM{2nd}\,\GRM{table}\,\GRM{\veetext} && \GRM{\veetext} && \GRM{\wedgetext}\\[0.2cm]
-&
-{\includegraphics[width=\widthscreens]{screen01}}
-&&
-{\includegraphics[width=\widthscreens]{screen02}}
-&&
-{\includegraphics[width=\widthscreens]{screen03}}
-&&
-{\includegraphics[width=\widthscreens]{screen04}}
-&
-\end{tabularx}
-\setlength{\tabcolsep}{6pt}
-}
-\end{voorbeeld}
 
-\begin{voorbeeld} 
+
+
+
+\begin{example} 
 We ontbinden de volgende veelterm zo ver als mogelijk.
 \renewcommand{\kolbreed}{\widthof{$-18$}}
 \begin{align*}
@@ -2632,11 +2663,11 @@ A(x) & = x^3 + 4x^2 - 3x - 18 \\
 & = (x-2)(x^2+6x+9) \\
 & = (x-2)(x+3)(x+3) = (x-2)(x+3)^2
 \end{align*}
-\end{voorbeeld}
+\end{example} 
 
-\clearpage
 
-\begin{voorbeeld} 
+
+\begin{example} 
 We ontbinden de volgende veelterm zo ver als mogelijk.
 \renewcommand{\kolbreed}{\widthof{$-6$}}
 \begin{align*}
@@ -2684,7 +2715,7 @@ We ontbinden de volgende veelterm zo ver als mogelijk.
 & = \frac{1}{2}(x+1)(x+1)(x^2-3) \\
 & = \frac{1}{2}(x+1)^2(x-\sqrt{3})(x+\sqrt{3})
 \end{align*}
-\end{voorbeeld}
+\end{example} 
 Vinden we slechts \'e\'en gehele nulwaarde $a$, dan kun je overwegen om  het schema van Horner meteen twee keer na elkaar uit te voeren. Is ook bij het tweede schema de rest gelijk aan nul, dan is de veelterm deelbaar door $(x-a)^2$. Bij het voorbeeld hierboven gaat dat als volgt.
 \renewcommand{\kolbreed}{\widthof{$-6$}}
 \begin{align*}
@@ -2715,17 +2746,17 @@ A(x) & = x^4 + 2x^3 - 2x^2 - 6x - 3 \\
 & = (x+1)(x+1)(x^2-3)
 \end{align*}
 
-\clearpage
+
 
 \section{Algebra\"isch bepalen van nulwaarden}\index{veelterm!nulwaarde} 
 
-Om de nulwaarden van een veelterm $A(x)$ te bepalen, moeten we een \wsgref{vergelijking oplossen}{104}{104}, namelijk $A(x) = 0$. Ontbinden in factoren is een strategie om zo'n vergelijking algebra\"isch op te lossen, want 
+Om de nulwaarden van een veelterm $A(x)$ te bepalen, moeten we een vergelijking oplossen, namelijk $A(x) = 0$. Ontbinden in factoren is een strategie om zo'n vergelijking algebra\"isch op te lossen, want 
 uit Eigenschap \ref{eigenschap:geennuldelers} volgt voor elke twee veeltermen $A(x)$ en $B(x)$:
 \[
 A(x) \cdot B(x) = 0 \quad \Leftrightarrow \quad A(x) = 0 \,\, \text{ of } \,\, B(x)=0. 
 \]  
 
-\begin{voorbeeld}
+\begin{example} 
 We bepalen telkens algebra\"isch de nulwaarden van de veelterm.
 \begin{enumerate}[(a)]
 \item
@@ -2802,14 +2833,14 @@ $\D \Leftrightarrow \quad x - 5 = 0 \,\, \text{ of } \,\,  x^2+x-1 = 0$
 \item[]
 $\D \Leftrightarrow \quad x = 5 \,\, \text{ of } \,\,  x = \frac{-1 \pm \sqrt{5}}{2}$ \quad oplossingsverzameling $\D V = \left\{5,\frac{-1 + \sqrt{5}}{2},\frac{-1 - \sqrt{5}}{2} \right\}$
 \end{enumerate}
-\end{voorbeeld}
+\end{example} 
 
-\clearpage
+
 
 \begin{Uitbreiding}
 Elke veelterm $A(x)$ kan opgevat worden als het voorschrift van een functie, waarvan we de grafiek kunnen plotten. De snijpunten van die grafiek met de $x$-as komen dan overeen met de oplossingen van de vergelijking $A(x) = 0$, en dus met de nulwaarden van de veelterm. De ontbinding in factoren geeft de ligging van de grafiek ten opzichte van de $x$-as aan, en in welke punten de grafiek raakt aan de $x$-as. 
 
-\begin{voorbeeld}
+\begin{example} 
 Gegeven is de functie $f$ met als voorschrift $f(x) = x^4 + x^3 - 13x^2-x$ waarvan de grafiek hieronder staat afgebeeld. Er worden ook drie snijpunten van de grafiek met de $x$-as aangeduid: de oorsprong $O$ en de punten $P$ en $Q$. 
 
 \medskip
@@ -2866,16 +2897,16 @@ Ter controle gebruiken we ICT om de veelterm $x^4 + x^3 - 13x^2-x$ te ontbinden 
 f(x) = x(x+4,1064\ldots)(x-3,1829\ldots)(x+0,0765\ldots).
 \]
 De reden waarom de grafiek van $f$ de $x$-as snijdt in de oosprong maar niet raakt in de oorsprong, is omdat $f(x)$ deelbaar is door $x-0$, maar niet door $(x-0)^2$. 
-\end{voorbeeld}
+\end{example} 
 \end{Uitbreiding}
 
-\clearpage
+
 
 \phantomsection
 \addcontentsline{toc}{section}{Oefeningen}
 
 \section*{Oefeningen reeks 1}
-\begin{Oefening}[\bf \ref{antw4.1}.]\setcounter{enumi}{1}
+\begin{exercise} 
 \hypertarget{oef4.1}{Werk} telkens de veelterm uit. Vereenvoudig zoveel mogelijk. 
 \begin{multicols}{2}
 \begin{enumerate}[(a)]
@@ -2889,9 +2920,9 @@ $\D -\frac{1}{2}\,x^2\left(x^4-6x^3-8x^2+2x-1\right)$
 $(x-1)^3(x-1)^2$
 \end{enumerate}
 \end{multicols}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw4.2}.]\setcounter{enumi}{2}
+\begin{exercise} 
 \hypertarget{oef4.2}{Werk} telkens de veelterm uit met behulp van merkwaardige producten. Vereenvoudig zoveel mogelijk. 
 \begin{multicols}{2}
 \begin{enumerate}[(a)]
@@ -2913,9 +2944,9 @@ $(x^2-2x+5)^2$
 $\D \left(-\frac{1}{2}\,x^3 - \frac{2}{3}\,x^2-\frac{2}{5}\right)^2$
 \end{enumerate}
 \end{multicols}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw4.3}.]\setcounter{enumi}{3} 
+\begin{exercise} 
 \hypertarget{oef4.3}{Ontbind} telkens de veelterm zo ver mogelijk in factoren. Ga algebra\"isch te werk en schrijf jouw redenering uit.  
 \begin{multicols}{2}
 \begin{enumerate}[(a)]
@@ -2933,9 +2964,9 @@ $-17x+38$
 $(x-3)(5x^2+50x+110)$
 \end{enumerate}
 \end{multicols}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw4.4}.]\setcounter{enumi}{4}
+\begin{exercise} 
 \hypertarget{oef4.4}{Ontbind} telkens de veelterm zo ver mogelijk in factoren. Ga algebra\"isch te werk en schrijf jouw redenering uit.  
 \begin{multicols}{2}
 \begin{enumerate}[(a)]
@@ -2953,11 +2984,11 @@ $21-40x^2-21x^4$
 $\D \frac{2}{3}\,x^4-\frac{5}{3}\,x^2 + x^3 - 3x-1$
 \end{enumerate}
 \end{multicols}
-\end{Oefening}
+\end{exercise} 
 
 \section*{Oefeningen reeks 2}
 
-\begin{Oefening}[\bf \ref{antw4.5}.]\setcounter{enumi}{5} 
+\begin{exercise} 
 \hypertarget{oef4.5}{Ontbind} telkens de veelterm zo ver mogelijk in factoren. Ga algebra\"isch te werk en schrijf jouw redenering uit.  
 \begin{multicols}{2}
 \begin{enumerate}[(a)]
@@ -2975,9 +3006,9 @@ $\D 1-x^2+\frac{1}{4}\,x^4$
 $2x^3 - 15x^2 + 19x - 6$
 \end{enumerate}
 \end{multicols}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw4.6}.]\setcounter{enumi}{6}  
+\begin{exercise} 
 \hypertarget{oef4.6}{Bepaal} telkens algebra\"isch alle nulwaarden van de veelterm. Schrijf jouw redenering uit.
 \begin{multicols}{2}
 \begin{enumerate}
@@ -2999,35 +3030,35 @@ $3x^5-30x^4+120x^3-240x^2+240x-96$
 $x^3 - 3\sqrt{2}\,x^2 + 6x - 2\sqrt{2}\,$
 \end{enumerate}
 \end{multicols}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw4.7}.]\setcounter{enumi}{7}   
+\begin{exercise} 
 \hypertarget{oef4.7}{Gegeven} is de veelterm
 \[
 A(x) = 3x^4-21x^2-7x^3+35x+30.
 \]
 Er is ook gegeven dat de getalwaarde van $A(x)$ in $\D x = -\frac{2}{3}$ gelijk is aan nul. Bepaal algebra\"isch alle nulwaarden van de veelterm $A(x)$.
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw4.8}.]\setcounter{enumi}{8}
+\begin{exercise} 
 \hypertarget{oef4.8}{Beschouw} de veelterm
 \[
 P(x) = 3x^3-20x^2+kx+12
 \]
 waarbij $k \in \R$. Er gegeven dat $P(x)$ deelbaar is door $x-3$. Bepaal algebra\"isch alle nulwaarden van de veelterm $P(x)$.
-\end{Oefening}
+\end{exercise} 
 
 \section*{Oefeningen reeks 3}
 
-\begin{Oefening}[\bf \ref{antw4.9}.]\setcounter{enumi}{9}
+\begin{exercise} 
 \hypertarget{oef4.9}{Bepaal} alle kubische veeltermen $A(x)$ waarvan de constante term gelijk is aan nul en waarvoor geldt dat
 \[
 A(x) - A(x-1) = x^2.
 \]
-\end{Oefening}
+\end{exercise} 
 
 \begin{Uitbreiding}
-\begin{Oefening}[\bf \ref{antw4.10}.]\setcounter{enumi}{10}
+\begin{exercise} 
 \hypertarget{oef4.10}{In} wiskunde staat een \underline{bewijs zonder woorden}\index{bewijs zonder woorden} voor een figuur die aangeeft dat een bepaalde wiskundige uitspraak vanzelfsprekend is, zonder dat daarbij begeleidende uitleg vermeld wordt. Daarbij gaat het vaak om identiteiten in de algebra of stellingen in de meetkunde. Zo werden al bewijzen zonder woorden gevonden van de stelling van Pythagoras, de cosinusregel en formules voor sommen van getallen die aan een bepaalde regelmaat voldoen, zoals de eindige som 
 \[
 1 + 2 + 3 + \dots + n 
@@ -3065,12 +3096,12 @@ Hieronder staat een bewijs zonder woorden van een merkwaardig product. Formuleer
 \end{pspicture}
 \end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\end{Oefening}
+\end{exercise} 
 \end{Uitbreiding}
 
-\clearpage
 
-\begin{Oefening}[\bf \ref{antw4.11}.]\setcounter{enumi}{11} 
+
+\begin{exercise} 
 \hypertarget{oef4.11}{Ontbind} telkens de veelterm zo ver mogelijk in factoren. Ga algebra\"isch te werk en schrijf jouw redenering uit.  
 \begin{multicols}{2}
 \begin{enumerate}[(a)]
@@ -3084,14 +3115,14 @@ $x^5-1$
 $x^5+1$
 \end{enumerate}
 \end{multicols}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}
+\begin{exercise} 
 Zij $A(x)$ een willekeurige veelterm met gehele co\"effici\"enten en met hoogstegraadsco\"effici\"ent gelijk aan $1$. Toon aan: als $A(x)$ een rationale nulwaarde heeft, dan heeft $A(x)$ ook een gehele nulwaarde.
-\end{Oefening}
+\end{exercise} 
 
 \begin{Uitbreiding}
-\begin{Oefening}
+\begin{exercise} 
 Toon telkens de veeltermgelijkheid aan. Hierbij is $a$ een willekeurig re\"eel getal en $n \in \N_0$.
 \begin{enumerate}[(a)]
 \item
@@ -3099,11 +3130,11 @@ $\D x^{n+1} - a^{n+1} = (x-a)(x^{n} + ax^{n-1} + a^2x^{n-2} + \dots + a^{n-2}x^2
 \item
 $\D x^{2n+1} + a^{2n+1} = (x+a)(x^{2n} - ax^{2n-1} + a^2x^{2n-2} - a^3x^{2n-3} + \dots - a^{2n-1}x + a^{2n})$
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}
+\begin{exercise} 
 \label{somtweevierdemachten}
-Toon voor elke $a \in \R_0$ aan dat het zo ver mogelijk ontbinden in factoren van de veeltermen $x^2 \pm a^2$, $x^3 \pm a^3$, $x^4 \pm a^4$ en  $x^5 \pm a^5$ wordt gegeven door onderstaande uitdrukkingen. Hierbij staat $\varphi$ voor de gulden snede. %{\wsgref{gulden snede}{Bijzondere irrationale getallen}{22}}. 
+Toon voor elke $a \in \R_0$ aan dat het zo ver mogelijk ontbinden in factoren van de veeltermen $x^2 \pm a^2$, $x^3 \pm a^3$, $x^4 \pm a^4$ en  $x^5 \pm a^5$ wordt gegeven door onderstaande uitdrukkingen. Hierbij staat $\varphi$ voor de gulden snede. %{gulden snede}. 
 \begin{align*}
 & x^2 + a^2 = x^2 + a^2 && \text{som van twee kwadraten} \\
 & x^2 - a^2 = (x-a)(x+a) && \text{verschil van twee kwadraten} \\
@@ -3114,9 +3145,9 @@ Toon voor elke $a \in \R_0$ aan dat het zo ver mogelijk ontbinden in factoren va
 & x^5 + a^5 = (x+a)(x^2-\varphi\,ax + a^2)(x^2+\frac{1}{\varphi}\,ax + a^2) && \text{som van twee vijfde machten} \\
 & x^5 - a^5 = (x-a)(x^2+\varphi\,ax + a^2)(x^2-\frac{1}{\varphi}\,ax + a^2) && \text{verschil van twee vijfde machten}
 \end{align*}
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}\label{oefening:gehelewortelstelling}
+\begin{exercise} 
 {\bf (gehele wortelstelling)}\index{gehele wortelstelling} 
 In deze oefening bewijzen we de Stelling \ref{stelling:gehelewortelstelling}: 
 \begin{itemize}
@@ -3132,13 +3163,13 @@ waarbij $ n \in \N$ en $a_0, a_1, \ldots, a_n \in \Z$. Stel nu dat $a \neq 0$ ee
 a \in \Z_0 \quad \text{ en } \quad A(a) = 0.
 \]
 Toon aan dat $A(a) = 0$ leidt tot $a_0 = a\cdot q$ voor een zeker geheel getal $q$, en dus dat $a \mid a_0$. 
-\end{Oefening}
+\end{exercise} 
 \end{Uitbreiding}
 
-\clearpage
+
 
 \begin{Uitbreiding}
-\begin{Oefening}\label{oefening:rationalewortelstelling}
+\begin{exercise} 
 {\bf (rationale wortelstelling)}\index{rationale wortelstelling} 
 In deze oefening bewijzen we de rationale wortelstelling:
 \begin{itemize}
@@ -3155,31 +3186,31 @@ waarbij $ n \in \N$ en $a_0, a_1, \ldots, a_n \in \Z$. Beschouw nu een rationaal
 p,q \in \Z_0 \quad \text{ en } \quad \ggd(p,q)=1 \quad \text{ en } \quad A\left(\frac{p}{q}\right) = 0.
 \]
 Toon aan dat $A\left(\frac{p}{q}\right) = 0$ leidt tot $p \mid a_0q^n$ en $q \mid a_n p^n$, en dus tot $p \mid a_0$ en $q \mid a_n$.
-\end{Oefening}
+\end{exercise} 
 \end{Uitbreiding}
 
-\begin{Oefening}[\bf \ref{antw4.17}.]\setcounter{enumi}{17} 
+\begin{exercise} 
 \hypertarget{oef4.17}{Bepaal} algebra\"isch alle re\"ele getallen $x$ waarvoor geldt dat 
 \[
 x^3-288x^2-282x  = 2023.
 \]
 Schrijf alle tussenstappen op.
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw4.18}.]\setcounter{enumi}{18} 
+\begin{exercise} 
 \hypertarget{oef4.18}{Bepaal} algebra\"isch alle nulwaarden van de veelterm
 \[
 A(x) = x^6 + x^4 + x^2 + 1.
 \]
 Schrijf alle tussenstappen op.
-\end{Oefening}
+\end{exercise} 
 
-\begin{Oefening}[\bf \ref{antw4.19}.]\setcounter{enumi}{19} 
+\begin{exercise} 
 \hypertarget{oef4.19}{Bepaal} een veelterm met gehele co\"effici\"enten waarvan $\sqrt{3+\sqrt{17}}$ een nulwaarde is.
-\end{Oefening}
+\end{exercise} 
 
 \begin{Uitbreiding}
-\begin{Oefening}
+\begin{exercise} 
 In deze oefening laten we zien dat de rationale wortelstelling (zie Oefening \ref{oefening:rationalewortelstelling}) gebruikt kan worden om aan te tonen dat sommige re\"eele getallen irrationaal zijn.
 \begin{enumerate}[(a)]
 \item
@@ -3195,16 +3226,16 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \qquad \text{ en } \qquad \sqrt{2}+\sqrt{3}.
 \]
 \end{enumerate}
-\end{Oefening}
+\end{exercise} 
 \end{Uitbreiding}
 
-\clearpage
+
 
 % \backmatter
 \section{Eindantwoorden van oefeningen}
 \section*{Hoofdstuk 1}
 
-\begin{Antwoord} \label{antw1.1}
+\begin{oplossing} 
 \begin{enumerate}[(a)]
 \item
 \hyperlink{oef1.1}{eenterm}
@@ -3226,9 +3257,9 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item
 \hyperlink{oef1.1}{geen eenterm}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw1.2}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef1.2}{$x + 2x^2 + 3x^3$}
@@ -3237,9 +3268,9 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item
 \hyperlink{oef1.2}{$x^2 - x^3 + x^4$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw1.3}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef1.3}{veelterm}
@@ -3267,11 +3298,11 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \hyperlink{oef1.3}{veelterm}
 \end{enumerate}
 \setcounter{enumi}{4}
-\end{Antwoord}
+\end{oplossing} 
 
-\clearpage
 
-\begin{Antwoord} \label{antw1.5}
+
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef1.5}{graad $5$, hoogstegraadsco\"effici\"ent $1$, constante term $-15$}
@@ -3287,9 +3318,9 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \hyperlink{oef1.5}{graad $6$, hoogstegraadsco\"effici\"ent $64$, constante term $125$}
 \end{enumerate}
 \setcounter{enumi}{6}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw1.7}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef1.7}{$-x^3+x^2+3x+1$, graad $3$}
@@ -3308,9 +3339,9 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item
 \hyperlink{oef1.7}{$\frac{15}{2}\,x^3 + 3x^2 - \frac{10}{3}\,x-\frac{4}{3}$, graad $3$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw1.8}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef1.8}{$A(2)=0$, nulwaarde}
@@ -3325,27 +3356,27 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item
 \hyperlink{oef1.8}{$D\left(-\frac{1}{2}\right)=0$, nulwaarde}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw1.9}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef1.9}{$a=-3$}
 \item
 \hyperlink{oef1.9}{$a = 1$ en $b = -3$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw1.10}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef1.10}{$a = -\frac{3}{2}$}
 \item
 \hyperlink{oef1.10}{$c = \frac{2}{1-\sqrt{2}}$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw1.11}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef1.11}{$A(x) = -3x^6+24x^4+12x^2$ en $B(x) = -5x^2$}
@@ -3354,48 +3385,48 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item
 \hyperlink{oef1.11}{$A(-2) = 240$ en $B(\sqrt{3}) = -15$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
 
-\begin{Antwoord} \label{antw1.12}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef1.12}{$475$}
 \item
 \hyperlink{oef1.12}{$c = -2$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw1.13}
+\begin{oplossing} 
 \hyperlink{oef1.13}{$A(x) = -x^2-x+2$}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw1.14}
+\begin{oplossing} 
 \hyperlink{oef1.14}{$A(x) = \frac{1}{3}\,x^3-\frac{1}{3}\,x$}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw1.15}
+\begin{oplossing} 
 \hyperlink{oef1.15}{$2x^2+3x+1$}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw1.16}
+\begin{oplossing} 
 \hyperlink{oef1.16}{$a = 3$ en $b = \frac{1}{4}$}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw1.17}
+\begin{oplossing} 
 \hyperlink{oef1.17}{$4096$}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw1.18}
+\begin{oplossing} 
 \hyperlink{oef1.18}{$32$}
 \setcounter{enumi}{0}
-\end{Antwoord}
+\end{oplossing} 
 
-\clearpage
+
 
 \section*{Hoofdstuk 2}
 
-\begin{Antwoord} \label{antw2.1}
+\begin{oplossing} 
 \begin{enumerate}[(a)]
 \item
 \hyperlink{oef2.1}{deelbaar, quoti\"ent $6x^2$} 
@@ -3414,9 +3445,9 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item
 \hyperlink{oef2.1}{niet deelbaar}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw2.2}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef2.2}{deelbaar door $6$, quoti\"ent $2x^3 - 3x^2 + x$} 
@@ -3455,17 +3486,17 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item[]
 \hyperlink{oef2.2}{deelbaar door $3x^2$, quoti\"ent $\frac{1}{3}\,x^6 - \frac{\pi}{3}\,x^3$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw2.3}
+\begin{oplossing} 
 \hyperlink{oef2.3}{$-3x^3+11x^2-5x+2$}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw2.4}
+\begin{oplossing} 
 \hyperlink{oef2.4}{$p=2$ en $q=8$}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw2.5}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef2.5}{quoti\"ent $5$, rest $3x$, niet deelbaar, verband $A(x) = 5B(x)+3x$}
@@ -3482,13 +3513,13 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item
 \hyperlink{oef2.5}{quoti\"ent $-\frac{8}{3}\,x$, rest $16$, niet deelbaar, verband $A(x) = -\frac{8}{3}\,xB(x)+16$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw2.6}
+\begin{oplossing} 
 \hyperlink{oef2.6}{$12$}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw2.7}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef2.7}{niet deelbaar}
@@ -3501,9 +3532,9 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item
 \hyperlink{oef2.7}{niet deelbaar}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw2.8}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef2.8}{$x^4 + x^2 + 1 = (x^2+x+1)(x^2-x+1)$}
@@ -3512,9 +3543,9 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item
 \hyperlink{oef2.8}{$x^4 + 1 = (x^2+\sqrt{2}\,x+1)(x^2-\sqrt{2}\,x+1)$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw2.9}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef2.9}{$a=2$ en $b = 2$}
@@ -3529,9 +3560,9 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item
 \hyperlink{oef2.9}{$a \in \left\{1,-1\right\}$ en $b = 1$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw2.10}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef2.10}{quoti\"ent $x-1$, rest $0$, deelbaar, verband $A(x) = (x-1)B(x)+0$}
@@ -3548,9 +3579,9 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item
 \hyperlink{oef2.10}{quoti\"ent $\frac{1}{2}\,x + \frac{1}{4}$, rest $-\frac{5}{2}\,x - \frac{1}{4}$, niet deelbaar, verband $A(x) = \left( \frac{1}{2}\,x + \frac{1}{4} \right)B(x)-\frac{5}{2}\,x - \frac{1}{4}$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw2.11}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef2.11}{quoti\"ent $\frac{1}{2}\,x^2 - \frac{1}{2}\,x + \frac{1}{2}$, rest $0$, deelbaar, verband $A(x) = \left(\frac{1}{2}\,x^2 - \frac{1}{2}\,x + \frac{1}{2}\right)B(x)+0$}
@@ -3575,35 +3606,35 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item[]
 \hyperlink{oef2.11}{verband $A(x) = \left( x^2 + \frac{1}{2}\,x + \frac{17}{4} \right)B(x)-\frac{33}{4}\,x + \frac{113}{4}$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw2.12}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef2.12}{quoti\"ent $4x^2+10$ en rest $ax+b-20$} 
 \item
 \hyperlink{oef2.12}{quoti\"ent $4x^2-6x+\frac{1}{2}\,a+9$ en rest $-\frac{3}{2}\,a+b-27$} 
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw2.13}
+\begin{oplossing} 
 \hyperlink{oef2.13}{$m = 0$ en $n = -1$}
 \setcounter{enumi}{16}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw2.17}
+\begin{oplossing} 
 \hyperlink{oef2.17}{$\gr Q(x) \in \left\{0,1,2,3,4,5,6,7,8,9\right\}$}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw2.18}
+\begin{oplossing} 
 \hyperlink{oef2.18}{$a=-2$}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw2.19}
+\begin{oplossing} 
 \hyperlink{oef2.19}{$x$}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw2.20}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef2.20}{$Q(x) = 0$ en $R(x) = 0$}
@@ -3619,11 +3650,11 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \hyperlink{oef2.20}{$Q(x) = \frac{1}{\sqrt{2}}$ en $R(x) =-\frac{\pi}{\sqrt{2}}$}
 \end{enumerate}
 \setcounter{enumi}{0}
-\end{Antwoord}
+\end{oplossing} 
 
 \section*{Hoofdstuk 3}
 
-\begin{Antwoord} \label{antw3.1}
+\begin{oplossing} 
 \begin{enumerate}[(a)]
 \item
 \hyperlink{oef3.1}{$30$}
@@ -3638,13 +3669,13 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item
 \hyperlink{oef3.1}{$0$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw3.2}
+\begin{oplossing} 
 \hyperlink{oef3.2}{(A)}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw3.3}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef3.3}{geen deler}
@@ -3655,26 +3686,26 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item
 \hyperlink{oef3.3}{geen deler}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw3.4}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef3.4}{quoti\"ent $2x^2+11x+33$ en rest $96$}
 \item
 \hyperlink{oef3.4}{quoti\"ent $x^4-2x^3+3x^2-4x+5$ en rest $-6$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw3.5}
+\begin{oplossing} 
 \hyperlink{oef3.5}{$k = - \frac{153}{40}$}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw3.6}
+\begin{oplossing} 
 \hyperlink{oef3.6}{(B)}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw3.7}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef3.7}{$a \in \left\{\frac{1}{2}, -\frac{7}{10}\right\}$}
@@ -3691,33 +3722,33 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item
 \hyperlink{oef3.7}{$a = 0$ of $b = 3$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw3.8}
+\begin{oplossing} 
 \hyperlink{oef3.8}{(B)}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw3.9}
+\begin{oplossing} 
 \hyperlink{oef3.9}{(C)}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw3.10}
+\begin{oplossing} 
 \hyperlink{oef3.10}{$a = 8$ en $b = 19$}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw3.11}
+\begin{oplossing} 
 \hyperlink{oef3.11}{(D)}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw3.12}
+\begin{oplossing} 
 \hyperlink{oef3.12}{$A(x) = (b-c)(x-b)(x-c)$}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw3.13}
+\begin{oplossing} 
 \hyperlink{oef3.13}{(C)}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw3.14}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef3.14}{quoti\"ent $2x^2+6x+15$ en rest $92$}
@@ -3728,28 +3759,28 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item
 \hyperlink{oef3.14}{quoti\"ent $\sqrt{2}\,x+4\sqrt{10}$ en rest $0$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw3.15}
+\begin{oplossing} 
 \begin{enumerate}
 \item[(b)]
 \hyperlink{oef3.15}{quoti\"ent $3x^3-2x^2+10x-7$ en rest $-20$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw3.16}
+\begin{oplossing} 
 \hyperlink{oef3.16}{$12x-6$}
 \setcounter{enumi}{19}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw3.20}
+\begin{oplossing} 
 \hyperlink{oef3.20}{$100$}
 \setcounter{enumi}{0}
-\end{Antwoord}
+\end{oplossing} 
 
 \section*{Hoofdstuk 4}
 
-\begin{Antwoord} \label{antw4.1}
+\begin{oplossing} 
 \begin{enumerate}[(a)]
 \item
 \hyperlink{oef4.1}{$21x^{10}$}
@@ -3760,9 +3791,9 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item
 \hyperlink{oef4.1}{$x^5 - 5x^4 + 10x^3 - 10x^2 + 5x - 1$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw4.2}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef4.2}{$3x^2 - 4$}
@@ -3781,9 +3812,9 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item
 \hyperlink{oef4.2}{$\frac{1}{4}\,x^6 + \frac{2}{3}\,x^5 + \frac{4}{9}\,x^4 + \frac{2}{5}\,x^3 + \frac{8}{15}\,x^2 + \frac{4}{25}$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw4.3}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef4.3}{$(10x+1)(100x^2 - 10x + 1)$}
@@ -3798,9 +3829,9 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item
 \hyperlink{oef4.3}{$5(x-3)(x+5-\sqrt{3})(x+5+\sqrt{3})$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw4.4}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef4.4}{$\frac{1}{4}\,(x+1)(2x+1-\sqrt{13})(2x+1+\sqrt{13})$}
@@ -3815,9 +3846,9 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item
 \hyperlink{oef4.4}{$\frac{1}{3}\,(x+1)(2x-1)(x-\sqrt{3})(x+\sqrt{3})$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw4.5}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef4.5}{$(6x+40)(x-3)$}
@@ -3832,9 +3863,9 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item
 \hyperlink{oef4.5}{$(x-1)(x-6)(2x-1)$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw4.6}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef4.6}{$V = \left\{ 2\sqrt{3},\frac{5\sqrt{3}}{3} \right\}$}
@@ -3853,27 +3884,27 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \item
 \hyperlink{oef4.6}{$V = \{\sqrt{2}\}$}
 \end{enumerate}
-\end{Antwoord}
+\end{oplossing} 
 
 \pagebreak
 
-\begin{Antwoord} \label{antw4.7}
+\begin{oplossing} 
 \hyperlink{oef4.7}{$V = \left\{ 3, -\frac{2}{3}, \sqrt{5}, -\sqrt{5} \right\}$}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw4.8}
+\begin{oplossing} 
 \hyperlink{oef4.8}{$V = \left\{ 3, 4, -\frac{1}{3}\right\}$}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw4.9}
+\begin{oplossing} 
 \hyperlink{oef4.9}{$A(x) = \frac{1}{3}\,x^3 + \frac{1}{2}\,x^2 + \frac{1}{6}\,x + d$ met $d \in \R$}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw4.10}
+\begin{oplossing} 
 \hyperlink{oef4.10}{Voor elke $a,b \in \R^+_0$ is $(a+b)^2 = a^2 + 2ab + b^2$.}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw4.11}
+\begin{oplossing} 
 \begin{enumerate}
 \item
 \hyperlink{oef4.11}{$(x^2+\sqrt{2}\,x+1)(x^2-\sqrt{2}\,x+1)$}
@@ -3885,21 +3916,23 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
 \hyperlink{oef4.11}{$(x-1)\left(x^2-\frac{1+\sqrt{5}}{2}\,x+1\right)\left(x^2-\frac{1-\sqrt{5}}{2}\,x+1\right)$}
 \end{enumerate}
 \setcounter{enumi}{16}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw4.17}
+\begin{oplossing} 
 \hyperlink{oef4.17}{$x=289$}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw4.18}
+\begin{oplossing} 
 \hyperlink{oef4.18}{geen re\"ele oplossingen}
-\end{Antwoord}
+\end{oplossing} 
 
-\begin{Antwoord} \label{antw4.19}
+\begin{oplossing} 
 \hyperlink{oef4.19}{$A(x)=x^4-6x^2-8$}
-\end{Antwoord}
+\end{oplossing} 
 
-\blancobijrectoverso
+% \blancobijrectoverso
+
+\end{document}
 
 % Om in trefwoordenlijst de hyperlink naar de correcte pagina te sturen: rekening houden met aantal pagina's in frontmatter:
 \makeatletter
@@ -3919,9 +3952,9 @@ Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaa
   \fi
 }
 \makeatother
-\printindex
+% \printindex
 
-\blancobijrectoverso
+% \blancobijrectoverso
 
 \phantomsection
 % \addcontentsline{toc}{chapter}{Referentielijst}
