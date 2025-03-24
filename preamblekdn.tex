@@ -300,6 +300,43 @@ needspace=30pt % minimumhoogte voor splitsen kader
 \newcommand{\staartphstreep}[1]{\myRule{\widthof{$#1$}}{0.1mm}}
 
 
+% --------------------------------------------------------------------- tikzpicture  van maken voor html 
+
+% warp something inside tikz (to turn it into an image, usefull for unsupported constructs in tex4ht/html)
+%  add 0.1 padding on top and right (mainly for charges in \chemfig!)
+\newcommand{\tikzit}[2][\width]{%
+    \begin{image}[#1]
+        \tikzitinline{#2}
+    \end{image}%
+}
+
+
+% Apply a scaling-factor to tikzpictures ONLINE
+\providecommand{\tikzexportScale}[1][1.5]{
+    \iftikzexport
+    \tikzset{every picture/.append style={scale=#1, transform shape}}
+    \fi
+    }
+
+
+%% mmm, could also be done with \tikzexportScale now, but that risks to be set globaly ...   
+\providecommand{\tikzitOptions}{}
+%\providecommand{\tikzitOptions}{[scale=1.5, transform shape]}
+\iftikzexport
+\renewcommand{\tikzitOptions}{[scale=1.5, transform shape]}
+\fi
+
+\newcommand{\tikzitinline}[2][0.1]{
+    % \expandafter\tikz\tikzitOptions{
+    \begin{tikzpicture}
+        \node (a) {#2};
+        \path (current bounding box.south west) ++(-0.0,-0.0) coordinate (newSW);
+        \path (current bounding box.north east) ++(#1,#1) coordinate (newNE);
+        \useasboundingbox (newSW) rectangle (newNE);
+        % \draw[gray] (newSW) rectangle (newNE);   % for debugging
+    \end{tikzpicture}
+
+}  
 
 
 
