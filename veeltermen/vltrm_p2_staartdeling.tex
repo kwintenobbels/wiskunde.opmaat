@@ -20,24 +20,24 @@
 
 
 
-In de lagere school heb je geleerd hoe je een deling van twee gehele getallen kan uitvoeren met behulp van het schema van de staartdeling. De staartdeling is een voorbeeld van wat we een {\em algoritme} noemen: een eindige reeks instructies om vanuit een gegeven begintoestand een probleem op te lossen of een taak uit te voeren. Zo is ook een keukenrecept een  voorbeeld van een aloritme. De fundamentele vraag welke problemen met een algoritme kunnen opgelost worden, werd in 1937 opgelost door Alan Turing. Zijn werk lag aan de basis van een van de grootste uitvindingen ooit: de computer. De deling van $239$ door $5$ als quotiënt $47$ en rest $4$. Dat resultaat kun je schrijven als $239 = 5 \cdot 47 + 4$. Kenmerkend is dat de rest kleiner is dan (de absolute waarde van) de deler. 
+In de lagere school heb je geleerd hoe je een deling van twee gehele getallen kan uitvoeren met behulp van het schema van de staartdeling. De staartdeling is een voorbeeld van wat we een \textit{ algoritme} noemen: een eindige reeks instructies om vanuit een gegeven begintoestand een probleem op te lossen of een taak uit te voeren. Zo is ook een keukenrecept een  voorbeeld van een aloritme. De fundamentele vraag welke problemen met een algoritme kunnen opgelost worden, werd in 1937 opgelost door Alan Turing. Zijn werk lag aan de basis van een van de grootste uitvindingen ooit: de computer. De deling van $239$ door $5$ als quotiënt $47$ en rest $4$. Dat resultaat kun je schrijven als $239 = 5 \cdot 47 + 4$. Kenmerkend is dat de rest kleiner is dan (de absolute waarde van) de deler. 
 	
 Hieronder leer je om een deling van veeltermen -met het algoritme van de staartdeling- op een gelijkaardige manier uit te voeren.
 	
-\begin{algorithm} 
-	We hernemen het voorbeeld $A(x) = 14x^2+17x+5$ en $B(x) = 2x+1$. Om na te gaan dat $B(x)$ een deler van $A(x)$ is en om tegelijk ook het quotiënt te vinden, kan je stapsgewijs {\em de veelterm $B(x)$ forceren in de veelterm $A(x)$}. Dat gaat als volgt:
+\begin{algorithm}(staartdeling)
+	We hernemen het voorbeeld $A(x) = 14x^2+17x+5$ en $B(x) = 2x+1$. Om na te gaan dat $B(x)$ een deler van $A(x)$ is en om tegelijk ook het quotiënt te vinden, kan je stapsgewijs \textit{ de veelterm $B(x)$ forceren in de veelterm $A(x)$}. Dat gaat als volgt:
 	\begin{align*}
 	14x^2 + 17x + 5 
-	& = \mathcolor{red}{7x} \cdot (2x+1) \mathcolor{blue}{- 7x} + 17x + 5 \\
-	& = \mathcolor{red}{7x} \cdot (2x+1) + 10x + 5 \\
-	& = \mathcolor{red}{7x} \cdot (2x+1) + \mathcolor{red}{5} \cdot (2x+1) \mathcolor{blue}{- 5} + 5 \\
-	& = \mathcolor{red}{7x} \cdot (2x+1) + \mathcolor{red}{5} \cdot (2x+1) \\
-	& = (2x+1)\cdot(\mathcolor{red}{7x + 5}).
+	& = {\red{7x}} \cdot (2x+1) \blue{- 7x} + 17x + 5 \\
+	& = \red{7x} \cdot (2x+1) + 10x + 5 \\
+	& = \red{7x} \cdot (2x+1) + \red{5} \cdot (2x+1) \blue{- 5} + 5 \\
+	& = \red{7x} \cdot (2x+1) + \red{5} \cdot (2x+1) \\
+	& = (2x+1)\cdot(\red{7x + 5}).
 	\end{align*}
 	
 	
 	
-	Het vele schrijfwerk kan ingekort worden door het onderstaande {\em schema van de staartdeling}, ook wel {\em lange deling} genoemd. Hierin herken je de stappen die hierboven werden uitgevoerd. 
+	Het vele schrijfwerk kan ingekort worden door het onderstaande \textit{ schema van de staartdeling}, ook wel \textit{ lange deling} genoemd. Hierin herken je de stappen die hierboven werden uitgevoerd. 
 
 	\tikzit{
 	\(
@@ -45,15 +45,15 @@ Hieronder leer je om een deling van veeltermen -met het algoritme van de staartd
 	& 2x+1 \\
 	\cline{2-2}
 	\vrule height 1.2em width 0pt
-	& \mathcolor{red}{7x+5} \\[-0.96cm]
+	& \red{7x+5} \\[-0.96cm]
 	\stackunder[0.05cm]{%
 	  \stackon[0pt]{14x^2+17x+5}{}%
 	}{%
 	  \Shortstack[r]{
-		{14x^2+\mph{1}\mathcolor{blue}{7x}\mph{+5}}
+		{14x^2+\mph{1}\blue{7x}\mph{+5}}
 		{\staartmin \staartstreep{14x^2+\mph{1}7x} \staartphstreep{+50}}
 		{10x+5}
-		{10x+\mathcolor{blue}{5}} 
+		{10x+\blue{5}} 
 		{\staartmin \staartstreep{10x+5}}
 		{0}
 	}
@@ -67,13 +67,13 @@ Hieronder leer je om een deling van veeltermen -met het algoritme van de staartd
 	\underbrace{14x^2+17x+5}_{A(x)} = \underbrace{(2x+1)}_{B(x)}\cdot\underbrace{(7x + 5)}_{Q(x)}.
 	\]
 
-	Ook in het geval een veelterm $A(x)$ niet deelbaar is door een veelterm $B(x)$, kan je te werk gaan zoals hierboven. Het {\em forceren van de veelterm $B(x)$ in de veelterm $A(x)$} verloopt dan als volgt:
+	Ook in het geval een veelterm $A(x)$ niet deelbaar is door een veelterm $B(x)$, kan je te werk gaan zoals hierboven. Het \textit{ forceren van de veelterm $B(x)$ in de veelterm $A(x)$} verloopt dan als volgt:
 	\begin{align*}
 	2x^3 + 3x^2 - 1 
-	& = \mathcolor{red}{2x} \cdot (x^2+3x) \mathcolor{blue}{- 6x^2} + 3x^2 - 1 \\
-	& = \mathcolor{red}{2x} \cdot (x^2+3x) - 3x^2 - 1 \\
-	& = \mathcolor{red}{2x} \cdot (x^2+3x) \mathcolor{red}{- 3} \cdot (x^2+3x) \mathcolor{blue}{+ 9x} - 1  \\
-	& = (x^2+3x) \cdot (\mathcolor{red}{2x - 3}) + 9x - 1.
+	& = \red{2x} \cdot (x^2+3x) \blue{- 6x^2} + 3x^2 - 1 \\
+	& = \red{2x} \cdot (x^2+3x) - 3x^2 - 1 \\
+	& = \red{2x} \cdot (x^2+3x) \red{- 3} \cdot (x^2+3x) \blue{+ 9x} - 1  \\
+	& = (x^2+3x) \cdot (\red{2x - 3}) + 9x - 1.
 	\end{align*}
 	Het bijbehorende schema van de staartdeling vergt opnieuw minder schrijfwerk. 
 
@@ -83,15 +83,15 @@ Hieronder leer je om een deling van veeltermen -met het algoritme van de staartd
 	& x^2+3x \\
 	\cline{2-2}
 	\vrule height 1.2em width 0pt
-	& \mathcolor{red}{2x-3} \\[-0.96cm]
+	& \red{2x-3} \\[-0.96cm]
 	\stackunder[0.05cm]{%
 	  \stackon[0pt]{2x^3+3x^2-1\mph{x-1}}{}%
 	}{%
 	  \Shortstack[r]{
-		{2x^3 \mathcolor{blue}{+6x^2}\mph{-9x-1}} 
+		{2x^3 \blue{+6x^2}\mph{-9x-1}} 
 		{\staartmin \staartstreep{2x^3+6x^2} \staartphstreep{-9x-10}}
 		{-3x^2-1\mph{x-1}} 
-		{-3x^2 \mathcolor{blue}{-9x}\mph{-1}} 
+		{-3x^2 \blue{-9x}\mph{-1}} 
 		{\staartmin \staartstreep{-3x^2-9x} \staartphstreep{-10}}
 		{9x-1}
 	}
@@ -100,16 +100,21 @@ Hieronder leer je om een deling van veeltermen -met het algoritme van de staartd
 	\)
 	}
 
-	In dit geval stopt de procedure bij een {\em restveelterm} (kortweg {\em rest}) $R(x)$ die verschillend is van nul. Kenmerkend is dat de graad van die rest kleiner is dan de graad van $B(x)$. Uit het bovenstaande schema van de staartdeling mogen we dus besluiten dat
+	In dit geval stopt de procedure bij een \textit{ restveelterm} (kortweg \textit{ rest}) $R(x)$ die verschillend is van nul. Kenmerkend is dat de graad van die rest kleiner is dan de graad van $B(x)$. Uit het bovenstaande schema van de staartdeling mogen we dus besluiten dat
 	\[
 	\underbrace{2x^3+3x^2-1}_{A(x)} = \underbrace{(x^2+3x)}_{B(x)}\cdot\underbrace{(2x - 3)}_{Q(x)} \,\, + \,\, \underbrace{9x - 1}_{R(x)} \quad \text{ waarbij } \quad \gr R(x) < \gr B(x).
 	\]
 
 	\end{algorithm} 
 	
-	In het vervolg zullen we meestal meteen het schema van de staartdeling opschrijven. Onthoud wel waar die staartdeling vandaan komt: het is een kortere schrijfwijze voor het {\em forceren van een veelterm $B(x)$ in een veelterm $A(x)$}, de langere werkwijze die we hierboven twee keer uitgeschreven hebben. Enerzijds komt die lange werkwijze later nog aan bod in bewijzen van eigenschappen. Anderzijds komt ze ook nog van pas bij het oplossen van sommige oefeningen, net zoals dat bij de methode van de onbepaalde coëfficiënten het geval is.
+	In het vervolg wordt meestel enkel het schema van de staartdeling opgeschreven. Onthoud wel waar die staartdeling vandaan komt: het is een kortere schrijfwijze voor het \textit{ forceren van een veelterm $B(x)$ in een veelterm $A(x)$}, de langere werkwijze die we hierboven twee keer uitgeschreven hebben. Enerzijds komt die lange werkwijze later nog aan bod in bewijzen van eigenschappen. Anderzijds komt ze ook nog van pas bij het oplossen van sommige oefeningen, net zoals dat bij de \textit{methode van de onbepaalde coëfficiënten} het geval is.
 	
 	
+
+
+	Het volgende voorbeeld gaat voor twee gegeven veeltermen deelbaarheid met de staartdeling na: 
+
+
 	\begin{example} 
 	Beschouw de veeltermen $A(x) = 6x^3 + 19x^2 + 8x - 5$ en $B(x) = 2x+5$. We gaan met behulp van het schema van de staartdeling na of $A(x)$ deelbaar is door $B(x)$. 
 	
@@ -145,76 +150,79 @@ Hieronder leer je om een deling van veeltermen -met het algoritme van de staartd
 	\]
 	waaruit we besluiten dat $A(x)$ deelbaar is door $B(x)$.
 	\end{example} 
-	
-	\begin{example} 
-	Gegeven is de veelterm $A(x) = x^3 + ax^2 - 9x + b$ waarbij $a,b \in \R$. We bepalen de waarde(n) van de parameters $a$ en $b$ waarvoor $A(x)$ deelbaar is door $(x+1)^2$. Dat kunnen we doen met behulp van het schema van de staartdeling:
-	\tikzit{
-	\(
-	\begin{array}{l|l}
-	& x^2+2x+1 \\
-	\cline{2-2}
-	\vrule height 1.2em width 0pt
-	& x+a-2 \\[-0.96cm]
-	\stackunder[0.05cm]{%
-	  \stackon[0pt]{x^3 + ax^2 - 9x + b}{}%
-	}{%
-	  \Shortstack[r]{
-		{x^3 + 2x^2 + x\mph{9+b}} 
-		{\staartmin \staartstreep{(a-2)x^2-10x+b}}
-		{(a-2)x^2-10x+b} 
-		{(a-2)x^2 + (2a-4)x + a-2} 
-		{\staartmin \staartstreep{(a-2)x^2 + (2a-4)x + a-2}}
-		{(-2a-6)x+b-a+2}
-	}
-	}  
-	\end{array}
-	\)
-	}
 
-	waaruit volgt dat  
-	\begin{align*}
-	(x+1)^2 \mid A(x) \quad 
-	& \Leftrightarrow \quad (-2a-6)x+b-a+2 = 0x + 0 \\
-	& \Leftrightarrow \quad
-	\left\{ 
-	\begin{aligned}
-	-2a-6 & = 0 \\
-	b-a+2 & = 0 
-	\end{aligned}
-	\right. \\ 
-	& \Leftrightarrow \quad
-	\left\{ 
-	\begin{aligned}
-	a & = -3 \\
-	b & = -5. 
-	\end{aligned}
-	\right.
-	\end{align*} 
 
-	Een andere manier om $a$ en $b$ te bepalen is door middel van de methode van de onbepaalde coëfficiënten. Dat blijkt efficiënter te zijn dan het schema van de staartdeling, omdat je heel wat minder rekenwerk moet uitvoeren: het quotiënt van de opgaande deling van $A(x)$ door $(x+1)^2 = x^2 + 2x + 1$ heeft graad $1$ en vergelijken van hoogstegraadsterm en constante term in linker- en rechterlid geeft meteen:
+Deelbaarheid voor veeltermen met parameters werd voor de staartdeling al nagegaan met de \textit{methode van de onbepaalde coëfficiënten}. Het algoritme van de staartdeling werkt echter altijd. Ook in dit geval kan het ook hier -al is het niet het meest efficiënt-  toegepast worden: 
 
-	\begin{align*}
-	x^3 + ax^2 - 9x + b 
-	& = (x^2 + 2x + 1)(x + b) \\
-	& = x^3 + (b+2)x^2 + (2b+1)x + b
-	\end{align*}
-	zodat 
-	\begin{align*}
-	\left\{ 
-	\begin{aligned}
-	a & = b+2 \\
-	-9 & = 2b+1
-	\end{aligned}
-	\right. 
-	\quad \Leftrightarrow \quad
-	\left\{ 
-	\begin{aligned}
-	a & = -3 \\
-	b & = -5. 
-	\end{aligned}
-	\right.
-	\end{align*}
-	\end{example} 
+\begin{example} 
+Gegeven is de veelterm $A(x) = x^3 + ax^2 - 9x + b$ waarbij $a,b \in \R$. We bepalen de waarde(n) van de parameters $a$ en $b$ waarvoor $A(x)$ deelbaar is door $(x+1)^2$. Dat kunnen we doen met behulp van het schema van de staartdeling:
+\tikzit{
+\(
+\begin{array}{l|l}
+& x^2+2x+1 \\
+\cline{2-2}
+\vrule height 1.2em width 0pt
+& x+a-2 \\[-0.96cm]
+\stackunder[0.05cm]{%
+	\stackon[0pt]{x^3 + ax^2 - 9x + b}{}%
+}{%
+	\Shortstack[r]{
+	{x^3 + 2x^2 + x\mph{9+b}} 
+	{\staartmin \staartstreep{(a-2)x^2-10x+b}}
+	{(a-2)x^2-10x+b} 
+	{(a-2)x^2 + (2a-4)x + a-2} 
+	{\staartmin \staartstreep{(a-2)x^2 + (2a-4)x + a-2}}
+	{(-2a-6)x+b-a+2}
+}
+}  
+\end{array}
+\)
+}
+
+waaruit volgt dat  
+\begin{align*}
+(x+1)^2 \mid A(x) \quad 
+& \Leftrightarrow \quad (-2a-6)x+b-a+2 = 0x + 0 \\
+& \Leftrightarrow \quad
+\left\{ 
+\begin{aligned}
+-2a-6 & = 0 \\
+b-a+2 & = 0 
+\end{aligned}
+\right. \\ 
+& \Leftrightarrow \quad
+\left\{ 
+\begin{aligned}
+a & = -3 \\
+b & = -5. 
+\end{aligned}
+\right.
+\end{align*} 
+
+Een andere manier om $a$ en $b$ te bepalen is door middel van de methode van de onbepaalde coëfficiënten. Dat blijkt efficiënter te zijn dan het schema van de staartdeling, omdat je heel wat minder rekenwerk moet uitvoeren: het quotiënt van de opgaande deling van $A(x)$ door $(x+1)^2 = x^2 + 2x + 1$ heeft graad $1$ en vergelijken van hoogstegraadsterm en constante term in linker- en rechterlid geeft meteen:
+
+\begin{align*}
+x^3 + ax^2 - 9x + b 
+& = (x^2 + 2x + 1)(x + b) \\
+& = x^3 + (b+2)x^2 + (2b+1)x + b
+\end{align*}
+zodat 
+\begin{align*}
+\left\{ 
+\begin{aligned}
+a & = b+2 \\
+-9 & = 2b+1
+\end{aligned}
+\right. 
+\quad \Leftrightarrow \quad
+\left\{ 
+\begin{aligned}
+a & = -3 \\
+b & = -5. 
+\end{aligned}
+\right.
+\end{align*}
+\end{example} 
 	
 	
 
