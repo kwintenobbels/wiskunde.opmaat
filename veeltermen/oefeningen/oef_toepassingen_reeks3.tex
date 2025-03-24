@@ -1,0 +1,202 @@
+\documentclass{ximera} 
+
+\input{../../preamble.tex}
+\input{../../preamblekdn.tex}
+\input{../../preamble_pst.tex}
+
+\addPrintStyle{..}
+
+\begin{document}
+	\author{Koen De Naeghel}
+	\xmtitle{Oefeningen reeks 3}{}
+	\label{xim:veeltermen_toepassingen_oefeningen_reeks3}
+%%\section*{Oefeningen reeks 3}
+
+\begin{Oefening}[\bf \ref{antw4.9}.]\setcounter{enumi}{9}
+\hypertarget{oef4.9}{Bepaal} alle kubische veeltermen $A(x)$ waarvan de constante term gelijk is aan nul en waarvoor geldt dat
+\[
+A(x) - A(x-1) = x^2.
+\]
+\(\answer[onlineshowanswerbutton]{A(x) = \frac{1}{3}\,x^3 + \frac{1}{2}\,x^2 + \frac{1}{6}\,x + d$ met $d \in \R } \)
+\end{Oefening}
+
+\begin{Uitbreiding}
+\begin{Oefening}[\bf \ref{antw4.10}.]\setcounter{enumi}{10}
+\hypertarget{oef4.10}{In} wiskunde staat een \underline{bewijs zonder woorden}\index{bewijs zonder woorden} voor een figuur die aangeeft dat een bepaalde wiskundige uitspraak vanzelfsprekend is, zonder dat daarbij begeleidende uitleg vermeld wordt. Daarbij gaat het vaak om identiteiten in de algebra of stellingen in de meetkunde. Zo werden al bewijzen zonder woorden gevonden van de stelling van Pythagoras, de cosinusregel en formules voor sommen van getallen die aan een bepaalde regelmaat voldoen, zoals de eindige som 
+\[
+1 + 2 + 3 + \dots + n 
+\]
+met $n \in \N_0$ willekeurig, en de niet-eindigende sommen 
+\[
+0,9 + 0,09 + 0,009 + \dots \quad \text{ en } \quad 1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \dots
+\]
+Een bewijs zonder woorden geldt niet als een volledig bewijs zoals we dat in wiskunde kennen, omdat de logische argumenten ontbreken om de uitspraak formeel aan te tonen. Het kan wel waardevolle intu\"itieve ide\"een aanreiken. Op die manier kan er voor elk bewijs zonder woorden een redenering worden opgeschreven die gebaseerd is op de figuur en die kan gelden als een volledig bewijs van de uitspraak. 
+
+Hieronder staat een bewijs zonder woorden van een merkwaardig product. Formuleer de bijbehorende uitspraak en schrijf op basis van de figuur een volledig bewijs op.
+
+\medskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\psset{xunit=0.75cm,yunit=0.75cm}
+\begin{pspicture}(2.5,0)(8,5.5) % co linksonder, co rechtsboven
+
+\psline[](3,0)(8,0)(8,5)(3,5)(3,0)
+
+\psline[](3,1)(8,1)
+\psline[](7,0)(7,5)
+
+\uput[u](7.5,0.2){$b^2$}
+\uput[u](5,0.2){$ab$}
+\uput[u](7.5,2.7){$ab$}
+\uput[u](5,2.7){$a^2$}
+
+\uput[u](2.7,2.7){$a$}
+\uput[u](2.7,0.2){$b$}
+
+\uput[u](5,5){$a$}
+\uput[u](7.5,5){$b$}
+\end{pspicture}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\(\answer[onlineshowanswerbutton]{\text{Voor elke $a,b \in \R^+_0$ is $(a+b)^2 = a^2 + 2ab + b^2$}}\)
+
+\end{Oefening}
+\end{Uitbreiding}
+
+%%% \clearpage
+
+\begin{Oefening}[\bf \ref{antw4.11}.]\setcounter{enumi}{11} 
+\hypertarget{oef4.11}{Ontbind} telkens de veelterm zo ver mogelijk in factoren. Ga algebra\"isch te werk en schrijf jouw redenering uit.  
+\begin{multicols}{2}
+
+	\begin{question} $x^4+1$         \(=\answer[onlineshowanswerbutton]{(x^2+\sqrt{2}\,x+1)(x^2-\sqrt{2}\,x+1)                                                    } \) \end{question}
+	\begin{question} $x^4 + x^2 + 1$ \(=\answer[onlineshowanswerbutton]{(x^2+x+1)(x^2-x+1)                                                                        } \) \end{question}
+	\begin{question} $x^5-1$         \(=\answer[onlineshowanswerbutton]{(x-1)\left(x^2+\frac{1+\sqrt{5}}{2}\,x+1\right)\left(x^2+\frac{1-\sqrt{5}}{2}\,x+1\right) } \) \end{question}
+	\begin{question} $x^5+1$         \(=\answer[onlineshowanswerbutton]{(x-1)\left(x^2-\frac{1+\sqrt{5}}{2}\,x+1\right)\left(x^2-\frac{1-\sqrt{5}}{2}\,x+1\right) } \) \end{question}
+\end{multicols}
+\end{Oefening}
+
+	
+
+\begin{Oefening}
+Zij $A(x)$ een willekeurige veelterm met gehele co\"effici\"enten en met hoogstegraadsco\"effici\"ent gelijk aan $1$. Toon aan: als $A(x)$ een rationale nulwaarde heeft, dan heeft $A(x)$ ook een gehele nulwaarde.
+\end{Oefening}
+
+\begin{Uitbreiding}
+\begin{Oefening}
+Toon telkens de veeltermgelijkheid aan. Hierbij is $a$ een willekeurig re\"eel getal en $n \in \N_0$.
+\begin{enumerate}
+
+\item
+$\D x^{n+1} - a^{n+1} = (x-a)(x^{n} + ax^{n-1} + a^2x^{n-2} + \dots + a^{n-2}x^2 + a^{n-1}x + a^{n})$
+\item
+$\D x^{2n+1} + a^{2n+1} = (x+a)(x^{2n} - ax^{2n-1} + a^2x^{2n-2} - a^3x^{2n-3} + \dots - a^{2n-1}x + a^{2n})$
+\end{enumerate}
+\end{Oefening}
+
+\begin{Oefening}
+\label{somtweevierdemachten}
+Toon voor elke $a \in \R_0$ aan dat het zo ver mogelijk ontbinden in factoren van de veeltermen $x^2 \pm a^2$, $x^3 \pm a^3$, $x^4 \pm a^4$ en  $x^5 \pm a^5$ wordt gegeven door onderstaande uitdrukkingen. Hierbij staat $\varphi$ voor de gulden snede. %{\wsgref{gulden snede}{Bijzondere irrationale getallen}{22}}. 
+\begin{align*}
+& x^2 + a^2 = x^2 + a^2 && \text{som van twee kwadraten} \\
+& x^2 - a^2 = (x-a)(x+a) && \text{verschil van twee kwadraten} \\
+& x^3 + a^3 = (x+a)(x^2 - ax + a^2) && \text{som van twee derde machten} \\
+& x^3 - a^3 = (x-a)(x^2 + ax + a^2) && \text{verschil van twee derde machten} \\
+& x^4 + a^4 = (x^2 + \sqrt{2}\,ax + a^2)(x^2 - \sqrt{2}\,ax + a^2) && \text{som van twee vierde machten} \\
+& x^4 - a^4 = (x-a)(x+a)(x^2+a^2) && \text{verschil van twee vierde machten} \\
+& x^5 + a^5 = (x+a)(x^2-\varphi\,ax + a^2)(x^2+\frac{1}{\varphi}\,ax + a^2) && \text{som van twee vijfde machten} \\
+& x^5 - a^5 = (x-a)(x^2+\varphi\,ax + a^2)(x^2-\frac{1}{\varphi}\,ax + a^2) && \text{verschil van twee vijfde machten}
+\end{align*}
+\end{Oefening}
+
+\begin{Oefening}\label{oefening:gehelewortelstelling}
+{\bf (gehele wortelstelling)}\index{gehele wortelstelling} 
+In deze oefening bewijzen we de Stelling \ref{stelling:gehelewortelstelling}: 
+\begin{itemize}
+\item[]
+Zij $A(x)$ een veelterm met gehele co\"effici\"enten. Als $a \neq 0$ een gehele nulwaarde van $A(x)$ is, dan is $a$ een deler van de constante term.
+\end{itemize}
+Beschouw een willekeurige veelterm met gehele co\"effici\"enten:
+\[
+A(x) = a_0 + a_1 x + a_2 x^2 + \dots + a_{n-1} x^{n-1} + a_nx^n
+\]
+waarbij $ n \in \N$ en $a_0, a_1, \ldots, a_n \in \Z$. Stel nu dat $a \neq 0$ een gehele nulwaarde van deze veelterm is, dus
+\[
+a \in \Z_0 \quad \text{ en } \quad A(a) = 0.
+\]
+Toon aan dat $A(a) = 0$ leidt tot $a_0 = a\cdot q$ voor een zeker geheel getal $q$, en dus dat $a \mid a_0$. 
+\end{Oefening}
+\end{Uitbreiding}
+
+%%% \clearpage
+
+\begin{Uitbreiding}
+\begin{Oefening}\label{oefening:rationalewortelstelling}
+{\bf (rationale wortelstelling)}\index{rationale wortelstelling} 
+In deze oefening bewijzen we de rationale wortelstelling:
+\begin{itemize}
+\item[]
+Zij $A(x)$ een veelterm met gehele co\"effici\"enten. Als $\frac{p}{q} \neq 0$ een rationale nulwaarde van $A(x)$ is (met $p,q$ gehele getallen en $\frac{p}{q}$ onvereenvoudigbaar), dan is $p$ een deler van de constante term en $q$ een deler van de hoogstegraadsco\"effici\"ent  
+\end{itemize}
+Beschouw een willekeurige veelterm met gehele co\"effici\"enten:
+Beschouw een willekeurige veelterm met gehele co\"effici\"enten:
+\[
+A(x) = a_0 + a_1 x + a_2 x^2 + \dots + a_{n-1} x^{n-1} + a_nx^n
+\]
+waarbij $ n \in \N$ en $a_0, a_1, \ldots, a_n \in \Z$. Beschouw nu een rationaal getal $\frac{p}{q} \neq 0$, en stel dat dit getal een nulwaarde van deze veelterm is waarbij $p,q$ gehele getallen en $\frac{p}{q}$ onvereenvoudigbaar, dus
+\[
+p,q \in \Z_0 \quad \text{ en } \quad \ggd(p,q)=1 \quad \text{ en } \quad A\left(\frac{p}{q}\right) = 0.
+\]
+Toon aan dat $A\left(\frac{p}{q}\right) = 0$ leidt tot $p \mid a_0q^n$ en $q \mid a_n p^n$, en dus tot $p \mid a_0$ en $q \mid a_n$.
+\end{Oefening}
+\end{Uitbreiding}
+
+\begin{Oefening}[\bf \ref{antw4.17}.]\setcounter{enumi}{17} 
+\hypertarget{oef4.17}{Bepaal} algebra\"isch alle re\"ele getallen $x$ waarvoor geldt dat 
+\[
+x^3-288x^2-282x  = 2023.
+\]
+Schrijf alle tussenstappen op.
+\(\answer[onlineshowanswerbutton]{x=289}\)
+\end{Oefening}
+
+\begin{Oefening}[\bf \ref{antw4.18}.]\setcounter{enumi}{18} 
+\hypertarget{oef4.18}{Bepaal} algebra\"isch alle nulwaarden van de veelterm
+\[
+A(x) = x^6 + x^4 + x^2 + 1.
+\]
+Schrijf alle tussenstappen op.
+\(\answer[onlineshowanswerbutton]{ \text{geen reële oplossingen}}\)
+\end{Oefening}
+
+\begin{Oefening}[\bf \ref{antw4.19}.]\setcounter{enumi}{19} 
+\hypertarget{oef4.19}{Bepaal} een veelterm met gehele co\"effici\"enten waarvan $\sqrt{3+\sqrt{17}}$ een nulwaarde is.
+\(\answer[onlineshowanswerbutton]{A(x)=x^4-6x^2-8}\)
+\end{Oefening}
+
+\begin{Uitbreiding}
+\begin{Oefening}
+In deze oefening laten we zien dat de rationale wortelstelling (zie Oefening \ref{oefening:rationalewortelstelling}) gebruikt kan worden om aan te tonen dat sommige re\"eele getallen irrationaal zijn.
+\begin{enumerate}
+
+\item
+Bepaal een veelterm $A(x)$ met gehele co\"effici\"enten waarvan $\sqrt{2}$ een nulwaarde is.
+\item
+Toon met behulp van de rationale wortelstelling aan dat die veelterm $A(x)$ geen rationale nulwaarden heeft.
+\item
+Argumenteer nu hoe uit (a) en (b) volgt dat $\sqrt{2}$ een irrationaal getal is.
+\item
+Toon op een gelijkaardige manier aan dat de volgende re\"ele getallen irrationaal zijn:
+\[
+\sqrt{17}, \qquad \sqrt[3]{2}, \qquad \sqrt[7]{13} \qquad \sqrt{3+\sqrt{17}}, 
+\qquad \text{ en } \qquad \sqrt{2}+\sqrt{3}.
+\]
+\end{enumerate}
+\end{Oefening}
+\end{Uitbreiding}
+
+%%% \clearpage
+
+%%% \backmatter
+\end{document}

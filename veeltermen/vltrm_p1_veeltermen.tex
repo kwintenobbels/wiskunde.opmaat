@@ -22,7 +22,7 @@
 De som van de eentermen  $ax^n$ en $bx^m$ levert een \textit{tweeterm} $ax^n + bx^m$ . Door nogmaals te someren bekom je een {\em drieterm}, een {\em vierterm} enzovoort. In het algemene geval spreekt men van een {\em veelterm}.
 
 \begin{definition} 
-Een \textit{(reële) veelterm \(A(x)\) in (de variabele) $x$} is een eindige som van eentermen in $x$.
+Een \textbf{(reële) veelterm \(A(x)\) in (de variabele) $x$} is een eindige som van eentermen in $x$.
 
 In symbolen: $A(x) = a_0 + a_1x + a_2x^2 + \dots + a_n x^n$ waarbij $n \in \N$ en $a_0,a_1,a_2,\ldots,a_n \in \R$.
 
@@ -32,15 +32,15 @@ Met de afspraak $x^0 = 1$ kan elke veelterm herschreven worden met het sommatiet
 A(x) = a_0 + a_1x + a_2x^2 + \dots + a_n x^n = \sum_{i=0}^n a_i x^i.
 \]
 
-Hierbij zijn de getallen $a_0, a_1, a_2, \ldots, a_n$ de \textit{coëfficiënten} van de veelterm. De term $a_0$ wordt de \textit{constante term}van de veelterm genoemd.
+Hierbij zijn de getallen $a_0, a_1, a_2, \ldots, a_n$ de \textbf{coëfficiënten} van de veelterm. De term $a_0$ wordt de \textbf{constante term}van de veelterm genoemd.
 
 
-Als $a_0 + a_1x + a_2x^2 + \dots + a_n x^n$ een veelterm is waarbij $a_n \neq 0$, dan is de \textit{graad} van de veelterm gelijk aan $n$. Voor een veelterm $A(x)$ noteert men de graad \(n\) als $\gr A(x)$. In dat geval is $a_nx^n$ de \textit{hoogstegraadsterm} en $a_n$ de \textit{hoogstegraadscoëfficiënt} van de veelterm. De graad van de veelterm $0 + 0\cdot x + 0 \cdot x^2 + \dots + 0\cdot x^n = 0$ wordt in het secundair onderwijs niet gedefiniëerd.
+Als $a_0 + a_1x + a_2x^2 + \dots + a_n x^n$ een veelterm is waarbij $a_n \neq 0$, dan is de \textbf{graad} van de veelterm gelijk aan $n$. Voor een veelterm $A(x)$ noteert men de graad \(n\) als $\gr A(x)$. In dat geval is $a_nx^n$ de \textbf{hoogstegraadsterm} en $a_n$ de \textbf{hoogstegraadscoëfficiënt} van de veelterm. De graad van de veelterm $0 + 0\cdot x + 0 \cdot x^2 + \dots + 0\cdot x^n = 0$ wordt in het secundair onderwijs niet gedefiniëerd.
 
 Veeltermen van graad nul, één, twee of drie wordt respectievelijk \textit{constante}, \textit{lineaire}, \linebreak \textit{kwadratische} en \textit{kubische veeltermen} genoemd. Ook de nulveelterm $0 + 0\cdot x + 0 \cdot x^2 + \dots + 0\cdot x^n = 0$ wordt een constante veelterm genoemd.
 
 
-Twee veeltermen in $x$ zijn \textit{gelijk} als ze ofwel dezelfde graad én dezelfde coëfficiënten hebben, ofwel beide gelijk zijn aan nul. 
+Twee veeltermen in $x$ zijn \textbf{gelijk} als ze ofwel dezelfde graad én dezelfde coëfficiënten hebben, ofwel beide gelijk zijn aan nul. 
 
 
 \end{definition}
@@ -139,21 +139,22 @@ $C(x) = \sqrt{7}-\sqrt{28} = \sqrt{7}-2\sqrt{7} = -\sqrt{7}$ heeft graad $0$, ho
 
 
 % DIT COMPILEERT NOG NIET 
-% \renewcommand{\TJa }{\makebox[2.5cm]{een veelterm }}
-% \renewcommand{\TNee}{\makebox[2.5cm]{eeen veelterm}}
+
+\renewcommand{\TJa}{\makebox[2.5cm]{een veelterm }}
+\renewcommand{\TNee}{\makebox[2.5cm]{eeen veelterm}}
   
  
-% \begin{exercise}
-%     \begin{question} $2x+3$                       is \Tja                               \begin{feedback} Elke eerstegraadsfunctie is een veelterm! $ax+b$ kan gezien worden als een eerstegraadsveelterm, met 'parameters' of 'constanten' $a$ en $b$ in plaats van concrete getallen.\end{feedback} \end{question}
-%     \begin{question} $5x^2+7x+1$                  is \Tja                               \begin{feedback} Elke tweedegraadsfunctie is een veelterm!                                                                                                                                    \end{feedback} \end{question}
-%     \begin{question} $x^{2025}-1$                 is \Tja   van graad $\answer{2025}$.                                                                                                                                                                                                               \end{question}
-%     \begin{question} $7$                          is \Tja   van graad \(\aswer{0}\).    \begin{feedback} Elke reëel getal is een reële veelterm!                                                                                                                                      \end{feedback} \end{question}
-%     \begin{question} $\sqrt{\pi}x^5-e^y+\alpha^2$ is \Tja   in $\answer{x}$ van graad \(\answer{5}\), met parameters $y$ en $\alpha$.                                                                                                                                                                \end{question}
-%     \begin{question} $x^2-e^x$                    is \Tnee                              \begin{feedback} Wegens \(x\) in de exponent is dit geen veelterm in \(x\)                                                                                                                    \end{feedback} \end{question}
-%     \begin{question} $t+\cos\alpha$               is \Tja   in $\answer{t}$                                                                                                                                                                                                                          \end{question}
+\begin{exercise}
+    \begin{question} $2x+3$                       is \choiceYes                               \begin{feedback} Elke eerstegraadsfunctie is een veelterm! $ax+b$ kan gezien worden als een eerstegraadsveelterm, met 'parameters' of 'constanten' $a$ en $b$ in plaats van concrete getallen.\end{feedback} \end{question}
+    \begin{question} $5x^2+7x+1$                  is \choiceYes                               \begin{feedback} Elke tweedegraadsfunctie is een veelterm!                                                                                                                                    \end{feedback} \end{question}
+    \begin{question} $x^{2025}-1$                 is \choiceYes   van graad $\answer{2025}$.                                                                                                                                                                                                               \end{question}
+    \begin{question} $7$                          is \choiceYes   van graad \(\answer{0}\).    \begin{feedback} Elke reëel getal is een reële veelterm!                                                                                                                                      \end{feedback} \end{question}
+    \begin{question} $\sqrt{\pi}x^5-e^y+\alpha^2$ is \choiceYes   in $\answer{x}$ van graad \(\answer{5}\), met parameters $y$ en $\alpha$.                                                                                                                                                                \end{question}
+    \begin{question} $x^2-e^x$                    is \choiceNo                              \begin{feedback} Wegens \(x\) in de exponent is dit geen veelterm in \(x\)                                                                                                                    \end{feedback} \end{question}
+    \begin{question} $t+\cos\alpha$               is \choiceYes   in $\answer{t}$                                                                                                                                                                                                                          \end{question}
 
                                                                                                                                                                                                                                                                                                                                                             
-% \end{exercise}
+\end{exercise}
  
 Zoals vorige oefeningen duidelijk maakt zijn alle eerstegraadsfuncties en tweedegraadsfuncties voorbeelden van veeltermen (met parameters). 
 Je leerde reeds hoe je de nulpunten (bijvoorbeeld met de discriminantformule) van deze functies kan berekenen. 
@@ -163,7 +164,7 @@ Ook bij veeltermen voor willekeurige graad gaat de interesse van wiskundige uit 
 \begin{definition} De nulwaarde van een veelterm. 
 
 
-    Door in een veelterm $A(x)$ de variabele $x$ te vervangen met een reëel getal $r$ bekomt men de \textit{getalwaarde} $A(r)$ van $A(x)$ in $x = r$.  In symbolen:
+    Door in een veelterm $A(x)$ de variabele $x$ te vervangen met een reëel getal $r$ bekomt men de \textbf{getalwaarde} $A(r)$ van $A(x)$ in $x = r$.  In symbolen:
     \[
     A(x) = a_0 + a_1x + a_2x^2 + \dots + a_n x^n \quad 
     \Rightarrow
@@ -171,11 +172,11 @@ Ook bij veeltermen voor willekeurige graad gaat de interesse van wiskundige uit 
     \]
     met $n \in \N$ en $r, a_0, a_1, \ldots, a_n \in \R$, waarbij ook hier het geval $n = r = 0$ uitsloten wordt. % voor ons heeft $0^0$ geen betekenis.
     
-    Is de getalwaarde van een veelterm in een reëel getal $r$ gelijk aan nul, dan is $r$ een \textit{nulwaarde} van die veelterm. De uitspraak {\em $r$ is een nulwaarde van $A(x)$} is dus gelijkwaardig met de uitspraak {\em $A(r) = 0$}. Met behulp van het symbool $\Leftrightarrow$ voor equivalentie wordt dit in symbolen:
+    Is de getalwaarde van een veelterm in een reëel getal $r$ gelijk aan nul, dan is $r$ een \textbf{nulwaarde} van die veelterm. De uitspraak {\em $r$ is een nulwaarde van $A(x)$} is dus gelijkwaardig met de uitspraak {\em $A(r) = 0$}. Met behulp van het symbool $\Leftrightarrow$ voor equivalentie wordt dit in symbolen:
     \[
     r \text{ is een nulwaarde van } A(x) \quad \Leftrightarrow \quad A(r) = 0.
     \]
-    Hierbij is $r \in \R$ en $A(x)$ een veelterm in $x$. In de literatuur wordt een nulwaarde soms ook een \textit{nulpunt}genoemd. Onze voorkeur gaat uit naar de volgende afspraak: een nulpunt is een punt (dus een meetkundig object), een nulwaarde is een waarde (dus een getal).
+    Hierbij is $r \in \R$ en $A(x)$ een veelterm in $x$. In de literatuur wordt een nulwaarde soms ook een \textbf{nulpunt}genoemd. Onze voorkeur gaat uit naar de volgende afspraak: een nulpunt is een punt (dus een meetkundig object), een nulwaarde is een waarde (dus een getal).
     
 \end{definition} 
     
@@ -194,7 +195,7 @@ Ook bij veeltermen voor willekeurige graad gaat de interesse van wiskundige uit 
 
 
 
-\begin{expandable}{remark} De vruchtbare zoektocht naar nulpunten van veeltermen
+\begin{expandable}{remark}{De vruchtbare zoektocht naar nulpunten van veeltermen.}
 
     Op het eerste zicht lijken de nulwaarden van veeltermen geen bijzonder interessante objecten. In de geschiedenis van de wiskunde leverde deze zoektocht naar de nulpunten \textit{complexe getallen} op.  
     Evariste Galois leverde op 18jarige leeftijd een bewijs voor de de stelling dat er voor 5de graads veeltermen \textit{geen formule kan bestaan...}. 

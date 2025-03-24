@@ -1,0 +1,91 @@
+\documentclass{ximera} 
+
+\input{../../preamble.tex}
+\input{../../preamblekdn.tex}
+
+\addPrintStyle{..}
+
+\begin{document}
+	\author{Koen De Naeghel}
+	\xmtitle{Oefeningen reeks 3}{}
+	\label{xim:veeltermen_deling_door_veelterm_oefeningen_reeks3}
+
+
+%%\section*{Oefeningen reeks 3}
+
+\begin{exercise}
+Beschouw $a,b,c,d \in \R$ willekeurig met $a \neq 0$. Bewijs:
+\[
+\exists k \in \R: (x^2 + k) \mid (ax^3 + bx^2 + cx + d) \quad \Leftrightarrow \quad ad = bc
+\]
+\end{exercise}
+
+% \begin{Uitbreiding}
+\begin{exercise} 
+Zij $A(x)$ en $B(x)$ twee veeltermen waarbij $A(x) \neq 0$ en $B(x) \neq 0$. Vul aan en bewijs de volgende eigenschap:
+\[
+B(x) \mid A(x) \quad \Rightarrow \quad \gr\biggl(\frac{A(x)}{B(x)}\biggr) 
+\, = \, \ldots
+\]
+\end{exercise}
+
+\begin{exercise}
+Zij $r \in \R_0$ en $A(x), B(x), C(x), D(x), E(x), K(x)$ en $L(x)$ veeltermen waarbij $D(x) \neq 0$ en $E(x) \neq 0$. Bewijs de volgende basiseigenschappen van deelbaarheid. 
+\begin{enumerate}
+
+	\item
+	$r \mid A(x)$
+	\item
+	Als $\D A(x)  \neq 0$ dan is $A(x) \mid 0$ en $\D \bigl(rA(x)\bigr) \mid A(x)$.
+	\item
+	Als $D(x) \mid A(x)$ dan is $\D \bigl(rD(x)\bigr) \mid A(x)$.
+	\item
+	Als $D(x) \mid E(x)$ en $E(x) \mid A(x)$ dan is $D(x) \mid A(x)$. 
+	\item
+	Als $D(x) \mid A(x)$ dan is $D(x) \mid \bigl(K(x)A(x)\bigr)$ en $\bigl(E(x)D(x)\bigr) \mid \bigl(E(x)A(x)\bigr)$.
+	\item
+	Als $D(x) \mid A(x)$ en $D(x) \mid B(x)$ dan is $D(x) \mid \bigl(K(x)A(x)+L(x)B(x)\bigr)$.
+	\item
+	Als $D(x) \mid A(x)$ dan is $\gr D(x) \leq \gr A(x)$ of $A(x) = 0$.
+\end{enumerate}
+	
+\end{exercise}
+% \end{Uitbreiding}
+
+\begin{exercise}[\bf \ref{antw2.17}.]\setcounter{enumi}{17}  
+\hypertarget{oef2.17}{Stel} dat het deling van een veelterm $A(x)$ door een veelterm $B(x) \neq 0$ als quoti\"ent $Q(x)$ en als rest $R(x)$ heeft. Als $\gr A(x) = 12$ en $\gr R(x) = 2$, wat zijn dan de mogelijke waarden voor de graad van de veelterm $Q(x)$?
+\( \answer[onlineshowanswerbutton]{ \gr Q(x) \in \left\{0,1,2,3,4,5,6,7,8,9\right\} } \)
+\end{exercise}
+
+\begin{exercise}[\bf \ref{antw2.18}.]\setcounter{enumi}{18} 
+\hypertarget{oef2.18}{Gegeven} is de veelterm
+\[
+A(x) = x^3+3x^2+ax+13
+\]
+waarbij $a \in \R$. Bepaal de waarde(n) van de parameter $a$ waarvoor de deling van $A(x)$ door $x^2+3x-2$ als als rest een getal heeft. 
+\( \answer[onlineshowanswerbutton]{ a = -2 } \)
+
+\end{exercise}
+
+\begin{exercise}[\bf \ref{antw2.19}.]\setcounter{enumi}{19}
+\hypertarget{oef2.19}{Bepaal} de rest bij deling van $A(x)$ door $B(x)$ waarbij
+\[
+A(x) = x^{81} + x^{49} + x^{25} + x^{9} + x \quad \text{ en } \quad B(x) = x^3-x.
+\]
+\( \answer[onlineshowanswerbutton]{ x} \) 
+\end{exercise}
+
+\begin{exercise}[\bf \ref{antw2.20}.]\setcounter{enumi}{20}
+\hypertarget{oef2.20}{Toon} voor elk van onderstaande gevallen het bestaan van de veeltermen $Q(x)$ en $R(x)$ in de stelling van de euclidische deling aan. Doe dat telkens door expliciet de veeltermen $Q(x)$ en $R(x)$ te geven. 
+
+	\begin{question} $A(x) = 0$ en $B(x) \neq 0$ een willekeurige veelterm                                                              \( = \answer[onlineshowanswerbutton] {Q(x) = 0$ en $R(x) = 0                                      } \) \end{question} 
+	\begin{question} $A(x)$ een willekeurige veelterm en $B(x) = 1$                                                                     \( = \answer[onlineshowanswerbutton] {Q(x) = A(x)$ en $R(x) = 0                                   } \) \end{question}
+	\begin{question} $A(x)$ een willekeurige veelterm en $B(x) = -7$                                                                    \( = \answer[onlineshowanswerbutton] {Q(x) = -\frac{1}{7}$ en $R(x) = 0                           } \) \end{question}
+	\begin{question} $A(x)$ een willekeurig re\"eel getal en $B(x) \neq 0$ een willekeurige veelterm met constante term gelijk aan nul. \( = \answer[onlineshowanswerbutton] {Q(x) = 0$ en $R(x) = A(x)                                   } \) \end{question}
+	\begin{question} $A(x) \neq 0$ een willekeurige veelterm en $B(x) = A(x)$                                                           \( = \answer[onlineshowanswerbutton] {Q(x) = 1$ en $R(x) = 0                                      } \) \end{question}
+	\begin{question} $A(x) \neq 0$ een willekeurige veelterm en $B(x) = \sqrt{2}\cdot A(x)+\pi$                                         \( = \answer[onlineshowanswerbutton] {Q(x) = \frac{1}{\sqrt{2}}$ en $R(x) =-\frac{\pi}{\sqrt{2}}  } \) \end{question}
+
+\end{exercise}
+
+
+\end{document}
