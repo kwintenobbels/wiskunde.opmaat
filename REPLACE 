@@ -353,3 +353,66 @@ Gebruik van de grafische rekenmachine TI-84 Plus CE.
 
 
 NU WORDT ALLES GECOMMIT; DAARNA OPSPLITSEN 
+
+
+
+KOEN ZIJN ENVIRIONMENT UITBREIDING VERGETEN AANPASSEN DENKIK 
+KOMT NU UIT ZIJN PREAMBLE NOG 
+
+
+
+
+KOEN ZIJN \" VERGETEN AANPASSEN OP DE I EN E 
+DIT KAN IN VSCODE VANZELF EN MAAKT CODE LEESBAARDER 
+
+
+
+
+hebben iets gemeen: ze zijn allemaal van de vorm $2\cdot \square^5$ waarbij $\square$ een re\"eel getal voorstelt. Het is gebruikelijk om in plaats van het symbool $\square$ een Latijnse letter zoals $x$ te schrijven, die we dan een {\em variabele} noemen. De bewerkingen hierboven zijn dan telkens van de vorm $2 \cdot x^5$ en die uitdrukking noemen we een {\em eenterm in $x$}. Daarbij wordt het symbool $\cdot$ voor de vermenigvuldiging meestal weggelaten. 
+
+
+NOG NIET AANGEPAST  {\em variabele} 
+
+re\"eel getal HEEFT DIE SPECIALE UNDERDASHED --> NIET TE ZIEN IN DEZE CODE 
+
+
+
+
+
+
+
+% -------------------------------------------------- HEADER 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% DIT MATERIAAL VERTROK VAN DE OPEN-SOURCE CURSUS VEELTERMEN VAN KOEN DE NAEGHEL         
+% GEKOPIEËRD OP 24 MAART 2025                                                            
+% ORIGINEEL BESCHIKBAAR VIA https://www.koendenaeghel.be/opensource.htm         
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\documentclass{ximera}
+\input{../preamble}
+\input{../preamblekdn}
+
+\addPrintStyle{..}
+\begin{document}
+	\author{Koen de Naeghel - Wiskunde Op Maat}
+	\xmtitle{}{}
+
+
+\end{document}
+
+
+naamgeving: 
+vltrm_.tex
+vltrm_eentermen 
+vltrm_veeltermen 
+vltrm_deelbaarheid 
+vltrm_reststelling 
+
+
+HANDIG: EERST 10 WITTE LIJNEN NA ELKE SECITON ZETTEN 

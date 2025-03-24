@@ -1,0 +1,121 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% DIT MATERIAAL VERTROK VAN DE OPEN-SOURCE CURSUS VEELTERMEN VAN KOEN DE NAEGHEL         
+% GEKOPIEËRD OP 24 MAART 2025                                                            
+% ORIGINEEL BESCHIKBAAR VIA https://www.koendenaeghel.be/opensource.htm         
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass{ximera}
+\input{../preamble}
+\input{../preamblekdn}
+
+\addPrintStyle{..}
+\begin{document}
+	\author{Koen de Naeghel - Wiskunde Op Maat}
+	\xmtitle{Reststelling}{}
+
+
+
+
+	\section{Reststelling}
+
+	Om in het algemeen de rest bij deling van een veelterm $A(x)$ door een veelterm $B(x) \neq 0$ te vinden, voeren we het schema van de staartdeling uit. In het geval dat $B(x) = x-a$ voor een zekere $a \in \R$ kun je die rest op een meer effici\"ente manier vinden.
+	
+	Beschouw bijvoorbeeld de deling van de veelterm $A(x) = x^3-2x^2+3x-1$ door $B(x) = x-2$. We bepalen quoti\"ent en rest bij deling van $A(x)$ door $B(x)$ met behulp van de staartdeling.
+	\[
+	\begin{array}{l|l}
+	& x-2 \\
+	\cline{2-2}
+	\vrule height 1.2em width 0pt
+	& x^2+3 \\[-0.96cm]
+	\stackunder[0.05cm]{%
+	  \stackon[0pt]{x^3-2x^2+3x-1}{}%
+	}{%
+	  \Shortstack[r]{
+		{x^3-2x^2\mph{+3x-1}}
+		{\staartmin \staartstreep{x^3-2x^2+3x-1}}
+		{3x-1}
+		{3x-6} 
+		{\staartmin \staartstreep{3x-6}}
+		{5}
+	}
+	}  
+	\end{array}
+	\]
+	Uit dit schema volgt het onderstaand verband tussen deeltal, deler, quoti\"ent en rest.
+	\[
+	\underbrace{x^3-2x^2+3x-1}_{A(x)} = \underbrace{(x-2)}_{B(x)}\cdot\underbrace{(x^2+3)}_{Q(x)} \,\, + \,\, \underbrace{5}_{R(x)} 
+	\]
+	We laten zien dat je de rest $R(x)$ ook kan vinden zonder het schema van de staartdeling. Vooreerst tonen we aan dat die rest een getal is: uit de stelling van de euclidische deling volgt
+	\[
+	\gr R(x) < \underbrace{\gr B(x)}_{1} \quad \text{ of } \quad R(x) = 0
+	\]
+	zodat $\gr R(x) = 0$ of $R(x) = 0$, dus $R(x) = r$ voor een zekere $r \in \R$. Zo vinden we:
+	\begin{align*}
+	A(x) & = (x-2) \cdot Q(x) + \underbrace{R(x)}_{r} \\
+	\Rightarrow \quad A(2) & = \underbrace{(2-2)}_{0} \cdot \, Q(2) + r = r. 
+	\end{align*}
+	Op die manier kunnen we de rest berekenen: $R(x) = r = A(2) = 2^3 - 2 \cdot 2^2 + 3 \cdot 2 - 1 = 5$.
+	
+	
+	
+	De vaststelling die we hierboven gemaakt hebben, geeft ons nu een manier om meteen de rest bij deling van een veelterm door $x-a$ te vinden, zonder dat we eerst het schema van de staartdeling moeten uitvoeren. Dat resultaat wordt de {\em reststelling} genoemd.
+	
+	\begin{theorem} 
+	Zij $A(x)$ een veelterm en $a \in \R$. Dan is de rest bij deling van $A(x)$ door $x-a$ gelijk aan $A(a)$.
+	\end{theorem} 
+	
+	
+	\begin{proof}
+	
+	Wegens de stelling van de euclidische deling bestaat er precies  \'e\'en veelterm $Q(x)$ en \'e\'en veelterm $R(x)$ zodat
+	\[
+	A(x) = (x-a)\cdot Q(x) + R(x) \quad \text{ waarbij } \quad \gr R(x) < \underbrace{\gr (x-a)}_{1} \,\, \text{ of } \,\, R(x) = 0.
+	\]
+	Hieruit volgt dat $\gr R(x) = 0$ of $R(x) = 0$. Dus is $R(x) = r$ voor een zekere $r \in \R$. \\
+	Zo vinden we:
+	\begin{align*}
+	A(x) & = (x-a) \cdot Q(x) + \underbrace{R(x)}_{r} \\
+	\Rightarrow \quad A(a) & = \underbrace{(a-a)}_{0} \cdot \, Q(a) + r = r. 
+	\end{align*}
+	We besluiten dat de rest bij deling van $A(x)$ door $x-a$ gelijk is aan $R(x) = r = A(a)$. 
+	
+	\end{proof}
+	
+	
+	Als we in het vervolg enkel de rest bij deling van een veelterm door $x-a$ willen weten, dan passen we de reststelling toe. Ze kan ook gebruikt worden om de rest bij deling door $bx-a$ te bepalen. 
+	
+	\begin{example} 
+	Beschouw de veelterm $A(x) = 5x^7 - 3x^2 + 2$. Dan is, wegens de reststelling, de rest bij deling van $A(x)$ door $x+1$ gelijk aan
+	\[
+	A(-1) = 5 \cdot (-1)^7 - 3 \cdot (-1)^2 + 2 = -5-3+2 = -6.
+	\]
+	Om ook de rest bij deling van $A(x)$ door $2x-1$ te vinden, passen we eerst de stelling van de euclidische deling toe: er bestaan (unieke) veeltermen $Q(x)$ en $R(x)$ waarvoor
+	\[
+	A(x) = (2x-1)\cdot Q(x) + R(x) \quad \text{ waarbij } \quad \gr R(x) < \underbrace{\gr (2x-1)}_{1} \,\, \text{ of } \,\, R(x) = 0
+	\]
+	zodat $R(x) = r \in \R$. Zo vinden we:
+	\begin{align*}
+	A(x) & = (2x-1) \cdot Q(x) + \underbrace{R(x)}_{r} \\
+	\Rightarrow \quad A\left(\frac{1}{2}\right) & = \underbrace{\left(2 \cdot \frac{1}{2}-1\right)}_{0} \cdot \,Q\left(\frac{1}{2}\right) + r = r. 
+	\end{align*} 
+	We besluiten dat de rest bij deling van $A(x)$ door $2x-1$ gelijk is aan
+	\begin{align*}
+	r = A\left(\frac{1}{2}\right) & = 5 \cdot \left(\frac{1}{2}\right)^7 - 3 \cdot \left(\frac{1}{2}\right)^2 + 2 \\
+	& = \frac{5}{128} - \frac{3}{4} + 2 \\
+	& = \frac{5}{128} - \frac{96}{128} + \frac{256}{128} \\
+	& = \frac{165}{128}.
+	\end{align*}
+	\end{example} 
+	
+	
+	
+	
+	
+	
+
+
+
+\end{document}

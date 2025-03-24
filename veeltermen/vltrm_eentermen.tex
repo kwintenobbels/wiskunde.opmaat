@@ -1,0 +1,162 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% DIT MATERIAAL VERTROK VAN DE OPEN-SOURCE CURSUS VEELTERMEN VAN KOEN DE NAEGHEL         
+% GEKOPIEËRD OP 24 MAART 2025                                                            
+% ORIGINEEL BESCHIKBAAR VIA https://www.koendenaeghel.be/opensource.htm         
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass{ximera}
+\input{../preamble}
+\input{../preamblekdn}
+
+\addPrintStyle{..}
+\begin{document}
+	\author{Koen de Naeghel - Wiskunde Op Maat}
+	\xmtitle{Eentermen}{}
+
+
+
+\section{chapter:Basisbegrippen}
+
+In de voorbije jaren heb je leren rekenen met lettervormen, waaronder het optellen, ver\-menigvuldigen en vereenvoudigen van eentermen, tweetermen en drietermen. Dat zullen we in dit hoofdstuk uitbreiden tot viertermen, vijftermen enzovoort. Algemeen spreken we dan van {\em veeltermen}.
+
+\section{Eentermen}
+
+De bewerkingen
+\[
+2\cdot 3^5, \qquad 2\cdot 8^5, \qquad 2\cdot (-1)^5, \qquad 2\cdot\left(\frac{19}{3}\right)^5, \qquad 2\cdot\left(\sqrt{3}\right)^5 \qquad \text{ en } \qquad 2 \cdot \pi^5
+\]
+hebben iets gemeen: ze zijn allemaal van de vorm $2\cdot \square^5$ waarbij $\square$ een re\"eel getal voorstelt. Het is gebruikelijk om in plaats van het symbool $\square$ een Latijnse letter zoals $x$ te schrijven, die we dan een {\em variabele} noemen. De bewerkingen hierboven zijn dan telkens van de vorm $2 \cdot x^5$ en die uitdrukking noemen we een {\em eenterm in $x$}. Daarbij wordt het symbool $\cdot$ voor de vermenigvuldiging meestal weggelaten. 
+
+Doorgaans noteren we een eenterm met een Latijnse hoofdletter zoals $A$ of $B$. Om te beklemtonen dat de variabele van de eenterm gelijk is aan $x$, noteren we dan ook $A(x)$ of $B(x)$. Wat tussen de haakjes staat, noemen we dan het {\em argument}, wat in dit geval gewoon gelijk is aan de variabele $x$. De eenterm van hierboven kan nu geschreven worden als $A(x) = 2x^5$ en veralgemenen leidt tot de volgende definitie.
+
+\begin{definition} 
+Een \underline{(re\"ele) eenterm in (de variabele) $x$}\index{eenterm} is een uitdrukking $A(x) = ax^n$ waarbij $a \in \R$ en $n \in \N$. 
+\end{definition} 
+
+Spreken we in het vervolg van {\em een eenterm} $A(x) = ax^n$ of $B(x) = bx^m$ dan nemen we steeds aan dat $n,m\in \N$ en $a,b\in \R$.
+
+\begin{example} 
+De volgende uitdrukkingen zijn eentermen in $x$:
+	
+\[
+A(x) = 2x^5, \quad B(x) = -\frac{3}{7}\,x^1, \quad C(x) = 541x^0 \quad \text{ en } \quad D(x) = 0x^{2024}.
+\]
+Ook $A(t) = 2t^5$ is een eenterm, maar dan in de variabele $t$. De volgende uitdrukkingen zijn geen eentermen in $x$:
+\[
+2x^5+3x, \quad \frac{1}{x}, \quad 3x^{-5}, \quad \sqrt{x} \quad \text{en} \quad \left|x\right|.
+\] 
+\end{example} 
+
+De uitdrukking $ax^n$ van een eenterm wordt opgevat als de {\em vermenigvuldiging} van een re\"eel getal $a$ met $x^n$. Om die vermenigvuldiging te benadrukken, noteren we $ax^n$ soms ook als $a \cdot x^n$. Verder vatten we de uitdrukking $x^n$ op als macht met als grondtal de variabele $x$ en als exponent $n$. Bij afspraak maken we dan ook gebruik van de volgende schrijfwijzen:
+\[
+1\cdot x^n = x^n, \qquad
+0\cdot x^n = 0, \qquad  
+x^0 = 1, \qquad 
+a\cdot x^0 = a \qquad \text{ en } \qquad 
+a\cdot x^1 = a \cdot x = ax.
+\]
+
+Als $ax^n$ een eenterm is, dan noemen we het getal $a$ de \underline{co\"effici\"ent}\index{co\"effici\"ent}\index{eenterm!co\"effici\"ent} van de eenterm.
+
+\begin{example} 
+We vereenvoudigen de onderstaande eentermen, geven telkens de co\"eefici\"ent en vermelden ook of de eenterm al dan niet behoort tot de verzameling van de re\"ele getallen.
+\begin{enumerate}[(a)]
+\item
+$A(x) = \sqrt{2}\cdot x \cdot x \cdot x = \sqrt{2}\cdot x^3$ met co\"effici\"ent $\sqrt{2}$, en $A(x) \not\in \R$
+\item
+$B(x) = 541x^0 = 541$ met co\"effici\"ent $541$, en $B(x) \in \R$ 
+\item
+$\D C(x) = -\frac{4}{7}\,x^1 = -\frac{4}{7}\,x$ met co\"effici\"ent $\D -\frac{4}{7}$, en $C(x) \not\in \R$
+\item
+$D(x) = 0 x^{2024} = 0$ met co\"effici\"ent $0$, en $D(x) \in \R$ 
+\end{enumerate}
+\end{example} 
+
+Als $ax^n$ een eenterm is waarbij $a \neq 0$, dan noemen we $n$ de \underline{graad}\index{graad}\index{eenterm!graad} van de eenterm. Schrijven we de eenterm als $A(x)$, dan noteren we de graad als $\gr A(x)$. De graad van de eenterm $0\cdot x^n = 0$ wordt in het secundair onderwijs niet gedefini\"eerd.
+
+\medskip
+
+\begin{Uitbreiding}
+In hogere wiskunde stelt men $\gr 0 = - \infty$ omdat op deze manier rekenregels in verband met de graad van een eenterm geldig blijven, bijvoorbeeld 
+{\em de graad van het product van twee re\"ele eentermen is gelijk aan de som van de graden van die eentermen}. Daarvoor verwijzen we naar Oefening \ref{oefgraadnulveelterm} op het einde van dit hoofdstuk.
+\end{Uitbreiding}
+
+\begin{example} 
+Beschouw de volgende eentermen.
+\[
+A(x) = -7x^3, \,\,\, B(x) = -\frac{17}{89}\,x^5\cdot x^3, \,\,\, C(x) = 1, \,\,\, D(x) = \sqrt{5}\,x, \,\,\, P(x) = 0 x^4, \,\,\,  Q(x) = 0 x^7.
+\]
+De graad van de eenterm $A(x)$ is gelijk aan $3$, in symbolen: $\gr A(x) = 3$. Herschrijven we de andere eentermen als
+\[
+B(x) = -\frac{17}{89}\,x^8, \qquad C(x) = 1\cdot x^0, \qquad D(x) = \sqrt{5}\,x^1, \qquad P(x) = 0 = Q(x)
+\]
+dan lezen we hieruit af dat 
+\[
+\gr B(x) = 8, \qquad \gr C(x) = 0, \qquad \gr D(x) = 1. 
+\]
+Omdat $P(x) = 0$ bestaat de graad van de eenterm $P(x)$ niet. We schrijven dan: $\gr P(x) = /$. Idem is $\gr Q(x) = /$.
+\end{example} 
+
+Twee eentermen in $x$ zijn \underline{gelijksoortig}\index{gelijksoortig} als ze ofwel dezelfde graad hebben, ofwel beide gelijk zijn aan nul.
+
+\begin{example} 
+Gegeven zijn de eentermen
+\[
+A(x) = -\frac{1}{3}\,x^9, \quad B(x) = 5\,x^9, \quad C(x) = 0x^9, \quad D(x) = 2^9, \quad P(x) = \pi \quad \text{ en } \quad Q(x) = 0 x^7.
+\]
+Dan zijn $A(x)$ en $B(x)$ gelijksoortig. Omdat $C(x) = 0 = Q(x)$ zijn ook $C(x)$ en $Q(x)$ gelijksoortig. Ten slotte is $D(x) = 2^9 \cdot x^0$ en $P(x) = \pi \cdot x^0$ zodat de eentermen $D(x)$ en $P(x)$ gelijksoortig zijn.  
+\end{example} 
+
+Twee eentermen in $x$ zijn \underline{gelijk}\index{eenterm!gelijk} als ze ofwel dezelfde graad en dezelfde co\"effici\"ent hebben, ofwel beide gelijk zijn aan nul.
+
+\begin{example} 
+We hebben dat $0x^{2024} = 0x^{2025}$. En als je weet dat $\sqrt{2}\,x^n = bx^{35}$ dan is $n = 35$ en $b = \sqrt{2}$.
+\end{example} 
+
+
+
+Vervangen we in een eenterm $A(x)$ de variabele $x$ door een re\"eel getal $r$, dan verkrijgen we de \underline{getalwaarde}\index{eenterm!getalwaarde} van $A(x)$ in $x = r$. Die getalwaarde noteren we met $A(r)$. Samengevat: als $A(x) = ax^n$ dan is $A(r) = ar^n$. Met behulp van het symbool $\Rightarrow$ voor implicatie wordt dit in symbolen:
+\[
+A(x) = ax^n \quad \Rightarrow \quad A(r) = a r^n.
+\]
+Hierbij is $a,r \in \R$ en $n \in \N$, waarbij we het geval $r = n = 0$ uitsluiten: aan de uitdrukking $0^0$ geven we geen betekenis.
+
+\begin{example} 
+Als $A(x) = 5x^3$ dan is de getalwaarde van $A(x)$ in $x = -2$ gelijk aan 
+\[
+A(-2) = 5 \cdot (-2)^3 = 5 \cdot (-8) = - 5 \cdot 8 = -40.
+\]
+\end{example} 
+
+De som of het verschil van twee gelijksoortige eentermen in $x$ is opnieuw een eenterm in $x$, met als rekenregels:
+\[
+ax^n + bx^n = (a+b)x^n \quad \text{ en } \quad ax^n - bx^n = (a-b)x^n
+\]
+of kortweg: $ax^n \pm bx^n = (a\pm b)x^n$. Ook het product van twee eentermen in $x$ is opnieuw een eenterm in $x$, waarbij:
+\[
+ax^n \cdot bx^m = abx^{n+m}.
+\]
+Na het toepassen van die rekenregels kan een som $a+b$, een verschil $a-b$ of een product $ab$ soms verder uitgewerkt en nadien vereenvoudigd worden. Zo moet je vlot kunnen rekenen met breuken.
+
+\begin{example} 
+Als $\D A(x) = \frac{3}{4}\,x^5$ en $\D B(x) = -\frac{7}{6}\,x^5$ dan is 
+\begin{align*}
+A(x) + B(x) & = \frac{3}{4}\,x^5 + \left(-\frac{7}{6}\,x^5\right) 
+= \frac{3}{4}\,x^5 - \frac{7}{6}\,x^5
+= \left(\frac{3}{4} - \frac{7}{6}\right)x^5 
+= \frac{3 \cdot 3 - 7 \cdot 2}{12}\,x^5 
+= -\frac{5}{12}\,x^5, \\
+A(x) \cdot B(x) & = \frac{3}{4}\,x^5 \cdot \left(-\frac{7}{6}\,x^5\right) = - \frac{3 \cdot 7}{4 \cdot 6}\,x^{5+5} = -\frac{1\cdot 7}{4 \cdot 2}\, x^{10} = -\frac{7}{8}\,x^{10}. 
+\end{align*}
+\end{example}
+
+
+
+
+
+
+
+\end{document}

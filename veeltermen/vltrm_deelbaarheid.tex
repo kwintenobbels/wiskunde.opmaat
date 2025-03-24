@@ -1,0 +1,156 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% DIT MATERIAAL VERTROK VAN DE OPEN-SOURCE CURSUS VEELTERMEN VAN KOEN DE NAEGHEL         
+% GEKOPIEËRD OP 24 MAART 2025                                                            
+% ORIGINEEL BESCHIKBAAR VIA https://www.koendenaeghel.be/opensource.htm         
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass{ximera}
+\input{../preamble}
+\input{../preamblekdn}
+
+\addPrintStyle{..}
+\begin{document}
+\author{Koen de Naeghel - Wiskunde Op Maat}
+\xmtitle{Deelbaarheid}{}
+
+
+
+
+
+\section{chapter:Deling van veelterm door veelterm}\label{hoofdstuk:2}
+
+Net zoals je kan spreken over deling van gehele getallen, kun je ook spreken over {\em deling van veeltermen}. Die definitie, eigenschappen en werkwijzen staan in dit hoofdstuk centraal. 
+
+\section{Deelbaarheid}
+
+Het geheel getal $2025$ is deelbaar door het geheel getal $15$ omdat er een geheel getal $q$ bestaat waarvoor $2025 = 15\cdot q$, namelijk $q = 35$. Op een gelijkaardige manier kunnen we zeggen dat de veelterm $x^2-1$ deelbaar is door de veelterm $x+1$, omdat er een veelterm $Q(x)$ bestaat waarvoor $x^2-1 = (x+1)\cdot Q(x)$, namelijk $Q(x) = x-1$. We veralgemenen dit als volgt.
+
+\begin{definition} 
+Zij $A(x)$ en $B(x)$ twee veeltermen waarbij $B(x) \neq 0$. 
+We noemen $B(x)$ een \underline{deler}\index{deler} van $A(x)$ als er een veelterm $Q(x)$ bestaat zodat $A(x) = B(x)\cdot Q(x)$.
+\end{definition} 
+
+\begin{example} 
+Beschouw de veeltermen $A(x) = 14x^2+17x+5$ en $B(x) = 2x+1$. Dan is $B(x)$ een deler van $A(x)$, want er bestaat een veelterm $Q(x)$ waarvoor $A(x) = B(x) \cdot Q(x)$, bijvoorbeeld $Q(x) = 7x+5$. Dat kunnen we controleren door het product %$B(x) \cdot Q(x)$ 
+uit te werken:
+\[
+B(x) \cdot Q(x) = (2x+1) \cdot (7x+5) = 14x^2 + 10x + 7x + 5 = 14x^2 + 17x + 5 = A(x).
+\]
+\end{example} 
+
+Argumenteren dat een gegeven veelterm $A(x)$ niet deelbaar is door een gegeven veelterm $B(x)$ kan door aan te tonen dat er geen enkele veelterm $Q(x)$ bestaat waarvoor $A(x) = B(x) \cdot Q(x)$. 
+
+\begin{example} 
+Zij $A(x) = 2x^3+15$ en $B(x) = x-3$. Dan is $B(x)$ geen deler van $A(x)$. Inderdaad, mocht er toch een veelterm $Q(x)$ bestaan waarvoor $A(x) = B(x) \cdot Q(x)$ dan zou $\gr Q(x) = 2$ zodat $Q(x) = a x^2 + b x + c$ voor zekere $a,b,c \in \R$ met $a \neq 0$. In dat geval is
+\[
+2x^3+15 = (x-3) \cdot (a x^2 + b x + c) 
+\]
+en door de hoogstegraadsterm en constante term van beide leden te vergelijken, vinden we meteen dat $a = 2$ en $c = -5$. Invullen en uitwerken van het rechterlid geeft dan
+\begin{align*}
+2x^3+15 
+& = (x-3) \cdot (2 x^2 + b x - 5) \\
+& = 2x^3 + bx^2 - 5x - 6x^2 - 3bx + 15 \\
+& = 2x^3 + (b-6)x^2 + (-5-3b)x + 15.
+\end{align*}
+Hieruit volgt dat $b - 6 = 0$ en $-5-3b = 0$, zodat $b = 6$ en $b = -\frac{5}{3}$, wat onmogelijk is. Er bestaat dus geen veelterm $Q(x)$ met $A(x) = B(x) \cdot Q(x)$. Dus $x-3$ is geen deler van $2x^3+15$. 
+\end{example} 
+
+Als een veelterm $B(x) \neq 0$ een deler is van een veelterm $A(x)$ dan noteren we $B(x) \mid A(x)$ en zeggen we dat de veelterm $A(x)$ \underline{deelbaar} is door de veelterm $B(x)$. Is dat niet zo, dan schrijven we $B(x) \nmid A(x)$. 
+
+\begin{example} 
+We hebben dat $x \mid x^2$ en $(x+1) \mid (x^2-1)$ en $(x-3) \nmid (2x^3+15)$.
+\end{example} 
+
+Met behulp van de existenti\"ele kwantor $\exists$, lees als {\em er bestaat}, kunnen we Definitie \ref{definitie:deler} als volgt aanvullen.
+
+\begin{definition} 
+Zij $A(x)$ en $B(x)$ twee veeltermen met $B(x) \neq 0$. We noemen $B(x)$ een \underline{deler}\index{deler} van $A(x)$ als er een veelterm $Q(x)$ bestaat waarvoor geldt dat $A(x) = B(x)\cdot Q(x)$. In symbolen:
+\[
+B(x) \mid A(x) \quad \Leftrightarrow \quad \exists \, Q(x) \in \R[x]: A(x) = B(x)\cdot Q(x).
+\]
+\end{definition} 
+
+In dat geval noemen we de veelterm $A(x)$ het \underline{deeltal}, veelterm $B(x)$ de \underline{deler} en veelterm $Q(x)$ een \underline{quoti\"ent (van de opgaande deling)}.\index{quoti\"ent}\index{opgaande deling} 
+
+\begin{example} 
+Beschouw de veeltermen $A(x) = x^8$ en $B(x) = x^2$. Dan is $B(x) \mid A(x)$ en een quoti\"ent van de opgaande deling is gelijk aan $x^6$. 
+\end{example} 
+
+In de bovenstaande voorbeelden bestaat er telkens hoogstens \'e\'en veelterm $Q(x)$ waarvoor $A(x) = B(x)\cdot Q(x)$. Dat resultaat blijkt waar te zijn voor alle veeltermen $A(x)$ en $B(x)$ met $B(x) \neq 0$. Die eigenschap is erg belangrijk, die we daarom een {\em stelling} noemen. Hieronder zullen we die stelling ook bewijzen. 
+
+\begin{theorem} 
+Zij $A(x)$ en $B(x)$ twee veeltermen waarbij $B(x) \neq 0$. Dan bestaat er hoogstens \'e\'en veelterm $Q(x)$ zodat $A(x) = B(x)\cdot Q(x)$. 
+\end{theorem} 
+
+
+\begin{proof}
+
+Stel dat er twee veeltermen $Q(x)$ en $Q'(x)$ bestaan waarvoor $A(x) = B(x)\cdot Q(x)$ en $A(x) = B(x)\cdot Q'(x)$. Gelijkstellen levert nu:
+\begin{align*}
+A(x) = A(x) \quad & \Rightarrow \quad B(x)\cdot Q(x) = B(x)\cdot Q'(x) \\
+& \Rightarrow \quad B(x)\cdot Q(x) - B(x)\cdot Q'(x) = 0 \\
+& \Rightarrow \quad B(x) \cdot \bigl(Q(x) - Q'(x) \bigr) = 0 \\
+& \Rightarrow \quad B(x) = 0 \,\,\text{ of } \,\, Q(x) - Q'(x) = 0. 
+\end{align*}
+Er is gegeven dat $B(x) \neq 0$. Dus moet noodzakelijk $Q(x) - Q'(x)$ zodat $Q(x) = Q'(x)$. Bijgevolg bestaat er hoogstens \'e\'en veelterm $Q(x)$ zodat $A(x) = B(x)\cdot Q(x)$.
+
+\end{proof}
+
+
+Combineren we die stelling met de definitie van deelbaarheid, dan vinden we: een veelterm $B(x) \neq 0$ is een deler van een veelterm $A(x)$ als en slechts als er precies \'e\'en veelterm $Q(x)$ bestaat waarvoor geldt dat $A(x) = B(x)\cdot Q(x)$. Dit kunnen we in symbolen noteren door gebruik te maken van de kwantor $\exists!$ die we lezen als {\em er bestaat precies \'e\'en}:
+\[
+B(x) \mid A(x) \quad \Leftrightarrow \quad \exists! \, Q(x) \in \R[x]: A(x) = B(x)\cdot Q(x).
+\] 
+In dat geval mogen we $Q(x)$ voortaan {\em het} quoti\"ent (van de opgaande deling) noemen, en noteren we ook 
+\[
+\frac{A(x)}{B(x)} = Q(x).
+\]
+
+\begin{example} 
+We hebben dat $x^2 \mid x^8$ en het quoti\"ent van de deling is gelijk aan $x^6$. De volgende notatie komt dan overeen met een rekenregel voor machten:
+\[
+\frac{x^8}{x^2} = x^6.
+\]
+\end{example} 
+
+
+Een typische oefening is bepalen van het quoti\"ent van een opgaande deling. In de volgende paragraaf zien we de algemene werkwijze om dat te doen. 
+
+In het geval er in de veeltermen $A(x)$ en $B(x)$ parameters voorkomen, dan is de zogenaamde {\em methode van de onbepaalde co\"effici\"enten} vaak effici\"enter. Hierbij bepalen we eerst de graad van het quoti\"ent $Q(x)$, daarna wordt het quoti\"ent $Q(x)$ uitgedrukt met co\"effici\"enten die nog onbepaald zijn (vandaar de naam), om daarna met het verband $A(x) = B(x) \cdot Q(x)$ die co\"effici\"enten van $Q(x)$ te bepalen. Die methode kwam al eerder aan bod in Voorbeeld \ref{geendeler}. 
+
+\begin{example} 
+We bepalen de waarde(n) van de parameters $p$ en $q$ waarvoor geldt dat de veelterm $6x^3+px^2+32x+q$ deelbaar is door de veelterm $2x^2-7x-1$. In dat geval heeft het quoti\"ent van de opgaande deling graad $1$, zodat 
+\[
+6x^3+px^2+32x+q = (2x^2-7x-1)\cdot (ax+b)
+\]
+voor zekere $a,b \in \R$ met $a \neq 0$. De veelterm in het rechterlid heeft hoogstegraadsterm $2x^2 \cdot ax = 2ax^3$, die gelijk moet zijn aan de hoogstegraadsterm van de veelterm in het linkerlid, zodat $6 = 2a$ dus $a = 3$. Een analoge redenering voor de constante term geeft dat $(-1) \cdot b = q$ zodat $b = -q$. Invullen en uitwerken van het rechterlid geeft nu:
+\begin{align*}
+6x^3+px^2+32x+q 
+& = (2x^2-7x-1)\cdot (3x-q) \\
+& = 6x^3 - 2qx^2 - 21x^2 + 7qx - 3x + q \\
+& = 6x^3 + (-2q-21)x^2 + (7q-3)x+q.
+\end{align*}
+Vergelijken van de co\"effici\"enten van $x^2$ en $x$ in linker- en rechterlid leidt tot een stelsel:
+\[
+\left\{ 
+\begin{aligned}
+p & = -2q - 21 \\
+32 & = 7q - 3. 
+\end{aligned}
+\right.
+\]
+De tweede vergelijking geeft $q = 5$, en door die waarde in de eerste vergelijking te substitueren, vinden we ten slotte dat $p = -31$.  
+\end{example} 
+
+
+
+
+
+
+
+
+
+\end{document}
