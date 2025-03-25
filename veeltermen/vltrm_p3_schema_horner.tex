@@ -33,35 +33,37 @@ Beschouw de veeltermen $A(x) = 3x^3+5x^2+8x+13$ en $B(x) = x-2$. Om quotiënt en
 \begin{align*}
 3x^3+5x^2+8x+13
 & = {\red{3}}x^2(x-2) + {\red{3}}\cdot 2x^2 + 5x^2 + 8x + 13 \\
-& = {\red{3}}x^2(x-2) + {\mathcolor{graf}{11}}x^2 + 8x + 13 \\
-& = {\red{3}}x^2(x-2) + {\mathcolor{graf}{11}}x(x-2) + {\mathcolor{graf}{11}}\cdot 2x + 8x + 13 \\
-& = {\red{3}}x^2(x-2) + {\mathcolor{graf}{11}}x(x-2) + {\blue{30}}x + 13 \\
-& = {\red{3}}x^2(x-2) + {\mathcolor{graf}{11}}x(x-2) + {\blue{30}}(x-2) + {\blue{30}} \cdot 2 + 13 \\
-& = {\red{3}}x^2(x-2) + {\mathcolor{graf}{11}}x(x-2) + {\blue{30}}(x-2) + {\mathcolor{gray}{73}} %\\
-%& = (x-2) \cdot \left({\red{3}}x^2 + {\mathcolor{graf}{11}}x + {\blue{30}}\right) + {\mathcolor{gray}{73}}.
+& = {\red{3}}x^2(x-2) + {\graf{11}}x^2 + 8x + 13 \\
+& = {\red{3}}x^2(x-2) + {\graf{11}}x(x-2) + {\graf{11}}\cdot 2x + 8x + 13 \\
+& = {\red{3}}x^2(x-2) + {\graf{11}}x(x-2) + {\blue{30}}x + 13 \\
+& = {\red{3}}x^2(x-2) + {\graf{11}}x(x-2) + {\blue{30}}(x-2) + {\blue{30}} \cdot 2 + 13 \\
+& = {\red{3}}x^2(x-2) + {\graf{11}}x(x-2) + {\blue{30}}(x-2) + {\gray{73}} %\\
+%& = (x-2) \cdot \left({\red{3}}x^2 + {\graf{11}}x + {\blue{30}}\right) + {\gray{73}}.
 \end{align*}
-zodat $\D \underbrace{3x^3+5x^2+8x+13}_{A(x)} = \underbrace{(x-2)}_{B(x)}\cdot\underbrace{({\red{3}}x^2 + {\mathcolor{graf}{11}}x + {\blue{30}})}_{Q(x)} \,\, + \,\, \underbrace{{\mathcolor{gray}{73}}}_{R(x)}$ waarbij $\gr R(x) < \gr B(x)$.
+zodat $\D \underbrace{3x^3+5x^2+8x+13}_{A(x)} = \underbrace{(x-2)}_{B(x)}\cdot\underbrace{({\red{3}}x^2 + {\graf{11}}x + {\blue{30}})}_{Q(x)} \,\, + \,\, \underbrace{{\gray{73}}}_{R(x)}$ waarbij $\gr R(x) < \gr B(x)$.
 
 Dat schrijfwerk kan ingekort worden met het schema van de staartdeling uit Hoofdstuk \ref{hoofdstuk:2}. Omdat de deler $B(x)$ van de vorm $x-a$ is, kunnen we quotiënt en rest op een andere manier berekenen die nog minder schrijfwerk vergt: het zogenaamde \textit{ schema van Horner}.\footnote{De meest gangbare naam voor dit rekenschema is \textit{ synthetische deling}. Uit dat schema volgt dat de rest bij deling van een veelterm $A(x) = a_0 + a_1x + a_2x^2 + \dots + a_nx^n$ door $x-a$, dat wegens de reststelling gelijk is aan de getalwaarde van $A(x)$ in $x=a$, kan geschreven worden als $A(a) = ((a_n a +a_{n-1})a+\dots)a+a_0$. Het belang ervan is dat ze het aantal vermenigvuldigingen tot een minimum beperkt, wat leidt tot een grotere numerieke stabiliteit van de berekende waarden. Deze gemotiveerde schrijfwijze voor $A(a)$ werd voor het eerst in 1819 door William George Horner\index{Horner, William George} beschreven. In de Lage Landen wordt het ganse rekenschema van de synthetische deling ook het \textit{ schema van Horner} genoemd, maar dat is historisch gezien onjuist. Zie \cite{Cajori} en \cite{wiki:Hornerschema}.} 
 \index{schema!van Horner}\index{Horner, schema van}
 \renewcommand{\kolbreed}{\widthof{$2 \cdot 30$}}
 
-
-\[
+\tikzit{
+\(
 \begin{array}{c|HHHH}
 	& 3 & 5 & 8 & 13 \\[0.2cm]
-2 & \downarrow  & 2 \cdot {\red{3}}  & 2 \cdot {\mathcolor{graf}{11}}  & 2 \cdot {\blue{30}}  \\[0.2cm]
+2 & \downarrow  & 2 \cdot {\red{3}}  & 2 \cdot {\graf{11}}  & 2 \cdot {\blue{30}}  \\[0.2cm]
 \hline 
 \vrule height 1.2em width 0pt 
-	& {\red{3}} & {\mathcolor{graf}{11}} & {\blue{30}} & \multicolumn{1}{|c}{{\mathcolor{gray}{73}}} 
+	& {\red{3}} & {\graf{11}} & {\blue{30}} & \multicolumn{1}{|c}{{\gray{73}}} 
 \end{array}
-\]
+\)
+}
 \end{algorithm} 
 
 \begin{example} 
 Beschouw de veelterm $A(x) = 2x^3 + 5x^2 - 3$. We bepalen met behulp van het schema van Horner het quotiënt en de rest bij deling van $A(x)$ door $x+3$. 
 \renewcommand{\kolbreed}{\widthof{$-3 \cdot (-1)$}}
-\[
+\tikzit{
+\(
 \begin{array}{c|HHHH}
 	& 2 & 5 & 0 & -3 \\[0.2cm]
 -3 & \downarrow  & -3 \cdot 2  & -3 \cdot (-1)  & -3 \cdot 3  \\[0.2cm]
@@ -69,7 +71,9 @@ Beschouw de veelterm $A(x) = 2x^3 + 5x^2 - 3$. We bepalen met behulp van het sch
 \vrule height 1.2em width 0pt 
 	& 2 & -1 & 3 & \multicolumn{1}{|c}{-12} 
 \end{array}
-\]
+\)
+}
+
 Hieruit lezen we af dat het quotiënt $Q(x)$ gelijk is aan $2x^2-x+3$ en de rest $R(x)$ gelijk is aan $-12$. We controleren ons antwoord door de deler $x+3$ te vermenigvuldigen met $Q(x)$ en vervolgens $R(x)$ op te tellen:
 \begin{align*}
 (x+3)\cdot(2x^2-x+3) - 12 
@@ -87,7 +91,9 @@ Gegeven is de veelterm $A(x) = x^4 - 3x^3 - 7x^2 - 9 x - 30$. Er is ook gegeven 
 
 Eerst zoeken we het quotiënt bij deling van $A(x)$ door $x-5$. Daartoe voeren we het schema van Horner uit.
 \renewcommand{\kolbreed}{\widthof{$-30$}}
-\[
+
+\tikzit{
+\(
 \begin{array}{c|HHHHH}
 	& 1 & -3 & -7 & -9 & -30 \\[0.2cm]
 5 & \downarrow  & 5  & 10  & 15 & 30  \\[0.2cm]
@@ -95,7 +101,10 @@ Eerst zoeken we het quotiënt bij deling van $A(x)$ door $x-5$. Daartoe voeren w
 \vrule height 1.2em width 0pt 
 	& 1 & 2 & 3 & 6 & \multicolumn{1}{|c}{0}
 \end{array}
-\]
+\)
+}
+
+
 Hieruit lezen we af dat
 \[
 A(x) = (x-5)\underbrace{(x^3 + 2x^2 + 3x + 6)}_{Q(x)}.
@@ -106,7 +115,9 @@ A(-2) = (-2-5)\cdot Q(-2)
 \]
 en omdat $(x+2) \mid A(x)$ is $A(-2) = 0$ (kenmerk van deelbaarheid) zodat $Q(-2) = 0$ en dus ook $(x+2) \mid Q(x)$. We bepalen nu het quotiënt bij deling van $Q(x)$ door $x+2$ door middel van een tweede schema van Horner.
 \renewcommand{\kolbreed}{\widthof{$-6$}}
-\[
+
+\tikzit{
+\(
 \begin{array}{c|HHHH}
 	& 1 & 2 & 3 & 6 \\[0.2cm]
 -2 & \downarrow  & -2  & 0  & -6  \\[0.2cm]
@@ -114,7 +125,10 @@ en omdat $(x+2) \mid A(x)$ is $A(-2) = 0$ (kenmerk van deelbaarheid) zodat $Q(-2
 \vrule height 1.2em width 0pt 
 	& 1 & 0 & 3 & \multicolumn{1}{|c}{0}
 \end{array}
-\]
+\)
+}
+
+
 Op die manier vinden we dat $Q(x) = (x+2)(x^2+3)$ zodat uiteindelijk
 \begin{align*}
 A(x) 
@@ -124,9 +138,12 @@ A(x)
 Het quotiënt bij deling van $A(x)$ door $(x-5)(x+2)$ is dus gelijk aan $x^2+3$. 
 \end{example} 
 
+
 In het vervolg zullen een redenering zoals in het voorbeeld hierboven wat korter opschrijven: we voeren dan de twee schema's van Horner meteen na elkaar uit
 \renewcommand{\kolbreed}{\widthof{$-30$}}
-\[
+
+\tikzit{
+\(
 \begin{array}{c|HHHHH}
 	& 1 & -3 & -7 & -9 & -30 \\[0.2cm]
 5 & \downarrow  & 5  & 10  & 15 & 30  \\[0.2cm]
@@ -138,7 +155,9 @@ In het vervolg zullen een redenering zoals in het voorbeeld hierboven wat korter
 \vrule height 1.2em width 0pt 
 	& 1 & 0 & 3 & \multicolumn{1}{|c}{0}
 \end{array}
-\]
+\)
+}
+
 en lezen dan af dat  
 \begin{align*}
 x^4 - 3x^3 - 7x^2 - 9 x - 30 
@@ -149,7 +168,9 @@ x^4 - 3x^3 - 7x^2 - 9 x - 30
 \begin{example} 
 Gegeven is de veelterm $A(x) = 3 x^3 - x^2 - 7 x + 5$. Er is ook gegeven dat die veelterm deelbaar is door $x^2-2x+1$. Om het quotiënt van die deling te bepalen, merken we op dat de deler gelijk is aan $(x-1)^2 = (x-1)(x-1)$. We kunnen het quotiënt dus vinden door het schema van Horner twee keer na elkaar kunnen uitvoeren:
 \renewcommand{\kolbreed}{\widthof{$-30$}}
-\[
+
+\tikzit{
+\(
 \begin{array}{c|HHHH}
 	& 3 & -1 & -7 & 5  \\[0.2cm]
 1 & \downarrow  & 3  & 2  & -5   \\[0.2cm]
@@ -161,7 +182,9 @@ Gegeven is de veelterm $A(x) = 3 x^3 - x^2 - 7 x + 5$. Er is ook gegeven dat die
 \vrule height 1.2em width 0pt 
 	& 3 & 5 & \multicolumn{1}{|c}{0}
 \end{array}
-\]
+\)
+}
+
 waaruit we dan aflezen dat 
 \begin{align*}
 A(x) 
@@ -171,7 +194,6 @@ A(x)
 \end{align*}
 \end{example} 
 
-\begin{Uitbreiding}
 Meer algemeen kunnen we het schema van Horner ook gebruiken om quotiënt en rest bij deling van een veelterm door $B(x) = bx-a$ te vinden, waarbij $a,b \in \R$ met $b \neq 0$. 
 
 \begin{example} 
@@ -183,7 +205,9 @@ Gegeven zijn de veeltermen $A(x) = 3x^3-8x^2+13x-7$ en $B(x) = 3x-2$. We beschou
 \end{align*}
 waaruit we afleiden dat $3Q(x)$ en $R(x)$ het quotiënt en de rest zijn bij deling van $A(x)$ door $x - \frac{2}{3}$. Die vinden we door het schema van Horner op te schrijven.
 \renewcommand{\kolbreed}{\widthof{$-8$}}
-\[
+
+\tikzit{
+\(
 \begin{array}{c|HHHH}
 	& 3 & -8 & 13 & -7 \\[0.2cm]
 \D \frac{2}{3} & \downarrow  & 2  & -4  & 6  \\[0.2cm]
@@ -191,7 +215,9 @@ waaruit we afleiden dat $3Q(x)$ en $R(x)$ het quotiënt en de rest zijn bij deli
 \vrule height 1.2em width 0pt 
 	& 3 & -6 & 9 & \multicolumn{1}{|c}{-1} 
 \end{array}
-\]
+\)
+}
+
 Hieruit lezen we af dat $R(x) = -1$ en $3Q(x) = 3x^2 - 6x + 9$ zodat $Q(x) = x^2-2x+3$.
 
 We kunnen de controle uitvoeren door de deler met het quotiënt $Q(x)$ te vermenigvuldigen, en er daarna de rest $R(x)$ bij op te tellen:
@@ -204,7 +230,6 @@ B(x) \cdot Q(x) + R(x)
 & = A(x).
 \end{align*}
 \end{example} 
-\end{Uitbreiding}
 
 
 

@@ -23,23 +23,26 @@ Tot nu toe heb je al enkele strategieën gezien om te ontbinden in factoren: afz
 
 \begin{example} 
 De volgende kwadratische veelterm kan ontbonden worden in lineaire factoren omdat de discriminant positief is. Het rekenwerk kan ingekort worden door eerst een gemeenschappelijke factor van de termen af te zonderen. 
-\begin{align*}
+
+\[
 6x^2+21x-45 & = 3(2x^2 + 7x - 15) \\
-& \qquad 
-\begin{array}{|l}
-\hline
-\begin{aligned}
-\vrule height 0.4cm width 0cm
-& D = b^2 - 4ac = 7^2-4\cdot 2 \cdot (-15) = 169 > 0 \\[0.1cm] 
-& x_{1} = \frac{-b + \sqrt{D}}{2a} = \frac{-7 + 13}{4} = \frac{3}{2} \\[0.1cm] 
-& x_{2} = \frac{-b - \sqrt{D}}{2a} = \frac{-7 - 13}{4} = -5 \\[0.1cm]
-\end{aligned} \\
-\hline
-\end{array} \\
-& = 3 \cdot a(x-x_1)(x-x_2) \\
-& = 3 \cdot 2\left(x- \frac{3}{2}\right)(x+5) \\
-& = 3(2x-3)(x+5)
-\end{align*}
+\]
+
+De nulwaarden van deze kwadratische vergelijking kunnen bepaald worden met de discriminantformule: 
+
+\[
+D = b^2 - 4ac = 7^2-4\cdot 2 \cdot (-15) = 169 > 0 
+x_{1} = \frac{-b + \sqrt{D}}{2a} = \frac{-7 + 13}{4} = \frac{3}{2} 
+x_{2} = \frac{-b - \sqrt{D}}{2a} = \frac{-7 - 13}{4} = -5
+\]
+
+De veelterm kan nu worden ontbonden in factoren: 
+
+\[
+= 3 \cdot a(x-x_1)(x-x_2) \\
+= 3 \cdot 2\left(x- \frac{3}{2}\right)(x+5) \\
+= 3(2x-3)(x+5)
+\]
 \end{example} 
 
 In deze paragraaf leer je nog twee andere strategieën. Door al die werkwijzen doordacht in te zetten, kun je dan al heel wat eenvoudige veeltermen algebraïsch ontbinden in factoren. Vooreerst vermelden we een belangrijk resultaat, dat een gevolg is van de zogenaamde \textit{ hoofdstelling van de algebra}.\footnote{De hoofdstelling van de algebra stelt dat elke \textit{ complexe} veelterm (een veelterm waarvan de coëfficiënten \textit{ complexe getallen} zijn) dat niet constant is kan geschreven worden als een product van lineaire complexe veeltermen. Die stelling werd voor het eerst aangetoond door Carl Friedrich Gauss\index{Gauss, Carl Friedrich} in 1798.}\index{hoofdstelling van de algebra} Het bewijs laten we achterwege.
@@ -67,15 +70,19 @@ x^2 - 7 = x^2 - \bigl(\sqrt{7}\bigr)^2 = \bigl(x-\sqrt{7})(x+\sqrt{7}\bigr).
 Om ook een veelterm $A(x)$ van de vorm $x^3 - a^3$ te ontbinden in factoren, kunnen we als volgt te werk gaan.
 We stellen vast dat $A(a) = 0$. Daarom is $A(x)$ deelbaar door $x-a$, zie Stelling \ref{stelling:kenmerkvandeelbaarheid} (kenmerk van deelbaarheid door $x-a$). We berekenen het quotiënt met het schema van Horner
 \renewcommand{\kolbreed}{\widthof{$-a^3$}}
-\[
-\begin{array}{c|HHHH}
-	& 1 & 0 & 0 & -a^3 \\[0.2cm]
-\D a & \downarrow  & a  & a^2  & a^3  \\[0.2cm]
-\hline 
-\vrule height 1.2em width 0pt 
-	& 1 & a & a^2 & \multicolumn{1}{|c}{0} 
-\end{array}
-\]
+
+% \tikzit{
+% \(
+% \begin{array}{c|HHHH}
+% 	& 1 & 0 & 0 & -a^3 \\[0.2cm]
+% \D a & \downarrow  & a  & a^2  & a^3  \\[0.2cm]
+% \hline 
+% \vrule height 1.2em width 0pt 
+% 	& 1 & a & a^2 & \multicolumn{1}{|c}{0} 
+% \end{array}
+% \)
+% }
+
 waaruit we afleiden dat $x^3 - a^3 = (x-a)(x^2 + ax + a^2)$. Zo kunnen we ook elk verschil van derde machten ontbinden in factoren, zoals
 \[
 x^3 - 125 = x^3 - 5^3 = (x-5)(x^2 + 5x + 25) 
@@ -86,15 +93,19 @@ en ook
 \]
 Op een gelijkaardige manier kun je ook een veelterm $A(x)$ van de vorm $x^3 + a^3$ ontbinden in factoren: deze keer is $A(-a) = 0$ zodat $A(x)$ is deelbaar door $x-(-a) = x+a$. Het bijbehorende schema van Horner is dan
 \renewcommand{\kolbreed}{\widthof{$-a^3$}}
-\[
-\begin{array}{c|HHHH}
-	& 1 & 0 & 0 & -a^3 \\[0.2cm]
-\D -a & \downarrow  & -a  & a^2  & -a^3  \\[0.2cm]
-\hline 
-\vrule height 1.2em width 0pt 
-	& 1 & -a & a^2 & \multicolumn{1}{|c}{0} 
-\end{array}
-\]
+
+% \tikzit{
+% \(
+% \begin{array}{c|HHHH}
+% 	& 1 & 0 & 0 & -a^3 \\[0.2cm]
+% \D -a & \downarrow  & -a  & a^2  & -a^3  \\[0.2cm]
+% \hline 
+% \vrule height 1.2em width 0pt 
+% 	& 1 & -a & a^2 & \multicolumn{1}{|c}{0} 
+% \end{array}
+% \)
+% }
+
 waaruit volgt dat  $x^3 + a^3 = (x+a)(x^2-ax+a^2)$. Zo is dan bijvoorbeeld
 \[
 x^3+8 = x^3 + 2^3 = (x+2)(x^2-2x+4).
@@ -119,32 +130,28 @@ Nu kunnen we sommige eenvoudige veeltermen zo ver mogelijk ontbinden in factoren
 
 \begin{example} 
 We ontbinden telkens de veelterm zo ver mogelijk in factoren. 
-\begin{enumerate}[(a)]
-\item 
-$\D x^3 + 8 = x^3 + 2^3 = (x+2)\underbrace{(x^2-2x+4)}_{D = -12 < 0}$
-\item
-$\D -500x^3 + \frac{27}{2} = -\frac{1}{2}(1000x^3 - 27) = -\frac{1}{2}(10x-3)\underbrace{(100x^2 + 30x + 9)}_{D = -2700 < 0}$
-\item
-$\D x^4-25 = (x^2 - 5)(x^2+5) = (x-\sqrt{5})(x+\sqrt{5})\underbrace{(x^2+5)}_{D = -20 < 0}$
-\item
-$\D 9x^5 - 6x^4 - 16x^3 = x^3(9x^2-6x-16)$ 
-\item[]
-$\D \mph{9x^5 - 6x^4 - 16x^3} \qquad 
-\begin{array}{|l}
-\hline
-\begin{aligned}
-\vrule height 0.4cm width 0cm
-& D = (-6)^2-4\cdot 9 \cdot (-16) = 612 = 2^2 \cdot 3^2 \cdot 17 \\[0.1cm] 
-& x_{1,2} = \frac{-(-6) \pm \sqrt{6^2 \cdot 17}}{2 \cdot 9} = \frac{6 \pm 6\sqrt{17}}{18} = \frac{1 \pm \sqrt{17}}{3} \\[0.1cm] 
-\end{aligned} \\
-\hline
-\end{array}
-$
-\item[]
-$\D \mph{9x^5 - 6x^4 - 16x^3} = x^3 \cdot 9 \cdot \left(x-\frac{1+\sqrt{17}}{3}\right)\cdot\left(x-\frac{1-\sqrt{17}}{3}\right)$
-\item[]
-$\D \mph{9x^5 - 6x^4 - 16x^3} = x^3(3x-1-\sqrt{17})(3x-1+\sqrt{17})$
-\end{enumerate}
+
+\begin{question} \( \D x^3 + 8 = x^3 + 2^3 = (x+2)\underbrace{(x^2-2x+4)}_{D = -12 < 0}                                                         \) \end{question}
+\begin{question} \( \D -500x^3 + \frac{27}{2} = -\frac{1}{2}(1000x^3 - 27) = -\frac{1}{2}(10x-3)\underbrace{(100x^2 + 30x + 9)}_{D = -2700 < 0} \) \end{question}
+\begin{question} \( \D x^4-25 = (x^2 - 5)(x^2+5) = (x-\sqrt{5})(x+\sqrt{5})\underbrace{(x^2+5)}_{D = -20 < 0}                                   \) \end{question}
+\begin{question} \( \D 9x^5 - 6x^4 - 16x^3 = x^3(9x^2-6x-16)                                                                                    \) \end{question}
+\begin{question} \( \D \mph{9x^5 - 6x^4 - 16x^3} \)              
+
+Met de discriminantformule kan deze kwadratische vergelijking worden opgelost: 
+
+\[
+D = (-6)^2-4\cdot 9 \cdot (-16) = 612 = 2^2 \cdot 3^2 \cdot 17 
+\]
+
+Er zijn twee oplossingen: 
+
+\[
+x_{1,2} = \frac{-(-6) \pm \sqrt{6^2 \cdot 17}}{2 \cdot 9} = \frac{6 \pm 6\sqrt{17}}{18} = \frac{1 \pm \sqrt{17}}{3} 
+\]
+
+Hiermee kan met de veelterm ontbonden worden als \(9x^5 - 6x^4 - 16x^3 = x^3 \cdot 9 \cdot \left(x-\frac{1+\sqrt{17}}{3}\right)\cdot\left(x-\frac{1-\sqrt{17}}{3}\right) = x^3(3x-1-\sqrt{17})(3x-1+\sqrt{17})\)
+
+\end{question}
 \end{example} 
 
 Voor heel wat andere veeltermen volstaan die technieken niet, maar kan toch ontbonden worden door het kenmerk van deelbaarheid door $x-a$ toe te passen. Beschouw bijvoorbeeld
@@ -170,7 +177,7 @@ Die redenering gaat ook op voor andere veeltermen met gehele coëfficiënten. Nu
 \footnote{De voorwaarde $a \neq 0$ is nodig, omdat deelbaarheid door $0$ ongedefinieerd is.
 Een veralgemening is de zogenaamde \textit{ rationale wortelstelling}, zie Oefening \ref{oefening:rationalewortelstelling}.}
 
-\begin{theorem} 
+\begin{theorem}(gehele worteltrekking)
 Zij $A(x)$ een veelterm met gehele coëfficiënten. Als $a \neq 0$ een gehele nulwaarde van $A(x)$ is, dan is $a$ een deler van de constante term. 
 \end{theorem} 
 
@@ -182,29 +189,31 @@ te ontbinden in factoren, op voorwaarde dat er een \textit{ rationale} nulwaarde
 \begin{example} 
 We ontbinden de volgende veelterm zo ver als mogelijk.
 \renewcommand{\kolbreed}{\widthof{$-21$}}
-\begin{align*}
-A(x) & = 2x^3 + x^2 - 8x + 21 \\
-& \qquad
-\begin{array}{|l}
-\hline
-\vrule height 0.5cm width 0cm
-\text{ kanshebbers gehele nulwaarden: delers van de constante term $21$
-} \\[0.1cm]
-\text{ ICT: } A(-3) = 0 \text{ dus $A(x)$ is deelbaar door $x- (-3) = x+3$} \\[0.1cm]
-\text{ schema van Horner:} \\[0.1cm]
-\qquad
-\begin{array}{c|HHHH}
-	& 2 & 1 & -8 & 21 \\[0.2cm]
-\D -3 & \downarrow  & -6  & 15  & -21  \\[0.2cm]
-\hline 
-\vrule height 1.2em width 0pt 
-	& 2 & -5 & 7 & \multicolumn{1}{|c}{0} 
-\end{array} \\[-0.2cm]
-\mbox{}\\
-\hline
-\end{array} \\[0.1cm]
-& = (x+3)\underbrace{(2x^2-5x+7)}_{D = -31 < 0}
-\end{align*}
+
+
+\begin{tabular}{rl}
+
+Met Horner kan een deler van de vorm \(x-a\) van de veelterm \(A(x) = 2x^3 + x^2 - 8x + 21\) gezocht worden. Kanshebbers voor gehele nulwaarden zijn de delers van de constante term $21$. Een berekening lever dat \( A(-3) = 0 \) dus $A(x)$ is deelbaar door $x- (-3) = x+3$
+
+
+
+% DEZE COMPILEERT NIET 
+
+% \tikzit{
+% \(
+% \begin{array}{c|HHHH}
+% 	& 2 & 1 & -8 & 21 \\[0.2cm]
+% \D -3 & \downarrow  & -6  & 15  & -21  \\[0.2cm]
+% \hline 
+% \vrule height 1.2em width 0pt 
+% 	& 2 & -5 & 7 & \multicolumn{1}{|c}{0} 
+% \end{array} \\[-0.2cm]
+% \)
+% }
+
+Bijgevolg kan de veelterm ontbonden worden: \( (x+3)\underbrace{(2x^2-5x+7)}_{D = -31 < 0} \)
+\end{tabular}
+
 \end{example} 
 
 
@@ -214,34 +223,32 @@ A(x) & = 2x^3 + x^2 - 8x + 21 \\
 \begin{example} 
 We ontbinden de volgende veelterm zo ver als mogelijk.
 \renewcommand{\kolbreed}{\widthof{$-18$}}
-\begin{align*}
-A(x) & = x^3 + 4x^2 - 3x - 18 \\
-& \qquad
-\begin{array}{|l}
-\hline
-\vrule height 0.5cm width 0cm
-\text{ kanshebbers gehele nulwaarden: delers van de constante term $-18$
-} \\[0.1cm]
-\text{ ICT: } A(2) = 0 \text{ en } A(-3) = 0 \text{ dus $A(x)$ is deelbaar door $(x-2)(x+3)$} \\[0.1cm]
-\text{ schema's van Horner:} \\[0.1cm]
-\qquad
-\begin{array}{c|HHHH}
-	& 1 & 4 & -3 & -18 \\[0.2cm]
-2 & \downarrow  & 2  & 12  & 18  \\[0.2cm]
-\hline 
-\vrule height 1.2em width 0pt 
-	& 1 & 6 & 9 & \multicolumn{1}{|c}{0} \\[0.2cm]
--3& \downarrow & -3 & -9 \\[0.2cm]
-\cline{1-4}
-\vrule height 1.2em width 0pt
-	& 1 & 3 & \multicolumn{1}{|c}{0} 
-\end{array} \\[-0.2cm]
-\mbox{}\\
-\hline
-\end{array} \\[0.1cm]
-& = (x-2)(x^2+6x+9) \\
-& = (x-2)(x+3)(x+3) = (x-2)(x+3)^2
-\end{align*}
+
+Met Horner kan een deler van de vorm \(x-a\) van de veelterm \(A(x) & = x^3 + 4x^2 - 3x - 18\) gezocht worden. Kanshebbers voor gehele nulwaarden zijn de delers van de constante term $21$. Een berekening lever dat \( A(2) = 0 \text{ en } A(-3) = 0 \) dus $A(x)$ is deelbaar door $(x-2)(x+3)$: 
+
+
+% \tikzit{
+% \(
+% \begin{array}{c|HHHH}
+% 	& 1 & 4 & -3 & -18 \\[0.2cm]
+% 2 & \downarrow  & 2  & 12  & 18  \\[0.2cm]
+% \hline 
+% \vrule height 1.2em width 0pt 
+% 	& 1 & 6 & 9 & \multicolumn{1}{|c}{0} \\[0.2cm]
+% -3& \downarrow & -3 & -9 \\[0.2cm]
+% \cline{1-4}
+% \vrule height 1.2em width 0pt
+% 	& 1 & 3 & \multicolumn{1}{|c}{0} 
+% \end{array} \\[-0.2cm]
+% \)
+% }
+
+De veelterm kan dus alsvolgt ontbonden worden: 
+
+\[
+A(x) & = x^3 + 4x^2 - 3x - 18= (x-2)(x^2+6x+9) = (x-2)(x+3)(x+3) = (x-2)(x+3)^2
+\]
+
 \end{example} 
 
 
@@ -249,90 +256,83 @@ A(x) & = x^3 + 4x^2 - 3x - 18 \\
 \begin{example} 
 We ontbinden de volgende veelterm zo ver als mogelijk.
 \renewcommand{\kolbreed}{\widthof{$-6$}}
-\begin{align*}
-& \mph{=} \frac{1}{2}\,x^4 + x^3 - x^2 - 3x - \frac{3}{2} \\
-& = \frac{1}{2}\underbrace{\left(x^4 + 2x^3 - 2x^2 - 6x - 3 \right)}_{A(x)} \\
-& \qquad
-\begin{array}{|l}
-\hline
-\vrule height 0.5cm width 0cm
-\text{ kanshebbers gehele nulwaarden: delers van de constante term $-3$
-} \\[0.1cm]
-\text{ ICT: } A(-1) = 0 \text{ dus $A(x)$ is deelbaar door $x+1$} \\[0.1cm]
-\text{ schema van Horner:} \\[0.1cm]
-\qquad
-\begin{array}{c|HHHHH}
-	& 1 & 2 & -2 & -6 & -3 \\[0.2cm]
-\D -1 & \downarrow  & -1  & -1  & 3 & 3  \\[0.2cm]
-\hline 
-\vrule height 1.2em width 0pt 
-	& 1 & 1 & -3 & -3 & \multicolumn{1}{|c}{0}
-\end{array} \\[-0.2cm]
-\mbox{}\\
-\hline
-\end{array} \\[0.1cm]
-& = \frac{1}{2}(x+1)\underbrace{(x^3+x^2-3x-3)}_{Q(x)} \\
-& \qquad
-\begin{array}{|l}
-\hline
-\vrule height 0.5cm width 0cm
-\text{ kanshebbers gehele nulwaarden: delers van de constante term $-3$
-} \\[0.1cm]
-\text{ ICT: } Q(-1) = 0 \text{ dus $Q(x)$ is deelbaar door $x+1$} \\[0.1cm]
-\text{ schema van Horner:} \\[0.1cm]
-\qquad
-\begin{array}{c|HHHH}
-	& 1 & 1 & -3 & -3 \\[0.2cm]
-\D -1 & \downarrow  & -1  & 0  & 3  \\[0.2cm]
-\hline 
-\vrule height 1.2em width 0pt 
-	& 1 & 0 & -3 & \multicolumn{1}{|c}{0}
-\end{array} \\[-0.2cm]
-\mbox{}\\
-\hline
-\end{array} \\[0.1cm]
-& = \frac{1}{2}(x+1)(x+1)(x^2-3) \\
-& = \frac{1}{2}(x+1)^2(x-\sqrt{3})(x+\sqrt{3})
-\end{align*}
+
+
+
+
+\begin{array}
+	 A(x) &= \frac{1}{2}\,x^4 + x^3 - x^2 - 3x - \frac{3}{2} \\
+	      &= \frac{1}{2}\underbrace{\left(x^4 + 2x^3 - 2x^2 - 6x - 3 \right)}_{A(x)} \\
+\end{array}
+
+Met Horner kan een deler van de vorm \(x-a\) van de veelterm \(A(x) & = x^4 + 2x^3 - 2x^2 - 6x - 3 \) gezocht worden. Kanshebbers voor gehele nulwaarden zijn de delers van de constante term $-3$. Een berekening lever dat \(  A(-1) = 0\) dus $A(x)$ is deelbaar door  $x+1$: 
+
+% \tikzit{
+% \(
+% \begin{array}{c|HHHHH}
+% 	& 1 & 2 & -2 & -6 & -3 \\[0.2cm]
+% \D -1 & \downarrow  & -1  & -1  & 3 & 3  \\[0.2cm]
+% \hline 
+% \vrule height 1.2em width 0pt 
+% 	& 1 & 1 & -3 & -3 & \multicolumn{1}{|c}{0}
+% \end{array}
+% \)
+% }
+
+De veelterm kan ontbonden worden: 
+
+\[
+= \frac{1}{2}(x+1)\underbrace{(x^3+x^2-3x-3)}_{Q(x)} 
+\]
+
+De veelterm \( Q(x) = x^3+x^2-3x-3 \) kan opnieuw ontbonden worden met Horner. Kanshebbers voor gehele nulwaarden zijn delers van de constante term $-3$. 
+Een berekening levert \(Q(-1) = 0\) dus $Q(x)$ is deelbaar door $x+1$.
+
+% \tikzit{
+% \(
+% \begin{array}{c|HHHH}
+% 	& 1 & 1 & -3 & -3 \\[0.2cm]
+% \D -1 & \downarrow  & -1  & 0  & 3  \\[0.2cm]
+% \hline 
+% \vrule height 1.2em width 0pt 
+% 	& 1 & 0 & -3 & \multicolumn{1}{|c}{0}
+% \end{array}
+% \)
+% }
+
+De veelterm \(A(x)\) kan bijgevolg alsvolgt ontbonden worden: 
+
+\begin{array}
+	\frac{1}{2}\,x^4 + x^3 - x^2 - 3x - \frac{3}{2} & = \frac{1}{2}(x+1)(x+1)(x^2-3) \\
+													& = \frac{1}{2}(x+1)^2(x-\sqrt{3})(x+\sqrt{3})
+\end{array}
 \end{example} 
-Vinden we slechts één gehele nulwaarde $a$, dan kun je overwegen om  het schema van Horner meteen twee keer na elkaar uit te voeren. Is ook bij het tweede schema de rest gelijk aan nul, dan is de veelterm deelbaar door $(x-a)^2$. Bij het voorbeeld hierboven gaat dat als volgt.
+
+
+Vinden we slechts één gehele nulwaarde $a$, dan kun je overwegen om  het schema van Horner meteen twee keer na elkaar uit te voeren. Is ook bij het tweede schema de rest gelijk aan nul, dan is de veelterm deelbaar door $(x-a)^2$. Bij het voorbeeld hierboven gaat dat alsvolgt.
+
 \renewcommand{\kolbreed}{\widthof{$-6$}}
-\begin{align*}
-A(x) & = x^4 + 2x^3 - 2x^2 - 6x - 3 \\
-& \qquad
-\begin{array}{|l}
-\hline
-\vrule height 0.5cm width 0cm
-\text{ kanshebbers gehele nulwaarden: delers van de constante term $-3$
-} \\[0.1cm]
-\text{ ICT: } A(-1) = 0 \text{ dus $A(x)$ is deelbaar door $x+1$} \\[0.1cm]
-\text{ schema's van Horner:} \\[0.1cm]
-\qquad
-\begin{array}{c|HHHHH}
-	& 1 & 2 & -2 & -6 & -3 \\[0.2cm]
-\D -1 & \downarrow  & -1  & -1  & 3 & 3  \\[0.2cm]
-\hline 
-\vrule height 1.2em width 0pt 
-	& 1 & 1 & -3 & -3 & \multicolumn{1}{|c}{0} \\[0.2cm]
--1 & \downarrow  & -1  & 0  & 3 \\[0.2cm]
-\cline{1-5}
-\vrule height 1.2em width 0pt 
-	& 1 & 0 & -3 & \multicolumn{1}{|c}{0}
-\end{array}\\[-0.2cm]
-\mbox{}\\
-\hline
-\end{array} \\[0.1cm]
-& = (x+1)(x+1)(x^2-3)
-\end{align*}
 
+\(A(x) = x^4 + 2x^3 - 2x^2 - 6x - 3 \)
 
+% \tikzit{
+% \(
+% \begin{array}{c|HHHHH}
+% 	& 1 & 2 & -2 & -6 & -3 \\[0.2cm]
+% \D -1 & \downarrow  & -1  & -1  & 3 & 3  \\[0.2cm]
+% \hline 
+% \vrule height 1.2em width 0pt 
+% 	& 1 & 1 & -3 & -3 & \multicolumn{1}{|c}{0} \\[0.2cm]
+% -1 & \downarrow  & -1  & 0  & 3 \\[0.2cm]
+% \cline{1-5}
+% \vrule height 1.2em width 0pt 
+% 	& 1 & 0 & -3 & \multicolumn{1}{|c}{0}
+% \end{array}
+% \)
+% }
 
-	
-	
-	
-	
-	
-	
+\( x^4 + 2x^3 - 2x^2 - 6x - 3 = (x+1)(x+1)(x^2-3) \)
+
 
 
 \end{document}

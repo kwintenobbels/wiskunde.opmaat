@@ -53,29 +53,16 @@ De stelling van de euclidische deling voor veeltermen is analoog aan het gelijkn
 
 \begin{theorem}(deling met rest, euclidische deling)
 Zij $A(x)$ en $B(x)$ twee veeltermen met $B(x) \neq 0$. Dan bestaat er precies één veelterm $Q(x)$ en precies één veelterm $R(x)$ zodat
-\begin{equation} \label{euclides}
+
+\begin{equation}
 A(x) = B(x)\cdot Q(x) + R(x) \quad \text{ waarbij } \quad \gr R(x) < \gr B(x) \,\, \text{ of } \,\, R(x) = 0.
 \end{equation}
 
 met $A(x)$ het \textbf{deeltal}, $B(x)$ de \textbf{deler}, $Q(x)$ het \textbf{quotiënt}en $R(x)$ de \textbf{rest} bij de deling van $A(x)$ door $B(x)$. 
 \end{theorem} 
-\begin{Uitbreiding}
 
 
 
-Ook in het geval van een deling van veeltermen zullen we die benamingen gebruiken: als
-\[
-A(x) = B(x)\cdot Q(x) + R(x) \quad \text{ waarbij } \quad \gr R(x) < \gr B(x) \,\, \text{ of } \,\, R(x) = 0
-\]
-
-	
-
-
-
-
-
-
-	
 \begin{expandable}{proof}{Bewijs dat $Q(x)$ en $R(x)$ bestaan}
 	
 Beschouw de verzameling 
@@ -100,7 +87,6 @@ zodat $R(x) - ax^k B(x) \in S$. Maar dan hebben we een veelterm in $S$ gevonden 
 
 \end{expandable}
 
-\end{Uitbreiding}
 
 
 
@@ -113,11 +99,13 @@ Stel dat er nog een tweede veelterm $Q'(x)$ en een tweede veelterm $R'(x)$ zou b
 A(x) = B(x)\cdot Q'(x) + R'(x) \quad \text{ waarbij } \quad \gr R'(x) < \gr B(x) \,\, \text{ of } \,\, R'(x) = 0.
 \]
 We moeten aantonen dat $Q'(x) = Q(x)$ en dat $R'(x) = R(x)$. Gelijkstellen levert nu:
+
 \begin{align}
-& B(x) \cdot Q(x) + R(x) = B(x) \cdot Q'(x) + R'(x) \notag \\
-\Rightarrow \quad & B(x) \cdot Q(x) - B(x) \cdot Q'(x) = R'(x) - R(x) \notag \\
-\Rightarrow \quad & \underbrace{B(x) \cdot \bigl(Q(x) - Q'(x)\bigr)}_{\text{LL}} = \underbrace{R'(x) - R(x)}_{\text{RL}}. \label{euclides2}
+& B(x) \cdot Q(x) + R(x) = B(x) \cdot Q'(x) + R'(x) \\
+\Rightarrow \quad & B(x) \cdot Q(x) - B(x) \cdot Q'(x) = R'(x) - R(x) \\ %\notag 
+\Rightarrow \quad & \underbrace{B(x) \cdot \bigl(Q(x) - Q'(x)\bigr)}_{\text{LL}} = \underbrace{R'(x) - R(x)}_{\text{RL}}. %s\label{euclides2}
 \end{align}
+
 Mocht $Q'(x) \neq Q(x)$ en $R'(x) \neq R(x)$ dan zou de graad van het linkerlid van \eqref{euclides2} groter dan of gelijk aan de graad van $B(x)$ zijn, terwijl de graad van het rechterlid van \eqref{euclides2} kleiner dan de graad van $B(x)$ zou zijn, wat onmogelijk is. Dus moet $Q'(x) = Q(x)$ of $R'(x) = R(x)$. We onderscheiden die twee gevallen.
 \begin{itemize}
 \item[]
