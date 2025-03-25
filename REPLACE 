@@ -168,6 +168,17 @@ DIT IS NIET STANDAARD --> NAAR \COLOR GAAN EN GEBRUIKEN ZOALS PREAMBLE KUL
 
 \mathcolorwhite9x5−6x4−16   (EEN TRUC)
 
+REGULIERE EXPRESSIE VOOR DE MATHCOLORS 
+\\mathcolor\{red\}\{([^}]*)\}
+\\red{DOLLAR1}
+
+
+
+
+
+KOEN ZIJN \EM KAN EENVOUDIG WORDEN AANGEPAST 
+
+{\em replace \textit{
 
 
 
@@ -368,6 +379,36 @@ DIT KAN IN VSCODE VANZELF EN MAAKT CODE LEESBAARDER
 
 
 
+ver\-menigvuldigen    KOEN ZET DIT OM EEN NIEUWE LIJN TE CONTROLEREN 
+
+
+
+
+ALLE \INDEX WEGDOEN? --> HOE GAAN WE DIT MET XIMERA DOEN? 
+
+
+
+KOEN GEBRUIKT \MEDSKIP 
+
+
+
+ALLE MATHMODES OOK AANPASSEN 
+
+
+
+KOEN GEBRUIKT \, VOOR EEN KLEINE SPATIE --> KIJKEN OF WE DIT HOUDEN. 
+
+
+
+\left|x\right|  is dit onze conventie voor absolute waarde? 
+
+
+
+nakijken: ik het ééntermen geschreven 
+
+
+
+
 hebben iets gemeen: ze zijn allemaal van de vorm $2\cdot \square^5$ waarbij $\square$ een re\"eel getal voorstelt. Het is gebruikelijk om in plaats van het symbool $\square$ een Latijnse letter zoals $x$ te schrijven, die we dan een {\em variabele} noemen. De bewerkingen hierboven zijn dan telkens van de vorm $2 \cdot x^5$ en die uitdrukking noemen we een {\em eenterm in $x$}. Daarbij wordt het symbool $\cdot$ voor de vermenigvuldiging meestal weggelaten. 
 
 
@@ -377,6 +418,13 @@ re\"eel getal HEEFT DIE SPECIALE UNDERDASHED --> NIET TE ZIEN IN DEZE CODE
 
 
 
+
+
+KOEN GEBRUIKT \LINEBREAK
+
+
+
+\begin{enumerate}[(a)] DIT KAN DOOR QUESTIONS VERVANGEN WORDEN DENKIK? 
 
 
 
