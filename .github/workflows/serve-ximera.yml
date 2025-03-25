@@ -48,7 +48,7 @@ jobs:
           ls -alrt
           # git config --global --add safe.directory "$(pwd)"
           # export COMMAND=./xmScripts/xmlatex.test
-          ./xmScripts/xmlatex ghaction -j 4 veeltermen.tex veeltermen || echo not ok
+          ./xmScripts/xmlatex ghaction  veeltermen.tex veeltermen -j 6 --settingsfile ./xmScripts/config.lua --compile lpdf,html || echo NOK
           echo "✅ Published to $XIMERA_URL$XIMERA_NAME " >> $GITHUB_STEP_SUMMARY
 
       - name: Setup ximera serve cache (only .git)
@@ -84,10 +84,11 @@ jobs:
           GPG_KEY: ${{ secrets.GPG_KEY }}
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
           XIMERA_URL: ${{ vars.XIMERA_URL }}
-          XIMERA_NAME:  ${{ vars.XIMERA_NAME }}
+          XXXXIMERA_NAME:  ${{ vars.XIMERA_NAME }}
+          XIMERA_NAME:  veeltermen
         run: |
           ./xmScripts/xmlatex name         
-          ./xmScripts/xmlatex serve -f veeltermen.tex veeltermen # NOTE: -f  should not be needed ...        
+          ./xmScripts/xmlatex serve  veeltermen.tex veeltermen -f  # NOTE: -f  should not be needed ...        
           echo "✅ Published to $XIMERA_URL$XIMERA_NAME " >> $GITHUB_STEP_SUMMARY
 
 

@@ -36,14 +36,14 @@
 \usepackage{rotating} % voor omgeving turn
 
 % voor figuren met PSTricks:
-\usepackage{pstricks} 
-\usepackage{pstricks-add}
-\usepackage{pst-plot}
-\usepackage{pst-node}
-\usepackage{pst-coil}
-\pdfOnly{
-\usepackage{auto-pst-pdf}
-}
+% \usepackage{pstricks} 
+% \usepackage{pstricks-add}
+% \usepackage{pst-plot}
+% \usepackage{pst-node}
+% \usepackage{pst-coil}
+% \pdfOnly{
+% \usepackage{auto-pst-pdf}
+% }
 
 
 % voor figuren met TikZ:
@@ -170,17 +170,19 @@
 
 % --------------------------------------------------------------------- ENVIRONMENTS DEFINIËREN 
 
-\newenvironment{Uitbreiding}{
-    \marginpar{
-        \center
-		\vspace{0.1cm}
-		\vspace{7pt}
-		\rotatebox{90}{\color{rood}\Large \bf Uitbreiding}
-	}
-    \begin{mdframed}[style=uitbreiding]
-    }{\vspace{-0.05cm}
-    \end{mdframed}
-}
+
+\newenvironment{Uitbreiding}{}{}
+% \newenvironment{Uitbreiding}{
+%     \marginpar{
+%         \center
+% 		\vspace{0.1cm}
+% 		\vspace{7pt}
+% 		\rotatebox{90}{\color{rood}\Large \bf Uitbreiding}
+% 	}
+%     \begin{mdframed}[style=uitbreiding]
+%     }{\vspace{-0.05cm}
+%     \end{mdframed}
+% }
 
 
 % omgevingen voor lemma, definitie, voorbeeld etc.:
