@@ -25,7 +25,7 @@ Tot nu toe heb je al enkele strategieën gezien om te ontbinden in factoren: afz
 De volgende kwadratische veelterm kan ontbonden worden in lineaire factoren omdat de discriminant positief is. Het rekenwerk kan ingekort worden door eerst een gemeenschappelijke factor van de termen af te zonderen. 
 
 \[
-6x^2+21x-45 & = 3(2x^2 + 7x - 15) \\
+6x^2+21x-45 = 3(2x^2 + 7x - 15) \\
 \]
 
 De nulwaarden van deze kwadratische vergelijking kunnen bepaald worden met de discriminantformule: 
@@ -224,7 +224,7 @@ Bijgevolg kan de veelterm ontbonden worden: \( (x+3)\underbrace{(2x^2-5x+7)}_{D 
 We ontbinden de volgende veelterm zo ver als mogelijk.
 \renewcommand{\kolbreed}{\widthof{$-18$}}
 
-Met Horner kan een deler van de vorm \(x-a\) van de veelterm \(A(x) & = x^3 + 4x^2 - 3x - 18\) gezocht worden. Kanshebbers voor gehele nulwaarden zijn de delers van de constante term $21$. Een berekening lever dat \( A(2) = 0 \text{ en } A(-3) = 0 \) dus $A(x)$ is deelbaar door $(x-2)(x+3)$: 
+Met Horner kan een deler van de vorm \(x-a\) van de veelterm \(A(x) = x^3 + 4x^2 - 3x - 18\) gezocht worden. Kanshebbers voor gehele nulwaarden zijn de delers van de constante term $21$. Een berekening lever dat \( A(2) = 0 \text{ en } A(-3) = 0 \) dus $A(x)$ is deelbaar door $(x-2)(x+3)$: 
 
 
 % \tikzit{
@@ -246,7 +246,7 @@ Met Horner kan een deler van de vorm \(x-a\) van de veelterm \(A(x) & = x^3 + 4x
 De veelterm kan dus alsvolgt ontbonden worden: 
 
 \[
-A(x) & = x^3 + 4x^2 - 3x - 18= (x-2)(x^2+6x+9) = (x-2)(x+3)(x+3) = (x-2)(x+3)^2
+A(x) = x^3 + 4x^2 - 3x - 18= (x-2)(x^2+6x+9) = (x-2)(x+3)(x+3) = (x-2)(x+3)^2
 \]
 
 \end{example} 
@@ -259,13 +259,14 @@ We ontbinden de volgende veelterm zo ver als mogelijk.
 
 
 
-
-\begin{array}
+$$
+\begin{array}{rl}
 	 A(x) &= \frac{1}{2}\,x^4 + x^3 - x^2 - 3x - \frac{3}{2} \\
 	      &= \frac{1}{2}\underbrace{\left(x^4 + 2x^3 - 2x^2 - 6x - 3 \right)}_{A(x)} \\
 \end{array}
+$$
 
-Met Horner kan een deler van de vorm \(x-a\) van de veelterm \(A(x) & = x^4 + 2x^3 - 2x^2 - 6x - 3 \) gezocht worden. Kanshebbers voor gehele nulwaarden zijn de delers van de constante term $-3$. Een berekening lever dat \(  A(-1) = 0\) dus $A(x)$ is deelbaar door  $x+1$: 
+Met Horner kan een deler van de vorm \(x-a\) van de veelterm \(A(x) = x^4 + 2x^3 - 2x^2 - 6x - 3 \) gezocht worden. Kanshebbers voor gehele nulwaarden zijn de delers van de constante term $-3$. Een berekening lever dat \(  A(-1) = 0\) dus $A(x)$ is deelbaar door  $x+1$: 
 
 % \tikzit{
 % \(
@@ -301,11 +302,12 @@ Een berekening levert \(Q(-1) = 0\) dus $Q(x)$ is deelbaar door $x+1$.
 % }
 
 De veelterm \(A(x)\) kan bijgevolg alsvolgt ontbonden worden: 
-
-\begin{array}
+$$
+\begin{array}{rl}
 	\frac{1}{2}\,x^4 + x^3 - x^2 - 3x - \frac{3}{2} & = \frac{1}{2}(x+1)(x+1)(x^2-3) \\
 													& = \frac{1}{2}(x+1)^2(x-\sqrt{3})(x+\sqrt{3})
 \end{array}
+$$
 \end{example} 
 
 
