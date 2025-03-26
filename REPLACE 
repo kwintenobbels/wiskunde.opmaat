@@ -193,6 +193,17 @@ KOEN ZIJN \EM KAN EENVOUDIG WORDEN AANGEPAST
 \qedhere (word opgelost door environment)
 
 
+
+% -------------------------------------------------------------------------------------------------------------------- OEFENINGEN 
+(\\begin\{exersices\}).*
+
+\\hypertarget\{[^}]*\}\{([^}]*)\}
+
+$1
+
+
+
+
 WE HADDEN GEZEGD XIMERA LEMMA GEBRUIKEN 
 % \newtheorem{lemma}{Lemma}[chapter] % als je [chapter] desactiveert dan Voorbeeld 3 in plaats van Voorbeeld 5.3, als je [chapter] vervangt door [section] dan Voorbeeld 5.2.3 in plaats van Voorbeeld 5.3 
 
