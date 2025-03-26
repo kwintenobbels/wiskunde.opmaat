@@ -2,8 +2,6 @@
 
 \input{../preamble}
 \input{../preamblekdn}
-\input{../preamble_pst.tex}
-
 \addPrintStyle{..}
 
 \begin{document}
@@ -18,11 +16,17 @@ Bepaal alle kubische veeltermen $A(x)$ waarvan de constante term gelijk is aan n
 \[
 A(x) - A(x-1) = x^2.
 \]
-\(\answer[onlineshowanswerbutton]{A(x) = \frac{1}{3}\,x^3 + \frac{1}{2}\,x^2 + \frac{1}{6}\,x + d$ met $d \in \R } \)
+
+% \(A(x) = \answer[onlineshowanswerbutton]{\frac{1}{3}\,x^3 + \frac{1}{2}\,x^2 + \frac{1}{6}\,x + d$ met $d \in \R } \)
+\begin{uitkomst}
+$$
+A(x) = \frac{1}{3}\,x^3 + \frac{1}{2}\,x^2 + \frac{1}{6}\,x + d \text{ met } d \in \R 
+$$
+\end{uitkomst}
 \end{exercise}
 
 \begin{Uitbreiding}
-\begin{exercise}[\bf \ref{antw4.10}.]\setcounter{enumi}{10}
+\begin{exercise}
 In wiskunde staat een \underline{bewijs zonder woorden}\index{bewijs zonder woorden} voor een figuur die aangeeft dat een bepaalde wiskundige uitspraak vanzelfsprekend is, zonder dat daarbij begeleidende uitleg vermeld wordt. Daarbij gaat het vaak om identiteiten in de algebra of stellingen in de meetkunde. Zo werden al bewijzen zonder woorden gevonden van de stelling van Pythagoras, de cosinusregel en formules voor sommen van getallen die aan een bepaalde regelmaat voldoen, zoals de eindige som 
 \[
 1 + 2 + 3 + \dots + n 
@@ -35,33 +39,33 @@ Een bewijs zonder woorden geldt niet als een volledig bewijs zoals we dat in wis
 
 Hieronder staat een bewijs zonder woorden van een merkwaardig product. Formuleer de bijbehorende uitspraak en schrijf op basis van de figuur een volledig bewijs op.
 
-\medskip
+% \medskip
 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{center}
+% \psset{xunit=0.75cm,yunit=0.75cm}
+% \begin{pspicture}(2.5,0)(8,5.5) % co linksonder, co rechtsboven
+
+% \psline[](3,0)(8,0)(8,5)(3,5)(3,0)
+
+% \psline[](3,1)(8,1)
+% \psline[](7,0)(7,5)
+
+% \uput[u](7.5,0.2){$b^2$}
+% \uput[u](5,0.2){$ab$}
+% \uput[u](7.5,2.7){$ab$}
+% \uput[u](5,2.7){$a^2$}
+
+% \uput[u](2.7,2.7){$a$}
+% \uput[u](2.7,0.2){$b$}
+
+% \uput[u](5,5){$a$}
+% \uput[u](7.5,5){$b$}
+% \end{pspicture}
+% \end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\psset{xunit=0.75cm,yunit=0.75cm}
-\begin{pspicture}(2.5,0)(8,5.5) % co linksonder, co rechtsboven
-
-\psline[](3,0)(8,0)(8,5)(3,5)(3,0)
-
-\psline[](3,1)(8,1)
-\psline[](7,0)(7,5)
-
-\uput[u](7.5,0.2){$b^2$}
-\uput[u](5,0.2){$ab$}
-\uput[u](7.5,2.7){$ab$}
-\uput[u](5,2.7){$a^2$}
-
-\uput[u](2.7,2.7){$a$}
-\uput[u](2.7,0.2){$b$}
-
-\uput[u](5,5){$a$}
-\uput[u](7.5,5){$b$}
-\end{pspicture}
-\end{center}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{image}
-	\begin{tikzpicture}[x=0.75cm, y=0.75cm]
+\begin{image}[\width]
+	\begin{tikzpicture}[x=0.5cm, y=0.5cm]
 
 		% Outer rectangle
 		\draw (3,0) rectangle (8,5);
@@ -86,12 +90,19 @@ Hieronder staat een bewijs zonder woorden van een merkwaardig product. Formuleer
 		\node[above] at (5,5) {$a$};
 		\node[above] at (7.5,5) {$b$};
 		
-		\end{tikzpicture}
+	\end{tikzpicture}
 \end{image}
 
 
+\begin{uitkomst}
+Deze figuur toont waarom voor elke $a,b \in \R^+_0$ geldt dat $(a+b)^2 = a^2 + 2ab + b^2$.
 
-\(\answer[onlineshowanswerbutton]{\text{Voor elke $a,b \in \R^+_0$ is $(a+b)^2 = a^2 + 2ab + b^2$}}\)
+Inderdaad, want het grote vierkant heeft zijde $a+b$, en dus oppervlakte $(a+b)^2$. 
+En het bestaat uit twee kleinere vierkanten met oppervlaktes respectievelijk $a^2$ en $b^2$, en twee keer een rechthoek met oppervalkte $ab$.
+De totale oppervlakte is dus $a^2+b^2+2ab$
+\\
+Dit bewijst de gelijkheid $(a+b)^2 = a^2 + 2ab + b^2$
+\end{uitkomst}
 
 \end{exercise}
 \end{Uitbreiding}
@@ -100,13 +111,11 @@ Hieronder staat een bewijs zonder woorden van een merkwaardig product. Formuleer
 
 \begin{exercise}
 Ontbind telkens de veelterm zo ver mogelijk in factoren. Ga algebraïsch te werk en schrijf jouw redenering uit.  
-\begin{multicols}{2}
 
-	\begin{question} $x^4+1$         \(=\answer[onlineshowanswerbutton]{(x^2+\sqrt{2}\,x+1)(x^2-\sqrt{2}\,x+1)                                                    } \) \end{question}
-	\begin{question} $x^4 + x^2 + 1$ \(=\answer[onlineshowanswerbutton]{(x^2+x+1)(x^2-x+1)                                                                        } \) \end{question}
-	\begin{question} $x^5-1$         \(=\answer[onlineshowanswerbutton]{(x-1)\left(x^2+\frac{1+\sqrt{5}}{2}\,x+1\right)\left(x^2+\frac{1-\sqrt{5}}{2}\,x+1\right) } \) \end{question}
-	\begin{question} $x^5+1$         \(=\answer[onlineshowanswerbutton]{(x-1)\left(x^2-\frac{1+\sqrt{5}}{2}\,x+1\right)\left(x^2-\frac{1-\sqrt{5}}{2}\,x+1\right) } \) \end{question}
-\end{multicols}
+	\begin{question} $x^4+1$         \begin{uitkomst} \((x^2+\sqrt{2}\,x+1)(x^2-\sqrt{2}\,x+1)                                                    \) \end{uitkomst} \end{question}
+	\begin{question} $x^4 + x^2 + 1$ \begin{uitkomst} \((x^2+x+1)(x^2-x+1)                                                                        \) \end{uitkomst} \end{question}
+	\begin{question} $x^5-1$         \begin{uitkomst} \((x-1)\left(x^2+\frac{1+\sqrt{5}}{2}\,x+1\right)\left(x^2+\frac{1-\sqrt{5}}{2}\,x+1\right) \) \end{uitkomst} \end{question}
+	\begin{question} $x^5+1$         \begin{uitkomst} \((x-1)\left(x^2-\frac{1+\sqrt{5}}{2}\,x+1\right)\left(x^2-\frac{1-\sqrt{5}}{2}\,x+1\right) \) \end{uitkomst} \end{question}
 \end{exercise}
 
 	
@@ -118,13 +127,13 @@ Zij $A(x)$ een willekeurige veelterm met gehele coëfficiënten en met hoogstegr
 \begin{Uitbreiding}
 \begin{exercise}
 Toon telkens de veeltermgelijkheid aan. Hierbij is $a$ een willekeurig reëel getal en $n \in \N_0$.
-\begin{enumerate}
 
-\item
-$\D x^{n+1} - a^{n+1} = (x-a)(x^{n} + ax^{n-1} + a^2x^{n-2} + \dots + a^{n-2}x^2 + a^{n-1}x + a^{n})$
-\item
-$\D x^{2n+1} + a^{2n+1} = (x+a)(x^{2n} - ax^{2n-1} + a^2x^{2n-2} - a^3x^{2n-3} + \dots - a^{2n-1}x + a^{2n})$
-\end{enumerate}
+\begin{question}
+	$\D x^{n+1} - a^{n+1} = (x-a)(x^{n} + ax^{n-1} + a^2x^{n-2} + \dots + a^{n-2}x^2 + a^{n-1}x + a^{n})$
+\end{question}
+\begin{question}
+	$\D x^{2n+1} + a^{2n+1} = (x+a)(x^{2n} - ax^{2n-1} + a^2x^{2n-2} - a^3x^{2n-3} + \dots - a^{2n-1}x + a^{2n})$
+\end{question}
 \end{exercise}
 
 \begin{exercise}
@@ -184,27 +193,28 @@ Toon aan dat $A\left(\frac{p}{q}\right) = 0$ leidt tot $p \mid a_0q^n$ en $q \mi
 \end{exercise}
 \end{Uitbreiding}
 
-\begin{exercise}[\bf \ref{antw4.17}.]\setcounter{enumi}{17} 
+\begin{exercise}
 Bepaal algebraïsch alle reële getallen $x$ waarvoor geldt dat 
 \[
 x^3-288x^2-282x  = 2023.
 \]
 Schrijf alle tussenstappen op.
-\(\answer[onlineshowanswerbutton]{x=289}\)
+Antwoord: \( x = \answer[onlineshowanswerbutton]{289}\)
 \end{exercise}
 
-\begin{exercise}[\bf \ref{antw4.18}.]\setcounter{enumi}{18} 
+\begin{exercise}
 Bepaal algebraïsch alle nulwaarden van de veelterm
 \[
 A(x) = x^6 + x^4 + x^2 + 1.
 \]
 Schrijf alle tussenstappen op.
-\(\answer[onlineshowanswerbutton]{ \text{geen reële oplossingen}}\)
+Antwoord: \(x = \answer[onlinenoinput]{ \text{ (er zijn geen reële nulwaarden)}}\)
 \end{exercise}
 
-\begin{exercise}[\bf \ref{antw4.19}.]\setcounter{enumi}{19} 
+\begin{exercise}
 Bepaal een veelterm met gehele coëfficiënten waarvan $\sqrt{3+\sqrt{17}}$ een nulwaarde is.
-\(\answer[onlineshowanswerbutton]{A(x)=x^4-6x^2-8}\)
+
+Antwoord: \(A(x) = \answer[onlineshowanswerbutton]{x^4-6x^2-8}\)
 \end{exercise}
 
 \begin{Uitbreiding}
@@ -228,7 +238,4 @@ Toon op een gelijkaardige manier aan dat de volgende reële getallen irrationaal
 \end{exercise}
 \end{Uitbreiding}
 
-%%% \clearpage
-
-%%% \backmatter
 \end{document}
