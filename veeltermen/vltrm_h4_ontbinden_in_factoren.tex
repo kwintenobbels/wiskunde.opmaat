@@ -216,6 +216,66 @@ Bijgevolg kan de veelterm ontbonden worden: \( (x+3)\underbrace{(2x^2-5x+7)}_{D 
 
 \end{example} 
 
+\begin{example}  Ontbind de veelterm $p(x)=x^3-7x-6$ in factoren van zo laag mogelijke graad.
+    \begin{oplossing}[toon]
+        We zoeken eerst een nulpunt van de gegeven veelterm. We gaan na of $p(x)$ een geheel nulpunt $a$ heeft.
+        Hiervoor moet $a$ een deler zijn van de constante term. De mogelijkheden zijn dus $1,-1,2,-2,3,-3,6,-6$.
+         
+        We berekenen $p(1)=1-7-6\neq0, p(2) = 8 - 14 - 6\neq 0$, maar $p(3)=27-21-6=0$.
+         
+        Er bestaat dus zeker een veelterm $q(x)$ zodat $x^3-7x-6=(x-3)q(x)$.
+         
+        Deze veelterm  $q(x)$ kan je berekenen met de Euclidische Deling:
+         
+        \begin{image}
+            \begin{tikzpicture}
+            \node[anchor=west] at (0,0) {$1x^3$};
+            \node[anchor=west] at (1,0) {$+$};
+            \node[anchor=west] at (2,0) {$0x^2$};
+            \node[anchor=west] at (3,0) {$-$};
+            \node[anchor=west] at (4,0) {$7x$};
+            \node[anchor=west] at (5,0) {$-$};
+            \node[anchor=west] at (6,0) {$6$};
+            \node[anchor=west] at (0,-0.5) {$1x^3$};
+            \node[anchor=west] at (1,-0.5) {$-$};
+            \node[anchor=west] at (2,-0.5) {$3x^2$};
+            \draw (0,-0.8) -- (2.8,-0.8);
+            \draw (-0.3,-0.8) -- (-0.1,-0.8);
+            \node[anchor=west] at (2,-1) {$3x^2$};
+            \node[anchor=west] at (3,-1) {$-$};
+            \node[anchor=west] at (4,-1) {$7x$};
+            \node[anchor=west] at (5,-1) {$-$};
+            \node[anchor=west] at (6,-1) {$6$};
+            \node[anchor=west] at (2,-1.5) {$3x^2$};
+            \node[anchor=west] at (3,-1.5) {$-$};
+            \node[anchor=west] at (4,-1.5) {$9x$};
+            \draw (2,-1.8) -- (4.8,-1.8);
+            \draw (1.8,-1.8) -- (1.95,-1.8);
+            \node[anchor=west] at (4,-2) {$2x$};
+            \node[anchor=west] at (5,-2) {$-$};
+            \node[anchor=west] at (6,-2) {$6$};
+            \node[anchor=west] at (4,-2.5) {$2x$};
+            \node[anchor=west] at (5,-2.5) {$-$};
+            \node[anchor=west] at (6,-2.5) {$6$};
+            \draw (3,-2.8) -- (6.8,-2.8);
+            \draw (2.8,-2.8) -- (2.95,-2.8);
+            \node[anchor=west] at (6,-3) {$0$};
+            \draw (7,-0.2) -- (10,-0.2);
+            \draw (7,0.2) -- (7,-3.2);
+            \node[anchor=west] at (7.1,0) {$x-3$};
+            \node[anchor=west] at (7.1,-0.5) {$x^2+3x+2$};
+            \end{tikzpicture}
+        \end{image}
+         
+        Hieruit volgt dat $x^3-7x-6 = (x-3)(x^2+3x+2)$. Nu gaan we na of de factor  $x^2+3x+2$ nog verder kan worden ontbonden. De discriminant in positief, en de nulpunten zijn: $x_{1,2} = \dfrac{-3\pm\sqrt{9-8}}{2} = -2,-1$.
+         
+        We vinden de ontbinding $x^3-7x-6=(x-3)(x+1)(x+2)$.
+        \\
+        \\
+        Merk op: in dit geval had je ook voor de overige delers van de constante term 6 de getalwaarde van $p(x)$ kunnen berekenen, en vinden dat $p(-1)=-1+7-6=0$ en ook $p(-2)=-8+14-6=0$. De drie nulpunten van $p(x)$ zijn dus $3,-1$ en $-2$, en daaruit volgt ook dadelijk de ontbinding $x^3-7x-6=(x-3)(x+1)(x+2)$. Dat werkt hier omdat \textit{alle} nulpunten geheel zijn, de methode met de discriminant werkt ook voor niet-gehele nulpunten.
+         
+    \end{oplossing}
+\end{example}
 
 
 

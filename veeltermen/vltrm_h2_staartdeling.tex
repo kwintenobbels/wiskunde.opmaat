@@ -113,7 +113,7 @@ Hieronder leer je om een deling van veeltermen -met het algoritme van de staartd
 	
 
 
-	Het volgende voorbeeld gaat voor twee gegeven veeltermen deelbaarheid met de staartdeling na: 
+	Het volgende voorbeelden gaan voor twee gegeven veeltermen deelbaarheid met de staartdeling na: 
 
 
 	\begin{example} 
@@ -226,7 +226,160 @@ b & = -5.
 \end{example} 
 	
 	
-
+\begin{example}  Deel $2x^3-8$ door $x+2$.
+    \begin{oplossing}[toon] \nl
+    \begin{image}[\width]
+        \begin{tikzpicture}
+            \node[anchor=west] at (0,0) {$2x^3$};
+            \node[anchor=west] at (1,0) {$+$};
+            \node[anchor=west] at (2,0) {$0x^2$};
+            \node[anchor=west] at (3,0) {$+$};
+            \node[anchor=west] at (4,0) {$0x$};
+            \node[anchor=west] at (5,0) {$-$};
+            \node[anchor=west] at (6,0) {$8$};
+            \node[anchor=west] at (0,-0.5) {$2x^3$};
+            \node[anchor=west] at (1,-0.5) {$+$};
+            \node[anchor=west] at (2,-0.5) {$4x^2$};
+            \draw (0,-0.8) -- (2.8,-0.8);
+            \draw (-0.3,-0.8) -- (-0.1,-0.8);
+            \node[anchor=west] at (1,-1) {$-$};
+            \node[anchor=west] at (2,-1) {$4x^2$};
+            \node[anchor=west] at (3,-1) {$+$};
+            \node[anchor=west] at (4,-1) {$0x$};
+            \node[anchor=west] at (5,-1) {$-$};
+            \node[anchor=west] at (6,-1) {$8$};
+            \node[anchor=west] at (1,-1.5) {$-$};
+            \node[anchor=west] at (2,-1.5) {$4x^2$};
+            \node[anchor=west] at (3,-1.5) {$-$};
+            \node[anchor=west] at (4,-1.5) {$8x$};
+            \draw (1,-1.8) -- (4.8,-1.8);
+            \draw (0.8,-1.8) -- (0.95,-1.8);
+            \node[anchor=west] at (4,-2) {$8x$};
+            \node[anchor=west] at (5,-2) {$-$};
+            \node[anchor=west] at (6,-2) {$8$};
+            \node[anchor=west] at (4,-2.5) {$8x$};
+            \node[anchor=west] at (5,-2.5) {$+$};
+            \node[anchor=west] at (6,-2.5) {$16$};
+            \draw (3,-2.8) -- (6.8,-2.8);
+            \draw (2.8,-2.8) -- (2.95,-2.8);
+            \node[anchor=west] at (5,-3) {$-$};
+            \node[anchor=west] at (6,-3) {$24$};
+            \draw (7,-0.2) -- (10,-0.2);
+            \draw (7,0.2) -- (7,-3.2);
+            \node[anchor=west] at (7.1,0) {$x+2$};
+            \node[anchor=west] at (7.1,-0.5) {$2x^2-4x+8$};
+        \end{tikzpicture}
+    \end{image}
+  
+     Besluit: $2x^3-8=(2x^2-4x+8)(x+2)-24$
+    \end{oplossing}
+\end{example}
+ 
+\begin{example} Deel $-x^3+9x+2$ door $x+4$.
+    \begin{oplossing}[toon] \nl
+        \begin{image}[\width]
+        \begin{tikzpicture}
+        \node[anchor=west] at (0,0) {$-$};
+        \node[anchor=west] at (1,0) {$x^3$};
+        \node[anchor=west] at (2,0) {$+$};
+        \node[anchor=west] at (3,0) {$0x^2$};
+        \node[anchor=west] at (4,0) {$+$};
+        \node[anchor=west] at (5,0) {$9x$};
+        \node[anchor=west] at (6,0) {$+$};
+        \node[anchor=west] at (7,0) {$2$};
+        \node[anchor=west] at (0,-0.5) {$-$};
+        \node[anchor=west] at (1,-0.5) {$x^3$};
+        \node[anchor=west] at (2,-0.5) {$-$};
+        \node[anchor=west] at (3,-0.5) {$4x^2$};
+        \draw (0,-0.8) -- (3.8,-0.8);
+        \draw (-0.3,-0.8) -- (-0.1,-0.8);
+        \node[anchor=west] at (3,-1) {$4x^2$};
+        \node[anchor=west] at (4,-1) {$+$};
+        \node[anchor=west] at (5,-1) {$9x$};
+        \node[anchor=west] at (6,-1) {$+$};
+        \node[anchor=west] at (7,-1) {$2$};
+        \node[anchor=west] at (3,-1.5) {$4x^2$};
+        \node[anchor=west] at (4,-1.5) {$+$};
+        \node[anchor=west] at (5,-1.5) {$16x$};
+        \draw (3,-1.8) -- (5.8,-1.8);
+        \draw (2.8,-1.8) -- (2.95,-1.8);
+        \node[anchor=west] at (4,-2) {$-$};
+        \node[anchor=west] at (5,-2) {$7x$};
+        \node[anchor=west] at (6,-2) {$+$};
+        \node[anchor=west] at (7,-2) {$2$};
+        \node[anchor=west] at (4,-2.5) {$-$};
+        \node[anchor=west] at (5,-2.5) {$7x$};
+        \node[anchor=west] at (6,-2.5) {$-$};
+        \node[anchor=west] at (7,-2.5) {$28$};
+        \draw (3,-2.8) -- (7.8,-2.8);
+        \draw (2.8,-2.8) -- (2.95,-2.8);
+        \node[anchor=west] at (7,-3) {$30$};
+        \draw (8,-0.2) -- (11,-0.2);
+        \draw (8,0.2) -- (8,-3.2);
+        \node[anchor=west] at (8.1,0) {$x+4$};
+        \node[anchor=west] at (8.1,-0.5) {$-x^2+4x-7$};
+        \end{tikzpicture}
+    \end{image}
+ 
+    Besluit: $-x^3+9x+2=(-x^2+4x-7)(x+4)+30$
+    \end{oplossing}
+\end{example}
+ 
+% Mmm, misschien beter een voorbeeld zonder breuken, en breuken laten tot in de oefeningen?
+\begin{example} Deel $4x^4+x^3+2x+1$ door $2x^2+1$.
+    \begin{oplossing}[toon] \nl
+        \begin{image}[\width]
+            \begin{tikzpicture}
+            \node[anchor=west] at (0,0) {$4x^4$};
+            \node[anchor=west] at (1,0) {$+$};
+            \node[anchor=west] at (2,0) {$x^3$};
+            \node[anchor=west] at (3,0) {$+$};
+            \node[anchor=west] at (4,0) {$0x^2$};
+            \node[anchor=west] at (5,0) {$+$};
+            \node[anchor=west] at (6,0) {$2x$};
+            \node[anchor=west] at (7,0) {$+$};
+            \node[anchor=west] at (8,0) {$1$};
+            \node[anchor=west] at (0,-0.5) {$4x^4$};
+            \node[anchor=west] at (3,-0.5) {$+$};
+            \node[anchor=west] at (4,-0.5) {$2x^2$};
+            \draw (0,-0.8) -- (4.8,-0.8);
+            \draw (-0.3,-0.8) -- (-0.1,-0.8);
+            \node[anchor=west] at (2,-1) {$x^3$};
+            \node[anchor=west] at (3,-1) {$-$};
+            \node[anchor=west] at (4,-1) {$2x^2$};
+            \node[anchor=west] at (5,-1) {$+$};
+            \node[anchor=west] at (6,-1) {$2x$};
+            \node[anchor=west] at (7,-1) {$+$};
+            \node[anchor=west] at (8,-1) {$1$};
+            \node[anchor=west] at (2,-1.5) {$x^3$};
+            \node[anchor=west] at (5,-1.5) {$+$};
+            \node[anchor=west] at (6,-1.5) {$\tfrac12 x$};
+            \draw (2,-1.8) -- (6.8,-1.8);
+            \draw (1.8,-1.8) -- (1.95,-1.8);
+            \node[anchor=west] at (3,-2) {$-$};
+            \node[anchor=west] at (4,-2) {$2x^2$};
+            \node[anchor=west] at (5,-2) {$+$};
+            \node[anchor=west] at (6,-2) {$\tfrac32 x$};
+            \node[anchor=west] at (7,-2) {$+$};
+            \node[anchor=west] at (8,-2) {$1$};
+            \node[anchor=west] at (3,-2.5) {$-$};
+            \node[anchor=west] at (4,-2.5) {$2x^2$};
+            \node[anchor=west] at (7,-2.5) {$-$};
+            \node[anchor=west] at (8,-2.5) {$1$};
+            \draw (3,-2.8) -- (8.8,-2.8);
+            \draw (2.8,-2.8) -- (2.95,-2.8);
+            \node[anchor=west] at (6,-3) {$\tfrac32 x$};
+            \node[anchor=west] at (7,-3) {$+$};
+            \node[anchor=west] at (8,-3) {$2$};
+            \draw (9,-0.2) -- (12,-0.2);
+            \draw (9,0.2) -- (9,-3.2);
+            \node[anchor=west] at (9.1,0) {$2x^2+1$};
+            \node[anchor=west] at (9.1,-0.5) {$2x^2+\tfrac12 x-1$};
+            \end{tikzpicture}
+        \end{image}
+    Besluit: $4x^4+x^3+2x+1= \left(2x^2+\frac{1}{2}x-1\right)(2x^2+1)+\left(\frac{3}{2}x+2\right)$
+    \end{oplossing}
+\end{example}
 
 
 

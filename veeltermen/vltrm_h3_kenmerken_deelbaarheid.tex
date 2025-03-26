@@ -50,6 +50,56 @@ Wegens de reststelling geldt:
 
 \end{expandable}
 
+
+
+
+\begin{example} 
+	Bepaal alle gehele $a$ zodat  $p(x) = x^4-10x^2+9$ deelbaar is door $x-a$.
+	 
+	We moeten dus alle gehele nulpunten van $p(x)$ bepalen. Uit vorige eigenschap volgt dat enkel gehele delers van de constante term in aanmerking komen, dus $\pm1,\pm3,\pm9$:
+	 
+	\renewcommand{\bullet}{}   % Willen we bullets hier? Deze hack werkt niet in html ...
+	\[
+	%\hspace{-7.6cm} ????
+	\begin{array}{lr@{\,}c@{\,}lcl@{}c@{}r@{}c@{\ }c@{\ }l}
+	\bullet&p(x)&\textrm{ is deelbaar door }   &(x-1)&\textrm{ omdat }&p&(& 1&)&=   &0\\
+	\bullet&p(x)&\textrm{ is deelbaar door }   &(x+1)&\textrm{ omdat }&p&(&-1&)&=   &0\\
+	\bullet&p(x)&\textrm{ is deelbaar door }    &(x-3)&\textrm{ omdat }&p&(& 3&)&=   &0\\
+	\bullet&p(x)&\textrm{ is deelbaar door }   &(x+3)&\textrm{ omdat }&p&(&-3&)&=   &0\\
+	%\bullet&(x-5)&\nmid&p(x)&\textrm{ omdat }&p&(& 5&)&\neq&0\\
+	\bullet&p(x)&\textrm{ is niet deelbaar door }&(x-9)&\textrm{ omdat }&p&(& 9&)&\neq&0\\
+	\bullet&p(x)&\textrm{ is niet deelbaar door }&(x+9)&\textrm{ omdat }&p&(&-9&)&\neq&0.
+	\end{array}
+	\]
+	 
+	%We vinden hier 4 delers van de vorm $x-a$. Een 4de-graadsveelterm kan maximaal 4 delers van de vorm $x-a$ hebben. $(x-1)(x+1)(x-3)(x+3) = x^4-10x^2+9$, dus we hebben de veelterm $x^4-10x^2+9$ volledig ontbonden in factoren.
+\end{example}
+	 
+\begin{example} 
+	Bepaal alle gehele $a$ zodat  $p(x) =x^3-2x^2+x-2$ deelbaar is door $x-a$.
+		
+	We moeten dus alle gehele nulpunten van $p(x)$ bepalen. Uit vorige eigenschap volgt dat enkel delers van de constante term in aanmerking komen, dus $\pm1$ en $\pm2$:
+		
+	\renewcommand{\bullet}{}   % Willen we bullets hier? Deze hack werkt niet in html ...
+	\[
+	%\hspace{-7.6cm} ????
+	\begin{array}{lr@{\,}c@{\,}lcl@{}c@{}r@{}c@{\ }c@{\ }l}
+	\bullet&p(x)&\textrm{ is niet deelbaar door }  &(x-1)&\textrm{ omdat }&p&(& 1&)&\neq   &0\\
+	\bullet&p(x)&\textrm{ is niet deelbaar door }  &(x+1)&\textrm{ omdat }&p&(&-1&)&\neq   &0\\
+	\bullet&p(x)&\textrm{ is deelbaar door }    &(x-2)&\textrm{ omdat }&p&(& 2&)&=   &0\\
+	\bullet&p(x)&\textrm{ is niet deelbaar door }    &(x+2)&\textrm{ omdat }&p&(&-2&)&\neq   &0.
+	\end{array}
+	\]
+	We vinden enkel dat $p(x)$ deelbaar is door $x-2$. Het quotiënt van de deling van $x^3-2x^2+x-2$ door $x-2$ kunnen we bepalen met het algoritme van de \hyperref[euclidische deling: algoritme]{Euclidische deling}.
+	%In dit speciale geval van een deler van de eerste graad is het \hyperref[xim:horner]{rekenschema van Horner} een alternatieve manier om het quotiënt te bepalen.
+\end{example}
+
+
+
+
+
+
+
 Bij veeltermen met parameters hangt de deelbaarheid af van de waarden van de parameters. Zoals volgend voorbeeld aantoond kan het bepalen van deze waarden aanleiding geven tot een vergelijking. Verwacht wordt dat je vlot eerstegraads-, tweedegraads- en bikwadratische vergelijkingen kan oplossen waarbij je jouw redenering correct kan opschrijven. 
 
 \begin{example} 
