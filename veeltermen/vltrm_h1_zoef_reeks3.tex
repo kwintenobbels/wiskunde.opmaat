@@ -88,35 +88,62 @@ Van een rechthoekig stuk karton met afmetingen $20\:\text{cm}$ op $10\:\text{cm}
 \medskip
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\psset{xunit=1cm,yunit=1cm}
-\begin{pspicture}(0,-1)(6,4)% co linksonder, co rechtsboven
-\psline[](0,0)(6,0)(6,3)(0,3)(0,0)
+% KOEN ZIJN PSTRIKS; TIKZPICTURE VOOR GEMAAKT 
+% \begin{center}
+% \psset{xunit=1cm,yunit=1cm}
+% \begin{pspicture}(0,-1)(6,4)% co linksonder, co rechtsboven
+% \psline[](0,0)(6,0)(6,3)(0,3)(0,0)
 
-\psline[linestyle=dashed](0,0.5)(6,0.5)
-\psline[linestyle=dashed](0,2.5)(6,2.5)
-\psline[linestyle=dashed](0.5,0)(0.5,3)
-\psline[linestyle=dashed](5.5,0)(5.5,3)
+% \psline[linestyle=dashed](0,0.5)(6,0.5)
+% \psline[linestyle=dashed](0,2.5)(6,2.5)
+% \psline[linestyle=dashed](0.5,0)(0.5,3)
+% \psline[linestyle=dashed](5.5,0)(5.5,3)
 
-\psline[linecolor=blue]{<->}(0,3.5)(6,3.5)
-\uput[u](3,3.5){\color{blue}\SI{20}{\cm}}
+% \psline[linecolor=blue]{<->}(0,3.5)(6,3.5)
+% \uput[u](3,3.5){\color{blue}\SI{20}{\cm}}
 
-\psline[linecolor=blue]{<->}(-0.5,0)(-0.5,3)
-\uput[l](-0.5,1.5){\color{blue}\SI{10}{\cm}}
+% \psline[linecolor=blue]{<->}(-0.5,0)(-0.5,3)
+% \uput[l](-0.5,1.5){\color{blue}\SI{10}{\cm}}
 
-\psline[linecolor=red]{<->}(0,-0.5)(0.5,-0.5)
-\uput[d](0.25,-0.5){\color{red}$x$}
+% \psline[linecolor=red]{<->}(0,-0.5)(0.5,-0.5)
+% \uput[d](0.25,-0.5){\color{red}$x$}
 
-\psline[linecolor=red]{<->}(5.5,-0.5)(6,-0.5)
-\uput[d](5.75,-0.5){\color{red}$x$}
+% \psline[linecolor=red]{<->}(5.5,-0.5)(6,-0.5)
+% \uput[d](5.75,-0.5){\color{red}$x$}
 
-\psline[linecolor=red]{<->}(6.5,0)(6.5,0.5)
-\uput[r](6.5,0.25){\color{red}$x$}
+% \psline[linecolor=red]{<->}(6.5,0)(6.5,0.5)
+% \uput[r](6.5,0.25){\color{red}$x$}
 
-\psline[linecolor=red]{<->}(6.5,2.5)(6.5,3)
-\uput[r](6.5,2.75){\color{red}$x$}
-\end{pspicture}
-\end{center}
+% \psline[linecolor=red]{<->}(6.5,2.5)(6.5,3)
+% \uput[r](6.5,2.75){\color{red}$x$}
+% \end{pspicture}
+% \end{center}
+
+\begin{image}
+\begin{tikzpicture}[x=1cm,y=1cm]
+
+	% Rectangle
+	\draw (0,0) rectangle (6,3);
+	
+	% Dashed lines
+	\draw[dashed] (0,0.5) -- (6,0.5);
+	\draw[dashed] (0,2.5) -- (6,2.5);
+	\draw[dashed] (0.5,0) -- (0.5,3);
+	\draw[dashed] (5.5,0) -- (5.5,3);
+	
+	% Blue double arrows for dimensions
+	\draw[<->,blue] (0,3.5) -- (6,3.5); %node[midway, above]{\SI{20}{\cm}};
+	\draw[<->,blue] (-0.5,0) -- (-0.5,3); % node[midway, left]{\SI{10}{\cm}};
+	
+	% Red arrows for x distances
+	\draw[<->,red] (0,-0.5) -- (0.5,-0.5) node[midway, below] {$x$};
+	\draw[<->,red] (5.5,-0.5) -- (6,-0.5) node[midway, below] {$x$};
+	\draw[<->,red] (6.5,0) -- (6.5,0.5) node[midway, right] {$x$};
+	\draw[<->,red] (6.5,2.5) -- (6.5,3) node[midway, right] {$x$};
+	
+\end{tikzpicture}
+\end{image}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{exercise}
 

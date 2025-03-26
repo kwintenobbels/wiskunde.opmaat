@@ -40,7 +40,7 @@ De bewerkingen
 
 hebben iets gemeen: ze zijn allemaal van de vorm $2\cdot \square^5$ waarbij $\square$ een reëel getal voorstelt. Het is gebruikelijk om in plaats van het symbool $\square$ een Latijnse letter $x$ als \textit{ variabele} te gebruiken. Uitdrukkingen van deze vorm noemt men \textit{ eentermen in $x$}. Het symbool $\cdot$ voor de vermenigvuldiging wordt meestal weggelaten. 
 
-Het is gebruikelijk om een éénterm te noteren met een Latijnse hoofdletter $A$ of $B$. Om te beklemtonen dat de variabele van de eenterm gelijk aan $x$  is wordt de schrijfwijze $A(x)$ of $B(x)$ veel gebruikt. De eenterm hierboven kan dus geschreven worden als $A(x) = 2x^5$ en dit veralgemenen leidt tot volgende definitie:
+Het is gebruikelijk om een éénterm te noteren met een Latijnse hoofdletter $A$ of $B$. Om te beklemtonen dat de variabele van de eenterm gelijk aan $x$  is wordt de schrijfwijze $A(x)$ of $B(x)$ veel gebruikt. De eenterm hierboven kan dus in het algemeen geschreven worden als $A(x) = 2x^5$.
 
 % IN DE REST VAN DE CURSUS WORDT DE TERM ARGUMENT NIET GEBRUIKT --> WE KIEZEN OM HET WEG TE LATEN. 
 
@@ -111,11 +111,11 @@ Hierbij is $a,r \in \R$ en $n \in \N$, waarbij het geval $r = n = 0$ uitgesloten
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
-\begin{expandable}{remark}
-In hogere wiskunde stelt men $\gr 0 = - \infty$ omdat op deze manier rekenregels in verband met de graad van een eenterm geldig blijven, bijvoorbeeld 
-\textit{ de graad van het product van twee reële eentermen is gelijk aan de som van de graden van die eentermen}. Daarvoor verwijzen we naar Oefening \ref{oefgraadnulveelterm} op het einde van dit hoofdstuk.
-\end{expandable}
+% DEZE OPMERKING IN COMMENTAAR --> kijken naar de ofeningen waar dit gebruikt wordt --> 1 oefening op einde dit hoofdstuk 
+% \begin{expandable}{remark}
+% In hogere wiskunde stelt men $\gr 0 = - \infty$ omdat op deze manier rekenregels in verband met de graad van een eenterm geldig blijven, bijvoorbeeld 
+% \textit{ de graad van het product van twee reële eentermen is gelijk aan de som van de graden van die eentermen}. Daarvoor verwijzen we naar Oefening \ref{oefgraadnulveelterm} op het einde van dit hoofdstuk.
+% \end{expandable}
 
 
 % dit moet afspraak of conventie worden 
@@ -156,12 +156,12 @@ Je kan telkens eenvoudig de coëeficiënt van een éénterm bepalen. Een éénte
 
 \begin{example} 
 % We vereenvoudigen de onderstaande eentermen, geven telkens de coëeficiënt en vermelden ook of de eenterm al dan niet behoort tot de verzameling van de reële getallen.
-\begin{itemize}
-\item  $A(x) = \sqrt{2}\cdot x \cdot x \cdot x = \sqrt{2}\cdot x^3$  met coëfficiënt $\sqrt{2}$, en $A(x) \not\in \R$
-\item  $B(x) = 541x^0 = 541$                                         met coëfficiënt $541$, en $B(x) \in \R$ 
-\item  $\D C(x) = -\frac{4}{7}\,x^1 = -\frac{4}{7}\,x$               met coëfficiënt $\D -\frac{4}{7}$, en $C(x) \not\in \R$
-\item  $D(x) = 0 x^{2024} = 0$                                       met coëfficiënt $0$, en $D(x) \in \R$ 
-\end{itemize}
+\begin{tabular}{lll}
+ $A(x) = \sqrt{2}\cdot x \cdot x \cdot x = \sqrt{2}\cdot x^3$  & met coëfficiënt $\sqrt{2}$         & en $A(x) \not\in \R$ \\
+ $B(x) = 541x^0 = 541$                                         & met coëfficiënt $541$              & en $B(x) \in \R$  \\
+ $\D C(x) = -\frac{4}{7}\,x^1 = -\frac{4}{7}\,x$               & met coëfficiënt $\D -\frac{4}{7}$  & en $C(x) \not\in \R$ \\
+ $D(x) = 0 x^{2024} = 0$                                       & met coëfficiënt $0$                & en $D(x) \in \R$  \\
+\end{tabular}
 \end{example} 
 
 
@@ -195,7 +195,7 @@ Dan zijn $A(x)$ en $B(x)$ gelijksoortig. Omdat $C(x) = 0 = Q(x)$ zijn ook $C(x)$
 Ook $D(x)$ en $P(x)$ zijn gelijksoortig want $D(x) = 2^9 \cdot x^0$ en $P(x) = \pi \cdot x^0$.  
 \end{example} 
 
-De gelijkheid van eentermen wordt bepaald door de coëeficiënten én de graden: 
+% De gelijkheid van eentermen wordt bepaald door de coëeficiënten én de graden: 
 \begin{example} 
 Wegens de coëeficiënt gelijk aan nul geldt de gelijkheid $0x^{2024} = 0x^{2025}$. Stel $\sqrt{2}\,x^n = bx^{35}$ dan is $n = 35$ en $b = \sqrt{2}$.
 \end{example} 

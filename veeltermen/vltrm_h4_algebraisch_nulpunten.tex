@@ -30,22 +30,17 @@ A(x) \cdot B(x) = 0 \quad \Leftrightarrow \quad A(x) = 0 \,\, \text{ of } \,\, B
 
 We bepalen telkens algebraïsch de nulwaarden van de veelterm.
 
-\begin{enumerate}[(a)]
-\item
-$\D \mph{\Leftrightarrow \quad} x^4-34x^2-2x^3-2x-35 = 0$ 
-\item[]
-$\D \Leftrightarrow \quad \underbrace{x^4 - 2x^3 - 34x^2 - 2x - 35}_{A(x)} = 0$ \quad termen herschikken
-\item[]
+
+\begin{question} \( x^4-34x^2-2x^3-2x-35 = 0 \)
+
+Na herschikken van de termen is dit gelijk aan $\underbrace{x^4 - 2x^3 - 34x^2 - 2x - 35}_{A(x)} = 0$. 
 \renewcommand{\kolbreed}{\widthof{$-35$}}
-$\D \mph{\Leftrightarrow \quad}
-\begin{array}{|l}
-\hline
-\vrule height 0.5cm width 0cm
-\text{ kanshebbers gehele nulwaarden: delers van de constante term $-35$
-} \\[0.1cm]
-\text{ ICT: } A(7) = 0 \text{ en } A(-5) = 0 \text{ dus $A(x)$ is deelbaar door $(x-7)(x+5)$} \\[0.1cm]
-\text{ schema's van Horner:} \\[0.1cm]
-\qquad
+
+
+Delers van de constante term $-35$ zijn kanshebbers gehele nulwaarden. Met ICT vinden we: \(A(7) = 0 \text{ en } A(-5) = 0 \text{ dus $A(x)$ is deelbaar door} $(x-7)(x+5)$ \). Het schema van horner tweemaal uitvoeren levert: 
+
+\tikzit{
+\(
 \begin{array}{c|HHHHH}
 	& 1 & -2 & -34 & -2 & -35 \\[0.2cm]
 7 & \downarrow  & 7  & 35  & 7 & 35  \\[0.2cm]
@@ -56,33 +51,32 @@ $\D \mph{\Leftrightarrow \quad}
 \cline{1-5}
 \vrule height 1.2em width 0pt
 	& 1 & 0 & 1 & \multicolumn{1}{|c}{0} 
-\end{array} \\[-0.2cm]
-\mbox{}\\
-\hline
+\end{array} 
+\)
+}
+
+De veelterm kan dus als volgt ontbonden worden: 
+\(
+\begin{array}
+\D x^4 - 2x^3 - 34x^2 - 2x - 35 & \Leftrightarrow \quad (x-7)(x+5)(x^2+1) = 0 \\
+\D & \Leftrightarrow \quad x - 7 = 0 \,\, \text{ of } \,\,  x + 5 = 0 \,\, \text{ of } \,\, x^2 + 1 = 0 \\
+\D & \Leftrightarrow \quad x = 7 \,\, \text{ of } \,\,  x = -5 \,\, \text{ of } \,\, \underbrace{x^2}_{\geq 0} = \underbrace{-1}_{< 0} \quad \text{oplossingsverzameling} V = \{7,-5\}
 \end{array}
-$ 
-\item[]
-$\D \Leftrightarrow \quad (x-7)(x+5)(x^2+1) = 0$
-\item[]
-$\D \Leftrightarrow \quad x - 7 = 0 \,\, \text{ of } \,\,  x + 5 = 0 \,\, \text{ of } \,\, x^2 + 1 = 0$
-\item[]
-$\D \Leftrightarrow \quad x = 7 \,\, \text{ of } \,\,  x = -5 \,\, \text{ of } \,\, \underbrace{x^2}_{\geq 0} = \underbrace{-1}_{< 0}$ 
-\quad oplossingsverzameling $V = \{7,-5\}$
-\item
-$\D \mph{\Leftrightarrow \quad} \frac{1}{25}\,x^4-\frac{9}{25}\,x^3+\frac{14}{25}\,x^2+\frac{7}{5}\,x-1 = 0$ 
-\item[]
-$\D \Leftrightarrow \quad \underbrace{x^4 - 9x^3 + 14x^2 + 35x - 25}_{A(x)} = 0$ \quad beide leden maal $25$
-\item[]
+\)
+
+\end{question} 
+$ \frac{1}{25}\,x^4-\frac{9}{25}\,x^3+\frac{14}{25}\,x^2+\frac{7}{5}\,x-1 = 0$ 
+
+Beide leden vermenigvuldigen met \(25\) levert $\D \underbrace{x^4 - 9x^3 + 14x^2 + 35x - 25}_{A(x)} = 0$. 
 \renewcommand{\kolbreed}{\widthof{$-25$}}
-$\D \mph{\Leftrightarrow \quad}
-\begin{array}{|l}
-\hline
-\vrule height 0.5cm width 0cm
-\text{ kanshebbers gehele nulwaarden: delers van de constante term $-25$
-} \\[0.1cm]
-\text{ ICT: } A(5) = 0 \text{ dus $A(x)$ is deelbaar door $x-5$} \\[0.1cm]
-\text{ schema's van Horner:} \\[0.1cm]
-\qquad
+
+
+
+Delers van de constante term $-25$ zijn kanshebbers gehele nulwaarden. Met ICT vinden we: \(A(5) = 0 \text{ dus $A(x)$ is deelbaar door} $(x-5)$ \). Het schema van horner tweemaal uitvoeren levert: 
+
+
+\tikzit{
+\(
 \begin{array}{c|HHHHH}
 	& 1 & -9 & 14 & 35 & -25 \\[0.2cm]
 5 & \downarrow  & 5  & -20  & -30 & 25  \\[0.2cm]
@@ -93,38 +87,21 @@ $\D \mph{\Leftrightarrow \quad}
 \cline{1-5}
 \vrule height 1.2em width 0pt
 	& 1 & 1 & -1 & \multicolumn{1}{|c}{0} 
-\end{array} \\[-0.2cm]
-\mbox{}\\
-\hline
 \end{array}
-$ 
-\item[]
-$\D \Leftrightarrow \quad (x-5)^2(x^2+x-1) = 0$
-\item[]
-$\D \Leftrightarrow \quad x - 5 = 0 \,\, \text{ of } \,\,  x^2+x-1 = 0$
-\item[]
-$\D \Leftrightarrow \quad x = 5 \,\, \text{ of } \,\,  x = \frac{-1 \pm \sqrt{5}}{2}$ \quad oplossingsverzameling $\D V = \left\{5,\frac{-1 + \sqrt{5}}{2},\frac{-1 - \sqrt{5}}{2} \right\}$
-\end{enumerate}
+\)
+}
+
+De veelterm kan dus als volgt ontbonden worden: 
+
+\(
+\begin{array}
+\D x^4 - 9x^3 + 14x^2 + 35x - 25 = 0 &\Leftrightarrow \quad (x-5)^2(x^2+x-1) = 0 \\
+\D &\Leftrightarrow \quad x - 5 = 0 \,\, \text{ of } \,\,  x^2+x-1 = 0 \\
+\D &\Leftrightarrow \quad x = 5 \,\, \text{ of } \,\,  x = \frac{-1 \pm \sqrt{5}}{2} \quad \text{oplossingsverzameling} \D V = \left\{5,\frac{-1 + \sqrt{5}}{2},\frac{-1 - \sqrt{5}}{2} \right\} \\
+\end{array}
+\)
 
 \end{example} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Elke veelterm $A(x)$ kan opgevat worden als het voorschrift van een functie, waarvan we de grafiek kunnen plotten. De snijpunten van die grafiek met de $x$-as komen dan overeen met de oplossingen van de vergelijking $A(x) = 0$, en dus met de nulwaarden van de veelterm. De ontbinding in factoren geeft de ligging van de grafiek ten opzichte van de $x$-as aan, en in welke punten de grafiek raakt aan de $x$-as. 
@@ -155,6 +132,36 @@ Gegeven is de functie $f$ met als voorschrift $f(x) = x^4 + x^3 - 13x^2-x$ waarv
 \end{pspicture}
 \end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{image}
+	
+	\begin{tikzpicture}[x=0.525cm, y=0.525cm]
+		% Axes
+		\draw[->] (-4.5,0) -- (4,0) node[below right] {$x$};
+		\draw[->] (0,-4.99) -- (0,5.7) node[left] {$y$};
+		\node[anchor=north east] at (0,0) {$O$};
+		
+		% Function plot
+		\draw[green, thick, domain=-4.5:3.85, samples=200]
+		plot(\x, {((\x+4)*(\x+1)*(\x-1)*(\x-3)/14 + 0.5 - 19/14)});
+		
+		% Function label
+		\node[right, green] at (-4.5,5) {$f$};
+		
+		% Points P and Q on the x-axis
+		\fill[green] (-4.1064,0) circle (1pt);
+		\node[above left, green] at (-4.1064,0) {$P$};
+		
+		\fill[green] (3.1829,0) circle (1pt);
+		\node[above left, green] at (3.1829,0) {$Q$};
+		
+		% Optional: origin dot (can be made invisible)
+		\fill[green] (0,0) circle (1pt);
+		
+	\end{tikzpicture}
+	
+\end{image}
+
 
 Het lijkt het erop dat de punten $O$, $P$ en $Q$ de enige snijpunten van de grafiek met de $x$-as zijn. Meer bepaald, we hebben de indruk dat de grafiek van $f$ de $x$-as raakt in de oorsprong. Schrijven we $\co(P) = (a,0)$ en $\co(Q) = (b,0)$ met $a,b \in \R$ dan vermoeden we dat de tekentabel van $f$ gegeven wordt door
 \renewcommand{\kolbreed}{\widthof{$a$}}
