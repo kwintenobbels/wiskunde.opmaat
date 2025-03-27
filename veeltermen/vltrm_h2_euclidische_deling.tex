@@ -19,38 +19,38 @@
 
 
 
-In de lagere school het je voor de gehele getallen de Euclidische deling geleerd. Zo kan de deling van $365$ door $7$ geschreven worden als
+In de lagere school het je voor de gehele getallen de Euclidische deling geleerd. Zo kan de deling van \(365\) door \(7\) geschreven worden als
 \[
 365 = 52 \cdot 7 + 1
 \]
-waarbij je $365$ het deeltal, $7$ de deler, $52$ het quotiënt en $1$ de rest is. De euclidische deling met rest kan voor gehele getallen telkens op die manier geschreven worden. 
+waarbij je \(365\) het deeltal, \(7\) de deler, \(52\) het quotiënt en \(1\) de rest is. De euclidische deling met rest kan voor gehele getallen telkens op die manier geschreven worden. 
 
 
 \begin{example}[Delen-met-rest voor natuurlijke getallen.]\nl
          
-	Zeggen dat de deling van $13$ door $4$ gelijk is aan $3$ met rest $1$, betekent dat
+	Zeggen dat de deling van \(13\) door \(4\) gelijk is aan \(3\) met rest \(1\), betekent dat
 	\[
 	13 = 3 \cdot 4  + 1
 	\]
-	omdat $4$ hoogstens $3$ keer in $13$ kan, en er blijft dan nog $1$ over.
+	omdat \(4\) hoogstens \(3\) keer in \(13\) kan, en er blijft dan nog \(1\) over.
 	 
-	Op dezelfde manier betekent $20$ delen door $3$ dat
+	Op dezelfde manier betekent \(20\) delen door \(3\) dat
 	\[
 	20 = 6\cdot 3 + 2
 	\]
-	of met symbolen: als we \textit{deeltal} $D$ delen door \textit{deler} $d$, krijgen we \textit{quotiënt} $q$ en \textit{rest} $r$ als volgende formule geldt:
+	of met symbolen: als we \textit{deeltal} \(D\) delen door \textit{deler} \(d\), krijgen we \textit{quotiënt} \(q\) en \textit{rest} \(r\) als volgende formule geldt:
 	\[
-	D = q\cdot d + r   \text{ met $r<d$}.
+	D = q\cdot d + r   \text{ met \(r<d\)}.
 	\]
 	 
 	 
-	Daarbij is het erg belangrijk dat $r<d$: als dat niet het geval is, heb je nog niet ver genoeg gedeeld, want je kan dan de rest $r$ nog verder delen door $d$.
+	Daarbij is het erg belangrijk dat \(r<d\): als dat niet het geval is, heb je nog niet ver genoeg gedeeld, want je kan dan de rest \(r\) nog verder delen door \(d\).
 	 
-%       Als de rest gelijk is aan $0$, dan zeggen we  dat  $d$ een \textit{deler} is van $D$, en we noteren $d|D$. Merk op dat in dat geval ook het quotiënt $q$ een deler is van $D$ (dus ook $q|D$), en dat we $D$ dus kunnen schrijven als een product
+%       Als de rest gelijk is aan \(0\), dan zeggen we  dat  \(d\) een \textit{deler} is van \(D\), en we noteren \(d|D\). Merk op dat in dat geval ook het quotiënt \(q\) een deler is van \(D\) (dus ook \(q|D\)), en dat we \(D\) dus kunnen schrijven als een product
 %       \[
 %       D=q\cdot d
 %       \]
-%       Dus, $5$ en $7$ zijn allebei delers van $35$ want $35=5\cdot7$.
+%       Dus, \(5\) en \(7\) zijn allebei delers van \(35\) want \(35=5\cdot7\).
 \end{example}
 
 
@@ -59,7 +59,7 @@ waarbij je $365$ het deeltal, $7$ de deler, $52$ het quotiënt en $1$ de rest is
 
 
 
-In een voorgaand voorbeeld werd de staartdeling van $A(x) = 2x^3+3x^2-1$ door $B(x) = x^2+3x$ uitgevoerd met als resultaat: 
+In een voorgaand voorbeeld werd de staartdeling van \(A(x) = 2x^3+3x^2-1\) door \(B(x) = x^2+3x\) uitgevoerd met als resultaat: 
 \[
 \underbrace{2x^3+3x^2-1}_{A(x)} = \underbrace{(x^2+3x)}_{B(x)}\cdot\underbrace{(2x-3)}_{Q(x)} \,\, + \,\, \underbrace{9x-1}_{R(x)} \quad \text{ waarbij } \quad \underbrace{\gr R(x)}_{1} < \underbrace{\gr B(x)}_{2}.
 \]
@@ -72,11 +72,11 @@ Bij een ander voorgaand voorbeeld van de staartdeling met veeltermen was de deli
 \underbrace{14x^2+17x+5}_{A(x)} = \underbrace{(2x+1)}_{B(x)}\cdot\underbrace{(7x+5)}_{Q(x)} \,\, + \,\, \underbrace{0}_{R(x)} \quad \text{ waarbij } \quad R(x) = 0.
 \]
 
-Ook voor elke andere keuze van $A(x)$ en $B(x) \neq 0$ bestaan er zo'n veeltermen $Q(x)$ en $R(x)$, die daarenboven steeds uniek zijn. Ons bewijs bestaat uit twee delen. Eerst bewijzen we dat de veeltermen $Q(x)$ en $R(x)$ bestaan. Daarna bewijzen we dat ze uniek zijn. 
+Ook voor elke andere keuze van \(A(x)\) en \(B(x) \neq 0\) bestaan er zo'n veeltermen \(Q(x)\) en \(R(x)\), die daarenboven steeds uniek zijn. Ons bewijs bestaat uit twee delen. Eerst bewijzen we dat de veeltermen \(Q(x)\) en \(R(x)\) bestaan. Daarna bewijzen we dat ze uniek zijn. 
 
 
 % \begin{xmuitweiding}{Euclides}
-% De stelling van de euclidische deling voor veeltermen is analoog aan het gelijknamig resultaat voor gehele getallen: als $a,b \in \Z$ met $b \neq 0$ dan bestaat er precies één geheel getal $q$ en één geheel getal $r$ zodat $a = bq + r$ waarbij $0 \leq r < \left|b\right|$. Hoewel deze stelling genoemd is naar Euclides van Alexandrië\index{Euclides van Alexandrië} $\pm$300 v.Chr. lijkt het weinig waarschijnlijk dat Euclides bewust was van het bestaan en de uniciteit van het quotiënt en de rest. In die tijd was de manier om quotiënt en rest te bepalen beperkt tot het herhaaldelijk verminderen van het deeltal met de deler. De reden is dat het schema van de staartdeling van gehele getallen berust op een positiestelsel zoals het Hindu-Arabisch getallensysteem dat destijds voor Euclides niet bekend was. De naam \textit{ euclidische deling} werd pas in de 19e eeuw geïntroduceerd als verwijzing naar een algemeen resultaat uit de hogere wiskunde. Euclidische deling is dus wel degelijk een stelling, en geen algoritme.
+% De stelling van de euclidische deling voor veeltermen is analoog aan het gelijknamig resultaat voor gehele getallen: als \(a,b \in \Z\) met \(b \neq 0\) dan bestaat er precies één geheel getal \(q\) en één geheel getal \(r\) zodat \(a = bq + r\) waarbij \(0 \leq r < \left|b\right|\). Hoewel deze stelling genoemd is naar Euclides van Alexandrië\index{Euclides van Alexandrië} \(\pm\)300 v.Chr. lijkt het weinig waarschijnlijk dat Euclides bewust was van het bestaan en de uniciteit van het quotiënt en de rest. In die tijd was de manier om quotiënt en rest te bepalen beperkt tot het herhaaldelijk verminderen van het deeltal met de deler. De reden is dat het schema van de staartdeling van gehele getallen berust op een positiestelsel zoals het Hindu-Arabisch getallensysteem dat destijds voor Euclides niet bekend was. De naam \textit{ euclidische deling} werd pas in de 19e eeuw geïntroduceerd als verwijzing naar een algemeen resultaat uit de hogere wiskunde. Euclidische deling is dus wel degelijk een stelling, en geen algoritme.
 % \end{xmuitweiding}
 
 
@@ -85,38 +85,38 @@ Ook voor elke andere keuze van $A(x)$ en $B(x) \neq 0$ bestaan er zo'n veelterme
 
 
 \begin{theorem}(deling met rest, euclidische deling)
-Zij $A(x)$ en $B(x)$ twee veeltermen met $B(x) \neq 0$. Dan bestaat er precies één veelterm $Q(x)$ en precies één veelterm $R(x)$ zodat
+Zij \(A(x)\) en \(B(x)\) twee veeltermen met \(B(x) \neq 0\). Dan bestaat er precies één veelterm \(Q(x)\) en precies één veelterm \(R(x)\) zodat
 
 \begin{equation}
 A(x) = B(x)\cdot Q(x) + R(x) \quad \text{ waarbij } \quad \gr R(x) < \gr B(x) \,\, \text{ of } \,\, R(x) = 0.
 \end{equation}
 
-met $A(x)$ het \textbf{deeltal}, $B(x)$ de \textbf{deler}, $Q(x)$ het \textbf{quotiënt}en $R(x)$ de \textbf{rest} bij de deling van $A(x)$ door $B(x)$. 
+met \(A(x)\) het \textbf{deeltal}, \(B(x)\) de \textbf{deler}, \(Q(x)\) het \textbf{quotiënt}en \(R(x)\) de \textbf{rest} bij de deling van \(A(x)\) door \(B(x)\). 
 \end{theorem} 
 
 
 
-\begin{expandable}{proof}{Bewijs dat $Q(x)$ en $R(x)$ bestaan}
+\begin{expandable}{proof}{Bewijs dat \(Q(x)\) en \(R(x)\) bestaan}
 	
 Beschouw de verzameling 
 
 \begin{align*}
 S & = \bigl\{ A(x) - B(x)\cdot C(x) \mid C(x) \in \R[x] \bigr\}.  
 \end{align*}
-Als $0 \in S$ dan is $0 = A(x) - B(x)\cdot Q(x)$ voor een zekere veelterm $Q(x)$, zodat \begin{align*}
+Als \(0 \in S\) dan is \(0 = A(x) - B(x)\cdot Q(x)\) voor een zekere veelterm \(Q(x)\), zodat \begin{align*}
 A(x) = B(x)\cdot Q(x) + R(x) \quad \text{ waarbij } \quad R(x) = 0.
 \end{align*}
-Dus als $0 \in S$ dan bestaan er veeltermen $Q(x)$ en $R(x)$ zodat uitspraak \eqref{euclides} geldt. 
+Dus als \(0 \in S\) dan bestaan er veeltermen \(Q(x)\) en \(R(x)\) zodat uitspraak \eqref{euclides} geldt. 
 
-Voor het vervolg van dit (deel)bewijs mogen we dus veronderstellen dat $0 \not\in S$. Nemen we van elke veelterm in $S$ de graad, dan zijn er veeltermen in $S$ waarvoor de graad het kleinst is. Kies zo'n veelterm en noteer ze met $R(x)$. Omdat $R(x) \in S$ geldt dat $R(x) = A(x) - B(x)\cdot Q(x)$ voor een zekere veelterm $Q(x)$. Dus we hebben alvast dat
+Voor het vervolg van dit (deel)bewijs mogen we dus veronderstellen dat \(0 \not\in S\). Nemen we van elke veelterm in \(S\) de graad, dan zijn er veeltermen in \(S\) waarvoor de graad het kleinst is. Kies zo'n veelterm en noteer ze met \(R(x)\). Omdat \(R(x) \in S\) geldt dat \(R(x) = A(x) - B(x)\cdot Q(x)\) voor een zekere veelterm \(Q(x)\). Dus we hebben alvast dat
 \[
 A(x) = B(x)\cdot Q(x) + R(x) \quad \text{ waarbij } \quad R(x) \neq 0.
 \]
-We tonen aan dat $\gr R(x) < \gr B(x)$. Stel uit het ongerijmde dat $\gr R(x) \geq \gr B(x)$. Delen we de hoogstegraadsterm van $R(x)$ door de hoogstegraadsterm van $B(x)$, dan vinden we een eenterm $ax^k$ waarvoor de graad van $R(x) - ax^k B(x)$ kleiner is dan de graad van $R(x)$. Nu is
+We tonen aan dat \(\gr R(x) < \gr B(x)\). Stel uit het ongerijmde dat \(\gr R(x) \geq \gr B(x)\). Delen we de hoogstegraadsterm van \(R(x)\) door de hoogstegraadsterm van \(B(x)\), dan vinden we een eenterm \(ax^k\) waarvoor de graad van \(R(x) - ax^k B(x)\) kleiner is dan de graad van \(R(x)\). Nu is
 \begin{align*}
 R(x) - ax^k B(x) & = A(x) - B(x)\cdot Q(x) - ax^k B(x) = A(x) - B(x)\cdot (Q(x) + ax^k) 
 \end{align*}
-zodat $R(x) - ax^k B(x) \in S$. Maar dan hebben we een veelterm in $S$ gevonden waarvan de graad kleiner is dan de graad van $R(x)$. Dit is in strijd  met onze veronderstelling dat $R(x)$ een veelterm in $S$ is waarvoor de graad het kleinst is. Bijgevolg is noodzakelijk $\gr R(x) < \gr B(x)$. Dus ook als $0 \not\in S$ bestaan er veeltermen $Q(x)$ en $R(x)$ zodat uitspraak \eqref{euclides} geldt.
+zodat \(R(x) - ax^k B(x) \in S\). Maar dan hebben we een veelterm in \(S\) gevonden waarvan de graad kleiner is dan de graad van \(R(x)\). Dit is in strijd  met onze veronderstelling dat \(R(x)\) een veelterm in \(S\) is waarvoor de graad het kleinst is. Bijgevolg is noodzakelijk \(\gr R(x) < \gr B(x)\). Dus ook als \(0 \not\in S\) bestaan er veeltermen \(Q(x)\) en \(R(x)\) zodat uitspraak \eqref{euclides} geldt.
 
 \end{expandable}
 
@@ -125,13 +125,13 @@ zodat $R(x) - ax^k B(x) \in S$. Maar dan hebben we een veelterm in $S$ gevonden 
 
 
 
-\begin{expandable}{proof}{Bewijs dat $Q(x)$ en $R(x)$ uniek zijn} 
-Stel dat er nog een tweede veelterm $Q'(x)$ en een tweede veelterm $R'(x)$ zou bestaan zodat
+\begin{expandable}{proof}{Bewijs dat \(Q(x)\) en \(R(x)\) uniek zijn} 
+Stel dat er nog een tweede veelterm \(Q'(x)\) en een tweede veelterm \(R'(x)\) zou bestaan zodat
 
 \[
 A(x) = B(x)\cdot Q'(x) + R'(x) \quad \text{ waarbij } \quad \gr R'(x) < \gr B(x) \,\, \text{ of } \,\, R'(x) = 0.
 \]
-We moeten aantonen dat $Q'(x) = Q(x)$ en dat $R'(x) = R(x)$. Gelijkstellen levert nu:
+We moeten aantonen dat \(Q'(x) = Q(x)\) en dat \(R'(x) = R(x)\). Gelijkstellen levert nu:
 
 \begin{align}
 & B(x) \cdot Q(x) + R(x) = B(x) \cdot Q'(x) + R'(x) \\
@@ -139,20 +139,20 @@ We moeten aantonen dat $Q'(x) = Q(x)$ en dat $R'(x) = R(x)$. Gelijkstellen lever
 \Rightarrow \quad & \underbrace{B(x) \cdot \bigl(Q(x) - Q'(x)\bigr)}_{\text{LL}} = \underbrace{R'(x) - R(x)}_{\text{RL}}. %s\label{euclides2}
 \end{align}
 
-Mocht $Q'(x) \neq Q(x)$ en $R'(x) \neq R(x)$ dan zou de graad van het linkerlid van \eqref{euclides2} groter dan of gelijk aan de graad van $B(x)$ zijn, terwijl de graad van het rechterlid van \eqref{euclides2} kleiner dan de graad van $B(x)$ zou zijn, wat onmogelijk is. Dus moet $Q'(x) = Q(x)$ of $R'(x) = R(x)$. We onderscheiden die twee gevallen.
+Mocht \(Q'(x) \neq Q(x)\) en \(R'(x) \neq R(x)\) dan zou de graad van het linkerlid van \eqref{euclides2} groter dan of gelijk aan de graad van \(B(x)\) zijn, terwijl de graad van het rechterlid van \eqref{euclides2} kleiner dan de graad van \(B(x)\) zou zijn, wat onmogelijk is. Dus moet \(Q'(x) = Q(x)\) of \(R'(x) = R(x)\). We onderscheiden die twee gevallen.
 \begin{itemize}
 \item[]
-Eerste geval: $Q'(x) = Q(x)$. Dan volgt uit de gelijkheid \eqref{euclides2} dat ook $R'(x) = R(x)$.  
+Eerste geval: \(Q'(x) = Q(x)\). Dan volgt uit de gelijkheid \eqref{euclides2} dat ook \(R'(x) = R(x)\).  
 \item[]
-Tweede geval: $R'(x) = R(x)$. Dan volgt uit de gelijkheid \eqref{euclides2} dat
+Tweede geval: \(R'(x) = R(x)\). Dan volgt uit de gelijkheid \eqref{euclides2} dat
 \begin{align*}
 B(x) \cdot \bigl(Q(x) - Q'(x)\bigr) = 0 \quad 
 & \Rightarrow \quad B(x) = 0 \,\, \text{ of } \,\, Q(x) - Q'(x) = 0 \\
 & \Rightarrow \quad B(x) = 0 \,\, \text{ of } \,\, Q(x) = Q'(x). 
 \end{align*}
-Omdat gegeven is dat $B(x) \neq 0$ volgt nu noodzakelijk $Q(x) = Q'(x)$.
+Omdat gegeven is dat \(B(x) \neq 0\) volgt nu noodzakelijk \(Q(x) = Q'(x)\).
 \end{itemize}
-We besluiten dat in elk geval $Q'(x) = Q(x)$ en $R'(x) = R(x)$. Hiermee is aangetoond dat $Q(x)$ en $R(x)$ uniek zijn. 
+We besluiten dat in elk geval \(Q'(x) = Q(x)\) en \(R'(x) = R(x)\). Hiermee is aangetoond dat \(Q(x)\) en \(R(x)\) uniek zijn. 
 
 \end{expandable}
 
@@ -160,21 +160,21 @@ We besluiten dat in elk geval $Q'(x) = Q(x)$ en $R'(x) = R(x)$. Hiermee is aange
      
     % layout kan beter? tabel met enkel de veeltermen, en D/d/Q/R in de header ?
     \begin{tabular}{lcll}
-        $p(x)=x^2+2x$ & $\text{  en  }$ & $d(x)=x+2$, &
-        dan is $q(x)=$\xmonlineChoice{\choice{$0$}\choice{$1$}\choice[correct]{$x$}}
-        en $r(x)=$\xmonlineChoice{\choice[correct]{$0$}\choice{$1$}\choice{$x$}} 
+        \(p(x)=x^2+2x\) & \(\text{  en  }\) & \(d(x)=x+2\), &
+        dan is \(q(x)=\)\xmonlineChoice{\choice{\(0\)}\choice{\(1\)}\choice[correct]{\(x\)}}
+        en \(r(x)=\)\xmonlineChoice{\choice[correct]{\(0\)}\choice{\(1\)}\choice{\(x\)}} 
         \\
-        $p(x)=x^2+x$ & $\text{  en  }$ & $d(x)=x^2$, &
-        dan is $q(x)=$\xmonlineChoice{\choice{$0$}\choice[correct]{$1$}\choice{$x$}}
-        en $r(x)=$\xmonlineChoice{\choice{$0$}\choice{$1$}\choice[correct]{$x$}} 
+        \(p(x)=x^2+x\) & \(\text{  en  }\) & \(d(x)=x^2\), &
+        dan is \(q(x)=\)\xmonlineChoice{\choice{\(0\)}\choice[correct]{\(1\)}\choice{\(x\)}}
+        en \(r(x)=\)\xmonlineChoice{\choice{\(0\)}\choice{\(1\)}\choice[correct]{\(x\)}} 
         \\
-        $p(x)=x+1$ & $\text{  en  }$ & $d(x)=x$, &
-        dan is $q(x)=$\xmonlineChoice{\choice{$0$}\choice[correct]{$1$}\choice{$x$}}
-        en $r(x)=$\xmonlineChoice{\choice{$0$}\choice[correct]{$1$}\choice{$x$}} 
+        \(p(x)=x+1\) & \(\text{  en  }\) & \(d(x)=x\), &
+        dan is \(q(x)=\)\xmonlineChoice{\choice{\(0\)}\choice[correct]{\(1\)}\choice{\(x\)}}
+        en \(r(x)=\)\xmonlineChoice{\choice{\(0\)}\choice[correct]{\(1\)}\choice{\(x\)}} 
         \\
-        $p(x)=x$ & $\text{  en  }$ & $d(x)=x^2$, &
-        dan is $q(x)=$\xmonlineChoice{\choice[correct]{$0$}\choice{1}\choice{$x$}}
-        en $r(x)=$\xmonlineChoice{\choice{$0$}\choice{$1$}\choice[correct]{$x$}} 
+        \(p(x)=x\) & \(\text{  en  }\) & \(d(x)=x^2\), &
+        dan is \(q(x)=\)\xmonlineChoice{\choice[correct]{\(0\)}\choice{1}\choice{\(x\)}}
+        en \(r(x)=\)\xmonlineChoice{\choice{\(0\)}\choice{\(1\)}\choice[correct]{\(x\)}} 
     \end{tabular}
 \end{example}
 
@@ -184,11 +184,11 @@ We besluiten dat in elk geval $Q'(x) = Q(x)$ en $R'(x) = R(x)$. Hiermee is aange
 Zoals volgend voorbeeld aantoond, geven parameters ook voor de Euclidische deling voor veeltermen aanleiding tot een stelsel: 
 
 \begin{example} 
-De veelterm $A(x) = x^3 + px^2 - 8x + q$ is deelbaar door $x-1$ en de rest bij deling door $x^2 - 9$ is $x-9$. Om de waarde(n) van de parameters $p$ en $q$ te vinden, gaan we als volgt te werk: we weten dat
+De veelterm \(A(x) = x^3 + px^2 - 8x + q\) is deelbaar door \(x-1\) en de rest bij deling door \(x^2 - 9\) is \(x-9\). Om de waarde(n) van de parameters \(p\) en \(q\) te vinden, gaan we als volgt te werk: we weten dat
 \begin{align*}
 A(x) = (x-1)\cdot Q(x) \quad \text{ en } \quad A(x) = (x^2-9)\cdot Q'(x) + x - 9
 \end{align*}
-voor zekere veeltermen $Q(x)$ en $Q'(x)$. Vervangen we $x$ door respecievelijk $1$, $3$ en $-3$ dan verkrijgen we 
+voor zekere veeltermen \(Q(x)\) en \(Q'(x)\). Vervangen we \(x\) door respecievelijk \(1\), \(3\) en \(-3\) dan verkrijgen we 
 \[
 \left\{
 \begin{aligned}
@@ -214,7 +214,7 @@ p+q & = 7 && (1) \\
 \end{aligned}
 \right.
 \]
-Uit (2)$-$(1) volgt $8p=-16$ zodat $p = -2$. Invullen in (1) geeft dan $-2+q=7$ zodat $q = 9$. 
+Uit (2)\(-\)(1) volgt \(8p=-16\) zodat \(p = -2\). Invullen in (1) geeft dan \(-2+q=7\) zodat \(q = 9\). 
 \end{example} 
 
 

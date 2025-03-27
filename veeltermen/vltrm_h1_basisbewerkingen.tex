@@ -25,11 +25,11 @@ Het sommeren van eentermen leverde veeltermen, op dezelfde manier kan je met vee
 De notatie van deze eigenschappen is in het algemeen geval wat schrikbarend, laat ons dus rekenen met een eenvoudig voorbeeld om te kijken hoe veeltermen worden opgeteld en vermenigvuldigd: 
 
 \begin{example} 
-De som van $A(x) = 3x^3+2x^2-x+4$ met $B(x) = 6x^3-x^2+2$ is  
+De som van \(A(x) = 3x^3+2x^2-x+4\) met \(B(x) = 6x^3-x^2+2\) is  
 \[
 A(x) + B(x) = 3x^3+2x^2-x+4 + 6x^3-x^2+2 = 9x^3 + x^2 - x + 6.
 \]
-Voor $P(x) = 6x^2-x+2$ en $Q(x) = -3x^3+5x^2$ is het product gelijk aan
+Voor \(P(x) = 6x^2-x+2\) en \(Q(x) = -3x^3+5x^2\) is het product gelijk aan
 \begin{align*}
 P(x) \cdot Q(x) 
 & = (6x^2-x+2) \cdot (-3x^3+5x^2) \\
@@ -40,28 +40,28 @@ P(x) \cdot Q(x)
 \end{example} 
 
 
-In het voorbeeld hierboven is de graad van het product $P(x) \cdot Q(x)$ bepaald wordt door de graad van de hoogstegraadsterm $6x^2 \cdot (-3x^3) = -18 x^{5}$. De graad van het product is hier gelijk aan de som van de graden. Dat kenmerk geldt ook in het algemeen, in symbolen: 
+In het voorbeeld hierboven is de graad van het product \(P(x) \cdot Q(x)\) bepaald wordt door de graad van de hoogstegraadsterm \(6x^2 \cdot (-3x^3) = -18 x^{5}\). De graad van het product is hier gelijk aan de som van de graden. Dat kenmerk geldt ook in het algemeen, in symbolen: 
 \begin{equation} 
 \gr\bigl( A(x) \cdot B(x) \bigr) \, = \, \gr A(x) + \gr B(x)
 \end{equation}
-waarbij $A(x)$ en $B(x)$ veeltermen zijn, beide verschillend van de nulveelterm. 
+waarbij \(A(x)\) en \(B(x)\) veeltermen zijn, beide verschillend van de nulveelterm. 
 
 
 Voor de som van veeltermen is de graad van de som iets subtieler. In sommmige gevallen zal de graad van de som van twee veeltermen gelijk aan het maximum van de graden van die twee veeltermen. Dat is bijvoorbeeld het geval met 
-$A(x) = x^3$ en $B(x) = x^5 + 2x^2$. Inderdaad, $A(x) + B(x) = x^5 + x^3 + 2x^2$ zodat $\gr\left(A(x) + B(x)\right) = 5$ gelijk is aan het maximum van de getallen $\gr A(x) = 3$ en $\gr B(x) = 5$. %In symbolen: $5 = \max\{3,5\}$. 
+\(A(x) = x^3\) en \(B(x) = x^5 + 2x^2\). Inderdaad, \(A(x) + B(x) = x^5 + x^3 + 2x^2\) zodat \(\gr\left(A(x) + B(x)\right) = 5\) gelijk is aan het maximum van de getallen \(\gr A(x) = 3\) en \(\gr B(x) = 5\). %In symbolen: \(5 = \max\{3,5\}\). 
 
-In andere gevallen kan het voorkomen dat de graad van de som van twee veeltermen kleiner is dan de graad van elk van die twee veeltermen. Dat is precies het geval wanneer de hoogste\-graadstermen van die twee veeltermen elkaars tegengestelde zijn. Zo is voor $A(x) = x^3$ en $C(x) = -x^3 + 2x^2$ de som gelijk aan $A(x) + C(x) = 2x^2$, waarvan de graad kleiner is dan $\max\{3,3\} = 3$. In het algemeen geldt  
+In andere gevallen kan het voorkomen dat de graad van de som van twee veeltermen kleiner is dan de graad van elk van die twee veeltermen. Dat is precies het geval wanneer de hoogste\-graadstermen van die twee veeltermen elkaars tegengestelde zijn. Zo is voor \(A(x) = x^3\) en \(C(x) = -x^3 + 2x^2\) de som gelijk aan \(A(x) + C(x) = 2x^2\), waarvan de graad kleiner is dan \(\max\{3,3\} = 3\). In het algemeen geldt  
 \begin{equation} 
 \gr\bigl( A(x) \pm B(x) \bigr) \, \leq \, \max \bigl\{ \,\gr A(x)\, , \, \gr B(x) \, \bigr\}
 \end{equation}
-voor alle veeltermen $A(x)$ en $B(x)$ die beide verschillend zijn van de nulveelterm. In het geval dat $\gr A(x) \neq \gr B(x)$ dan geldt in de bovenstaande formule \eqref{eq:graadsomenverschil} steeds de gelijkheid. 
+voor alle veeltermen \(A(x)\) en \(B(x)\) die beide verschillend zijn van de nulveelterm. In het geval dat \(\gr A(x) \neq \gr B(x)\) dan geldt in de bovenstaande formule \eqref{eq:graadsomenverschil} steeds de gelijkheid. 
 
 
 
 
 % EEN UITWEIDING MAKEN OVER DE NULVEETERM 
 % \begin{xmuitweiding}
-% Spreken we af dat $\gr 0 = - \infty$, dan zijn \eqref{eq:graadproduct} en \eqref{eq:graadsomenverschil} ook geldig voor het geval dat $A(x) = 0$ of $B(x) = 0$, zie Oefening \ref{oefgraadnulveelterm}. Vermeldenswaardig is de gelijkaardige uitdrukking voor de graad van de substitutie van een veelterm in een veelterm, die eenvoudig wordt aangetoond:
+% Spreken we af dat \(\gr 0 = - \infty\), dan zijn \eqref{eq:graadproduct} en \eqref{eq:graadsomenverschil} ook geldig voor het geval dat \(A(x) = 0\) of \(B(x) = 0\), zie Oefening \ref{oefgraadnulveelterm}. Vermeldenswaardig is de gelijkaardige uitdrukking voor de graad van de substitutie van een veelterm in een veelterm, die eenvoudig wordt aangetoond:
 % \[
 % \gr\Bigl(A\bigl(B(x)\bigr)\Bigr) = \gr A(x) \cdot \gr B(x).
 % \]
@@ -76,18 +76,18 @@ Zoals volgend voorbeeld illustreert kan je met bovenstaande formules de graad be
 
 \begin{question}
 
-Van drie veeltermen $A(x)$, $B(x)$ en $C(x)$ weten we dat
+Van drie veeltermen \(A(x)\), \(B(x)\) en \(C(x)\) weten we dat
 \[
 \gr A(x) = 6, \quad \gr B(x) = 4 \quad \text{ en } \quad \gr C(x) = 1.
 \]
 
-We bepalen de graad van de veelterm $D(x) = A(x) - \bigl(B(x) + 2C(x)\bigr)$ door de bovenstaande formules \eqref{eq:graadproduct} en \eqref{eq:graadsomenverschil} toe te passen. 
+We bepalen de graad van de veelterm \(D(x) = A(x) - \bigl(B(x) + 2C(x)\bigr)\) door de bovenstaande formules \eqref{eq:graadproduct} en \eqref{eq:graadsomenverschil} toe te passen. 
 
-Vooreerst is $\gr\bigl(2C(x)\bigr) = \gr(2) + \gr C(x) = 0 + 1 = 1$. Nu is $\gr B(x) \neq \gr\bigl(2C(x)\bigr)$ zodat
+Vooreerst is \(\gr\bigl(2C(x)\bigr) = \gr(2) + \gr C(x) = 0 + 1 = 1\). Nu is \(\gr B(x) \neq \gr\bigl(2C(x)\bigr)\) zodat
 \[
 \gr \bigl(B(x) + 2C(x)\bigr) = \max \bigl\{\gr B(x),\gr\bigl(2C(x)\bigr)\bigr\} = \max\{4,1\} = 4.
 \]
-Verder is $\gr A(x) \neq \gr\bigl(B(x) + 2C(x)\bigr)$ zodat 
+Verder is \(\gr A(x) \neq \gr\bigl(B(x) + 2C(x)\bigr)\) zodat 
 \[
 \gr D(x) = \max \bigl\{\gr A(x),\gr\bigl(B(x) + 2C(x)\bigr)\bigr\} = \max\{6,4\} = 6.
 \]
@@ -97,9 +97,9 @@ Verder is $\gr A(x) \neq \gr\bigl(B(x) + 2C(x)\bigr)$ zodat
 \begin{question}
 
 
-Beschouw vervolgens een veelterm $Q(x)$ waarvan je weet dat $A(x) = B(x)\cdot Q(x) + C(x)$. We gebruiken dit verband om de graad van $Q(x)$ te bepalen. 
+Beschouw vervolgens een veelterm \(Q(x)\) waarvan je weet dat \(A(x) = B(x)\cdot Q(x) + C(x)\). We gebruiken dit verband om de graad van \(Q(x)\) te bepalen. 
 
-Omdat $B(x)\cdot Q(x) = A(x) - C(x)$ en $\gr A(x) \neq \gr C(x)$ is
+Omdat \(B(x)\cdot Q(x) = A(x) - C(x)\) en \(\gr A(x) \neq \gr C(x)\) is
 \[
 \gr\bigl(B(x)\cdot Q(x)\bigr) = \gr\bigl(A(x) - C(x)\bigr) = \max \bigl\{\gr A(x),\gr C(x)\bigr\} = \max\{6,1\} = 6.
 \]
@@ -107,7 +107,7 @@ Anderzijds is
 \[
 \gr\bigl(B(x)\cdot Q(x)\bigr) = \gr B(x) + \gr Q(x) = 4 + \gr Q(x).
 \]
-Hieruit volgt dat $\gr Q(x) = 6-4 = 2$. 
+Hieruit volgt dat \(\gr Q(x) = 6-4 = 2\). 
 
 \end{question}
 

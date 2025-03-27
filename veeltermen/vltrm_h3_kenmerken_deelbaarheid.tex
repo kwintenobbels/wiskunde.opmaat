@@ -19,20 +19,20 @@
     \xmsource
 
 
-Om na te gaan of een geheel getal deelbaar is door $2$, $3$, $5$, $7$, $9$, $10$ of $11$ kun je een kenmerk van deelbaarheid gebruiken. Voor grotere getallen gaat dat heel wat sneller dan het uitvoeren van de staartdeling. Zo kun je meteen inzien dat $2025$ deelbaar is door $3$ en door $5$, en dus ook door $15$.  
+Om na te gaan of een geheel getal deelbaar is door \(2\), \(3\), \(5\), \(7\), \(9\), \(10\) of \(11\) kun je een kenmerk van deelbaarheid gebruiken. Voor grotere getallen gaat dat heel wat sneller dan het uitvoeren van de staartdeling. Zo kun je meteen inzien dat \(2025\) deelbaar is door \(3\) en door \(5\), en dus ook door \(15\).  
 
 Ook bij veeltermen kun je spreken over kenmerken van deelbaarheid. Met behulp van de reststelling worden er in dit onderdeel voor twee soorten veeltermen een kenmerk van deelbaarheid gegeven. 
 
-De staartdeling gaat in het algemeen na of een veelterm $A(x)$ deelbaar is door een veelterm $B(x) \neq 0$, met volgend resultaat:
+De staartdeling gaat in het algemeen na of een veelterm \(A(x)\) deelbaar is door een veelterm \(B(x) \neq 0\), met volgend resultaat:
 
 \[
-B(x) \mid A(x) \quad \Leftrightarrow \quad \text{ de rest bij deling van $A(x)$ door $B(x)$ is gelijk aan $0$.}
+B(x) \mid A(x) \quad \Leftrightarrow \quad \text{ de rest bij deling van \(A(x)\) door \(B(x)\) is gelijk aan \(0\).}
 \] 
 
-In het geval dat $B(x) = x-a$ met $a \in \R$ geeft de reststelling een veel eenvoudiger criterium.
+In het geval dat \(B(x) = x-a\) met \(a \in \R\) geeft de reststelling een veel eenvoudiger criterium.
 
 \begin{theorem}(kenmerk van deelbaarheid door \(x-a\))
-Zij $A(x)$ een veelterm en $a \in \R$. Dan geldt:
+Zij \(A(x)\) een veelterm en \(a \in \R\). Dan geldt:
 \[
 (x-a) \mid A(x) \quad \Leftrightarrow \quad A(a) = 0.
 \]
@@ -44,7 +44,7 @@ Zij $A(x)$ een veelterm en $a \in \R$. Dan geldt:
 Wegens de reststelling geldt:
 \begin{align}
 (x-a) \mid A(x) \quad 
-& \Leftrightarrow \quad \underbrace{\text{ de rest bij deling van $A(x)$ door $x-a$ }}_{A(a)} \text{ is gelijk aan $0$} \nonumber \\
+& \Leftrightarrow \quad \underbrace{\text{ de rest bij deling van \(A(x)\) door \(x-a\) }}_{A(a)} \text{ is gelijk aan \(0\)} \nonumber \\
 & \Leftrightarrow \quad A(a) = 0. % \tag*{\qedhere} bugt op html 
 \end{align}
 
@@ -54,9 +54,9 @@ Wegens de reststelling geldt:
 
 
 \begin{example} 
-	Bepaal alle gehele $a$ zodat  $p(x) = x^4-10x^2+9$ deelbaar is door $x-a$.
+	Bepaal alle gehele \(a\) zodat  \(p(x) = x^4-10x^2+9\) deelbaar is door \(x-a\).
 	 
-	We moeten dus alle gehele nulpunten van $p(x)$ bepalen. Uit vorige eigenschap volgt dat enkel gehele delers van de constante term in aanmerking komen, dus $\pm1,\pm3,\pm9$:
+	We moeten dus alle gehele nulpunten van \(p(x)\) bepalen. Uit vorige eigenschap volgt dat enkel gehele delers van de constante term in aanmerking komen, dus \(\pm1,\pm3,\pm9\):
 	 
 	\renewcommand{\bullet}{}   % Willen we bullets hier? Deze hack werkt niet in html ...
 	\[
@@ -72,13 +72,13 @@ Wegens de reststelling geldt:
 	\end{array}
 	\]
 	 
-	%We vinden hier 4 delers van de vorm $x-a$. Een 4de-graadsveelterm kan maximaal 4 delers van de vorm $x-a$ hebben. $(x-1)(x+1)(x-3)(x+3) = x^4-10x^2+9$, dus we hebben de veelterm $x^4-10x^2+9$ volledig ontbonden in factoren.
+	%We vinden hier 4 delers van de vorm \(x-a\). Een 4de-graadsveelterm kan maximaal 4 delers van de vorm \(x-a\) hebben. \((x-1)(x+1)(x-3)(x+3) = x^4-10x^2+9\), dus we hebben de veelterm \(x^4-10x^2+9\) volledig ontbonden in factoren.
 \end{example}
 	 
 \begin{example} 
-	Bepaal alle gehele $a$ zodat  $p(x) =x^3-2x^2+x-2$ deelbaar is door $x-a$.
+	Bepaal alle gehele \(a\) zodat  \(p(x) =x^3-2x^2+x-2\) deelbaar is door \(x-a\).
 		
-	We moeten dus alle gehele nulpunten van $p(x)$ bepalen. Uit vorige eigenschap volgt dat enkel delers van de constante term in aanmerking komen, dus $\pm1$ en $\pm2$:
+	We moeten dus alle gehele nulpunten van \(p(x)\) bepalen. Uit vorige eigenschap volgt dat enkel delers van de constante term in aanmerking komen, dus \(\pm1\) en \(\pm2\):
 		
 	\renewcommand{\bullet}{}   % Willen we bullets hier? Deze hack werkt niet in html ...
 	\[
@@ -90,7 +90,7 @@ Wegens de reststelling geldt:
 	\bullet&p(x)&\textrm{ is niet deelbaar door }    &(x+2)&\textrm{ omdat }&p&(&-2&)&\neq   &0.
 	\end{array}
 	\]
-	We vinden enkel dat $p(x)$ deelbaar is door $x-2$. Het quotiënt van de deling van $x^3-2x^2+x-2$ door $x-2$ kunnen we bepalen met het algoritme van de \hyperref[euclidische deling: algoritme]{Euclidische deling}.
+	We vinden enkel dat \(p(x)\) deelbaar is door \(x-2\). Het quotiënt van de deling van \(x^3-2x^2+x-2\) door \(x-2\) kunnen we bepalen met het algoritme van de \hyperref[euclidische deling: algoritme]{Euclidische deling}.
 	%In dit speciale geval van een deler van de eerste graad is het \hyperref[xim:horner]{rekenschema van Horner} een alternatieve manier om het quotiënt te bepalen.
 \end{example}
 
@@ -103,7 +103,7 @@ Wegens de reststelling geldt:
 Bij veeltermen met parameters hangt de deelbaarheid af van de waarden van de parameters. Zoals volgend voorbeeld aantoond kan het bepalen van deze waarden aanleiding geven tot een vergelijking. Verwacht wordt dat je vlot eerstegraads-, tweedegraads- en bikwadratische vergelijkingen kan oplossen waarbij je jouw redenering correct kan opschrijven. 
 
 \begin{example} 
-We bepalen de waarde(n) van de reële parameter $p$ waarvoor de veelterm $A(x) = 5x^2-4x-3$ deelbaar is door $x-2p$. Het kenmerk van deelbaarheid door $x-a$ geeft:
+We bepalen de waarde(n) van de reële parameter \(p\) waarvoor de veelterm \(A(x) = 5x^2-4x-3\) deelbaar is door \(x-2p\). Het kenmerk van deelbaarheid door \(x-a\) geeft:
 
 \begin{align*}
 (x-2p) \mid A(x) \quad 
@@ -140,11 +140,11 @@ Een rechtstreekse berekening levert de discriminant: \(D = b^2-4ac = (-8)^2-4 \c
 \end{example} 
 
 
-Het kenmerk van deelbaarheid door $x-a$ kan gemakkelijk veralgemeend worden. De uitspraak die we hieronder moeten aantonen, is een equivalentie. Een bewijs van zo'n equivalentie $P \Leftrightarrow Q$ bestaat vaak uit twee deelbewijzen: een bewijs van de implicatie $P \Rightarrow Q$ en een bewijs van de implicatie $Q \Rightarrow P$. In beide gevallen zullen we de implicatie aantonen met een rechtstreeks bewijs.
+Het kenmerk van deelbaarheid door \(x-a\) kan gemakkelijk veralgemeend worden. De uitspraak die we hieronder moeten aantonen, is een equivalentie. Een bewijs van zo'n equivalentie \(P \Leftrightarrow Q\) bestaat vaak uit twee deelbewijzen: een bewijs van de implicatie \(P \Rightarrow Q\) en een bewijs van de implicatie \(Q \Rightarrow P\). In beide gevallen zullen we de implicatie aantonen met een rechtstreeks bewijs.
 
 \begin{theorem}(kenmerk van deelbaarheid door \((x-a)(x+a)\))
 
-Zij $A(x)$ een veelterm en $a,b \in \R$ met $a \neq b$. Dan geldt:
+Zij \(A(x)\) een veelterm en \(a,b \in \R\) met \(a \neq b\). Dan geldt:
 \[
 (x-a)(x-b) \mid A(x) \quad \Leftrightarrow \quad A(a) = 0 \,\, \text{ en } \,\, A(b) = 0.
 \]
@@ -155,13 +155,13 @@ Zij $A(x)$ een veelterm en $a,b \in \R$ met $a \neq b$. Dan geldt:
 
 We bewijzen de eigenschap in twee delen.
 
-Veronderstel eerst dat $(x-a)(x-b) \mid A(x)$. We moeten aantonen dat $A(a) = 0$ en $A(b) = 0$.
+Veronderstel eerst dat \((x-a)(x-b) \mid A(x)\). We moeten aantonen dat \(A(a) = 0\) en \(A(b) = 0\).
 
-Omdat $(x-a)(x-b) \mid A(x)$ bestaat er een veelterm $Q(x)$ zodat
+Omdat \((x-a)(x-b) \mid A(x)\) bestaat er een veelterm \(Q(x)\) zodat
 \[
 A(x) = (x-a)(x-b)Q(x).
 \]
-Vervangen we $x$ door $a$ dan vinden we 
+Vervangen we \(x\) door \(a\) dan vinden we 
 \[
 A(a) = \underbrace{(a-a)}_{0}(a-b)Q(a) = 0
 \]
@@ -169,27 +169,27 @@ en analoog is
 \[
 A(b) = (b-a)\underbrace{(b-b)}_{0}Q(a) = 0.
 \]
-Omgekeerd, veronderstel dat $A(a) = 0$ en $A(b) = 0$. Te bewijzen is dat $(x-a)(x-b) \mid A(x)$.
+Omgekeerd, veronderstel dat \(A(a) = 0\) en \(A(b) = 0\). Te bewijzen is dat \((x-a)(x-b) \mid A(x)\).
 
-Uit het kenmerk van deelbaarheid door $x-a$ volgt dat $(x-a) \mid A(x)$. Er bestaat dus een veelterm $Q'(x)$ zodat
+Uit het kenmerk van deelbaarheid door \(x-a\) volgt dat \((x-a) \mid A(x)\). Er bestaat dus een veelterm \(Q'(x)\) zodat
 \[
 A(x) = (x-a)Q'(x).
 \]
-Als we hierin $x$ vervangen door $b$, dan verkrijgen we 
+Als we hierin \(x\) vervangen door \(b\), dan verkrijgen we 
 \[
 \underbrace{A(b)}_{0} = \underbrace{(b - a)}_{\neq 0} Q'(b)
 \]
-zodat $Q'(b) = 0$. Dus $(x-b) \mid Q'(x)$ zodat $Q'(x) = (x-b)Q''(x)$ voor een zekere veelterm $Q''(x)$. Samengevat is dan
+zodat \(Q'(b) = 0\). Dus \((x-b) \mid Q'(x)\) zodat \(Q'(x) = (x-b)Q''(x)\) voor een zekere veelterm \(Q''(x)\). Samengevat is dan
 \[
 A(x) = (x-a)Q'(x) = (x-a)(x-b)Q''(x)
 \]
-waaruit we mogen besluiten dat $(x-a)(x-b) \mid A(x)$.
+waaruit we mogen besluiten dat \((x-a)(x-b) \mid A(x)\).
 
 % \end{expandable}
 
 
 \begin{example} 
-We gaan na of de veelterm $A(x) = x^{2025} - x^{2009}$ deelbaar is door $x^2 - 1$. Omdat $x^2-1 = (x-1)(x+1)$ kunnen we het kenmerk van deelbaarheid door $(x-a)(x-b)$ toepassen:
+We gaan na of de veelterm \(A(x) = x^{2025} - x^{2009}\) deelbaar is door \(x^2 - 1\). Omdat \(x^2-1 = (x-1)(x+1)\) kunnen we het kenmerk van deelbaarheid door \((x-a)(x-b)\) toepassen:
 \begin{align*}
 (x^2-1) \mid (x^{2025} - x^{2009}) \quad 
 & \Leftrightarrow \quad (x-1)(x+1) \mid A(x) \\
@@ -197,7 +197,7 @@ We gaan na of de veelterm $A(x) = x^{2025} - x^{2009}$ deelbaar is door $x^2 - 1
 & \Leftrightarrow \quad 1^{2025} - 1^{2009} = 0 \,\, \text{ en } \,\, (-1)^{2025} - (-1)^{2009} = 0 \\
 & \Leftrightarrow \quad 1 - 1 = 0 \,\, \text{ en } \,\, (-1) - (-1) = 0.
 \end{align*}
-Die laatste uitspraak $1 - 1 = 0$ en $(-1) - (-1) = 0$ is waar, en omdat ze gelijkwaardig is met de eerste uitspraak $(x^2-1) \mid (x^{2025} - x^{2009})$ besluiten we dat $A(x)$ deelbaar is door $x^2-1$. 
+Die laatste uitspraak \(1 - 1 = 0\) en \((-1) - (-1) = 0\) is waar, en omdat ze gelijkwaardig is met de eerste uitspraak \((x^2-1) \mid (x^{2025} - x^{2009})\) besluiten we dat \(A(x)\) deelbaar is door \(x^2-1\). 
 \end{example} 
 
 	
