@@ -26,7 +26,7 @@ Om in het algemeen het quotiënt en de rest bij deling van een veelterm $A(x)$ d
 
 \begin{algorithm} 
 Beschouw de veeltermen $A(x) = 3x^3+5x^2+8x+13$ en $B(x) = x-2$. Om quotiënt en rest te vinden, kunnen we de veelterm 
-\textit{ de veelterm $B(x)$ forceren in de veelterm $A(x)$}, een manier die ook al in het vorige hoofdstuk aan bod kwam, zie Werkwijze \ref{werkwijze:staartdeling}:
+\textit{ de veelterm $B(x)$ forceren in de veelterm $A(x)$}, een manier die ook al in het vorige hoofdstuk aan bod kwam:
 
 
 \begin{align*}
@@ -41,7 +41,7 @@ Beschouw de veeltermen $A(x) = 3x^3+5x^2+8x+13$ en $B(x) = x-2$. Om quotiënt en
 \end{align*}
 zodat $\D \underbrace{3x^3+5x^2+8x+13}_{A(x)} = \underbrace{(x-2)}_{B(x)}\cdot\underbrace{({\red{3}}x^2 + {\green{11}}x + {\blue{30}})}_{Q(x)} \,\, + \,\, \underbrace{{\gray{73}}}_{R(x)}$ waarbij $\gr R(x) < \gr B(x)$.
 
-Dat schrijfwerk kan ingekort worden met het schema van de staartdeling uit Hoofdstuk \ref{hoofdstuk:2}. Omdat de deler $B(x)$ van de vorm $x-a$ is, kunnen we quotiënt en rest op een andere manier berekenen die nog minder schrijfwerk vergt: het zogenaamde \textit{ schema van Horner}.\footnote{De meest gangbare naam voor dit rekenschema is \textit{ synthetische deling}. Uit dat schema volgt dat de rest bij deling van een veelterm $A(x) = a_0 + a_1x + a_2x^2 + \dots + a_nx^n$ door $x-a$, dat wegens de reststelling gelijk is aan de getalwaarde van $A(x)$ in $x=a$, kan geschreven worden als $A(a) = ((a_n a +a_{n-1})a+\dots)a+a_0$. Het belang ervan is dat ze het aantal vermenigvuldigingen tot een minimum beperkt, wat leidt tot een grotere numerieke stabiliteit van de berekende waarden. Deze gemotiveerde schrijfwijze voor $A(a)$ werd voor het eerst in 1819 door William George Horner\index{Horner, William George} beschreven. In de Lage Landen wordt het ganse rekenschema van de synthetische deling ook het \textit{ schema van Horner} genoemd, maar dat is historisch gezien onjuist. Zie \cite{Cajori} en \cite{wiki:Hornerschema}.} 
+Dat schrijfwerk kan ingekort worden met het schema van de staartdeling uit Hoofdstuk. Omdat de deler $B(x)$ van de vorm $x-a$ is, kunnen we quotiënt en rest op een andere manier berekenen die nog minder schrijfwerk vergt: het zogenaamde \textit{ schema van Horner}.\footnote{De meest gangbare naam voor dit rekenschema is \textit{ synthetische deling}. Uit dat schema volgt dat de rest bij deling van een veelterm $A(x) = a_0 + a_1x + a_2x^2 + \dots + a_nx^n$ door $x-a$, dat wegens de reststelling gelijk is aan de getalwaarde van $A(x)$ in $x=a$, kan geschreven worden als $A(a) = ((a_n a +a_{n-1})a+\dots)a+a_0$. Het belang ervan is dat ze het aantal vermenigvuldigingen tot een minimum beperkt, wat leidt tot een grotere numerieke stabiliteit van de berekende waarden. Deze gemotiveerde schrijfwijze voor $A(a)$ werd voor het eerst in 1819 door William George Horner\index{Horner, William George} beschreven. In de Lage Landen wordt het ganse rekenschema van de synthetische deling ook het \textit{ schema van Horner} genoemd, maar dat is historisch gezien onjuist. Zie \cite{Cajori} en \cite{wiki:Hornerschema}.} 
 \index{schema!van Horner}\index{Horner, schema van}
 \renewcommand{\kolbreed}{\widthof{$2 \cdot 30$}}
 

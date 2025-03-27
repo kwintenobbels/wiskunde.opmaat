@@ -66,7 +66,7 @@ Sommige veeltermen kun je meteen ontbinden omdat je een merkwaardig product herk
 x^2 - 7 = x^2 - \bigl(\sqrt{7}\bigr)^2 = \bigl(x-\sqrt{7})(x+\sqrt{7}\bigr). 
 \]
 Om ook een veelterm $A(x)$ van de vorm $x^3 - a^3$ te ontbinden in factoren, kunnen we als volgt te werk gaan.
-We stellen vast dat $A(a) = 0$. Daarom is $A(x)$ deelbaar door $x-a$, zie Stelling \ref{stelling:kenmerkvandeelbaarheid} (kenmerk van deelbaarheid door $x-a$). We berekenen het quotiënt met het schema van Horner
+We stellen vast dat $A(a) = 0$. Daarom is $A(x)$ deelbaar door $x-a$ (wegens kenmerk van deelbaarheid door $x-a$). We berekenen het quotiënt met het schema van Horner
 \renewcommand{\kolbreed}{\widthof{$-a^3$}}
 
 % \tikzit{
@@ -108,7 +108,7 @@ waaruit volgt dat  $x^3 + a^3 = (x+a)(x^2-ax+a^2)$. Zo is dan bijvoorbeeld
 \[
 x^3+8 = x^3 + 2^3 = (x+2)(x^2-2x+4).
 \]
-Bij uitbreiding kun je ook producten herkennen voor $x^4-a^4$ en $x^5 \pm a^5$. Die vatten we hieronder samen. Ook hier kun je elke gelijkheid aantonen door het rechterlid uit te werken en te vereenvoudigen. Je kan ook een gelijkheid terugvinden vanuit het linkerlid: pas het kenmerk van deelbaarheid door $x \pm a$ toe en voer het schema van Horner uit, zoals we hierboven voor $x^3 \pm a^3$ hebben laten zien.\footnote{Merk op dat we de producten voor $x^3 + a^3$ en $x^5 + a^5$ kunnen verkrijgen door in de gelijkheden voor $x^3 - a^3$ en $x^5 - a^5$ elke $a$ te vervangen door $-a$. Zoals Stelling \ref{stelling:ontbinden} hierboven aangeeft, kun je de tweetermen $x^4 - a^4$ en $x^5 \pm a^5$ nog verder ontbinden in factoren tot een product van lineaire en kwadratische veeltermen. Je kan ook $x^4+a^4$ ontbinden in factoren. Die ontbindingen staan vermeld in Oefening \ref{somtweevierdemachten}.} 
+Bij uitbreiding kun je ook producten herkennen voor $x^4-a^4$ en $x^5 \pm a^5$. Die vatten we hieronder samen. Ook hier kun je elke gelijkheid aantonen door het rechterlid uit te werken en te vereenvoudigen. Je kan ook een gelijkheid terugvinden vanuit het linkerlid: pas het kenmerk van deelbaarheid door $x \pm a$ toe en voer het schema van Horner uit, zoals we hierboven voor $x^3 \pm a^3$ hebben laten zien.
 	
 \begin{proposition} 
 Voor elke $a \in \R$ is:
@@ -156,7 +156,7 @@ Voor heel wat andere veeltermen volstaan die technieken niet, maar kan toch ontb
 \[
 A(x) = 2x^3 +x^2 - 8x + 21.
 \]
-Wegens het kenmerk van deelbaarheid (Stelling \ref{stelling:kenmerkvandeelbaarheid}) geldt voor elk reëel getal $a$: 
+Wegens het kenmerk van deelbaarheid geldt voor elk reëel getal $a$: 
 \[
 (x-a) \mid A(x) \quad \Leftrightarrow \quad A(a) = 0. 
 \]
@@ -171,9 +171,8 @@ We merken op dat de coëfficiënten van de veelterm $A(x)$ gehele getallen zijn:
 
 Als die veelterm $A(x)$ een gehele nulwaarde $a$ heeft, dan leert het uitwerken van het rechterlid ons dat de getallen $b,c,d$ zelf ook gehele getallen zijn. Bovendien vinden we dat $21 = -ad$, zodat $a$ een (gehele) deler is van $21$. Besluit: als $a$ een gehele nulwaarde van $A(x)$ is, dan is $a$ een deler van de constante term. 
 
-Die redenering gaat ook op voor andere veeltermen met gehele coëfficiënten. Nulwaarden worden ook \textit{ wortels} genoemd, en omdat het over gehele nulwaarden gaat, noemt men het resultaat de \textit{ gehele wortelstelling}. Voor een bewijs verwijzen we naar Oefening \ref{oefening:gehelewortelstelling}.
-\footnote{De voorwaarde $a \neq 0$ is nodig, omdat deelbaarheid door $0$ ongedefinieerd is.
-Een veralgemening is de zogenaamde \textit{ rationale wortelstelling}, zie Oefening \ref{oefening:rationalewortelstelling}.}
+Die redenering gaat ook op voor andere veeltermen met gehele coëfficiënten. Nulwaarden worden ook \textit{ wortels} genoemd, en omdat het over gehele nulwaarden gaat, noemt men het resultaat de \textit{ gehele wortelstelling}. 
+
 
 \begin{theorem}(gehele worteltrekking)
 Zij $A(x)$ een veelterm met gehele coëfficiënten. Als $a \neq 0$ een gehele nulwaarde van $A(x)$ is, dan is $a$ een deler van de constante term. 
