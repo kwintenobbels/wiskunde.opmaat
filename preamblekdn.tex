@@ -526,7 +526,11 @@ needspace=30pt % minimumhoogte voor splitsen kader
 
 
 \providecommand{\xmsource}{
+    \ifonlineTF{
     \begin{xmdiv}{xmsource}
         Gebaseerd op de TeX code van Koen De Naegel, CC BY-NC-SA, \href{https://www.koendenaeghel.be/opensource.htm}{https://www.koendenaeghel.be/opensource.htm}
     \end{xmdiv}
+    }{
+        \renewcommand{\xmorganisatienaam}{{\smaller Gebaseerd op \href{https://www.koendenaeghel.be/opensource.htm}{https://www.koendenaeghel.be}}}
+    }
 }

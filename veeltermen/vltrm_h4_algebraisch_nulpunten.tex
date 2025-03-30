@@ -37,7 +37,7 @@ Na herschikken van de termen is dit gelijk aan \(\underbrace{x^4 - 2x^3 - 34x^2 
 \renewcommand{\kolbreed}{\widthof{\(-35\)}}
 
 
-Delers van de constante term \(-35\) zijn kanshebbers gehele nulwaarden. Met ICT vinden we: \(A(7) = 0 \text{ en } A(-5) = 0 \text{ dus \(A(x)\) is deelbaar door} \((x-7)(x+5)\) \). Het schema van horner tweemaal uitvoeren levert: 
+Delers van de constante term \(-35\) zijn kanshebbers gehele nulwaarden. Met ICT vinden we: \(A(7) = 0\) en \(A(-5) = 0\) dus \(A(x)\) is deelbaar door \((x-7)(x+5)\). Het schema van horner tweemaal uitvoeren levert: 
 
 \tikzit{
 \(
@@ -56,15 +56,18 @@ Delers van de constante term \(-35\) zijn kanshebbers gehele nulwaarden. Met ICT
 }
 
 De veelterm kan dus als volgt ontbonden worden: 
-\(
-\begin{array}
+\[
+\begin{array}{rl}
 \D x^4 - 2x^3 - 34x^2 - 2x - 35 & \Leftrightarrow \quad (x-7)(x+5)(x^2+1) = 0 \\
 \D & \Leftrightarrow \quad x - 7 = 0 \,\, \text{ of } \,\,  x + 5 = 0 \,\, \text{ of } \,\, x^2 + 1 = 0 \\
-\D & \Leftrightarrow \quad x = 7 \,\, \text{ of } \,\,  x = -5 \,\, \text{ of } \,\, \underbrace{x^2}_{\geq 0} = \underbrace{-1}_{< 0} \quad \text{oplossingsverzameling} V = \{7,-5\}
+\D & \Leftrightarrow \quad x = 7 \,\, \text{ of } \,\,  x = -5 \,\, \text{ of } \,\, \underbrace{x^2}_{\geq 0} = \underbrace{-1}_{< 0} 
 \end{array}
-\)
+\]
 
+De oplossingsverzameling is \( V = \{7,-5\} \).
 \end{question} 
+
+\begin{question}
 \( \frac{1}{25}\,x^4-\frac{9}{25}\,x^3+\frac{14}{25}\,x^2+\frac{7}{5}\,x-1 = 0\) 
 
 Beide leden vermenigvuldigen met \(25\) levert \(\D \underbrace{x^4 - 9x^3 + 14x^2 + 35x - 25}_{A(x)} = 0\). 
@@ -72,7 +75,7 @@ Beide leden vermenigvuldigen met \(25\) levert \(\D \underbrace{x^4 - 9x^3 + 14x
 
 
 
-Delers van de constante term \(-25\) zijn kanshebbers gehele nulwaarden. Met ICT vinden we: \(A(5) = 0 \text{ dus \(A(x)\) is deelbaar door} \((x-5)\) \). Het schema van horner tweemaal uitvoeren levert: 
+Delers van de constante term \(-25\) zijn kanshebbers gehele nulwaarden. Met ICT vinden we: \(A(5) = 0\) dus \(A(x)\) is deelbaar door \((x-5)\). Het schema van horner tweemaal uitvoeren levert: 
 
 
 \tikzit{
@@ -94,13 +97,15 @@ Delers van de constante term \(-25\) zijn kanshebbers gehele nulwaarden. Met ICT
 De veelterm kan dus als volgt ontbonden worden: 
 
 \(
-\begin{array}
+\begin{array}{rl}
 \D x^4 - 9x^3 + 14x^2 + 35x - 25 = 0 &\Leftrightarrow \quad (x-5)^2(x^2+x-1) = 0 \\
 \D &\Leftrightarrow \quad x - 5 = 0 \,\, \text{ of } \,\,  x^2+x-1 = 0 \\
-\D &\Leftrightarrow \quad x = 5 \,\, \text{ of } \,\,  x = \frac{-1 \pm \sqrt{5}}{2} \quad \text{oplossingsverzameling} \D V = \left\{5,\frac{-1 + \sqrt{5}}{2},\frac{-1 - \sqrt{5}}{2} \right\} \\
+\D &\Leftrightarrow \quad x = 5 \,\, \text{ of } \,\,  x = \frac{-1 \pm \sqrt{5}}{2} \\
 \end{array}
 \)
 
+De oplossingsverzameling is \( \D V = \left\{5,\frac{-1 + \sqrt{5}}{2},\frac{-1 - \sqrt{5}}{2} \right\} \).
+\end{question}
 \end{example} 
 
 
@@ -114,26 +119,26 @@ Gegeven is de functie \(f\) met als voorschrift \(f(x) = x^4 + x^3 - 13x^2-x\) w
 
 \medskip
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\psset{xunit=0.525cm,yunit=0.525cm}
-\begin{pspicture}(-4.5,-4.99)(4,5.7) % co linksonder, co rechtsboven
-\psaxes[labels=none,ticks=none]{->}(0,0)(-4.5,-4.99)(4,5.7)
-\uput[l](0,5.7){\(y\)}
-\uput[d](4,0){\(x\)}
-\psplot[plotpoints=200,linewidth=0.4mm,linecolor=graf]{-4.5}{3.85}{x 4 add x 1 add mul x 1 neg add mul x 3 neg add mul 14 div 0.5 add 19 14 div neg add}
-\uput[r](-4.5,5){\color{graf} \(f\)}
-\uput[ur](0,0){\(O\)}
-\psline[linewidth=0.4mm,linecolor=graf]{*-*}(0,0)(0,0)
-\uput[ur](-4.1064,0){\(P\)}
-\psline[linewidth=0.4mm,linecolor=graf]{*-*}(-4.1064,0)(-4.1064,0)
-\uput[ul](3.1829,0){\(Q\)}
-\psline[linewidth=0.4mm,linecolor=graf]{*-*}(3.1829,0)(3.1829,0)
-\end{pspicture}
-\end{center}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{center}
+% \psset{xunit=0.525cm,yunit=0.525cm}
+% \begin{pspicture}(-4.5,-4.99)(4,5.7) % co linksonder, co rechtsboven
+% \psaxes[labels=none,ticks=none]{->}(0,0)(-4.5,-4.99)(4,5.7)
+% \uput[l](0,5.7){\(y\)}
+% \uput[d](4,0){\(x\)}
+% \psplot[plotpoints=200,linewidth=0.4mm,linecolor=graf]{-4.5}{3.85}{x 4 add x 1 add mul x 1 neg add mul x 3 neg add mul 14 div 0.5 add 19 14 div neg add}
+% \uput[r](-4.5,5){\color{graf} \(f\)}
+% \uput[ur](0,0){\(O\)}
+% \psline[linewidth=0.4mm,linecolor=graf]{*-*}(0,0)(0,0)
+% \uput[ur](-4.1064,0){\(P\)}
+% \psline[linewidth=0.4mm,linecolor=graf]{*-*}(-4.1064,0)(-4.1064,0)
+% \uput[ul](3.1829,0){\(Q\)}
+% \psline[linewidth=0.4mm,linecolor=graf]{*-*}(3.1829,0)(3.1829,0)
+% \end{pspicture}
+% \end{center}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{image}
+\begin{image}[0.3\textwidth]
 	
 	\begin{tikzpicture}[x=0.525cm, y=0.525cm]
 		% Axes
