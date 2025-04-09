@@ -1,7 +1,5 @@
 %%% Begin Laad packages
 
-
-
 \makeatletter
 \@ifclassloaded{xourse}{%
     \typeout{Start loading preamble.tex (in a XOURSE)}%
@@ -81,12 +79,11 @@
 % todo: rather redefine blue/red/green ...?
 %\definecolor{xmblue}{rgb}{0.01, 0.31, 0.59}
 %\definecolor{xmred}{rgb}{0.89, 0.02, 0.17}
-\definecolor{xmdarkblue}{rgb}{0.122, 0.671, 0.835}   % KU Leuven Blauw
-\definecolor{xmblue}{rgb}{0.114, 0.553, 0.69}        % KU Leuven Blauw
-\definecolor{xmgreen}{rgb}{0.13, 0.55, 0.13}         % No KULeuven variant for green found ...
+\definecolor{xmdarkblue}{rgb}{0.122, 0.671, 0.835}  
+\definecolor{xmblue}{rgb}{0.114, 0.553, 0.69}       
+\definecolor{xmgreen}{rgb}{0.13, 0.55, 0.13}        
 
-\definecolor{xmaccent}{rgb}{0.867, 0.541, 0.18}      % KU Leuven Accent (orange ...)
-\definecolor{kuaccent}{rgb}{0.867, 0.541, 0.18}      % KU Leuven Accent (orange ...)
+\definecolor{xmaccent}{rgb}{0.867, 0.541, 0.18}     
 
 \colorlet{xmred}{xmaccent!50!black}                  % Darker version of KU Leuven Accent
 
@@ -131,8 +128,8 @@
 \providecommand{\importantcell}[1]{\ensuremath{#1}}     % no mathjax2 support for colloring array cells
 
 \pdfOnly{
-  \renewcommand{\important}[1]{\ensuremath{\colorbox{kuaccent!50!white}{$#1$}}}
-  \renewcommand{\importantcell}[1]{\ensuremath{\cellcolor{kuaccent!40!white}#1}}   
+  \renewcommand{\important}[1]{\ensuremath{\colorbox{xmaccent!50!white}{$#1$}}}
+  \renewcommand{\importantcell}[1]{\ensuremath{\cellcolor{xmaccent!40!white}#1}}   
 }
 
 %%% Tikz styles
@@ -347,19 +344,14 @@
 % \providecommand{\afg}[1]{\left{#1\right}'}   
 %\renewcommand{\afg}[1]{D\left{#1\right}}
 
-%
-% \xmxxx commands: Extra KU Leuven functionaliteit van, boven of naast Ximera
-%   ( Conventie 8/2019: xm+nederlandse omschrijving, maar is niet consequent gevolgd, en misschien ook niet erg handig !)
-%
-% (Met een minimale ximera.cls en preamble.tex zou een bruikbare .pdf moeten kunnen worden gemaakt van eender welke ximera)
-%
+
 % Usage: \xmtitle[Mijn korte abstract]{Mijn titel}{Mijn abstract}
 % Eerste command na \begin{document}:
 %  -> definieert de \title
 %  -> definieert de abstract
 %  -> doet \maketitle ( dus: print de hoofding als 'chapter' of 'sectie')
 % Optionele parameter geeft eenn kort abstract (die met de globale setting \xmshortabstract{} al dan niet kan worden geprint.
-% De optionele korte abstract kan worden gebruikt voor pseudo-grappige abtsarts, dus dus globaal al dan niet kunnen worden gebuikt...
+% De optionele korte abstract kan worden gebruikt voor pseudo-grappige abstracts, dus dus globaal al dan niet kunnen worden gebruikt...
 % Globale settings:
 %  de (optionele) 'korte abstract' wordt enkele getoond als \xmshortabstract is gezet
 \providecommand\xmshortabstract{} % default: print (only!) short abstract if present

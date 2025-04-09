@@ -44,6 +44,13 @@
 \usepackage{fancyhdr} % Nodig voor de 'fancy' hoofdingen
 \usepackage{extramarks}
 
+\usepackage{titlesec}
+
+
+\usepackage{qrcode}
+\usepackage{currfile}
+\usepackage{marginnote}
+
 
 %\usepackage{rotating}
 
@@ -96,14 +103,14 @@
 % provide defaults for frontpage/headers/footers
 %  ( Overwrite in global.sty !)
 %
-\providecommand{\xmmodulenaam}{Module}
+\providecommand{\xmmodulenaam}{Hoofdstuk}
 \providecommand{\xmcursusnaam}{Basiskennis Wiskunde}
 \providecommand{\xmlogo}{
 %    	\begin{minipage}[c]{2cm}\includegraphics[width=2cm]{./x_zomercursus/sedes.jpg}\end{minipage}
 }
-\providecommand{\xmorganisatienaam}{{\textsc{KU Leuven}}}
-\providecommand{\xmafdelingsnaam}{{\textsc{IDL Project Basiswiskunde}}}
-\providecommand{\xmcursusversie}{\scriptsize{\yyyymmdddate\today\xmtoonprintopties.\the\currentminute}}
+\providecommand{\xmorganisatienaam}{{\textsc{Wiskunde Op Maat}}}
+\providecommand{\xmafdelingsnaam}{{\textsc{}}}
+\providecommand{\xmcursusversie}{{\scriptsize\yyyymmdddate\today\xmtoonprintopties.\the\currentminute}}
 
 \providecommand{\xmtoonprintopties}{%
 	\ifhandout H\fi%
@@ -133,7 +140,7 @@
     \thispagestyle{empty}
     \sffamily
     \includegraphics*[height=19.8truemm]{logo.png}
-    \hfill\textsc\xmafdelingsnaam\quad}
+    \hfill\textsc\xmafdelingsnaam\quad
     %
     \flushleft
     \vspace{{5cm}}
@@ -145,9 +152,9 @@
     }
     \vfill
     \flushright(Versie \xmcursusversie)
-    %
+    
     \afterpage{\thispagestyle{empty}}         
-}
+}}
 
 
 \renewcommand{\headrulewidth}{3pt}
@@ -186,7 +193,7 @@
 
 \fancypagestyle{firstpage}{%  op de eerste pagina BOLD titel in BLAUW
     \pagestyle{otherpage}
-    %\renewcommand{\headrulewidth}{3pt}
+    \renewcommand{\headrulewidth}{2pt}
     \if@twoside
         \fancyhead[C]{{\Large\firstleftmark}}
     % \else      %% No change needed ....
@@ -195,55 +202,9 @@
     \fi
 }
 
-\makeatother  
 
 \pagestyle{otherpage}
 
-% Print een zwarte BLOB  rechts op de pagina bij elke nieuwe activity
-%    ( handig bij het bladeren door de PDF ... ?)
-\ifdefined\xmprintblob   % deprecated; does not work anymore ...? (2/2023)
-\setlength{\unitlength}{18mm}
-%\newcommand{\blob}{\rule[-.2\unitlength]{1\unitlength}{.25\unitlength}}
-\newcommand{\blob}{{\color{gray}\rule{.5\unitlength}{.2\unitlength}}} 
-\newcommand\rblob{
-    \begin{picture}(0,0)
-%        \put(1,-\value{titlenumber}){\begin{sideways}\@title \thetitlenumber\end{sideways} \blob}
-        \put(1,-\value{titlenumber}){\thetitlenumber\;\blob}
-
-    \end{picture}
-}
-
-\newcommand\lblob{
-    \begin{picture}(0,0)
-        \put(-3,-\value{titlenumber}){\blob\;\thetitlenumber}
-    \end{picture}
-}
-
-\newcommand\rbigblob{
-    \begin{picture}(0,0)
-    \put(0,-0.2)
-     {     % \framebox{\selectfont\bfseries\color{blue}\thetitlenumber}
-           \colorbox{blueline}{\makebox(1,0.56){\selectfont\bfseries\color{white}\thetitlenumber}}   % Mmm, WRONG for sections
-     }
-    \end{picture}
-}
-\newcommand\lbigblob{
-    \begin{picture}(0,0)
-    \put(-1.15,-0.2)
-     {     % \framebox{\selectfont\bfseries\color{blue}\thetitlenumber}
-	     \colorbox{blueline}{\makebox(1,0.56){\selectfont\bfseries\color{white}\thetitlenumber}}
-     }
-    \end{picture}
-}
-\else
-\newcommand\blob{}
-\newcommand\rblob{}
-\newcommand\lblob{}
-\newcommand\lbigblob{}
-\newcommand\rbigblob{}
-\fi
-
-\makeatletter
 %
 % Voorbereiding MAIN FRONTPAGE (Algemene titlepagina, en tableofcontents)
 %
@@ -295,27 +256,15 @@
 %
 % defaults: will be overwitten infra
 %
-\usepackage{titlesec}
 
 %\counterwithin{subsubsection}{sectiontitlenumber}
-
-% met kleurtjes (om te testen)
-%\titleformat{\subsection}[hang]{\color{blue}\normalfont\Large\bfseries}{\thesubsection}{1em}{}
-%\titleformat{\subsubsection}[hang]{\color{green}\normalfont\large\bfseries}{\thesubsubsection}{1em}{}
-%\titleformat{\paragraph}[hang]{\color{brown}\normalfont\bfseries}{\theparagraph}{1em}{}
 
 \titleformat{\subsection}[hang]{\normalfont\bfseries}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}[hang]{\normalfont\bfseries}{\thesubsubsection}{1em}{}
 \titleformat{\paragraph}[hang]{\normalfont\bfseries}{\theparagraph}{1em}{}
 
-
-%\titleformat*{\subsubsection}{\normalfont\large\sffamily\bfseries}
 \titlespacing*{\subsection}{0pt}{1.25ex plus 1ex minus .2ex}{0.2em}
 
-%\usepackage{regexpatch}% http://ctan.org/pkg/regexpatch
-\usepackage{qrcode}
-\usepackage{currfile}
-\usepackage{marginnote}
 
 % Update het maketitle commando in chapterstyle: toevoegen in inhoudsopgave en counters resetten
 % Deze counters worden gebruikt om de juiste nummering te tonen bij de definities etc
