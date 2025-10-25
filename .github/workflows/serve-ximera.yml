@@ -84,8 +84,7 @@ jobs:
           GPG_KEY: ${{ secrets.GPG_KEY }}
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
           XIMERA_URL: ${{ vars.XIMERA_URL }}
-          XXXXIMERA_NAME:  ${{ vars.XIMERA_NAME }}
-          XIMERA_NAME:  veeltermen
+          XIMERA_NAME:  koendenaeghel
         run: |
           ./xmScripts/xmlatex name         
           ./xmScripts/xmlatex serve  veeltermen.tex veeltermen -f  # NOTE: -f  should not be needed ...        
