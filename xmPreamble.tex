@@ -1,14 +1,94 @@
+\typeout{Start loading xmPreamble.tex}%
+
+\makeatletter
+\typeout{**** Class options: \@classoptionslist ****}
+
+\@ifclassloaded{xourse}{%
+    \typeout{Start loading xmPreamble.tex (in a XOURSE)}%
+    \def\isXourse{true}  % could/should be in xourse.cls !
+}{%
+    \typeout{Start loading xmPreamble.tex (NOT in a XOURSE)}%
+}
+\makeatother
+
+\ifdefined\isXourse
+    \typeout{tikzexport: in xourse no exports}
+    \else\ifhandout
+    \typeout{tikzexport: in handout no exports}
+    \else\iftikzexport
+    \typeout{tikzexport: global export settings}
+
+\usepackage{tikz}
+\usetikzlibrary{external}
+
+\makeatletter
+% Make sure folder tikz/ exists
+\def\tikz@createexternaldir{%
+    \immediate\write18{mkdir -p tikz}%
+}
+% Patch TikZ so this runs just before writing the .md5 file
+\pretocmd\tikzexternalize{\tikz@createexternaldir}{}{}
+
+% Setup externalization
+\ifdefined\HCode
+    % in htlatex, just include the svg files
+    \typeout{tikzexport: in HTML}
+    \def\pgfsys@imagesuffixlist{.svg}
+    \def\pgfsysdriver{pgfsys-dvisvgm4ht.def}    
+%    \tikzexternalize[verbose,prefix=tikz/,mode=graphics if exists]
+% \else
+%    \tikzexternalize[verbose,prefix=tikz/,optimize=false]
+\fi
+
+% Always externalize...
+
+    \tikzexternalize[verbose,prefix=tikz/,optimize=false]
+    \tikzset{
+        external/system call={
+            mkdir -p tikz &&
+            pdflatex \tikzexternalcheckshellescape
+            -halt-on-error -interaction=batchmode
+            -jobname "\image" "\string\PassOptionsToClass{tikzexport}{ximera}\texsource" &&
+            mutool draw -F svg "\image".pdf  >"\image".svg;
+            mutool draw -r 150 -c rgbalpha -o "\image".png "\image".pdf &&
+            ebb -x "\image".png &&
+            echo "DONE pdflatex \image"
+        },
+    }
+\else
+    \typeout{NO tikzexport}
+
+\fi
+\fi\fi
+
+%            dvisvgm --pdf --page=1- "\image".pdf -o "\image".svg &&
+
+
+\makeatother
+
+\typeout{Start loading preamble.tex from xmPreamble}%
+
+
+%% OBSOLETE:
+% \ifdefined\adhocpreambleloaded
+%     \typeout{SKIP (re-)loading preamble.tex}%
+%       \endinput % stops reading this file here
+% \fi
+%     \else
+%     \typeout{LOADING PREAMBLE.tex}%
+% %  \fi
+
+%
 %%% Begin Laad packages
-
-
-
+%
 \makeatletter
 \@ifclassloaded{xourse}{%
     \typeout{Start loading preamble.tex (in a XOURSE)}%
-    \def\isXourse{true}   % automatically defined; pre 112022 it had to be set 'manually' in a xourse
+    \def\isXourse{true}   % automatically defined; pre 112022 it had to be set 'manually' in a xourse (and 060925 AGAIN??)
 }{%
     \typeout{Start loading preamble.tex (NOT in a XOURSE)}%
 }
+
 \makeatother
 
 \pgfplotsset{compat=1.16}
@@ -38,7 +118,7 @@
 
 \usepackage{cancel}
 
-
+\usepackage{tabularx}
 % Nuttig als ook interactieve beamer slides worden voorzien:
 \providecommand{\p}{} % default nothing ; potentially usefull for slides: redefine as \pause
 %providecommand{\p}{\pause}
@@ -859,7 +939,7 @@
 % te gebruiken als je zeker een newline wil na de hoofdig en titel
 % (in het bijzonder itemize zonder \nl is 'lelijk' ...)
 \ifdefined\HCode
-\newcommand{\nl}{}
+\newcommand{\nl}{\Hnewline}
 \else
 \newcommand{\nl}{\ \par} % newline (achter heading van definition etc.)
 \fi
@@ -1203,3 +1283,217 @@
 
 
 
+% ----------------------------------------------------------------LAMBREGS
+
+\usepackage{siunitx}
+\sisetup{locale = FR, exponent-product = \cdot}
+
+
+\newcommand{\kader}[1]{\framebox{\begin{minipage}[t]{0.98\textwidth}#1\end{minipage}}}
+\newcommand{\voorbeeld}[2]{\begin{tabular}[t]{p{0.98\textwidth}}\textsf{Voorbeeld: #1}\\\hline\end{tabular}\ \newline\newline#2\ \newline \begin{tabular}[t]{p{0.98\textwidth}}\hline\\\end{tabular}}
+
+%\setlength{\parindent}{0pt} \addtolength{\voffset}{-1cm} \addtolength{\textheight}{2cm}
+%\setlength{\unitlength}{1mm}
+
+%\setlength{\parskip}{1em}
+
+
+% \newcommand{\dom}[1]{{\rm dom}\,#1}
+% \newcommand{\ber}[1]{{\rm ber}\,#1}
+% \newcommand{\bgsin}[1]{{\rm bgsin}\,#1}
+% \newcommand{\bgcos}[1]{{\rm bgcos}\,#1}
+% \newcommand{\bgtan}[1]{{\rm bgtan}\,#1}
+
+\newcommand*\cleartoleftpage{%
+  \clearpage
+  \ifodd\value{page}\hbox{}\newpage\fi
+}
+
+\theoremstyle{plain}\newtheorem{eigenschap}{Eigenschap}\newtheorem{definitie}{Definitie}
+%\theoremstyle{remark}\newtheorem*{bewijs}{Bewijs}
+
+% Om de oplossingen te tonen: comment out de \excludecomment
+% \specialcomment{oplossing}{\begingroup\color{blue}}{\endgroup}
+% \excludecomment{oplossing}
+
+%\includeonly{F_Files/voorblad, F_Files/inhoudspagina,F_Files/inleiding,F_Files/eendimensionalebewegingen,F_Files/oefeningen_1d}
+
+
+
+
+\providecommand{\xmorganisatienaam}{}
+\providecommand{\xmcursusnaam}{}
+\providecommand{\xmafdelingsnaam}{}
+
+
+
+
+\providecommand{\xmsource}{
+    \ifonlineTF{
+    \begin{xmdiv}{xmsource}
+        Gebaseerd op cursus SPC 2021
+    \end{xmdiv}
+    }{
+        \renewcommand{\xmorganisatienaam}{{\smaller Gebaseerd op cursus SPC 2021}}
+    }
+}
+
+
+\providecommand{\xmuitleg}{
+\ifonlineTF{
+\begin{expandable}{remark}{Verbeteringen/fouten/onduidelijkheden/...?}
+
+Deze open-source cursus is in ontwikkeling.
+\textbf{De aanbevelingen van leerlingen om dit materiaal te verbeteren zijn erg welkom via info@wiskunde.opmaat.org} \\ 
+Dit kan gaan over: 
+\begin{itemize}
+    \item Een voorbeeld dat onduidelijk is.
+    \item Onnauwkeurigheden, schrijffouten, ... 
+    \item Een tussenstap die beter uitgelegd moet worden. 
+    \item Een uitleg die je op youtube, wikipedia of aan de kersttafel gevonden hebt die ophelderend was. 
+    \item ... 
+\end{itemize}
+\end{expandable}
+}
+{}   % Niets in de in PDF ...
+}
+% \providecommand{\xmuitleg}{
+% \ifonlineTF{
+% \begin{expandable}{remark}{Deze open-source cursus is in ontwikkeling.}
+% Leerkrachten en leerlingen die van dit materiaal gebruik maken kunnen eenvoudig fouten/verbetering/... melden:
+% \begin{itemize}
+%     \item  via de 'Wijzig' knop kan je zelf kleine fouten en typo's aanpassen. \href{https://wiskunde.opmaat.org/website/inhoud/welkom/doe-mee}{(extra uitleg)}
+%     \item een mail sturen naar info@wiksunde.opmaat.org 
+% \end{itemize}
+% Dit materiaal wordt ontwikkeld als open-source project via \href{https://natuurkundeopmaat.zulipchat.com/login/}{zulip}. 
+% \end{expandable}
+% }
+% {}   % Niets in de in PDF ...
+% }
+
+
+
+% TEMP :
+\usepackage{totcount}
+\newtotcounter{totaantal}
+
+\usepackage{import}
+
+\usepackage{marginnote}
+
+\newcommand{\pt}[1]{\leavevmode\marginnote[\hfill\textbf{/#1}]{\hfill/#1}\addtocounter{totaantal}{#1}}
+
+% To be checked: to get \begin{expandable}{xmyoutue} work
+% COuld/should perhaps be 'xmdonothing' or so? Or expandable to be adapted
+\DeclareDocumentEnvironment{xmdonothing}{}{}{}{}
+
+\ifdefined\isXourse
+\else
+% \logo is only defined in xourses (but that prevents \logo to be used in global.sty etc ....)
+\newcommand*{\logo}[1]{%
+    \IfFileExists{#1}%
+      {\gdef\xourse@logo{#1}}%
+      {\ClassError{xmPreamble}{logo file does not exist}
+        {To use logo, make sure that the referenced image file exists}}%
+}
+\fi
+
+%% Overwrite definition in xourse.cls
+\AtBeginDocument{
+\renewcommand*{\logo}[1]{%
+    \IfFileExists{#1}%
+      {\gdef\xourse@logo{#1}}%
+      {\ClassError{xmPreamble}{logo file does not exist}
+        {To use logo, make sure that the referenced image file exists}}%
+}
+}
+% \fi
+
+
+%% OBSOLETE: 
+% \input{preamble.tex}
+% \def\adhocpreambleloaded{true}
+% \typeout{Loaded preamble.tex from xmPreamble (\adhocpreambleloaded)}%
+
+
+
+
+
+% VOOR DE LOGO's TIKZPICTURES 
+
+\tikzset{
+    wiskunde/.pic={
+        \draw (0,0) node[font=\fontfamily{cmr}\selectfont\large] {W}
+        ++(0.2,-0.1) node[font=\fontfamily{cmr}\selectfont\normalsize] {I}
+        ++(0.15,0.04) node[font=\fontfamily{cmr}\selectfont\normalsize] {S}
+        ++(0.23,0.06) node[font=\fontfamily{cmr}\selectfont\large] {K}
+        ++(0.23,0.06) node[font=\fontfamily{cmr}\selectfont\normalsize] {U}
+        ++(0.2,-0.06) node[font=\fontfamily{cmr}\selectfont\small] {N}
+        ++(0.23,0) node[font=\fontfamily{cmr}\selectfont\large] {D}
+        ++(0.24,-0.06) node[font=\fontfamily{cmr}\selectfont\small] {E};
+    },
+    natuurkunde/.pic={
+        \draw (0,0) node[font=\fontfamily{cmr}\selectfont\large] {N}
+        ++(0.2,-0.1) node[font=\fontfamily{cmr}\selectfont\normalsize] {A}
+        ++(0.15,0.1) node[font=\fontfamily{cmr}\selectfont\normalsize] {T}
+        ++(0.23,0)   node[font=\fontfamily{cmr}\selectfont\large] {U}
+        ++(0.23,0.06) node[font=\fontfamily{cmr}\selectfont\normalsize] {U}
+        ++(0.2,-0.03) node[font=\fontfamily{cmr}\selectfont\small] {R}
+        ++(0.23,-0.03) node[font=\fontfamily{cmr}\selectfont\large] {K}
+        ++(0.23,0.06) node[font=\fontfamily{cmr}\selectfont\normalsize] {U}
+        ++(0.2,-0.06) node[font=\fontfamily{cmr}\selectfont\small] {N}
+        ++(0.23,0) node[font=\fontfamily{cmr}\selectfont\large] {D}
+        ++(0.24,-0.06) node[font=\fontfamily{cmr}\selectfont\small] {E};
+    },
+    scheikunde/.pic={
+        \draw (0,0) node[font=\fontfamily{cmr}\selectfont\large] {S}
+        ++(0.22,-0.1) node[font=\fontfamily{cmr}\selectfont\normalsize] {C}
+        ++(0.25,0.05) node[font=\fontfamily{cmr}\selectfont\normalsize] {H}
+        ++(0.23,0.05)   node[font=\fontfamily{cmr}\selectfont\large] {E}
+        ++(0.2,0) node[font=\fontfamily{cmr}\selectfont\normalsize] {I}
+        ++(0.2,0) node[font=\fontfamily{cmr}\selectfont\large] {K}
+        ++(0.23,0.06) node[font=\fontfamily{cmr}\selectfont\normalsize] {U}
+        ++(0.2,-0.06) node[font=\fontfamily{cmr}\selectfont\small] {N}
+        ++(0.23,0) node[font=\fontfamily{cmr}\selectfont\large] {D}
+        ++(0.24,-0.06) node[font=\fontfamily{cmr}\selectfont\small] {E};
+    },
+    opmaat/.pic={
+        \draw (0,0) node[font=\fontfamily{cmr}\selectfont\large] {O}
+        ++(0.25,-0.1) node[font=\fontfamily{cmr}\selectfont\normalsize] {P}
+        ++(0.3,0.1) node[font=\fontfamily{cmr}\selectfont\large] {M}
+        ++(0.25,0.03) node[font=\fontfamily{cmr}\selectfont\small] {A}
+        ++(0.18,-0.07) node[font=\fontfamily{cmr}\selectfont\large] {A}
+        ++(0.2,0.04) node[font=\fontfamily{cmr}\selectfont\large] {T};
+    },
+    wiskundeopmaat/.pic={
+        \pic at (0,0) {wiskunde};
+        \pic at (0.1,-0.37) {opmaat};
+    },
+    natuurkundeopmaat/.pic={
+        \pic at (0,0) {natuurkunde};
+        \pic at (0.45,-0.32) {opmaat};
+    }, 
+    scheikundeopmaat/.pic={
+        \pic at (0,0) {scheikunde};
+        \pic at (0.45,-0.35) {opmaat};
+    }
+}
+
+
+% ========================================================================
+% PACKAGE VOOR TODO'S EN OPMERKNGEN PER AUTEUR 
+
+\usepackage{fixme} % Use 'draft' mode to show notes; 'final' hides them
+\fxsetup{
+    status=draft, % Display notes
+    author={Author}, % Default author name
+    layout=inline, % Options: inline, margin, footnote
+    theme=color, % Color-coded notes based on type
+    % outertheme=boxed,
+    }
+    
+    \FXRegisterAuthor{vincent}{vincentopmerking}{\color{cyan}Vincent} 
+    \FXRegisterAuthor{bart}{bartopmerking}{\color{yellow}Bart} 
+    \FXRegisterAuthor{kwinten}{kwintenopmerking}{\color{magenta}Kwinten} 
+    \FXRegisterAuthor{tikz}{tikzopmerking}{\color{green}TIKZ} 
+% ========================================================================
