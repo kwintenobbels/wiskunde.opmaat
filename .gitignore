@@ -310,6 +310,7 @@ ans[0-9]*.tex
 
 *.jax
 *.xmjax
+*.xmcss
 *.ids
 *.oc
 
