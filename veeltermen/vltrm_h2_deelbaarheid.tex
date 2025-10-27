@@ -1,0 +1,160 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% DIT MATERIAAL VERTROK VAN DE OPEN-SOURCE CURSUS VEELTERMEN VAN KOEN DE NAEGHEL         
+% GEKOPIEËRD OP 24 MAART 2025                                                            
+% ORIGINEEL BESCHIKBAAR VIA https://www.koendenaeghel.be/opensource.htm         
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass{ximera}
+
+\input{../preamblekdn}
+
+\addPrintStyle{..}
+\begin{document}
+    \author{Koen de Naeghel - Wiskunde Op Maat}
+    \xmtitle{Deelbaarheid}{}
+    \xmsource
+
+
+In de lagere school heb je geleerd om met \textit{getallen} een deling uit te voeren. Analoog kan je ook bij veeltermen deelbaarheid bestuderen. De definitie, eigenschappen en werkwijzen om veeltermen te delen staan in dit hoofdstuk centraal. 
+
+
+Het geheel getal \(2025\) is deelbaar door het geheel getal \(15\) omdat er een geheel getal \(q\) bestaat waarvoor \(2025 = 15\cdot q\), namelijk \(q = 35\). Op een gelijkaardige manier is de veelterm \(x^2-1\) deelbaar door door de veelterm \(x+1\), omdat er een veelterm \(Q(x)\) bestaat waarvoor \(x^2-1 = (x+1)\cdot Q(x)\), namelijk \(Q(x) = x-1\). Bereken zelf het procuct \({x-1} \cdot (x+1)\) uit om deze berekening na te gaan. Deze vaststelling wordt in het algemene geval alsvolgd gedefiniërd: 
+
+
+\begin{definition} 
+Zij \(A(x)\) en \(B(x)\) twee veeltermen waarbij \(B(x) \neq 0\). 
+We noemen \(B(x)\) een \underline{deler}\index{deler} van \(A(x)\) als er een veelterm \(Q(x)\) bestaat zodat \(A(x) = B(x)\cdot Q(x)\). In symbolen: 
+
+\[
+B(x) \mid A(x) \quad \Leftrightarrow \quad \exists \, Q(x) \in \R[x]: A(x) = B(x)\cdot Q(x).
+\]
+waarbij de veelterm \(A(x)\) het \textit{deeltal} is, de veelterm \(B(x)\) de \textit{deler} en de veelterm \(Q(x)\) het \textit{quotiënt (van de opgaande deling)}.
+
+Met \(B(x) \mid A(x)\) noteren we dat de veelterm \(B(x) \neq 0\) een deler is van een veelterm \(A(x)\). De veelterm \(A(x)\) is \textit{deelbaar} door de veelterm \(B(x)\). In het geval dat de deling niet opgaat noteren we \(B(x) \nmid A(x)\). 
+
+\end{definition} 
+
+
+
+
+\begin{example} 
+
+Beschouw de veeltermen \(A(x) = x^8\) en \(B(x) = x^2\). Dan is \(B(x) \mid A(x)\) en een quotiënt van de opgaande deling is gelijk aan \(x^6\). Leg uit waarom. 
+
+\end{example} 
+
+
+
+\begin{example} 
+Er geldt dat \(x \mid x^2\) en \((x+1) \mid (x^2-1)\) en \((x-3) \nmid (2x^3+15)\).
+\end{example} 
+
+
+\begin{example} 
+Beschouw de veeltermen \(A(x) = 14x^2+17x+5\) en \(B(x) = 2x+1\). Dan is \(B(x)\) een deler van \(A(x)\), want er bestaat een veelterm \(Q(x)\) waarvoor \(A(x) = B(x) \cdot Q(x)\), bijvoorbeeld \(Q(x) = 7x+5\). Inderdaad, het product uitwerken levert:
+\[
+B(x) \cdot Q(x) = (2x+1) \cdot (7x+5) = 14x^2 + 10x + 7x + 5 = 14x^2 + 17x + 5 = A(x).
+\]
+
+\end{example} 
+
+Argumenteren dat een gegeven veelterm \(A(x)\) \textit{niet deelbaar} is door een gegeven veelterm \(B(x)\) kan door aan te tonen dat er geen enkele veelterm \(Q(x)\) bestaat waarvoor \(A(x) = B(x) \cdot Q(x)\). In dit geval is een redenering uit het ongerijmde vaak een vruchtbare methode. 
+
+\begin{example} 
+Zij \(A(x) = 2x^3+15\) en \(B(x) = x-3\). Dan is \(B(x)\) geen deler van \(A(x)\). Inderdaad, mocht er toch een veelterm \(Q(x)\) bestaan waarvoor \(A(x) = B(x) \cdot Q(x)\) dan zou \(\gr Q(x) = 2\) zodat \(Q(x) = a x^2 + b x + c\) voor zekere \(a,b,c \in \R\) met \(a \neq 0\). In dat geval is
+\[
+2x^3+15 = (x-3) \cdot (a x^2 + b x + c) 
+\]
+en door de hoogstegraadsterm en constante term van beide leden te vergelijken, vinden we meteen dat \(a = 2\) en \(c = -5\). Invullen en uitwerken van het rechterlid geeft dan
+\begin{align*}
+2x^3+15 
+& = (x-3) \cdot (2 x^2 + b x - 5) \\
+& = 2x^3 + bx^2 - 5x - 6x^2 - 3bx + 15 \\
+& = 2x^3 + (b-6)x^2 + (-5-3b)x + 15.
+\end{align*}
+Hieruit volgt dat \(b - 6 = 0\) en \(-5-3b = 0\), zodat \(b = 6\) en \(b = -\frac{5}{3}\), wat onmogelijk is. Er bestaat dus geen veelterm \(Q(x)\) met \(A(x) = B(x) \cdot Q(x)\). Dus \(x-3\) is geen deler van \(2x^3+15\). 
+\end{example} 
+
+
+
+In bovenstaande voorbeelden bestaat er telkens hoogstens één veelterm \(Q(x)\) waarvoor \(A(x) = B(x)\cdot Q(x)\). Dat resultaat blijkt waar te zijn voor alle veeltermen \(A(x)\) en \(B(x)\) met \(B(x) \neq 0\). Deze eigenschap is erg belangrijk en mag dus \textit{ stelling} genoemd worden. 
+
+\begin{theorem} 
+Zij \(A(x)\) en \(B(x)\) twee veeltermen waarbij \(B(x) \neq 0\). Dan bestaat er hoogstens één veelterm \(Q(x)\) zodat \(A(x) = B(x)\cdot Q(x)\). 
+\end{theorem} 
+
+
+\begin{proof}
+
+Stel dat er twee veeltermen \(Q(x)\) en \(Q'(x)\) bestaan waarvoor \(A(x) = B(x)\cdot Q(x)\) en \(A(x) = B(x)\cdot Q'(x)\). Gelijkstellen levert nu:
+\begin{align*}
+A(x) = A(x) \quad & \Rightarrow \quad B(x)\cdot Q(x) = B(x)\cdot Q'(x) \\
+& \Rightarrow \quad B(x)\cdot Q(x) - B(x)\cdot Q'(x) = 0 \\
+& \Rightarrow \quad B(x) \cdot \bigl(Q(x) - Q'(x) \bigr) = 0 \\
+& \Rightarrow \quad B(x) = 0 \,\,\text{ of } \,\, Q(x) - Q'(x) = 0. 
+\end{align*}
+Er is gegeven dat \(B(x) \neq 0\). Dus moet noodzakelijk \(Q(x) - Q'(x)\) zodat \(Q(x) = Q'(x)\). Bijgevolg bestaat er hoogstens één veelterm \(Q(x)\) zodat \(A(x) = B(x)\cdot Q(x)\).
+
+\end{proof}
+
+
+Met deze eigenschap kunnen we de definitie voor deelbaarheid opnieuw formuleren. 
+
+\begin{definition}(deelbaarheid met uniciteit)
+    Een veelterm \(B(x) \neq 0\) is een deler van een veelterm \(A(x)\) als en slechts als er precies één veelterm \(Q(x)\) bestaat waarvoor geldt dat \(A(x) = B(x)\cdot Q(x)\). In symbolen:
+    \[
+    B(x) \mid A(x) \quad \Leftrightarrow \quad \exists! \, Q(x) \in \R[x]: A(x) = B(x)\cdot Q(x).
+    \] 
+    In dat geval is \(Q(x)\) dus voortaan \textit{ hét} quotiënt (van de opgaande deling) en geldt: 
+    \[
+    \frac{A(x)}{B(x)} = Q(x).
+    \]
+    
+\end{definition}
+
+\begin{example} 
+We hebben dat \(x^2 \mid x^8\) en het quotiënt van de deling is gelijk aan \(x^6\). De volgende notatie komt dan overeen met een rekenregel voor machten:
+\[
+\frac{x^8}{x^2} = x^6.
+\]
+\end{example} 
+
+
+
+
+Een typische oefening is bepalen van het quotiënt van een opgaande deling. In de volgende paragraaf zien we de algemene werkwijze om dat te doen. 
+
+In volgende sectie wordt uitgelegd hoe je in het algemene geval de deling van veeltermen kan uitvoeren. In het geval er in de veeltermen \(A(x)\) en \(B(x)\) parameters voorkomen, heb je reeds alle kennis om dit te controleren. Het is mogelijk om de graad van het quotiënt \(Q(x)\) te bepalen en vervolgens het quotiënt \(Q(x)\) uit te drukken met coëfficiënten die nog onbepaald zijn (vandaar de naam \textbf{methode van de onbepaalde coëfficiënten}). Daarna met het verband \(A(x) = B(x) \cdot Q(x)\) die coëfficiënten van \(Q(x)\) te bepalen. Deze methode werd reeds hierboven uitgevoerd om te bewijzen dat een veelterm \textit{niet deelbaar} is. 
+
+
+\begin{example} 
+We bepalen de waarde(n) van de parameters \(p\) en \(q\) waarvoor geldt dat de veelterm \(6x^3+px^2+32x+q\) deelbaar is door de veelterm \(2x^2-7x-1\). In dat geval heeft het quotiënt van de opgaande deling graad \(1\), zodat 
+\[
+6x^3+px^2+32x+q = (2x^2-7x-1)\cdot (ax+b)
+\]
+voor zekere \(a,b \in \R\) met \(a \neq 0\). De veelterm in het rechterlid heeft hoogstegraadsterm \(2x^2 \cdot ax = 2ax^3\), die gelijk moet zijn aan de hoogstegraadsterm van de veelterm in het linkerlid, zodat \(6 = 2a\) dus \(a = 3\). Een analoge redenering voor de constante term geeft dat \((-1) \cdot b = q\) zodat \(b = -q\). Invullen en uitwerken van het rechterlid geeft nu:
+\begin{align*}
+6x^3+px^2+32x+q 
+& = (2x^2-7x-1)\cdot (3x-q) \\
+& = 6x^3 - 2qx^2 - 21x^2 + 7qx - 3x + q \\
+& = 6x^3 + (-2q-21)x^2 + (7q-3)x+q.
+\end{align*}
+Vergelijken van de coëfficiënten van \(x^2\) en \(x\) in linker- en rechterlid leidt tot een stelsel:
+\[
+\left\{ 
+\begin{aligned}
+p & = -2q - 21 \\
+32 & = 7q - 3. 
+\end{aligned}
+\right.
+\]
+De tweede vergelijking geeft \(q = 5\), en door die waarde in de eerste vergelijking te substitueren, vinden we ten slotte dat \(p = -31\).  
+\end{example} 
+
+
+
+
+\end{document}
