@@ -1,0 +1,178 @@
+\documentclass{ximera}
+\input{../preamble}
+\addPrintStyle{..}
+\begin{document}
+	\author{Wiskundeplan}
+	\xmtitle{Rekenen met breuken}{}
+    \label{xim:breuken_theorie}
+
+Deze pagina geeft een overzicht van de rekenregels voor breuken. 
+De focus ligt op rekenvaardigheid. Voor meer nauwkeurige en theoretische bespreking verwijzen we door naar een handboek. 
+
+\begin{definition}\label{def:breuken}\nl
+ 
+%Zij $a,b,c,d\in \R$.
+Een \textbf{breuk} is een uitdrukking van de vorm $\frac ab$,  met $a,b\in\R$  en $b\neq0$.
+\\[2mm]
+We noemen $a$ de \textbf{teller} en $b$ de \textbf{noemer}.
+Zodra de noemers verschillend zijn van $0$, geldt:
+\begin{align*}
+        \important{\frac{a}{b} = \frac{c}{d}}  &\iff \important{ad = bc}
+             &&\text{gelijkheid van breuken}
+             %\label{def: gelijkwaardigheid breuken}
+             \\[2mm]
+        \frac{a}{b}+\frac{c}{d} \quad&\perdef\quad \frac{ad+cb}{bd}
+             &&\text{optelling}
+             %\label{def:optelling breuken}
+             \\[2mm]
+        \frac{a}{b} \cdot \frac{c}{d} \quad&\perdef\quad \frac{a\cdot c}{b\cdot d}
+             &&\text{vermenigvuldiging}
+             %\label{def: vermenigvuldiging breuken}
+             \\[2mm]
+        \frac{a}{b} : \frac{c}{d} \quad&\perdef\quad \frac ab \cdot \frac dc = \frac{a\cdot d}{b\cdot c}
+             &&\text{deling}
+             %\label {def: deling breuken}
+\end{align*}
+
+\end{definition}
+
+
+
+Uit deze definities volgen enkele belangrijke rekenregels: 
+
+\begin{proposition}\label{eig:rekenregels_breuken}
+{
+\allowdisplaybreaks
+\addtolength{\jot}{-2mm}  % hack: double // for html (??), but -2mm for pdf :( )
+%\savebox\strutbox{$\vphantom{\dfrac{1^2}{1^2}^n}$}   % hack!
+\begin{align*}
+        \frac{a\cdot c}{a\cdot d} &=    \frac{\cancel{a}\cdot c}{\cancel{a}\cdot d} = \frac{c}{d}
+            && \text{(gemeenschappelijke factor $a$ wegdelen)} \\[3mm]
+            \\
+         \frac{c}{d}    &= \frac{a\cdot c}{a\cdot d}
+            && \text{(met factor $a$ vermenigvuldigen)} \\[3mm]
+            \\
+        a\cdot \frac{c}{d}   &= \frac{a\cdot c}{d}
+            && \text{(getal maal breuk)}  \\[3mm]
+            \\
+        \frac{a\cdot c}{d}   &= a\cdot \frac{c}{d}
+            && \text{(factor uit teller halen)} \\[3mm]
+            \\
+        \frac{a}{b}+\frac{c}{b}  &= \frac{a+c}{b}
+            && \text{(breuken optellen, gelijke noemers)} \\[3mm]
+            \\
+        \frac{a+c}{b} &= \frac{a}{b}+\frac{c}{b}
+            && \text{(som in teller splitsen)}\\[3mm] % \hfill\text{(zelfde formule als vorige!)}\\
+            \\
+        \frac{\frac{a}{b}}{\ \frac{c}{d}\ } &= \frac ab \cdot \frac dc =  \frac{a\cdot d}{b\cdot c}
+            && \text{(breuk gedeeld door breuk is maal omgekeerde)}\\[3mm]
+            \\
+        \frac{\frac{a}{b}}{\ \frac{c}{b}\ } &= \frac ab \cdot \frac bc =  \frac{a}{c}
+            && \text{(gelijke noemer $\frac 1b$  wegdelen)}\\[3mm]
+            \\
+        \frac{\frac{a}{b}}{\ c\ } &= \frac ab \cdot \frac 1c = \frac{a}{b\cdot c}
+            && \text{(breuk gedeeld door getal is maal in noemer)}\\[3mm]
+            \\
+        \frac{a}{\ \frac{c}{d}\ } &= a\cdot \frac dc = \frac{a\cdot d}{c}
+            && \text{(getal gedeeld door breuk is maal omgekeerde)}
+\end{align*}
+}
+
+\end{proposition}
+
+
+
+Er zijn ook enkele minder voor de hand liggende operaties mogelijk die in oefeningen vaak handig blijken: 
+
+
+% \begin{proposition}[Eenvoudige  gevolgen]\label{eig:rekenregels_breuken2}
+%     \[
+%         \begin{array}{rll}
+%         a + c &= d\cdot (\frac ad +\frac cd)
+%         & (\text{niet bestaande factor buiten haakjes brengen})\\
+%         a  &= \frac a1
+%         & (\text{van 'geen breuk' toch 'breuk' maken})\\
+%         a  &= \frac {1}{1/a}
+%         & (\text{van 'geen breuk' toch 'breuk' maken (variant)})\\
+%         a\cdot b  &= \frac {a}{1/b}
+%         & (\text{van een product een breuk maken})\\
+%         \frac ab  &= a\cdot \frac 1b
+%         & (\text{van een breuk een product maken})\\
+%         a\cdot b = 1  &\iff a = \frac 1b
+%         & (\text{van een product een breuk maken (variant)})\\
+%         \end{array}
+%     \]
+% \end{proposition}
+
+
+
+\begin{proposition} Je kan altijd 
+    
+    \begin{center}
+        \begin{tabular}{cl}          
+            \( a + c = d\cdot \left(\frac{a}{d} + \frac{c}{d} \right) \)&
+            een niet bestaande factor buiten haakjes brengen.\\ [7mm]
+            
+            \( a  = \frac{a}{1} = \frac {1}{\frac{1}{a}}\)&
+            van 'geen breuk' toch een breuk maken.\\ [7mm]
+            
+            \( a\cdot b  = \frac{a}{\frac{1}{b}}\)&
+            van een product een breuk maken. \\ [7mm]
+            
+            \( \frac{a}{b}  = a\cdot \frac{1}{b}\)&
+            van een breuk een product maken. \\
+            
+        \end{tabular}
+    \end{center}
+\end{proposition}
+
+
+Bij het rekenen met breuken zijn er enkele foutieve operaties die voor leerlingen soms erg aanlokkelijk zijn. 
+Doe jezelf (en je leerkracht...) een plezier en overtuig jezelf dat de volgende uitdrukkingen verkeerd zijn. 
+
+
+
+% \begin{remark}[Vaak gemaakte fouten]\nl \label{eig:niet-rekenregels_breuken}
+    
+
+% \begin{remark}
+% \textit{in het algemeen niet}:
+
+% \renewcommand\CancelColor{\color{red}}
+
+
+%   $ \xcancel{ \frac{a}{b+c} = \frac{a}{b} + \frac{a}{c} } $ 
+
+
+%     $ \frac{a}{a+1} = \frac{\cancel{a}}{\cancel{a}+1}  = \frac{1}{1+1} = \frac{1}{2} $
+
+% \end{remark}
+
+\begin{remark} In het algemeen geldt niet:
+
+\renewcommand\CancelColor{\color{red}}
+$$ 
+     \frac{a}{b+c} \xcancel{=} \frac{a}{b} + \frac{a}{c} 
+$$ 
+$$ 
+     \frac{a}{a+1} \xcancel{=} \frac{\cancel{a}}{\cancel{a}+1}  \xcancel{=} \frac{1}{1+1} = \frac{1}{2} 
+$$
+
+\end{remark}
+
+
+\begin{exercise}
+    Schrijf als een zo eenvoudig mogelijke breuk. Veronderstel dat alle uitdrukkingen bestaan.
+    \begin{xmmulticols}{2}
+        \begin{question} \( \frac{x-2}{2} - \frac{x-1}{2}=   \answer[onlineshowanswerbutton]{-\frac{1}{2}}    \) \end{question}
+        \begin{question} \( \frac{x}{2}   + \frac{x}{2}  =   \answer[onlineshowanswerbutton]{x}               \) \end{question}
+        \begin{question} \( \frac{2}{x}   + \frac{3}{x}  =   \answer[onlineshowanswerbutton]{\frac{5}{x}}     \) \end{question}
+        \begin{question} \( \frac{x}{3}   - \frac{1}{3}  =   \answer[onlineshowanswerbutton]{\frac{x-1}{3}}   \) \end{question}
+        \begin{question} \( \frac{1}{x}   + 1            =   \answer[onlineshowanswerbutton]{\frac{1+x}{x}}   \) \end{question}
+        \begin{question} \( 1             + \frac{1}{x+1}=   \answer[onlineshowanswerbutton]{\frac{x+2}{x+1}} \) \end{question}
+        \begin{question} \( x             + \frac{1}{x}  =   \answer[onlineshowanswerbutton]{\frac{x^2+1}{x}} \) \end{question}
+        \begin{question} \( \frac{1}{1+\frac{1}{x}}      =   \answer[onlineshowanswerbutton]{\frac{x}{x+1}}   \) \end{question}
+    \end{xmmulticols}
+\end{exercise}
+
+\end{document}
