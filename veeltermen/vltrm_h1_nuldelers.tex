@@ -1,0 +1,72 @@
+\documentclass{ximera}
+	
+	\input{../preamblekdn}
+
+\addPrintStyle{..}
+\begin{document}
+	\author{Koen de Naeghel - Wiskunde Op Maat}
+	\xmtitle{Nuldelers}{}
+    \xmsource
+
+	
+Is het product van twee getallen gelijk aan nul, dan is minstens een van die getallen gelijk aan nul. Die eigenschap geldt ook voor veeltermen. 
+
+De zoektocht naar nulpunten van veeltermen gaf in het verleden aanleiding tot vele vruchtbare ontwikkelingen in de wiskunde (complexe getallen, Galoistheorie, ...). De eigenschap die we hier voor veeltermen (uit het ongerijmde ) zullen bewijzen is in het algemeen gekent als 'nuldelers'. In die zoektocht naar nulpunten bleek volgend onderscheid cruciaal: als een product nul is, kan ik dan besluiten dat één van de factoren nul moet zijn? 
+
+Zoals hierboven aangegeven is dat het geval voor getallen. Hieronder wordt bewezen dat ook voor veeltermen deze eigenschap geldig is. Wiskundigen zijn echter in het verleden veel objecten tegengekomen waar deze eigenschap \textit{niet} meer geldig is. 
+
+\textbf{Kan jij een berekening maken met een klok en 'op nul terechtkomen' zonder dat je nul hebt gebruikt? }
+	
+
+Volgende eigenschap geeft aan dat voor veeltermen de eigenschap wel geldig is: indien het product van twee veeltermen gelijk is aan nul, moet minstens één van de veeltermen zelf gelijk zijn aan nul. 
+
+
+\begin{proposition}(Eigenschap nuldelers)
+Zij \(A(x)\) en \(B(x)\) twee veeltermen. Dan geldt: 
+\[
+A(x)\cdot B(x) = 0 \quad \Rightarrow \quad A(x) = 0 \,\,\text{ of } \,\, B(x) = 0.
+\]
+\end{proposition} 
+
+
+\begin{expandable}{proof}{}
+
+Gegeven is dat \(A(x)\cdot B(x) = 0\). We moeten aantonen dat \(A(x) = 0\) of \(B(x) = 0\). Veronderstel, uit het ongerijmde, dat deze uitspraak niet waar is. Met behulp van het symbool \(\neg\) voor 
+negatie weten we dan:
+\[
+\neg\bigl(A(x) = 0 \,\, \text{ of } \,\, B(x) = 0\bigr).
+\]
+Wegens een wet van de Morgan betekent dit:
+\[
+A(x) \neq 0 \,\, \text{ en } \,\, B(x) \neq 0.
+\] 
+We schrijven de veeltermen \(A(x)\) en \(B(x)\) als
+\begin{align*}
+A(x) & = a_0 + a_1 x + a_2 x^2 + \dots + a_n x^n \\
+B(x) & = b_0 + b_1 x + b_2 x^2 + \dots + b_n x^m
+\end{align*}
+waarbij \(n,m \in \N\) en \(a_0, a_1, \ldots, a_n \in \R\) en \(b_0, b_1, \ldots, b_m \in \R\). Omdat \(A(x) \neq 0\) en \(B(x) \neq 0\) mogen we aannemen dat \(a_n \neq 0\) en \(b_m \neq 0\). Nu is
+\begin{align*}
+A(x) \cdot B(x) 
+& = \left(a_0 + a_1 x + a_2 x^2 + \dots + a_n x^n\right) \cdot \left( b_0 + b_1 x + b_2 x^2 + \dots + b_n x^m\right) \\
+& = a_0b_0 + (a_0b_1 + a_1b_0)x + \dots + a_n b_m x^{n+m}.
+\end{align*}
+Omdat \(a_n \neq 0\) en \(b_m \neq 0\) weten we dat \(a_n \cdot b_m \neq 0\). Hieruit volgt dat \(A(x) \cdot B(x) = 0\). Dit is in strijd met het gegeven dat \(A(x)\cdot B(x) = 0\). Kortom: de aanname dat \(A(x) \neq 0\) en \(B(x) \neq 0\) leidt tot een tegenstrijdigheid. Die aanname was dus fout. Op die manier hebben we aangetoond dat \(A(x) = 0\) of \(B(x) = 0\). 
+
+\end{expandable}
+
+
+% VOORLOPIG GRAAD VAN DE NULVEELTERM VERMEDEN 
+% \begin{xmuitweiding}
+% Spreken we af dat \(\gr 0 = - \infty\), dan kunnen we ons bewijs heel wat korter opschrijven. 
+
+% \textit{ Alternatief bewijs van Eigenschap \ref{eigenschap:geennuldelers}.}
+% Gegeven is dat \(A(x)\cdot B(x) = 0\). Nemen we van beide leden de graad, dan vinden we \(\gr\bigl( A(x)\cdot B(x) \bigr) = \gr 0\) waaruit volgt: \(\gr A(x) + \gr B(x) = - \infty\).
+
+% Mocht \(A(x) \neq 0\) en \(B(x) \neq 0\) dan zou een som van twee natuurlijk getallen gelijk zijn aan \(-\infty\), een tegenstrijdigheid. We besluiten dat \(A(x) = 0\) of \(B(x) = 0\).
+% \qed
+
+% \end{xmuitweiding}
+
+
+\end{document}
