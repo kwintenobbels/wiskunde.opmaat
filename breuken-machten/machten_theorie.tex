@@ -1,0 +1,164 @@
+\documentclass{ximera}
+\input{../preamble}
+\addPrintStyle{..}
+\begin{document}
+	\author{Wiskundeplan}
+	\xmtitle{Rekenen met machten}{}
+
+Deze pagina geeft een overzicht van de rekenregels voor machten. 
+De focus ligt op rekenvaardigheid. Voor meer nauwkeurige en theoretische bespreking verwijzen we door naar een handboek. 
+
+
+\begin{definition}(Machtsverheffing) \label{def:machten_light}\label{def:machten met gehele exponent}\
+    
+        
+    % De \textbf{$n$-de macht} van een getal $a$ is genoteerd $a^n$, bijvoorbeeld $3^4$. \\
+    
+    Voor een natuurlijk getal $n$ en een reëel getal $a$ is de \textbf{$n$-de macht} van $a$ het getal
+    
+    \formulevb{
+        a^n \perdef \underbrace{a\cdot a\cdot\ldots\cdot a}_{n\text{ factoren}}
+        }{
+            2^3=2\times2\times2
+            }
+    Men noemt $a$ het \textbf{grondtal},  $n$ de \textbf{exponent} en $a^n$  een \textbf{macht}.
+            
+    Negatieve exponenten geven per definitie het omgekeerde van de macht met de positieve exponent:
+    
+    \formulevb{a^{-n}\perdef\frac{1}{a^n}}{2^{-3}=\frac{1}{2^3} = \frac{1}{2\times2\times2}}
+    
+    Als de exponent 0 is (en het grondtal is niet 0), geldt per definitie dat  \important{a^0 = 1}, als $a\neq0$.
+    \\
+    De uitdrukkingen $0^0$ en $0^{-n}$ zijn \textit{onbepaald} en hebben \textit{geen betekenis}.
+
+\end{definition}
+
+\begin{exercise} Welke formules zijn waar?
+
+    \begin{xmmulticols}[3]
+    \begin{question} 
+        \choiceFalse $\left(-2\right)^2 = -4$
+        \begin{feedback} $(-2)^2 = (-2)(-2) = 4$ \end{feedback}
+    \end{question}
+    \begin{question} 
+        \choiceTrue $-2^2 = -4$
+        \begin{feedback} $-2^2 = - 2\cdot 2 = - 4 $ \end{feedback}
+    \end{question}
+    \begin{question} 
+        \choiceFalse $2^{-2} = -4$
+        \begin{feedback} $2^{-2} = \frac{1}{2^2} = \frac{1}{4} = 0,25$ \end{feedback}
+    \end{question}
+    
+    \begin{question} 
+        \choiceTrue $\left(\frac{1}{2}\right)^2 = \frac{1}{4}$
+        \begin{feedback} Een kwadraat kan dus kleiner zijn dan het grondtal.\end{feedback}
+    \end{question}
+    \begin{question} 
+        \choiceTrue $\left(\frac{1}{2}\right)^{-2} = 4$
+        \begin{feedback} $ \left(\frac{1}{2}\right)^{-2} = \left(\frac{2}{1}\right)^{2} = 4$ \end{feedback}
+    \end{question}
+    \begin{question} 
+        \choiceFalse $\left(\frac{-1}{2}\right)^{-2} = -4$
+        \begin{feedback} $\left(\frac{-1}{2}\right)^{-2} = (-2)^2 = 4$\end{feedback}
+    \end{question}
+    \end{xmmulticols}
+
+\end{exercise}
+
+\begin{definition}(Machtswortels) \label{def:wortels_light}\label{def:wortels}\nl
+     
+    Een reëel getal $b$ is \textbf{\textit{een} vierkantswortel} van een reëel getal $a$ als 
+    
+    \formulevb{a = b^2}{2 \text{ en } -2 \text{ zijn wortels van } 4 \text{ want } 2^2 = 4 \text{ en } (-2)^2 = 4}
+
+    Voor positieve $a$ noemen we het unieke \textit{positieve} getal $b$ zodat $b^2=a$ \textbf{\textit{de} vierkantswortel}, en die noteren we als $\sqrt{a}$ of ook als '$a$ tot de macht een half':
+ 
+    \formulevb{ \sqrt{a} \perdef a^\frac 12 = b \iff b^2 = a \text{ en } b\geq 0  } {\sqrt{25} \perdef 25^{\frac{1}{2}} = 5}
+ 
+    $\sqrt{a} = a^\frac{1}{2}$ is dus het unieke \textit{positieve} getal met kwadraat gelijk aan $a$.
+ 
+    Meer in het algemeen schrijven we ook $n$-de machtswortels als 'tot de macht $\tfrac1n$':
+     
+    \formulevb{ \sqrt[n]{a} \perdef a^\frac 1n = b  \iff b^n = a} {\sqrt[3]{8} \perdef 8^\frac {1}{3} = 2 \Twant 2^3=8}
+ 
+\end{definition}
+
+\begin{exercise} Welke formules zijn waar?
+
+    \begin{xmmulticols}[3]
+    \begin{question} 
+        \choiceTrue $\sqrt{4} = 2$
+        \begin{feedback} $2 ^2 = 4$ \end{feedback}
+    \end{question}
+    \begin{question} 
+        \choiceTrue $-\sqrt{4} = -2$
+        \begin{feedback} $2 ^2 = 4$ \end{feedback}
+    \end{question}
+    \begin{question} 
+        \choiceFalse $\sqrt{-4} = -2$
+        \begin{feedback} $(-2)^2 = 4 \neq -4. \sqrt{-4}$ bestaat niet (in $\R$). \end{feedback}
+    \end{question}
+    \begin{question} 
+        \choiceTrue $\sqrt[3]{-8} = -2$
+        \begin{feedback} $(-2)^3 = (2)(-2)(-2) = -8$ \end{feedback}
+    \end{question}
+    \begin{question} 
+        \choiceFalse $\sqrt[3]{9} = 3$
+        \begin{feedback} $3\cdot3\cdot3 = 9\cdot3 = 27 \neq 9$ \end{feedback}
+    \end{question}
+    \begin{question} 
+        \choiceTrue $\sqrt[3]{27} = 3$
+        \begin{feedback} $3\cdot3\cdot3 = 9\cdot3 = 27$ \end{feedback}
+    \end{question}
+
+\end{xmmulticols}
+
+\end{exercise}
+
+
+Uit deze definities volgen enkele belangrijke rekenregels: 
+
+\begin{proposition}[Rekenregels machten] \label{eig:rekenregels machten}\nl
+ 
+    \savebox\strutbox{$\vphantom{\dfrac11^n}$}   % hack; doesn't work in html
+ 
+    \formulevb{(xy)^n  = x^n y^n \quad \text{(macht van product)} }{(3y)^2 =3y\cdot 3y =3\cdot 3 \cdot y\cdot y = 3^2 y^2=9y^2 }
+    \formulevb{x^{m}x^{n}  = x^{m+n} \quad \text{(product met gelijk grondtal)}  }{x^{3}x^{2}  = (x\cdot x\cdot x)\cdot (x\cdot x) = x^{3+2} = x^{5}    }
+    \formulevb{\left(x^{m}\right)^{n} =x^{m\cdot n}\quad \text{(macht van macht)}  }{\left(x^{3}\right)^{2}=x^3 \cdot x^3 = (x \cdot x\cdot x)\cdot (x\cdot x\cdot x)=x^{3\cdot2}=x^6}
+    \formulevb{\left(\frac{x}{y}\right)^{n} = \frac{x^{n}}{y^{n}} \quad \text{(macht van breuk)}}{\left(\frac{x}{2}\right)^{3} =
+        \left(\frac{x}{2}\right) \cdot \left(\frac{x}{2}\right) \cdot \left(\frac{x}{2}\right) =
+        \frac{x\cdot x \cdot x}{2 \cdot 2 \cdot 2} = \frac{x^{3}}{2^{3}}=\frac{x^3}{8} }
+    % \frac{x^{m}}{x^{n}}    & = x^{m-n} & &  &\text{mits de noemer niet 0 is} %\text{als } x\neq 0 %x\neq0
+    % \\
+    % \left(\frac{x}{y}\right)^{n} & = \frac{x^{n}}{y^{n}} && & \text{mits de noemer niet 0 is}%y\neq0
+    % \\
+ 
+ 
+%   \begin{align*}
+%   (xy)^n      & = x^ny^n             & (xy)^3  & =(xy)(xy)(xy)  = x^3y^3                  & \text{(macht van product)}\\
+%   x^{m}x^{n}  & = x^{m+n}            & x^2 x^3 & = (xx)(xxx)    = x^{2+3} = x^5           & \text{(product gelijk grondtal)} \\
+%   \left(x^{m}\right)^{n} & = x^{mn}  & (x^2)^3 & = (xx)(xx)(xx) = x^{2\times3} = x^6      & \text{(macht van macht)} \\
+% \end{align*}
+
+
+\end{proposition}
+
+% \( \formulevb{\frac{x^{m}}{x^{n}}= x^{m-n} \quad \text{(breuk met gelijk grondtal)}} \) 
+
+
+
+
+Bij het rekenen met breuken zijn er enkele foutieve operaties die voor leerlingen soms erg aanlokkelijk zijn. 
+Doe jezelf (en je leerkracht...) een plezier en overtuig jezelf dat de volgende uitdrukkingen verkeerd zijn. 
+
+\begin{remark} In het algemeen geldt niet:
+    
+    \renewcommand\CancelColor{\color{red}}
+    
+
+$$ \sqrt{a+b} \xcancel{=} \sqrt{a} + \sqrt{b}$$ 
+$$ x^n + x^m \xcancel{=} x^{n+m} $$      
+    
+\end{remark}
+
+\end{document}
