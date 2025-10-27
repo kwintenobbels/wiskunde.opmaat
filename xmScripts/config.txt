@@ -21,7 +21,7 @@ YOUR_EMAIL="DUMMY_EMAIL_TEST"
 # !! DO NOT SAVE THE KEY IN THIS config.txt FILE   !!
 #
 
-: "${XIMERA_NAME:=cmplx}"
+: "${XIMERA_NAME:=leermateriaal}"
 #: "${XIMERA_URL:=http://wiskunde.opmaat.org/}"
 ## : "${XIMERA_URL:=http://localhost:2000/}"
 ## : "${XIMERA_URL:=https://ximera.osu.edu/}"
