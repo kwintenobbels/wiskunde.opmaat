@@ -1,7 +1,7 @@
 # Docker  
 
 
-### 
+### Is the docker daemon running?
 
 Ximera starts a container to compile files on your local machine. The following error will occur when you're Docker Desktop is not running. 
 
@@ -17,3 +17,5 @@ See 'docker run --help'.
  *  The terminal process "/bin/zsh '-l', '-c', 'xmlatex bake -s --force '--compile pdf' complexe_getallen/cmplx_deling_dhz.tex'" failed to launch (exit code: 125). 
  *  Terminal will be reused by tasks, press any key to close it. 
 ```
+
+
