@@ -1,0 +1,294 @@
+\documentclass{ximera}
+
+
+\begin{document}
+	\author{Wiskunde Op Maat}
+	\xmtitle{Kwadratische vergelijkingen oplossen}{}
+
+Met deze pagina kan je twee basismethodes om deelbaarheid van veeltermen te analyseren herhalen. 
+De staartdeling voor veeltermen geeft een basismethode die altijd toepasbaar is. (stelling van de Euclidische deling)
+Om te delen door veeltermen van de vorm \(x - a\) wordt de reststelling en Horner gebruikt. 
+Onder 'download' kan je de pdf met of zonder antwoorden downloaden.
+
+\newcommand{\choicetwee}{{\wordChoice{\choice[correct]{twee oplossingen}\choice{één oplossing}\choice{geen oplossingen}}}}
+\newcommand{\choiceeen}{{\wordChoice{\choice{twee oplossingen}\choice[correct]{één oplossing}\choice{geen oplossingen}}}}
+\newcommand{\choicegeen}{{\wordChoice{\choice{twee oplossingen}\choice{één oplossing}\choice[correct]{geen oplossingen}}}}
+
+\newcommand{\choicepositief}{{\wordChoice{\choice[correct]{positief}\choice{nul}\choice{negatief}}}}
+\newcommand{\choicenul}{{\wordChoice{\choice{positief}\choice[correct]{nul}\choice{negatief}}}}
+\newcommand{\choicenegatief}{{\wordChoice{\choice{positief}\choice{nul}\choice[correct]{negatief}}}}
+ 
+
+% Voorbeeld uit schema van de staartdeling 
+\begin{exercise}
+
+Beschouw de veeltermen \(A(x) = 6x^3 + 19x^2 + 8x - 5\) en \(B(x) = 2x+5\). Ga na of \(A(x)\) deelbaar is door \(B(x)\). 
+
+
+\begin{question}
+Geef eerst een voorbeeld van de Euclidische deling voor natuurlijke getallen. 
+    \begin{hint}
+        Hoe kan je \(10 \) delen door \(3\)? 
+    \end{hint}
+
+    \begin{oplossing}
+
+    Zeggen dat de deling van \(13\) door \(4\) gelijk is aan \(3\) met rest \(1\), betekent dat
+    \[
+    13 = 3 \cdot 4  + 1
+    \]
+    omdat \(4\) hoogstens \(3\) keer in \(13\) kan, en er blijft dan nog \(1\) over.
+     
+    Op dezelfde manier betekent \(20\) delen door \(3\) dat
+    \[
+    20 = 6\cdot 3 + 2
+    \]
+    of met symbolen: als we \textit{deeltal} \(D\) delen door \textit{deler} \(d\), krijgen we \textit{quotiënt} \(q\) en \textit{rest} \(r\) als volgende formule geldt:
+    \[
+    D = q\cdot d + r   \text{ met } r<d.
+    \]
+     
+     
+    Daarbij is het erg belangrijk dat \(r<d\): als dat niet het geval is, heb je nog niet ver genoeg gedeeld, want je kan dan de rest \(r\) nog verder delen door \(d\).  
+
+    Indien de rest gelijk is aan nul spreken we van \textit{deelbaarheid}. Zo is \(6\) deelbaar door \(3\) en 15 deelbaar door \(5\). 
+    
+    \end{oplossing}
+
+\end{question}
+
+
+\begin{question}
+    Leg in je eigen woorden de Euclidische deling uit voor een veelterm \(A(x)\) door een veelterm \(B(x)\). Wanneer zeggen we dat de veelterm \(A(x)\) deelbaar is door \(B(x)\)? 
+
+    \begin{oplossing}
+        
+    % \begin{theorem}(deling met rest, euclidische deling)
+    % \begin{theorem}
+    % Zij \(A(x)\) en \(B(x)\) twee veeltermen met \(B(x) \neq 0\). Dan bestaat er precies één veelterm \(Q(x)\) en precies één veelterm \(R(x)\) zodat
+    
+    % % \begin{equation}
+    % \[
+    % A(x) = B(x)\cdot Q(x) + R(x) \quad \text{ waarbij } \quad \gr R(x) < \gr B(x) \,\, \text{ of } \,\, R(x) = 0.
+    % \]
+    % % \end{equation}
+
+    % met \(A(x)\) het \textbf{deeltal}, \(B(x)\) de \textbf{deler}, \(Q(x)\) het \textbf{quotiënt}en \(R(x)\) de \textbf{rest} bij de deling van \(A(x)\) door \(B(x)\). 
+    % \end{theorem} 
+    
+    Indien \( R(x) = 0 \) zeggen de we dat de veelterm \(A(x)\) \textbf{deelbaar} is door de veelterm \(B(x)\). 
+  
+    \end{oplossing}
+\end{question}
+
+\begin{question}
+    Bepaal of de veeltermen \(A(x) = 6x^3 + 19x^2 + 8x - 5\) deelbaar is door \(B(x) = 2x+5\) door de staartdeling uit te voeren. 
+
+    \begin{oplossing}
+        
+    \tikzit{
+        \(
+        \begin{array}{l|l}
+        & 2x+5 \\
+        \cline{2-2}
+        \vrule height 1.2em width 0pt
+        & 3x^2+2x-1 \\[-0.96cm]
+        \stackunder[0.05cm]{%
+          \stackon[0pt]{6x^3+19x^2+\mph{0}8x-5}{}%
+        }{%
+          \Shortstack[r]{
+            {6x^3+15x^2\mph{+08x-5}} 
+            {\staartmin \staartstreep{6x^3+15x^2} \staartphstreep{+10x-50}}
+            {4x^2+\mph{0}8x-5} 
+            {4x^2+10x\mph{-5}} 
+            {\staartmin \staartstreep{4x^2+10x-5}}
+            {-2x-5}
+            {-2x-5}
+            {\staartmin \staartstreep{-2x-5}}
+            {0}
+        }
+        }  
+        \end{array}
+        \)
+        }
+        
+        Uit dit schema volgt het verband tussen deeltal, deler, quotiënt en rest:
+        \[
+        \underbrace{6x^3 + 19x^2 + 8x - 5}_{A(x)} = \underbrace{(2x+5)}_{B(x)}\cdot\underbrace{(3x^2+2x-1)}_{Q(x)} \,\, + \,\, \underbrace{0}_{R(x)} 
+        \]
+        waaruit we besluiten dat \(A(x)\) deelbaar is door \(B(x)\).
+    \end{oplossing}
+
+\end{question}
+
+\end{exercise}
+\newcommand{\choicemakkelijk}{{\wordChoice{\choice[correct]{makkelijker}\choice{één oplossing}}}}
+
+% Restelling 
+\begin{exercise}
+
+    Bepaal de oplossingen van de vierkantsvergelijking \( x^2 - 4x + 5 = 0 \). 
+    
+    
+    \begin{question}
+    Het is \choicemakkelijk om de deling uit te voeren van een veelterm door \(x-a\). 
+    \begin{feedback}
+    
+
+    \end{feedback}
+    \end{question}
+    
+    \begin{question}
+    Deze vergelijking heeft \choicegeen  in de reële getallen.
+    \begin{feedback}
+        Wanneer de discriminant negatief is, zijn er oplossingen in de reële getallen. 
+        In de algemene formule staat de discriminant onder een wortel. 
+        Er is geen reëel getal waarvan het kwadraat negatief is en je kan dus geen oplossingen bepalen: 
+        \[
+        x_{1} = \frac{-b + \sqrt{\Delta}}{2a}  \text{ en }  x_{2} = \frac{-b - \sqrt{\Delta}}{2a}
+        \]
+
+    \end{feedback}
+    \end{question}
+    
+    \begin{oplossing}
+    Voor de vergelijking \( x^2 - 4x + 5 = 0 \)
+    
+    hebben we:
+    \[
+    a = 1,\quad b = -4,\quad c = 5.
+    \]
+    
+    De discriminant wordt berekend als:
+    \[
+    \Delta = b^2 - 4ac = (-4)^2 - 4\cdot1\cdot5 = 16 - 20 = -4.
+    \]
+    
+    Aangezien \(\Delta < 0\) zijn er geen reële oplossingen. 
+
+    De grafiek van de parabool ligt volledig boven de \(x\)-as. Er zijn geen snijpunten. 
+    \begin{image}
+        \begin{tikzpicture}[scale=1]
+            % Teken de assen
+            \draw[->] (-1,0) -- (5,0) node[right] {\(x\)};
+            \draw[->] (0,-1) -- (0,6) node[above] {\(y\)};
+            
+            % Teken de parabool f(x) = x^2 - 4x + 5
+            \draw[domain=-0.2:4.2, samples=100, smooth, very thick, blue] 
+                plot (\x, {(\x)^2 - 4*(\x) + 5});
+                
+            \draw (2, 5) node[blue] {\( f(x) = x^2 - 4x + 5 \)};
+            
+        \end{tikzpicture}
+    \end{image}
+
+    
+    \end{oplossing}
+    
+\end{exercise}
+    
+
+% \begin{expandable}{remark}{De constante factor \(c\)}
+% \begin{remark}
+    
+    
+%     In het algemeen voorschrift \( ax^2+bx+c=0 \) geeft de constante term \(c\) een verticale verschuiving weer. 
+%     De waarde van \(c\) heeft dus invloed op het aantal snijpunten met de \(x\)-as en hiermee kan je inzien waar die \(c\) ook invloed heeft op het tegen van de discriminant \(\Delta = b^2 - 4ac\). 
+
+% \usepackage{tikz}
+
+%     \begin{image}
+
+%         \begin{scope}[xshift=0cm]
+%         \begin{tikzpicture}[scale=1]
+
+%             % Draw axes
+%             \draw[->] (-1,0) -- (5,0) node[right] {\(x\)};
+%             \draw[->] (0,-1) -- (0,4) node[above] {\(y\)};
+            
+%             % Draw the parabola y = x^2 - 4x + 3
+%             \draw[domain=-0.2:4.2, samples=100, smooth, very thick, blue] 
+%                 plot (\x, {(\x)^2 - 4*(\x) + 3}); 
+                
+%             \draw (2, 3) node[blue] {\( f(x) = x^2 - 4x + 3 \)};
+        
+%             % Roots (zeros) of the parabola
+%             \filldraw[red] (1,0) circle (2pt) node[below] {\(x=1\)};
+%             \filldraw[red] (3,0) circle (2pt) node[below] {\(x=3\)};
+        
+%         \end{tikzpicture}
+%         \end{scope}
+
+%         \begin{scope}[xshift=3cm]
+%         \begin{tikzpicture}[scale=1]
+%             % Teken de assen
+%             \draw[->] (-1,0) -- (5,0) node[right] {\(x\)};
+%             \draw[->] (0,-1) -- (0,4) node[above] {\(y\)};
+            
+%             % Teken de parabool f(x) = x^2 - 4x + 4
+%             \draw[domain=-0.2:4.2, samples=100, smooth, very thick, blue] 
+%                 plot (\x, {(\x)^2 - 4*(\x) + 4});
+                
+%             \draw (2, 3) node[blue] {\( f(x) = x^2 - 4x + 4 \)};
+            
+%             % Markeer de dubbele wortel
+%             \filldraw[red] (2,0) circle (2pt) node[below] {\(x=2\)};
+            
+%         \end{tikzpicture}
+%         \end{scope}
+
+
+%         \begin{scope}[xshift=6cm]    
+%         \begin{tikzpicture}[scale=1]
+%             % Teken de assen
+%             \draw[->] (-1,0) -- (5,0) node[right] {\(x\)};
+%             \draw[->] (0,-1) -- (0,6) node[above] {\(y\)};
+            
+%             % Teken de parabool f(x) = x^2 - 4x + 5
+%             \draw[domain=-0.2:4.2, samples=100, smooth, very thick, blue] 
+%                 plot (\x, {(\x)^2 - 4*(\x) + 5});
+                
+%             \draw (2, 5) node[blue] {\( f(x) = x^2 - 4x + 5 \)};
+            
+%         \end{tikzpicture}
+%         \end{scope}
+        
+%     \end{image}
+    
+    
+%     Voor de geïntresseerd leerlingen: de grafiek boven de \(x\)-as met een negatieve discrimant in de vierkantswortel heeft geen oplossingen in de reële getallen. 
+%     In de complexe getallen hebben wiskundigen echter wel oplossingen gevonden...
+
+%     \begin{expandable}{youtube}{A very gentle introduction to complex numbers.}
+%         \youtube{https://youtu.be/f079K1f2WQk}
+%     \end{expandable}   
+
+    
+% \end{remark}
+% \end{expandable}
+
+
+\begin{exercise} Bepaal de oplossingen van volgende tweedegraadsvergelijkingen. 
+  
+    \begin{question} \( x^2 - 4x + 3    = 0 \) \begin{uitkomst} Er zijn twee reële oplossingen \( 1 \) en  \( 3 \)          \end{uitkomst}\end{question}
+    \begin{question} \( -2x^2 + 4x + 8  = 0 \) \begin{uitkomst} Er zijn twee reële oplossingen \( -2 \) en  \(4 \)          \end{uitkomst}\end{question}
+    \begin{question} \( 2x^2 - 8x + 16  = 0 \) \begin{uitkomst} De dubbele wortel is gelijk aan \( 2 \)                     \end{uitkomst}\end{question}
+    \begin{question} \( 2x^2 + 5x + 2   = 0 \) \begin{uitkomst} Er zijn twee reële oplossingen \( -\frac{1}{2}\) en \(-2 \) \end{uitkomst}\end{question}
+    \begin{question} \( 3x^2 - 6x + 3   = 0 \) \begin{uitkomst} De dubbele wortel is gelijk aan \( 1   \)                   \end{uitkomst}\end{question}
+
+\end{exercise}
+
+
+\begin{exercise} Bepaal de oplossingen van volgende tweedegraadsvergelijkingen. 
+    
+    \begin{question} \( x^2 + 4x + 5    = 0 \) \begin{uitkomst} Er zijn geen oplossingen in de reële getallen.                \end{uitkomst} \end{question}
+    \begin{question} \( x^2 + 2x - 8    = 0 \) \begin{uitkomst} Er zijn twee reële oplossingen  \( -4 \) en \( 2 \)           \end{uitkomst} \end{question}
+    \begin{question} \( 4x^2 + 12x + 9  = 0 \) \begin{uitkomst} De dubbele wortel is gelijk aan \( -\frac{3}{2} \)            \end{uitkomst} \end{question}
+    \begin{question} \( 3x^2 + 6x + 3   = 0 \) \begin{uitkomst} De dubbele wortel is gelijk aan \(  -1 \)                     \end{uitkomst} \end{question}
+    \begin{question} \( -x^2 + 4x + 1   = 0 \) \begin{uitkomst} Er zijn twee reële oplossingen  \( -\frac{1}{2} \) en \( 5 \) \end{uitkomst} \end{question}
+    
+\end{exercise}
+
+
+
+\end{document}
