@@ -1,6 +1,6 @@
 # Wiskunde Op Maat
 
- **Open-source cursus natuurkunde** voor het 6de jaar secundair onderwijs, meer informatie over dit initiatief is beschikbaar via onze [website](https://wiskunde.opmaat.org/)
+ **Open-source cursus wiskunde** voor het secundair onderwijs, meer informatie over dit initiatief is beschikbaar via onze [website](https://wiskunde.opmaat.org/)
 
 Onze cursus voor het **inoefenen van rekenvaardigheden** is beschikbaar via [interactieve webpagina's](https://wiskunde.opmaat.org/rekenvaardigheden/breuken_machten/breuken_theorie). Hier is onder 'download' ook een **papieren versie** beschikbaar. 
 
