@@ -22,6 +22,6 @@ De eenvoudigste werkwijze is middels 'create a branch for this issue':
 -  Leerkrachten/scholen/... kunnen het materiaal aanpassen naar eigen stijl of noden van de klas. 
 -  De copyright op het materiaal berust bij Wiskunde Op Maat. 
 
-## Oorsprong
+## ⛵️ Oorsprong
 Onze cursus Natuurkunde vertrok als een **schip van Theseus** uit het eigen materiaal van [Bart Lambregs](https://www.kuleuven.be/wieiswie/nl/person/00133146). 
 Indien ook anderen onder bepaalde voorwaarden (inzake behoud copyright, naamsvermeling, ...) een startpunt willen aanleveren waarop het open-source project kan verderbouwen is dat welgekomen! 
