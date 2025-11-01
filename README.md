@@ -2,7 +2,7 @@
 
  **Open-source cursus wiskunde** voor het secundair onderwijs, meer informatie over dit initiatief is beschikbaar via onze [website](https://wiskunde.opmaat.org/)
 
-Onze cursus voor het **inoefenen van rekenvaardigheden** is beschikbaar via [interactieve webpagina's](https://wiskunde.opmaat.org/rekenvaardigheden/breuken_machten/breuken_theorie). Hier is onder 'download' ook een **papieren versie** beschikbaar. 
+Onze cursus voor het **inoefenen van rekenvaardigheden** is beschikbaar via [interactieve webpagina's](https://wiskunde.opmaat.org/rekenvaardigheden/breuken_machten/breuken_theorie](https://wiskunde.opmaat.org/leermateriaal/rekenvaardigheden/breuken_machten/breuken_theorie). Hier is onder 'download' ook een **papieren versie** beschikbaar. 
 
 ## 📚 Inhoud
 
