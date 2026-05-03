@@ -63,13 +63,47 @@
     \end{example}
 
     \begin{exercise} Bereken de wortels van volgende vergelijkingen.
-        \begin{question} $x^2+2x+3=0$\end{question}
-        \begin{question} $2x^2+3x+4=0$\end{question}
+        \begin{question} $x^2+2x+3=0$
+        \begin{oplossing}\nl
+            Hier is $a=1$, $b=2$ en $c=3$, dus de discriminant is $D=b^2-4ac=4-12=-8$.
+            De wortelformule geeft
+            $$
+            x_{1,2}=\dfrac{-2\pm\sqrt{-8}}{2}=\dfrac{-2\pm 2i\sqrt{2}}{2}=-1\pm i\sqrt{2}\,.
+            $$
+        \end{oplossing}
+        \end{question}
+        \begin{question} $2x^2+3x+4=0$
+        \begin{oplossing}\nl
+            Hier is $a=2$, $b=3$ en $c=4$, dus $D=9-32=-23$.
+            Dus
+            $$
+            x_{1,2}=\dfrac{-3\pm\sqrt{-23}}{4}=\dfrac{-3\pm i\sqrt{23}}{4}\,.
+            $$
+        \end{oplossing}
+        \end{question}
     \end{exercise}
 
     \begin{exercise} Ontbind volgende veeltermen in lineaire factoren.
-        \begin{question} $x^2+2x+3$\end{question}
-        \begin{question} $2x^2+3x+4$\end{question}
+        \begin{question} $x^2+2x+3$
+        \begin{oplossing}\nl
+            Uit de vorige oefening volgt dat de nulpunten van $x^2+2x+3$ gelijk zijn aan $-1\pm i\sqrt{2}$.
+            Daarom is
+            $$
+            x^2+2x+3=(x-(-1+i\sqrt{2}))(x-(-1-i\sqrt{2}))
+            =(x+1-i\sqrt{2})(x+1+i\sqrt{2})\,.
+            $$
+        \end{oplossing}
+        \end{question}
+        \begin{question} $2x^2+3x+4$
+        \begin{oplossing}\nl
+            De nulpunten van $2x^2+3x+4$ zijn $\dfrac{-3\pm i\sqrt{23}}{4}$ (zie vorige oefening).
+            Omdat de coëfficiënt van $x^2$ gelijk is aan $2$, geldt
+            $$
+            2x^2+3x+4
+            =2\left(x-\dfrac{-3+i\sqrt{23}}{4}\right)\left(x-\dfrac{-3-i\sqrt{23}}{4}\right)\,.
+            $$
+        \end{oplossing}
+        \end{question}
     \end{exercise}
 
 \end{document}

@@ -105,6 +105,66 @@ Complexe getallen als punten in het complexe vlak zullen ook een meetkundige int
 	
 \end{xmmulticols}
 
+\begin{oplossing}
+	\begin{image}[0.5\textwidth]
+	\begin{tikzpicture}
+	\begin{axis}
+	[
+	ytick ={-7,...,8}, yticklabels={$-7i$, $-6i$, $-5i$, $-4i$, $-3i$, $-2i$, $-i$, $0$, $i$, $2i$, $3i$, $4i$, $5i$, $6i$, $7i$, $8i$},
+	xtick ={-7,...,8},
+	axis lines = center, 
+	enlargelimits,
+	grid=both,
+	grid style={gray!15},
+	% minor tick num=1,
+	ticks=both,
+	xlabel=$\Re(z)$,
+	ylabel=$\Im(z)$,
+	ymin=-4,
+	ymax=+5,
+	xmin=-4,
+	xmax=+5,
+	scale = 1.7,
+	]
+	
+	\addplot [black, mark = *] coordinates {( 0, 0)} {};
+	\addplot [black, mark = *] coordinates {( 3, 2)} {};
+	\addplot [black, mark = *] coordinates {( -1, 1)} {};
+	\addplot [black, mark = *] coordinates {( 1, -3)} {};
+	
+
+	\node [above right, blue] at (axis cs:  0, 0) {\(0+0i\)};
+	\node [above right, blue] at (axis cs:  3, 2) {$3+2i$};
+	\node [above left , blue] at (axis cs: -1, 1) {$-1+i$};
+	\node [above right, blue] at (axis cs:  1,-3) {$1-3i$};
+
+	% oplossing 
+
+	\addplot [red, mark = *] coordinates {( 3, 3)} {};
+	\addplot [red, mark = *] coordinates {( -4,-4)} {};
+	\addplot [red, mark = *] coordinates {( 0,-2)} {};
+	\addplot [red, mark = *] coordinates {( 4, 0)} {};
+	\addplot [red, mark = *] coordinates {( -3,-4)} {};
+	\addplot [red, mark = *] coordinates {( 2, 5)} {};
+
+	\node [above right, red] at (axis cs:  3, 3) {$3+3i$};
+	\node [below left , red] at (axis cs: -4,-4) {$-4-4i$};
+	\node [right      , red] at (axis cs:  0,-2) {$-2i$};
+	\node [below right, red] at (axis cs:  4, 0) {$4$};
+	\node [below left , red] at (axis cs: -3,-4) {$-3-4i$};
+	\node [above right, red] at (axis cs:  2, 5) {$2+5i$};
+
+	
+	\end{axis}
+	\end{tikzpicture}
+	\qquad
+
+
+
+\end{image}
+
+\end{oplossing}
+
 \end{exercise}
 
 
