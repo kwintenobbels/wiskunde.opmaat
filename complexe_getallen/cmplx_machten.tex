@@ -53,12 +53,48 @@ z^n = r^n(\cos n\theta + i \sin n\theta )
 
 
 \begin{exercise}
-    Gegeven is het complex getal \(z = \cos(\frac{3\pi}{4} + i\sin(\frac{3\pi}{4}))\). 
+    Gegeven is het complex getal \(z = \cos\frac{3\pi}{4} + i\sin\frac{3\pi}{4}\). 
     \begin{question}
         Bereken \(z^0, z^1, z^2, z^3, \dots, z^8 \) en schrijf telkens het resultaat in cartesische vorm. 
+        \begin{oplossing}\nl
+            Het getal \(z\) ligt op de eenheidscirkel (\(r=1\)) met argument \(\frac{3\pi}{4}\). Volgens de formule van De Moivre geldt voor elke natuurlijke exponent \(n\):
+            \[
+                z^n = \cos\frac{3n\pi}{4} + i\sin\frac{3n\pi}{4}\,.
+            \]
+            Omdat \(\cos\frac{3\pi}{4}=\sin\frac{3\pi}{4}=-\frac{\sqrt{2}}{2}\), \(\cos\frac{\pi}{4}=\sin\frac{\pi}{4}=\frac{\sqrt{2}}{2}\) en \(\cos\frac{\pi}{2}=0\), \(\sin\frac{\pi}{2}=1\), vind je in cartesische vorm:
+            \begin{align*}
+                z^0 &= 1, &
+                z^1 &= -\frac{\sqrt{2}}{2}+\frac{\sqrt{2}}{2}\,i, &
+                z^2 &= -i, \\
+                z^3 &= \frac{\sqrt{2}}{2}+\frac{\sqrt{2}}{2}\,i, &
+                z^4 &= -1, &
+                z^5 &= \frac{\sqrt{2}}{2}-\frac{\sqrt{2}}{2}\,i, \\
+                z^6 &= i, &
+                z^7 &= -\frac{\sqrt{2}}{2}-\frac{\sqrt{2}}{2}\,i, &
+                z^8 &= 1\,.
+            \end{align*}
+        \end{oplossing}
     \end{question}
     \begin{question}
         Stel de opeenvolgende machten van \(z\) voor in het complexe vlak. Wat valt je op? 
+        \begin{oplossing}\nl
+            Alle punten liggen op de eenheidscirkel. Bij elke verhoging van de exponent met \(1\) roteert het beeldpunt over een vaste hoek \(\frac{3\pi}{4}\) rond de oorsprong (vermenigvuldigen met \(z\) is dus een rotatie over \(135^\circ\)). Na acht stappen ben je terug bij \(z^8=1=z^0\): de acht punten vormen een regelmatige achthoek op de cirkel (de machten herhalen zich met periode \(8\) omdat \(8\cdot\frac{3\pi}{4}=6\pi\) een veelvoud van \(2\pi\) is).
+
+            \begin{image}[0.85\textwidth]
+                \begin{tikzpicture}[scale=2.4]
+                    \draw[->] (-1.35,0) -- (1.45,0) node[below left] {Re$(z)$};
+                    \draw[->] (0,-1.35) -- (0,1.45) node[below left] {Im$(z)$};
+                    \draw[gray!55, dashed] (0,0) circle (1);
+                    \foreach \n in {0,...,7} {
+                        \pgfmathsetmacro{\hoek}{135*\n}
+                        \node[circle, fill=blue!70!black, inner sep=1.1pt] (Z\n) at ({\hoek}:1) {};
+                        \node[font=\scriptsize, inner sep=0.5pt] at ({\hoek}:1.26) {$z^{\n}$};
+                    }
+                    \draw[blue!70!black, thick, dashed, opacity=0.85]
+                        (Z0) -- (Z1) -- (Z2) -- (Z3) -- (Z4) -- (Z5) -- (Z6) -- (Z7) -- (Z0);
+                \end{tikzpicture}
+            \end{image}
+        \end{oplossing}
     \end{question}
 \end{exercise}
 

@@ -50,7 +50,7 @@ jobs:
           ls -alrt
           # git config --global --add safe.directory "$(pwd)"
           # export COMMAND=./xmScripts/xmlatex.test
-          ./xmScripts/xmlatex ghaction -j 4 
+          ./xmScripts/xmlatex ghaction -j 4 --compile html,pdf,handout.pdf
           echo "✅ Published to $XIMERA_URL$XIMERA_NAME " >> $GITHUB_STEP_SUMMARY
 
       - name: Setup ximera serve cache (only .git)
