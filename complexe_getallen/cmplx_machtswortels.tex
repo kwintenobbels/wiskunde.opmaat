@@ -189,7 +189,47 @@ Het resultaat geeft volgende interessante eigenschap: de vergelijking $z^n=w$ he
     $$
 \end{proposition}
 \begin{proof}
-TODO ?
+\textbf{Bewijs:}
+
+Laat $w = r(\cos\theta + i\sin\theta) \in \mathbb{C}\setminus\{0\}$ en $n \in \mathbb{N}\setminus\{0\}$.
+We zoeken alle oplossingen $z$ van de vergelijking $z^n = w$.
+
+Schrijf $z$ in polaire vorm:
+$$
+z = \rho(\cos\varphi + i\sin\varphi),
+$$
+met $\rho > 0$ en $\varphi \in \mathbb{R}$.
+
+Dan geldt, met de formule van De Moivre:
+$$
+z^n = \rho^n \left( \cos(n\varphi) + i\sin(n\varphi) \right).
+$$
+
+De vergelijking $z^n = w$ wordt dus:
+$$
+\rho^n \left( \cos(n\varphi) + i\sin(n\varphi) \right)
+= r(\cos\theta + i\sin\theta).
+$$
+
+Gelijkheid van complexe getallen in polaire vorm geeft:
+$$
+\rho^n = r \quad \text{en} \quad n\varphi = \theta + 2\pi k,\; k \in \mathbb{Z}.
+$$
+
+Hieruit volgt:
+$$
+\rho = \sqrt[n]{r}, \quad \varphi = \frac{\theta + 2\pi k}{n}.
+$$
+
+Dus de oplossingen zijn:
+$$
+z_k = \sqrt[n]{r}\left( \cos\left( \frac{\theta + 2\pi k}{n}\right) + i\sin\left( \frac{\theta + 2\pi k}{n}\right) \right), \quad k \in \mathbb{Z}.
+$$
+
+Omdat $\cos$ en $\sin$ $2\pi$-periodiek zijn, geven de waarden $k = 0,1,\ldots,n-1$ precies $n$ verschillende oplossingen. Voor $k \ge n$ of $k < 0$ herhalen de oplossingen zich.
+
+Dus er zijn precies $n$ verschillende oplossingen.
+
 \end{proof}
 
 Liefhebbers van de Euler notatie kunnen veel eenvoudiger schrijven
